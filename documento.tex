@@ -112,27 +112,19 @@ La motivación de parte del alumno comprende el aprendizaje de tecnologías, met
 \chapter{La Organización}
 \thispagestyle{empty}
 \section{Misión}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus urna vitae libero hendrerit id suscipit tellus sollicitudin. Morbi sed nulla ac sapien fringilla commodo sed sit amet justo. Nulla egestas placerat fermentum.
+
 \section{Visión}
-Entregar herramientas computacionales de una calidad por sobre el resto de los competidores. Dando apoyo y mostrando características de la tecnología reciente que dan valor agregado a nuestros productos. Potenciando las capacidades de nuestros clientes. Generando nuevos contactos y negocios.
+
 \section{Organigrama Empresarial}
-La empresa se compone particularmente de 12 empleados que trabajan de manera distribuida en distintos proyectos, frente a las políticas de la organización:
 
-Un Gerente General que se encarga de las actividades de comunicación con lo nuevos clientes y potencia el trabajo en los proyectos que están barajando para el futuro de la empresa.
-
-Tres Jefe de Proyectos, de los cuales dos de ellos se preocupan particularmente por la legislación de los proyectos en concreto y establecen comunicación con los clientes, guiándolos en el proceso productivo. Ellos potencian el trabajo, ya que al establecer contacto con el cliente, pueden generar la posibilidad para potenciar el trabajo. El otro Jefe de Proyectos administra la funcionalidad táctica de todos los proyectos y legisla con una visión general de la situación de la empresa.
-
-Ocho programadores que trabajan con capacidades en distintos temas y tecnologías. Abarcando en su conjunto un gran abanico de capacidades que nos ayudan a realizar los proyectos de manera solida y confiable para el cliente.
 \section{Estructura de desarrollo el proyecto}
-El proyecto de Botón Falabella se desarrolla frente a la acción de la Jefatura por parte de un encargado de los proyectos. En este caso particular tenemos a un jefe de proyecto que asigna a Miguel Fuenzalida y a otro Desarrollador en las tareas de generación del producto que se tiene llevar a cabo.
 
-En esta estructura de trabajo podemos ver como el Jefe de proyectos trae información importante y responde dudas que van surgiendo a medida que el proyecto avanza. Por su parte uno de los desarrolladores se encarga de la parte estructural del proyecto, mientras que Miguel Fuenzalida se encarga de la parte funcional de la aplicación. Esto resulta importante ya que Miguel Fuenzalida tiene la tarea de dar valor agregado al producto final.
 \chapter{Problema}
 \thispagestyle{empty}
 \section{Diagnóstico sin proyecto}
-Falabella tiene un sistema de asociación de comercios exteriores a su sistema de pagos en linea. Por lo cual es posible convertir la compra de un articulo por medio de internet a una compra exclusiva de la empresa que recibe el producto. El problema consiste en que si hay algún cambio en el protocolo de comercio dentro de Falabella, es necesario cambiar las políticas de compra y venta en todos los comercios adheridos al cliente general. Esto resulta bastante engorroso. 
+
 \section{Diagnóstico con proyecto}
-Por lo cual se pidió a Orange People la realización de un sistema autónomo que permita la integración de distintos comercios con el sistema de pago de Falabella, pero a su ves que el sistema fuera independiente y este solo envíe una información encriptada que facilita la comunicación a través de un protocolo establecido entre el sistema que el comercio adopta y Falabella. Siendo estas dos aplicaciones totalmente independientes.
+
 \section{Objetivos Generales y Específicos}
 \subsection{Objetivos Generales}
 \textit{Dessarrollar un sistema de medición estadistica para la Universidad Tecnológica Metropolitana ayudando a sus procesos docentes y productivos, mejorando la calidad de la educación y los niveles de enseñanza academica que la organización desea potenciar.}
@@ -165,21 +157,11 @@ Por otro lado, cabe mencionar que el proyecto no contendrá requerimientos que s
 \thispagestyle{empty}
 \section{Base Conceptual}
 \subsection{Establecer el problema}
-La situación en general se caracteriza por la necesidad de producir una mejora en el nivel tecnológico de un sistema antiguo que permite la forma de compra de tipo Falabella por parte de un comercio de carácter externo a la empresa. 
 
-La necesidad básica era implementar las funcionalidades básicas y también fomentar funcionalidades nuevas. Permitiendo mayor seguridad a la hora de traspasar datos desde el comercio adherido hacia el servidor central de la aplicación de compra de productos con sistema de tarjeta Falabella.
-
-La aplicación debe resolver el problema de la permanencia de los datos en un servidor externo y tener registro individual de las transacciones que se llevan a cabo fuera de servidor central. Para estos efectos  se tendrá en cuenta que el sistema envía una solicitud de pago hacia Falabella.
 \subsection{Establecer la Solución}
-La solución planteada es un sistema capas de generar un flujo que sea totalmente persistido en un servidor a través de un modelo que nos permite llevar cuentas de manera mas lógica de como se hacia antes. Para lo cual el desarrollo se ira haciendo en varias etapas.
 
-Primeramente se creara una tienda que pueda generar un mensaje encriptado, después se genera un sistema de obtención de llaves, después se hace el proyecto que permite hacer las compras con Falabella y finalmente se hace el programa que encripta y envía la solicitud final de compra a través de los sistemas de Falabella.
 \subsection{¿Por que ocupar Java?}
-Para generar una solución óptima se requiere una tecnología que sea avanzada en el campo de las aplicaciones empresariales. En alta comparación con otros lenguajes de programación, Java lleva mas años especializándose en características que lo hacen mas fácil a la hora de tener que implementar estructuras de desarrollo y Frameworks que permitan cosas particulares con características que se necesiten a la hora de responder y atacar los problemas fundamentales de la creación de una aplicación robusta y con valor agregado.
 
-Puesto que en realidad el mayor valor es que esta echo en Java lo que nos permite asegurar una pronta respuesta frente a cambios, en comparación a otras tecnologías que particularmente se basan en hacer de manera diferente muchas cosas que van de la mano. En cambio en Java tenemos una multitud de Frameworks que nos permiten hacer y deshacer, siendo la característica mas importante. La utilización de interfaces que nos abstraen de tener que usar un Famework en especifico.
-
-En particular el compendio de aplicaciones que nosotros utilizaremos para llevar a cabo la tarea de generar el producto es J2EE. Que es un compendio de tecnologías web que nos permiten integrar múltiples funcionalidades a un sistema establecido y compacto. Haciendo el desarrollo mas rápido de lo pensado.
 \subsection{¿Por que no otras tecnologías?}
 En comparación con PHP el cual nos permite crear la pagina de manera rápida e incorporando con un framework la unidad de persistencia. Pero como desventaja esta el concepto de no tener elasticidad para hacer otras cosas. Parámetro por el cual Ruby on Rails podría llevar a cabo de mejor manera. Pero el punto frágil de Ruby es que como utiliza un Framework de propósito general (igual que PHP) su capacidad de aprendizaje es bastante costoso. 
 \section{Fundamentos Teóricos}
@@ -200,14 +182,7 @@ En comparación con PHP el cual nos permite crear la pagina de manera rápida e 
 \item PrettyFaces: Framework que nos permite mejorar la forma de implementar la navegación dentro del sistema de paginas. Mas que nada usado para contener las excepciones de error y la redirección a una pagina de error en el caso de la ejecución haya salido errónea.
 \end{enumerate}
 \subsection{Forma genérica de la Solución}
-El sistema se compone de un recepcionista de datos encriptados. Para lo cual lo único que mira es una llamada en POST con un parámetro de nombre inXML el cual lleva un mensaje que hay que codificar.
 
-Si la codificación es Exitosa se pasa a un sistema de pago referente a Falabella. En donde el usuario pondrá información característica de su compra y posteriormente envía esta solicitud de compra.
-
-Finalmente se vuelve a encriptar otro mensaje con la confirmación de compra, que posteriormente Falabella aceptará, así dando por finalizada la compra.
-
-Este sistema es auto instalable en cualquier tipo de comercio que quiera adherirse a pagos con la tarjeta CMR de Falabella.
 \subsection{Implementación de la Solución}
 
-La característica principal de la solución es que se implementa sobre tecnologías robustas que nos aseguran un dominio total de los estándares de calidad de un producto Web que permita la interacción de un sistema de pago eficiente y exitoso.
 \end{document}
