@@ -4,6 +4,6 @@ Tarea
 - Ciclo de vida del Software.
 - Historia del Arte (Métricas, formulas de comparación de estudiantes).
 
-Esta Semana
+Esta Semana !! :3
 
 Obs "Generación de métricas"
