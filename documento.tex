@@ -19,6 +19,10 @@
 %para usar fragmentos de codigo fuente
 \usepackage{listings}
 \usepackage{float}
+%para usar signos de check y wrong
+\usepackage{bbding}
+%para usar colores en textos y simbolos
+\usepackage{color}
 \floatstyle{boxed}
 \newfloat{codigo}{thp}{lop}
 \floatname{codigo}{Caja de Código}
@@ -230,6 +234,119 @@ Este sistema da cuenta de una necesidad por parte de las universidades, de ser m
 La gran debilidad de este sistema es que no se efectúan muchos criterios de comparación y por tanto solo da una arista para presentar la comparación lo que resulta incomodo al no poder ver desde otra perspectiva este sistema.
 
 Finalmente se nota a las universidades actuales buscando organismos extranjeros capaces de certificar las características de la educación que ofrecen, de esta manera muestran no solo una acreditación por un organismo chileno, si no también una necesidad por competir a nivel internacional\cite{data3}.
+
+\section{Justificación del Proyecto}
+La necesidad de la Universidad Tecnológica Metropolitana por tener un buen sistema de análisis estadístico, radica básicamente en el proceso de acreditación de la misma, lo que hace necesario que la universidad tenga una herramienta de mantenimiento de la información y que estos datos permitan hacer la toma de decisiones un proceso justificado sobre la base de la necesidad de la Universidad.
+
+También es relevante señalar que no cualquier sistema puede ser el mas apropiado para incorporar a la universidad, pues el sistema que se esta realizando actualmente tiene como propósito especifico un cliente y ese usuario particular es la Universidad, de tal manera que en este proyecto no habrá mas indicadores de los que se requieren, asegurando una utilidad en su totalidad, puesto que nada se creará si no existe un requerimiento de la universidad de por medio.
+
+La otra justificación, no es competencia del trabajo de Título, pero es necesario explicarla de manera adecuada. La razón económica, prima por otras ya que un sistema de esta envergadura requiere no solo dinero si no también el consentimiento de varias entidades de poder dentro de la universidad, para realmente tomar la decisión de comprar un sistema externo.
+
+Finalmente el punto negativo de todo esto, es que este trabajo esta acotado dentro de los margenes que debe tener un trabajo de Título, por lo tanto no es posible seguir en el desarrollo a menos que halla una visión de futuro ya sea por parte del profesor a cargo de este proyecto y el alumno que realiza este trabajo.
+\section{Análisis de las herramientas}
+El desarrollo de las aplicaciones debe ser con un lenguaje que nos permita la correcta ejecución de las tareas de diseño y desarrollo. Por lo cual resulta interesante desarrollar algunos criterios que nos mostrarán las características y la justificación de nuestra elección a la hora de pensar en un lenguaje apropiado para este proyecto.
+
+\begin{enumerate}
+
+\item Sencillez: Característica del lenguaje que hace que sea fácil el crear o entender el código, al momento de programarlo o leerlo. De tal manera que ciertos lenguajes son mas explícitos en forma de mostrar sus sentencias y estructuras de control\cite{data4}.
+
+\item Robustez: Capacidad interna del lenguaje de proporcionar herramientas que permiten minimizar los errores producidos por el programador\cite{data4}.
+
+\item Seguridad: Característica que hace que un lenguaje no permita tocar accesos a donde la aplicación no debiese ir (en la mayoría de los casos), ejemplos como, el acceso ilegal a memoria, ejecución de pruebas o derechos de accesos\cite{data4}.
+
+\item Portabilidad: Capacidad de un lenguaje para correr en múltiples sistemas operativos\cite{data4}.
+
+\item Neutralidad: Independencia de la maquina en donde se ejecuta, haciendo una experiencia lo mas similar posible entre distintas máquinas y sistemas operativos\cite{data4}.
+
+\item Threads: manejo de ejecuciones en hilos o programación multi-tarea\cite{data4}.
+
+\item Garbage: Posee un sistema propio de recolección de basura, delegando al propio lenguaje la tarea del manejo de memoria\cite{data4}.
+
+\item Interfaz: Capacidad de producir fácilmente interfaces cómodas para el usuario final\cite{data4}.
+
+\item Expresividad: Cantidad de lineas con las que una acción puede ejecutarse dentro del código\cite{data5}.
+
+\item Compilación: Se refiere al tiempo que toma poder compilar el código producido.
+
+\item Aprendizaje: Dificultad para aprender el lenguaje. Basado simplemente en la experiencia propia sobre cada lenguaje.
+
+\item Estructuras de control: Un lenguaje debe proveer estructuras simples de control, pero tampoco llenarse de estructuras que nunca se van a utilizar\cite{data6}.
+
+\item Abstracción: Capacidad de convertir cosas difíciles en algo simple con la estructura del lenguaje\cite{data6}.
+
+\end{enumerate}
+
+También es importante tener en cuenta el lenguaje a utilizar en el momento de la creación del proyecto, de esta manera se pondrán los lenguajes candidatos para conocerlos en mayor detalle.
+
+\begin{enumerate}
+
+\item PHP: Es el lenguaje de lado servidor más extendido en la web. Nacido en 1994, se trata de un lenguaje de creación relativamente reciente, aunque con la rapidez con la que evoluciona Internet parezca que ha existido toda la vida. Es un lenguaje que ha tenido una gran aceptación en la comunidad de desarrolladores, debido a la potencia y simplicidad que lo caracterizan, así como al soporte generalizado en la mayoría de los servidores\cite{data7}.
+
+\item .NET: Es un framework de Microsoft que hace un énfasis en la transparencia de redes, con independencia de plataforma de hardware y que permita un rápido desarrollo de aplicaciones. Basado en ella, la empresa intenta desarrollar una estrategia horizontal que integre todos sus productos, desde el sistema operativo hasta las herramientas de mercado\cite{data8}.
+
+\item Ruby on Rails: Es un entorno de desarrollo web de código abierto que está optimizado para satisfacción de los programadores y de la productividad. Te permite escribir un buen código favoreciendo la convención antes que la configuración\cite{data9}.
+
+\item Java: Es un lenguaje de programación con el que podemos realizar cualquier tipo de programa. En la actualidad es un lenguaje muy extendido y cada vez cobra más importancia tanto en el ámbito de Internet como en la informática en general. Está desarrollado por la compañía Sun Microsystems con gran dedicación y siempre enfocado a cubrir las necesidades tecnológicas más punteras\cite{data10}. 
+\end{enumerate}
+
+En la siguiente tabla muestra una comparación de las cuatro tecnologías anteriormente presentadas de forma explicita para comprender nuestra elección. Es claro decir que uno de los aspectos que marca profundamente la elección sobre el lenguaje con que se va a realizar este proyecto, es determinada por los conocimientos que tiene el alumno y las indicaciones del profesor, en pos de realizar lo más rápido posible el trabajo, haciéndolo de forma elegante. 
+
+\begin{tabular}{| l | l | l | l | l |}
+\hline
+ & \includegraphics[scale=0.08]{images/icons/php.png} & \includegraphics[scale=0.08]{images/icons/net.png} & \includegraphics[scale=0.51]{images/icons/ruby-on-rails.png} & \includegraphics[scale=0.1]{images/icons/java.png}\\
+\hline
+\textit{Sencillez} & \textcolor{green}{\CheckmarkBold} &  \textcolor{red}{\XSolidBold} &  \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textit{Robustez} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold} & \textcolor{green}{\CheckmarkBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textit{Seguridad} & \textcolor{red}{\XSolidBold} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textit{Portabilidad} & \textcolor{green}{\CheckmarkBold} & \textcolor{red}{\XSolidBold} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textit{Neutralidad} & \textcolor{green}{\CheckmarkBold} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textit{Threads} & \textcolor{green}{\CheckmarkBold} & \textcolor{red}{\XSolidBold} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textit{Garbage} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textit{Interfaz} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold} & \textcolor{green}{\CheckmarkBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textit{Expresividad} & \textcolor{green}{\CheckmarkBold} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold} & \textcolor{red}{\XSolidBold}\\
+\hline
+\textit{Compilación} & \textcolor{green}{\CheckmarkBold} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold} & \textcolor{red}{\XSolidBold}\\
+\hline
+\textit{Aprendizaje} & \textcolor{green}{\CheckmarkBold} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textit{E. de control} & \textcolor{green}{\CheckmarkBold} & \textcolor{green}{\CheckmarkBold} & \textcolor{green}{\CheckmarkBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textit{Abstracción} & \textcolor{green}{\CheckmarkBold} & \textcolor{red}{\XSolidBold} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textbf{Total} & 9 & 4 & 8 & 11\\
+\hline
+\end{tabular}
+
+Como lo muestra la tabla anterior, java es el que puede cumplir más criterios, en el sentido de la observación y el criterio subjetivo del alumno que realiza el trabajo.
+
+\section{Criterios de Calidad}
+
+Se mostrarán a continuación los criterios de calidad que el proyecto como tal va a proporcionar a la universidad. Estos criterios muestran de forma justificada, que la mejor elección es la que nosotros proponemos para la organización, pensando en los costes de tiempo y recursos económicos que un proyecto de esta clase puede significar.
+
+\begin{enumerate}
+
+\item Mantenibilidad: Característica que hace que nuestro proyecto sea fácil de corregir en caso de fallos, mas que nada se refiere a si las bases de nuestro proyecto están debidamente echas y revisadas. Basándose en la concepción de que un proyecto que tiene un modelo bien establecido es más fácil de reparar\cite{data11}.
+
+\item Flexibilidad: Característica que permite a nuestro proyecto un fácil modelo de cambios o adiciones de más características, incluyendo también el echo de que como es un sistema echo dentro del contexto de la Universidad esta lo suficientemente enfocado en ella, pero también es posible cambiar algunas cosas en pos de que este sistema funcione también en otras universidades.\cite{data11}.
+
+\item Testeabilidad: Esto nos muestra que el modelo del sistema ha pasado por test antes de ser ocupado en el proyecto, de manera tal como es.\cite{data11}.
+
+\item Portabilidad: Ya que como se trabaja con Java, el proyecto es básicamente portable a casi cualquier tipo de sistema operativo, lo que lo hace un ente fácil de cambiar en otros entornos de trabajo y es perfectamente acomodable en ese sentido.\cite{data11}.
+
+\item Integridad: Este sistema se caracteriza por su integridad con los datos, lo que nos muestra un dedicado trabajo sobre el tema de la base de datos.\cite{data11}.
+
+\item Rapidez: El sistema esta echo de tal manera que debe funcionar de forma expedita y veloz, sobretodo con la enorme cantidad de datos que se van a manejar.\cite{data11}.
+
+\end{enumerate}
+
 
 \bibliographystyle{plain}
 \bibliography{bibliografia.bib}
