@@ -1,9 +1,5 @@
-Tarea
+Informe de Trabajo de Título para la obtención del titulo de Ingeniero Informático en la UTEM.
 
-- Esquema de trabajo (esplicar que se ocupa, el tipo de apoyo).
-- Ciclo de vida del Software.
-- Historia del Arte (Métricas, formulas de comparación de estudiantes).
-
-Esta Semana !! :3
-
-Obs "Generación de métricas"
+Miguel Ángel Aníbal Davor Fuenzalida Pino
+----------
+----------
