@@ -23,6 +23,7 @@
 \usepackage{bbding}
 %para usar colores en textos y simbolos
 \usepackage{color}
+\usepackage{multirow} %multi columna
 \floatstyle{boxed}
 \newfloat{codigo}{thp}{lop}
 \floatname{codigo}{Caja de Código}
@@ -316,7 +317,486 @@ Se mostrarán a continuación los criterios de calidad que el proyecto como tal 
 
 \end{enumerate}
 
+\chapter{Introducción al PSP}
+\thispagestyle{empty}
+\section{Base Teórica}
+PSP (Proceso de Software Personal) es una metodología de desarrollo para proyectos informáticos, que tiene una serie de pasos enfocados en el ordenamiento, cuantificación y la categorización del trabajo y el tiempo. Es usada mundialmente por su fácil aprendizaje y su rápida incorporación. Este modelo de trabajo es solo para proyectos personales, osea en donde el desarrollador toma todo el trabajo por si solo.
 
+Este tipo de trabajo nos proporciona una serie de tablas que muestran nuestros tiempos de desarrollo y avance del proyecto, básicamente en el PSP nosotros podemos obtener los tiempos de desarrollo y la cantidad de lineas de código para cada actividad o conjunto de actividades. De esta manera uno puede llegar a determinar un factor de calidad dentro de nuestro trabajo dentro de los estándares que uno estime conveniente utilizar.
+
+PSP nos obliga a desarrollar una forma de trabajo en la cual un desarrollador programa y anota los tiempos de desarrollo y la cantidad de código que uno ha producido, dentro de distintas tablas hechas ese propósito.
+\section{Estructura del PSP}
+\subsection{El Trabajo del Ingeniero de Sofware}
+En este apartado se requiere desarrollar un lista de actividades que contemplan el desarrollo del proyecto, incluyendo todo lo que pueda servir como avances en el proyecto, ya sea investigar, reunirse con otros o desarrollar.
+\subsection{La Gestión del Tiempo}
+Para este punto solo se necesita la estructuración del tiempo que uno tiene sobre el tiempo que se pretende dar al proyecto. Basándose en la lista de actividades.
+\subsection{El Control del Tiempo}
+Para este apartado se desarrolla una tabla que contiene una lista de actividades con los tiempos de inicio y termino de cada una de las cosas que se hacen. También se anotan los tiempos perdidos, el tipo de actividad y si esta completado o no.
+\subsection{Planificación de Períodos y Productos}
+Este apartado se preocupa de la planificación semanal del tiempo, en la parte de desarrollo se tienen 3 tablas que nos permiten llevar los registros totales de tiempo en minutos de las actividades que hago durante la semana. La primera tabla muestra las sumas de los tiempos, la segunda muestra la actividad de las semanas pasadas y la tercera muestra el total de las semanas hasta hoy en día.
+\subsection{La Planificación del Producto}
+El desarrollo del proyecto requiere un cuaderno que registre la actividad en función de los trabajos que se van realizando, para lo cual se tiene un cuaderno de trabajos que registra las actividades con sus respectivas estimaciones de tiempo, sacadas de datos anteriores. Recordar que en esta tabla se anotan los trabajos que son las actividades diarias, así que se anota uno al día.
+\subsection{El Tamaño del Producto}
+Para estimar los costes de tiempo y valor de cada actividad que representa parte del desarrollo del un producto como tal, es necesario establecer formas de medición para valores que pueden ser cuantificables en unidades de trabajo. Para lo cual en esta actividad de mostrarán Estimaciones de tamaños para las actividades particulares de este proyecto.
+\subsection{La Gestión del Tiempo}
+Para poder desarrollar las actividades, se necesita tiempo, por lo cual resulta importante el manejarlo apropiadamente, para esto se hace una estimación aproximada del tiempo que consumirá la ejecución de las actividades relacionadas con el desarrollo del trabajo que esta en curso. Se expondrán dos tablas y un marco de referencias para las aproximaciones futuras.
+\subsection{La Gestión de los Compromisos}
+Los compromisos que uno hace con las personas a las cuales espera entregar un proyecto, deben ser documentados, mostrando el tipo de actividad a realizar, el día, los participantes de ese compromiso, la hora en que se realiza, la fecha y finalmente lo que se recibe a cambio de la finalización de estas tareas. Es importante destacar que una correcta forma de manejar los compromisos lleva a un buen plan de trabajo.
+\subsection{La Gestión de las Programaciones}
+En un proyecto siempre es necesario definir las características importantes que comprenden la ejecución de cada una de las actividades que se están desarrollando, por tanto en este proyecto se tiene un registro de los puntos de control, los cuales representan las características importantes que el desarrollo de este trabajo debe comprender.
+\subsection{El Plan del Proyecto}
+Para generar un plan del proyecto se necesita tener un resumen de las características de como se desarrolla el trabajo, para lo cual se expondrá un molde para generar planes de proyectos, los cuales estiman la cantidad de trabajo que uno puede desarrollar de acuerdo a los trabajos anteriores que ha realizado. Finalmente se mostrará un ejemplo de estimación del tamaño del programa.
+\subsection{Defectos}
+El registro de los defectos es altamente importante, ya que nos permite la correcta verificación de cada incidente ocurrido dentro del proceso de desarrollo del software. El cuaderno de registro de errores se ocupa en el desarrollo de aplicaciones, y nos permite anotar un error cuando ha salido en modo de compilación para lo cual uno registra el tipo de error y el tiempo dedicado a la reparación de este error. El objetivo de esta tabla es impedir la repetición de ciertos errores que pueden ser reparados mediante del aprendizaje.\\
+\\
+\textbf{Tipos de Defectos}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+10 & Documentación         & 60 & Comprobación\\
+\hline
+20 & Sintaxis              & 70 & Datos\\
+\hline
+30 & Construcción Paquetes & 80 & Función\\
+\hline
+40 & Asignación            & 90 & Sistema\\
+\hline
+50 & Interfaz              & 100 & Entorno\\
+\hline
+\end{tabular}
+
+\chapter{Aplicación del PSP}
+\thispagestyle{empty}
+\section{Base Teórica}
+Se mostrará la forma de desarrollo de las tablas PSP más importantes en el proyecto. Dando muestra de como es el trabajo del PSP dentro de nuestro proyecto SEPA. Tendremos el desarrollo de las tablas más importantes en el PSP frente a nuestro trabajo. Obtendremos una mirada clara frente a que es el PSP y como este nos muestra la categorización de la calidad en nuestro trabajo.
+\section{Desarrollo del PSP}
+\subsection{El Trabajo del Ingeniero de Sofware}
+En estos efectos se desarrollo la siguiente tabla de actividades, con su frecuencia semanal y sus minutos.
+
+\begin{tabular}{|l | l | l |}
+\hline
+\textbf{Tarea} & \textbf{Frecuencia (semanal)} & \textbf{Tiempo (minutos)} \\
+\hline
+Leer libros de texto & todos & 840/semana\\
+\hline
+Desarrollo & todos & 1260\\
+\hline
+Programar & todos & 2520\\
+\hline
+Reuniones & L, M, J & 420/semana\\
+\hline
+Reparar Documentos & Mi, V & 840/semana\\
+\hline
+\end{tabular}
+\subsection{La Gestión del Tiempo}
+Para este caso en particular uno puede ver que se tienen todos los días de la semana destinados para el propósito de desarrollar el proyecto ya sea en informes o programar. En menos tiempo se reparten las tareas de investigar y reparar cosas.
+\subsection{El Control del Tiempo}
+Se muestra la siguiente tabla de control de Tiempo, de forma resumida, para un día en especifico.
+
+\begin{tabbing}
+Estudiante: \= Miguel Angel Fuenzaldia Pino \= Fecha: \= 9/10/2012\\
+Profesor: \> Sebastián Salazar Molina \>   \>  \\
+\end{tabbing}
+\begin{tabular}{| l | l | l | l | l | l | l | l | l |}
+\hline
+\textbf{Fecha} & \textbf{Comienzo} & \textbf{Fin} & \textbf{Delta} & \textbf{Actividad} & \textbf{Comentarios}\\
+\hline
+19/11 & 10:56 & 11:17 & 20 & Desarrollo & notebook\\
+\hline
+      & 11:18 & 11:35 & 15 & lectura & psp\\
+\hline
+      & 11:35 & 12:29 & 50 & Desarrollo & notebook\\
+\hline
+      & 12:30 & 12:56 & 30 & lectura & psp\\
+\hline
+      & 12:57 & 13:02 & 5 & Desarrollo & notebook\\
+\hline
+      & 13:02 & 13:29 & 30 & Almorzar & olgura\\
+\hline
+      & 13:30 & 15:21 & 120 & Desarrollo & notebook\\
+\hline
+      & 15:22 & 16:12 & 45 & lectura & psp\\
+\hline
+      & 15:22 & 16:00 & 40 & Desarrollo & notebook\\
+\hline   
+20/11 & 16:00 & 17:00 & 60 & Desarrollo & notebook\\
+\hline
+      & 17:00 & 18:26 & 90 & lectura & psp\\
+\hline
+      & 18:30 & 19:00 & 30 & Desarrollo & notebook\\
+\hline 
+21/11 & 18:00 & 18:30 & 30 & lectura & psp\\
+\hline
+      & 18:30 & 19:00 & 30 & Desarrollo & notebook\\
+\hline 
+26/11 & 15:00 & ... & ... & Desarrollo & notebook\\
+\hline
+\end{tabular}
+\subsection{Planificación de Períodos y Productos}
+Se muestran las siguientes tablas de planificación, de forma resumida, para comprender como se utilizan.
+
+\textbf{Estudiante}: Miguel Angel Fuenzaldia Pino     \textbf{Fecha}: 9/10/2012\\
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Tarea} & \textbf{Reunion} & \textbf{Codificar} & \textbf{Escribir} & \textbf{Leer} & \textbf{Total} \\
+\hline
+\textbf{Fecha} &                  & \textbf{Programas} & \textbf{Textos} & \textbf{textos} & \\
+\hline
+D 18/11 & & & & & \\
+\hline
+L & & & & & \\
+\hline
+M & & & & & \\
+\hline
+Mi & & & & & \\
+\hline
+J & & & & & \\
+\hline
+V & & & & & \\
+\hline
+S & & & & & \\
+\hline
+\textbf{Totales} & & & & & \\
+\hline
+\end{tabular}
+\\
+Tiempos y Medias del Período, Número de Semanas (número anterior +1): 1\\
+Resumen de las semanas anteriores:\\
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Total} & & & & & \\
+\hline
+\textbf{Med.} & & & & & \\
+\hline
+\textbf{Máx} & & & & & \\
+\hline
+\textbf{Mín} & & & & & \\
+\hline
+\end{tabular}
+\\
+Resumen de las semanas totales (anteriores mas última)\\
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Total} & & & & & \\
+\hline
+\textbf{Med.} & & & & & \\
+\hline
+\textbf{Máx} & & & & & \\
+\hline
+\textbf{Mín} & & & & & \\
+\hline
+\end{tabular}
+\subsection{La Planificación del Producto}
+La siguiente tabla muestra una forma de planificación.
+
+\textbf{Estudiante}: Miguel Angel Fuenzaldia Pino     \textbf{Fecha}: 9/10/2012\\
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Trab} & \textbf{Fecha} & \textbf{Pro} & \multicolumn{2}{|c|}{\textbf{Estimado}} & \multicolumn{3}{|c|}{\textbf{Real}} & \multicolumn{5}{|c|}{\textbf{Hasta la Fecha}} \\
+\hline
+ & & & \textbf{Tie} & \textbf{Uni} & \textbf{Tie} & \textbf{Uni} & \textbf{Vel} & \textbf{Tie} & \textbf{Uni} & \textbf{Vel} & \textbf{Máx} & \textbf{Mín} \\
+\hline
+\multirow{2}{*}{1} & 19/11 & Escr. & 420 & 1 & 300 & 2 & 150 & 300 & 2 & 150 & 150 & 150 \\
+\cline{2-13} & \multicolumn{12}{|l|}{\textbf{Descripción:} Escribir el Engineer Notebook para los capitulos 5 al 12}\\
+\hline
+\multirow{2}{*}{2} & 20/11 & Escr. & 420 & 1 & 300 & 2 & 150 & 300 & 2 & 150 & 150 & 150 \\
+\cline{2-13} & \multicolumn{12}{|l|}{\textbf{Descripción:} Escribir el Engineer Notebook para los capitulos 7 al 16}\\
+\hline
+\multirow{2}{*}{n} & & & & & & & & & & & & \\
+\cline{2-13} & \multicolumn{12}{|l|}{\textbf{Descripción:}}\\
+\hline
+\end{tabular}
+\subsection{El Tamaño del Producto}
+Se tiene una muestra de tablas por actividad para determinar la cantidad total de trabajo que se realiza con respecto a lo que se tiene que tener al final.
+
+\begin{tabbing}
+\textbf{Estudiante:} \= Miguel Angel Fuenzaldia Pino \= \textbf{Fecha:} \= 19/11/2012\\
+\textbf{Profesor:} \> Sebastián Salazar Molina \> \textbf{Tiempos de Actividad} \>  \\
+\end{tabbing}
+\textbf{Reunión}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Persona} & \textbf{Tiempo} & \textbf{Temas} & \textbf{Tiempo x Tema}\\
+\hline
+Sebastián Salazar & 60 & 4 & 15\\
+\hline
+\textbf{Totales} & 60 & 4 & 15 \\
+\hline
+\textbf{Medias} & 60 & 4 & 15 \\
+\hline
+\end{tabular}
+\\\\
+\textbf{Lectura}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Capítulo} & \textbf{Tiempo} & \textbf{Páginas} & \textbf{Tiempo x Página}\\
+\hline
+1-5   & 180 & 50 & 3,6 \\
+\hline
+6-10  & & & \\
+\hline
+11-15 & & & \\
+\hline
+16-20 & & & \\
+\hline
+\textbf{Totales} & 180 & 50 & 3,6 \\
+\hline
+\textbf{Medias} & 180 & 50 & 3,6 \\
+\hline
+\end{tabular}
+\\\\
+\textbf{Escribir}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Documento} & \textbf{Tiempo} & \textbf{Páginas} & \textbf{Tiempo x Página}\\
+\hline
+PSP & 360 & 30 & 20 \\
+\hline
+Bitácora & 10 & 1 & 10 \\
+\hline
+Título & & & \\
+\hline
+\textbf{Totales} & 370 & 31 & 30 \\
+\hline
+\textbf{Medias} & 135 & 15,5 & 15 \\
+\hline
+\end{tabular}
+\\\\
+\textbf{Programar}\\
+\begin{tabular}{| l | l | l | l | l | l | l |}
+\hline
+\textbf{Programa} & \textbf{LOC} & \textbf{Func. Anteriores} & \textbf{Func. Hasta} & \textbf{Mín} & \textbf{Media} & \textbf{Máx}\\
+\hline
+Modelo & & & & & & \\
+\hline
+Control & & & & & & \\
+\hline
+Vista & & & & & & \\
+\hline
+\textbf{Totales} & & & & & & \\
+\hline
+\textbf{Medias} & & & & & & \\
+\hline
+\end{tabular}
+\subsection{La Gestión del Tiempo}
+Se muestran las tablas de gestión del tiempo por actividades.
+
+\begin{tabbing}
+\textbf{Estudiante:} \= Miguel Angel Fuenzaldia Pino \= \textbf{Fecha:} \= 19/11/2012\\
+\textbf{Profesor:} \> Sebastián Salazar Molina \> \textbf{Tiempos de Actividad} \>  \\
+\end{tabbing}
+\textbf{Toma de Requerimientos y Preparación de Engineer Notebook}\\
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Tarea} & \textbf{Reunion} & \textbf{Codificar} & \textbf{Escribir} & \textbf{Leer} & \textbf{Total} \\
+\hline
+\textbf{Fecha} &                  & \textbf{Programas} & \textbf{Textos} & \textbf{textos} & \\
+\hline
+D  &    & & 180 & 180 & 360 \\
+\hline
+L  & 60 & & 180 & 180 & 420 \\
+\hline
+M  &    & & 180 & 180 & 360 \\
+\hline
+Mi & 60 & & 180 & 180 & 420 \\
+\hline
+J  &    & & 180 & 180 & 360 \\
+\hline
+V  & 60 & & 180 & 180 & 420 \\
+\hline
+S  &    & & 180 & 180 & 360 \\
+\hline
+\textbf{Totales} & 180 & & 1260 & 1260 & 1440 \\
+\hline
+\end{tabular}
+\\\\
+\textbf{Etapa de desarrollo de Proyecto e Informe}\\
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Tarea} & \textbf{Reunion} & \textbf{Codificar} & \textbf{Escribir} & \textbf{Leer} & \textbf{Total} \\
+\hline
+\textbf{Fecha} &                  & \textbf{Programas} & \textbf{Textos} & \textbf{textos} & \\
+\hline
+D  &    & 180 & 180 &  & 360 \\
+\hline
+L  & 60 & 180 & 180 &  & 420 \\
+\hline
+M  &    & 180 & 180 &  & 360 \\
+\hline
+Mi & 60 & 180 & 180 &  & 420 \\
+\hline
+J  &    & 180 & 180 &  & 360 \\
+\hline
+V  & 60 & 180 & 180 &  & 420 \\
+\hline
+S  &    & 180 & 180 &  & 360 \\
+\hline
+\textbf{Totales} & 180 & 1260 & 1260 &  & 2700 \\
+\hline
+\end{tabular}
+\subsection{La Gestión de los Compromisos}
+La siguiente tabla muestra un ejemplo de los compromisos y la información de acuerdo a cada tarea que uno pretende realizar.
+
+\begin{tabbing}
+\textbf{Estudiante:} \= Miguel Angel Fuenzaldia Pino \= \textbf{Fecha:} \= 19/11/2012\\
+\textbf{Profesor:} \> Sebastián Salazar Molina \> \textbf{Tiempos de Actividad} \>  \\
+\end{tabbing}
+\textbf{Lista de Compromisos}\\
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Fecha} & \textbf{Compromizo} & \textbf{¿Con quíen?} & \textbf{Horas} & \textbf{Fin} & \textbf{Consigo} \\
+\hline
+D  & Leer       & Propio   & 3 & Dom & Conocimiento \\
+\hline
+L  & Desarrollo & Cliente  & 3 & ... & Título \\
+\hline
+M  & Escribir   & Profesor & 3 & ... & Título \\
+\hline
+Mi & Desarrollo & Cliente  & 3 & ... & Título \\
+\hline
+J  & Reunión    & Profesor & 1 & ... & Información \\
+\hline
+V  & Desarrollo & Cliente  & 3 & ... & Título \\
+\hline
+S  & Escribir   & Profesor & 3 & ... & Título \\
+\hline
+\end{tabular}
+\subsection{La Gestión de las Programaciones}
+A continuación una tabla que muestra un poco de como una persona que utiliza el PSP puede programar su lista de actividades.
+
+\textbf{Estudiante}: Miguel Angel Fuenzaldia Pino     \textbf{Fecha}: 9/10/2012\\\\\
+\begin{tabular}{| l | l |}
+\hline
+\multicolumn{2}{|c|}{\textbf{Puntos de Control}}\\
+\hline
+\textbf{Numero} & \textbf{Punto de Control}\\
+\hline
+1 & Desarrollar el Cuaderno de Anotaciones para la Metodología PSP \\
+\hline
+2 & Asistir a reuniones con el profesor encargado del ramo \\
+\hline
+3 & Desarrollar el Sofware que se pide, a traves de los requerimientos conseguidos \\
+\hline
+4 & Escribir un informe de Título en coordinación con lo requerido\\
+\hline
+\end{tabular}
+\subsection{El Plan del Proyecto}
+Se tiene un molde de lo que es el plan del proyecto, que es la parte mas fuerte del desarrollo en PSP, ya que nos muestra información acerca de tiempos por lineas de código en un compendio de actividades que puede ser una tarea a realizar semanalmente o en periodos más largos.
+
+\textbf{Resumen del plan de Proyecto}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Estudiante:} & Miguel Angel Fuenzaldia Pino & \textbf{Fecha:} & 19/11/2012\\
+\hline
+\textbf{Programa:} & aaaaaaaaaaaaaaaaaaaaaaaaa & \textbf{Programa No.:} & 99\\
+\hline
+\textbf{Profesor:} & Sebastián Salazar Molina & \textbf{Lenguaje} & Java  \\
+\hline
+\end{tabular}
+\\\\\\
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Resumen} & \textbf{Plan} & \multicolumn{2}{|c|}{\textbf{Real}} & \multicolumn{2}{|c|}{\textbf{Hasta la Fecha}} \\
+\hline
+\textit{Minutos/LOC} & & \multicolumn{2}{|c|}{\textbf{}} & \multicolumn{2}{|c|}{\textbf{}} \\
+\hline
+\textit{LOC/Hora} & & \multicolumn{2}{|c|}{\textbf{}} & \multicolumn{2}{|c|}{\textbf{}} \\
+\hline
+\textit{Defectos/KLOC} & & \multicolumn{2}{|c|}{\textbf{}} & \multicolumn{2}{|c|}{\textbf{}} \\
+\hline
+\textit{Rendimiento} & & \multicolumn{2}{|c|}{\textbf{}} & \multicolumn{2}{|c|}{\textbf{}} \\
+\hline
+\textit{VIF} & & \multicolumn{2}{|c|}{\textbf{}} & \multicolumn{2}{|c|}{\textbf{}} \\
+\hline
+\textbf{Tamaño(LOC)} & \multicolumn{5}{|c|}{\textbf{}}\\
+\hline
+\textit{Nuevo y Cambiado} & & \multicolumn{2}{|c|}{\textbf{}} & \multicolumn{2}{|c|}{\textbf{}} \\
+\hline
+\textit{Máx} & & \multicolumn{4}{|c|}{\textbf{}}\\
+\hline
+\textit{Mín} & & \multicolumn{4}{|c|}{\textbf{}}\\
+\hline
+\textbf{Fase(Mín)} & \textbf{Plan} & \textbf{Real} & \textbf{Hasta la Fecha} & \multicolumn{2}{|c|}{\textbf{Porcentaje}} \\
+\hline
+\textit{Planificación} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Diseño} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Codificación} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Revisión} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Compilación} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Pruebas} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Postmortem} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Total} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Máx} & & \multicolumn{4}{|c|}{\textbf{}}\\
+\hline
+\textit{Mín} & & \multicolumn{4}{|c|}{\textbf{}}\\
+\hline
+\end{tabular}
+\newpage
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{D. Introducidos} & \textbf{Plan} & \textbf{Real} & \textbf{Hasta la Fecha} & \textbf{Porcentaje} & \textbf{Def./Hora} \\
+\hline
+\textit{Planificación} & & & & & \\
+\hline
+\textit{Diseño} & & & & & \\
+\hline
+\textit{Codificación} & & & & & \\
+\hline
+\textit{Revisión} & & & & & \\
+\hline
+\textit{Compilación} & & & & & \\
+\hline
+\textit{Pruebas} & & & & & \\
+\hline
+\textit{Total} & & & & & \\
+\hline
+\textbf{D. Eliminados} & \textbf{Plan} & \textbf{Real} & \textbf{Hasta la Fecha} & \textbf{Porcentaje} & \textbf{Def./Hora} \\
+\hline
+\textit{Planificación} & & & & & \\
+\hline
+\textit{Diseño} & & & & & \\
+\hline
+\textit{Codificación} & & & & & \\
+\hline
+\textit{Revisión} & & & & & \\
+\hline
+\textit{Compilación} & & & & & \\
+\hline
+\textit{Pruebas} & & & & & \\
+\hline
+\textit{Total} & & & & & \\
+\hline
+\end{tabular}
+\subsection{Defectos}
+La siguiente tabla es simplemente una muestra de la lista de los defectos y como se van anotando.
+
+\textbf{Resumen del plan de Proyecto al cual se le encuentran Defectos}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Estudiante:} & Miguel Angel Fuenzaldia Pino & \textbf{Fecha:} & 19/11/2012\\
+\hline
+\textbf{Programa:} & aaaaaaaaaaaaaaaaaaaaaaaaa & \textbf{Programa No.:} & 99\\
+\hline
+\textbf{Profesor:} & Sebastián Salazar Molina & \textbf{Lenguaje} & Java  \\
+\hline
+\end{tabular}
+\\\\\\
+\begin{tabular}{| l | l | l | l | l | l | l |}
+\hline
+\textbf{Fecha} & \textbf{Número} & \textbf{Tipo} & \textbf{Introducido} & \textbf{Eliminado} & \textbf{Correc.} & \textbf{Correg.}\\
+\hline
+ & & & & & & \\
+\hline
+\textbf{Descripción} & \multicolumn{6}{|c|}{} \\
+\hline
+\end{tabular}
 \bibliographystyle{plain}
 \bibliography{bibliografia.bib}
 \end{document}
