@@ -797,6 +797,28 @@ La siguiente tabla es simplemente una muestra de la lista de los defectos y como
 \textbf{Descripción} & \multicolumn{6}{|c|}{} \\
 \hline
 \end{tabular}
+
+\chapter{Integrador}
+\thispagestyle{empty}
+\section{Poblador}
+SEPA utiliza un módulo que permite la comunicación entre los datos del sistema de notas y estudiantes existente dentro de la universidad (Dir Doc). El fin de esto es preguntar por datos que posteriormente serán insertados en las tablas del sistema nuestro. Para esto se pregunta a un Web Service que provee una interfaz en donde uno obtiene la información, esta posteriormente se normaliza y adecua a nuestro sistema y finalmente se guarda. Existen varios procesos de integraciones, cada uno va dirigido a un objeto que se quiere poblar.
+\section{Web Service}
+Es una tecnología que permite la comunicación entre 2 sistemas mediante un sitio web que expone herramientas para el traspaso de datos, donde el encargado de generar las preguntas debe tener información consistente del que envía la información para poder establecer la conexión. Por otro lado los programas se relacionan gracias a un meta lenguaje basado en XML (de etiquetado) que describe el código que debe implementarse para poder realizar las consultas y retornar objetos con los cuales posteriormente trabaja.
+\section{Tareas}
+La integración se basa en distintas tareas separadas por el momento y la hora en donde se realizan, todas las tareas tienen el objetivo de poblar los datos propios por lo cual el trabajo de mapeo de datos es siempre distinto para todas las consultas y objetos que se tienen.
+\subsection{Tarea Diaria}
+Tareas que se ejecutan una ves al día, en donde podemos encontrar: Actualizar Cohortes y Actualizar Estudiantes.
+\subsection{Tarea Semanal}
+Tareas que se ejecutan una ves a la semana, en donde podemos encontrar: Actualizar Asignaturas Cursadas.
+\subsection{Tarea Mensual}
+Tareas que se ejecutan una ves al mes, en donde podemos encontrar: Actualizar Asignaturas Mallas, Actualizar Cursos, Actualizar Docentes y Actualizar Cargos.
+\subsection{Tarea Trimestral}
+Tareas que se ejecutan cada tres meses, en donde podemos encontrar: Actualizar Asignaturas, Actualizar Cupos Carreras, Actualizar Titulados.
+\subsection{Tarea Semestral}
+Tareas que se ejecutan cada semestre, en donde podemos encontrar: Actualizar Establecimientos y Actualizar Mallas.
+\subsection{Tarea Anual}
+Tareas que se ejecutan una ves al año, en donde podemos encontrar: Actualizar Carreras, Actualizar Planes de Estudio y Actualizar Quintalización.
+
 \bibliographystyle{plain}
 \bibliography{bibliografia.bib}
 \end{document}
