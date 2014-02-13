@@ -867,11 +867,30 @@ Todos estos mantenedores cumplen con las mismas funciones de buscar, borrar, fil
 
 \chapter{Rendimiento}
 \section{Jmeter}
-asdf
-\section{Firebug}
-asdf
+Es un software que permite la medición de flujos de carga en aplicaciones web, documenta y graba la ejecución de actividades dentro de un sitio con una dirección y un puerto. Una ves grabado el flujo este se puede multiplicar por las cantidades que uno desee, de tal manera que uno simule las peticiones de muchos usuarios concurrentes en la aplicación. La concurrencia es simplemente la cantidad de usuarios dividido por la cantidad de tiempo.
 
+Una de las características de Jmeter es que entrega información de las peticiones y los fallos que puedan ocurrir en  las ejecuciones, por lo tanto si un elemento del flujo falla (ya sea una variable o una imagen que no puede cargarse apropiadamente).
 
+Por lo tanto dentro de este proyecto nosotros haremos pruebas para medir la concurrencia y la cantidad de errores con respecto a 100 o mas usuarios en la aplicación web.
+
+\subsection{Medición de Concurrencia}
+Primero que nada se inicia Jmeter, por ejemplo si es en Linux, es necesario bajar de Internet la version compilada y ejecutar el archivo jmeter.sh. Una ves dentro, iniciamos la prueba.
+
+Para realizar esta prueba se inicia un grupo de hilos (dentro de un plan de pruebas), seguidamente dentro del grupo de hilos las siguientes herramientas:
+
+\begin{enumerate}
+	\item Gestor de Cookies HTTP: Se utiliza para decirle a jmeter que guarde las cookies y actividades de navegación.
+	\item Gestor de Cabecera HTTP: Se utiliza para decirle a jmeter que guarde las paginas que se van a visitar concurrentemente.
+	\item Valores por defecto para petición HTTP: Se utiliza para decirle a jmeter que registre valores que se utilizan en la navegación.
+	\item Controlador de Grabación: El grabador de Jmeter, utilizado para registrar la lista de actividades que se hacen dentro de una dirección y un puerto, para después emular este flujo multiplicado por la cantidad de usuarios con que se quiere medir la concurrencia.
+	\item Reporte Resumen: Muestra en tiempo real de la entrada de peticiones y los porcentajes de fallo de cada objeto que los usuarios simulados ejecutan. Cuando el proceso de simulación termina, se pueden ver los valores totales de errores y concurrencia.
+	\item Árbol de resultados: Muestra si cada uno de los objetos fue procesado satisfactoriamente o fue procesado con error. De esta manera uno también puede observar el log del error que se produjo u omitir ciertas partes que pueden ser poco interesantes para el estudio.
+\end{enumerate}
+
+El siguiente gráfico muestra la cantidad de errores y la concurrencia simulando de 100 a 1000 usuarios.
+
+\section{Recomendaciones}
+asdf
 \chapter{Diagrama del Proyecto}
 \section{Información}
 Esto es un servicio que alimenta a sus datos gracias a un servicio web, Usando el framework Apache CXF nos permite gestionar estos datos y nosotros con java y Spring Data somos capaces de entregárselos a nuestra base de datos PostgresSQL. De esta manera nosotros podemos con Spring Security ocupar los Beans de Spring que nos gestionan las paginas del sitio de mantenedores. El sitio por su parte esta echo con JSF para mostrar en pantalla sus datos, por encima tenemos un componente que enriquece las características de JSF llamado Primefaces, el cual nos agrega funcionalidad y características nuevas, como por ejemplo cajas de texto con parámetros que verifican los datos buscando errores en ellos así evitando completamente que el usuario use de mala manera el sitio.
@@ -886,17 +905,21 @@ Esto es un servicio que alimenta a sus datos gracias a un servicio web, Apache C
 \end{center}
 \end{figure}
 
-\section{Recomendaciones}
-asdf
 \chapter{Corolario}
 
 \section{Garantías de calidad}
 asdf
 
 \section{Conclusión}
-asdf
+El trabajo correspondiente al Sistema Mantenedor e Integrador en SEPA ha mostrado una forma de como recuperar datos que pueden ser difíciles de manejar. Los datos para este trabajo no estaban del todo bien organizados, esto quiere decir que cuando uno observa los datos, es posible encontrar insuficiencias de campos en los objetos mostrados en las tablas de los mantenedores, para lo cual los Mantenedores están preparados para ingresar datos en los sectores que lo requieran.
+
+También es posible identificar errores estructurales de información. En el sistema Integrador entraban datos que contenían errores repetidos en todas las filas de ciertas tablas, para lo cual este sistema esta preparado para resistir ese tipo de datos y cargar una data estándar que mas adelante será reparada por el sistema Mantenedor.
+
+Finalmente como análisis final se determina que este trabajo es necesario para cada organización educacional chilena, ya que en cada una de ellas existen datos que tienen estructuras antiguas de orden e indexado, lo que hace difícil para sistemas nuevos o venideros generar productos que ayuden en el desempeño de actividades, tales como organización económica de la institución académica, orden y mantenimiento de los sistemas docentes.
 \section{Trabajo Futuro}
-asdf
+Para ampliar las posibilidades de un trabajo que descansa sobre el valor de potenciar las capacidades administrativas de una institución académica, es necesario hacer estudios que posibiliten un mayor alcance de datos, tal como lo hace sepa, por tal razón es de vital importancia promover nuevas mejoras que hagan de este sistema una herramienta completa en el desarrollo de las capacidades generales de una organización, como lo es la Universidad Tecnológica Metropolitana.
+
+Finalizando, se puede pensar que un trabajo como este es perfectamente capaz de entregar datos y argumentos solidos en pos de generar estudios científicos relacionados con indicadores de calidad en educación, puesto que con el sistema SEPA en las condiciones actuales, se tienen todas las herramientas preparadas para tales propósitos. 
 \bibliographystyle{plain}
 \bibliography{bibliografia.bib}
 \end{document}
