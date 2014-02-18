@@ -879,7 +879,7 @@ Primero que nada se inicia Jmeter, por ejemplo si es en Linux, es necesario baja
 Para realizar esta prueba se inicia un grupo de hilos (dentro de un plan de pruebas), seguidamente dentro del grupo de hilos las siguientes herramientas:
 
 \begin{enumerate}
-	\item Gestor de Cookies HTTP: Se utiliza para decirle a jmeter que guarde las cookies y actividades de navegación.
+	\item Gestor de Cookies HTTP: Se utiliza para decirle a jmeter que guarde las cookies y actividades de navegación. 
 	\item Gestor de Cabecera HTTP: Se utiliza para decirle a jmeter que guarde las paginas que se van a visitar concurrentemente.
 	\item Valores por defecto para petición HTTP: Se utiliza para decirle a jmeter que registre valores que se utilizan en la navegación.
 	\item Controlador de Grabación: El grabador de Jmeter, utilizado para registrar la lista de actividades que se hacen dentro de una dirección y un puerto, para después emular este flujo multiplicado por la cantidad de usuarios con que se quiere medir la concurrencia.
@@ -887,10 +887,24 @@ Para realizar esta prueba se inicia un grupo de hilos (dentro de un plan de prue
 	\item Árbol de resultados: Muestra si cada uno de los objetos fue procesado satisfactoriamente o fue procesado con error. De esta manera uno también puede observar el log del error que se produjo u omitir ciertas partes que pueden ser poco interesantes para el estudio.
 \end{enumerate}
 
-El siguiente gráfico muestra la cantidad de errores y la concurrencia simulando de 100 a 1000 usuarios.
+El siguiente gráfico muestra la cantidad de errores y la concurrencia simulando de 100 a 1000 usuarios realizando una tarea simple como entrar mirar unos datos y salir. Como se puede observar, hay una tendencia a un error que supera el 20 por ciento en el flujo de acciones. Esto quiere decir que el sistema soporta de una manera estable a lo mas unos 300 usuarios, asegurando que estos usuarios verán la pagina de una manera mas o menos parecida, todo esto sin contar el tiempo de carga que se puede producir por una sobre petición en el sistema.
+
+Por otro lado en el tema de la concurrencia se puede inferir que el sistema puede hacer peticiones a una taza de 5 usuarios en un segundo, dando a entender que el sistema puede sufrir un alto retraso con respecto al tiempo si se llegan a sobrepasar los 10 usuarios concurrentes.
+
+\begin{figure}[!hbp]
+\begin{center}
+\includegraphics[scale=0.6,angle=0]{images/g1.jpg}
+\caption{Gráfico de Cantidad de Usuarios contra Porcentaje de error y Concurrencia}
+
+\end{center}
+\end{figure}
 
 \section{Recomendaciones}
-asdf
+
+Las 2 recomendaciones principales es que el sistema puede aguantar un poco más de lo que las pruebas de carga y estres puedan decirnos, ya que el ambiente en donde se trabaja tiene ciertas limitantes, por ejemplo el servidor de consulta es uno de prueba en el cual hay una cantidad limite de usuarios.
+
+Para finalizar es necesario también aclarar que las pruebas contemplan a usuarios que están realizando exactamente la misma acción, lo que hace que el sistema se sobrecargue en ciertos aspectos como consultas a bases de datos de manera repetitiva. Dando a entender que esta no es una situación para nada real y altamente fuerte para el sistema y que en condiciones reales es muy probable que se comporte un poco mejor que lo que pueden decir los resultados.
+
 \chapter{Diagrama del Proyecto}
 \section{Información}
 Esto es un servicio que alimenta a sus datos gracias a un servicio web, Usando el framework Apache CXF nos permite gestionar estos datos y nosotros con java y Spring Data somos capaces de entregárselos a nuestra base de datos PostgresSQL. De esta manera nosotros podemos con Spring Security ocupar los Beans de Spring que nos gestionan las paginas del sitio de mantenedores. El sitio por su parte esta echo con JSF para mostrar en pantalla sus datos, por encima tenemos un componente que enriquece las características de JSF llamado Primefaces, el cual nos agrega funcionalidad y características nuevas, como por ejemplo cajas de texto con parámetros que verifican los datos buscando errores en ellos así evitando completamente que el usuario use de mala manera el sitio.
@@ -908,7 +922,17 @@ Esto es un servicio que alimenta a sus datos gracias a un servicio web, Apache C
 \chapter{Corolario}
 
 \section{Garantías de calidad}
-asdf
+
+La calidad de este sistema se ve potenciada por varios aspectos, los cuales se explicaran a continuación:
+
+\begin{enumerate}
+	\item Uso de Metodología de Trabajo: El uso de PSP fortalece el desempeño del proyecto, mostrando los errores que el proceso de desarrollo pueda mostrar, desde esta perspectiva es necesario destacar que cuando se van anotando los errores estos tienden a disminuir con el tiempo por lo que en las etapas finales es muy difícil encontrar errores en el desarrollo.
+	\item Uso de Patrón de diseño: El patrón MVC ha echo de este proyecto un ente robusto y fuerte que puede ser mejorable incluso con poco conocimiento, ya que posee una base solida que sustenta su funcionamiento, por lo cual los cambios que se puedan nesesitar en el futuro harán uso de las herramientas que se fabricaron el desarrollo mismo.
+	\item Uso de Java y Frameworks: Esto nos permite una autonomía en varios aspectos, ya que nosotros como impulsores de proyectos tenemos siempre que velar por que todo el desarrollo sea altamente eficiente, y una manera muy clara de obtener eso es mediante del uso de herramientas que ya han sido muy probadas y se encuentran en uso de muchos otros proyectos. Dado que en otros sistemas esto ha funcionado muy bien es de esperar que en el nuestro también funcione excelente.
+	\item Pruebas de rendimiento: Las pruebas sobrecargan el sistema de tal manera que nosotros podemos decir a ciencia cierta que el software es capaz de resistir lo que los datos nos entregan, y eso nos demuestra que el trabajo realizado cumple con ciertas características que hacen a un proyecto web por lo menos algo que gran valor.
+\end{enumerate}
+
+Finalmente con de estos puntos se puede tener una clara idea de la calidad del producto que se entrega y de como este puede ir mejorando todavía, e inclusive puede cambiar y adecuase a otras necesidades.
 
 \section{Conclusión}
 El trabajo correspondiente al Sistema Mantenedor e Integrador en SEPA ha mostrado una forma de como recuperar datos que pueden ser difíciles de manejar. Los datos para este trabajo no estaban del todo bien organizados, esto quiere decir que cuando uno observa los datos, es posible encontrar insuficiencias de campos en los objetos mostrados en las tablas de los mantenedores, para lo cual los Mantenedores están preparados para ingresar datos en los sectores que lo requieran.
