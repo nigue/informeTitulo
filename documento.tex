@@ -918,6 +918,79 @@ Esto es un servicio que alimenta a sus datos gracias a un servicio web, Apache C
 
 \end{center}
 \end{figure}
+\chapter{Evaluación de Costos}
+\section{Puntos de Función}
+Para evaluar los costos monetarios de este proyecto se utilizara el calculo de Puntos de Función para llegar a un valor justificado. Mediante una función matemática que utiliza varios parámetros, divididos en 2 ramas.
+
+\section{Conteo de puntos}
+
+\begin{enumerate}
+	\item Ficheros Internos Lógicos (FIL): La información de los datos internos, contenida en bases de datos y ficheros de configuración.
+	\item Ficheros Externos de Interfaz (FEI): El proyecto utiliza datos que son administrados por la aplicación DirDoc.
+	\item Entrada Externa (EE): El sistema consume servicios web provenientes de otros sistemas.
+	\item Salida Externa (SE): El sistema muestra la totalidad de los datos internos en su parte visual.
+	\item Consulta Externa (CE): El sistema tiene mantenedores de todos sus datos, para poder ser modificables por los usuarios.
+\end{enumerate}
+
+\textbf{Tabla de valores ponderados}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Característica} & \textbf{Ponderación} & \textbf{Valor} & \textbf{Resultado} \\
+\hline
+FIL & 25 & medio & 4\\
+\hline
+FEI & 25 & medio & 4\\
+\hline
+EE & 16  & alto  & 2\\
+\hline
+SE & 26  & alto  & 3\\
+\hline
+CE & 26  & alto  & 3\\
+\hline
+\end{tabular}
+\\\\\\
+\textbf{Tabla de valores calculados}\\
+\begin{tabular}{| l | l | l | l | l |}
+\hline
+\textbf{TIPO} & \textbf{Bajo} & \textbf{Medio} & \textbf{Alto} & \textbf{Total} \\
+\hline
+EE & x3  & 4x4  & x6 & 16\\
+\hline
+SE & x4  & 4x5  & x7 & 20\\
+\hline
+CE & x3  & x4  & 2x6 & 12\\
+\hline
+FIL & x7 & x10 & 3x15 & 45\\
+\hline
+FEI & x5 & x7 & 3x10 & 30\\
+\hline
+TOTAL &  &  & & 123\\
+\hline
+\end{tabular}
+\\\\\\
+El total obtenido debe ser reparado con una serie de factores que se incluyen a continuación.
+
+\section{Características Generales del Sistema}
+
+En esta sección se evalúa con un número de 0 a 5 las distintas características que este sistema puede o no tener, y finalmente se ponderan para generar un valor que nos permite hacer el ajuste para el conteo de puntos anterior.
+
+\begin{enumerate}
+	\item Comunicación de Datos: [4] Varios teleprocesos pero con el mismo
+protocolo de comunicaciones.
+	\item Proceso Distribuido: [4] Proceso de datos distribuidos y transferencia de datos en línea en ambas direcciones. Por ejemplo una red de cajeros automáticos en donde estos procesan parte de la transacción.
+	\item Objetivos de Rendimiento: [] 
+	\item asdf
+	\item asdf
+	\item asdf
+	\item asdf
+	\item asdf
+	\item asdf
+	\item asdf
+	\item asdf
+	\item asdf
+	\item asdf
+	\item asdf
+\end{enumerate}
 
 \chapter{Corolario}
 
