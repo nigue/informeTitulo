@@ -975,22 +975,73 @@ El total obtenido debe ser reparado con una serie de factores que se incluyen a 
 En esta sección se evalúa con un número de 0 a 5 las distintas características que este sistema puede o no tener, y finalmente se ponderan para generar un valor que nos permite hacer el ajuste para el conteo de puntos anterior.
 
 \begin{enumerate}
-	\item Comunicación de Datos: [4] Varios teleprocesos pero con el mismo
-protocolo de comunicaciones.
-	\item Proceso Distribuido: [4] Proceso de datos distribuidos y transferencia de datos en línea en ambas direcciones. Por ejemplo una red de cajeros automáticos en donde estos procesan parte de la transacción.
-	\item Objetivos de Rendimiento: [] 
-	\item asdf
-	\item asdf
-	\item asdf
-	\item asdf
-	\item asdf
-	\item asdf
-	\item asdf
-	\item asdf
-	\item asdf
-	\item asdf
-	\item asdf
+	\item Comunicación de Datos: [4 puntos] Varios teleprocesos pero con el mismo protocolo de comunicaciones.
+	\item Proceso Distribuido: [4 puntos] Proceso de datos distribuidos y transferencia de datos en línea en ambas direcciones. Por ejemplo una red de cajeros automáticos en donde estos procesan parte de la transacción.
+	\item Objetivos de Rendimiento: [4 puntos] Se utilizan herramientas de análisis de rendimiento durante el diseño, desarrollo e instalación, con el objetivo de alcanzar el rendimiento demandado por el usuario.
+	\item Configuración de Explotación Usada intensamente por Otros Sistemas: [1 punto] Existen restricciones, pero son las usuales de cualquier equipo departamental. No es necesario hacer consideraciones especiales.
+	\item Tasa de Transacciones: [2 puntos] Se prevén peaks de operaciones semanales.
+	\item Entrada de datos EN-LÍNEA: [5 puntos] La entrada de datos interactivas superan el 30 por ciento de las transacciones.
+	\item Eficiencia con el Usuario Final: [3 puntos] Seis o más factores, pero sin especiales requerimientos de eficiencia.
+	\item Actualizaciones EN-LÍNEA: [4 puntos] Protección ante pérdidas y el sistema se ha de diseñar e implementar con estas consideraciones.
+	\item Lógica de Proceso Interno Compleja: [5 puntos] La aplicación llevará incorporados sistemas de seguridad y control.
+	\item Reusabilidad del Código: [5 puntos] La aplicación ha sido específicamente empaquetada y/o documentada para ser fácil de reutilizar.
+	\item Contempla la Conversión y Facilidad de Instalación: [0 puntos] No reemplazamos un sistema existente o no se requiere conversión. Tampoco se enuncia nada sobre la instalación.
+	\item Facilidad de Operación: [5 puntos] Sistema automático sin intervención.
+humana
+	\item Instalaciones Múltiples: [3 puntos] La aplicación correrá en múltiples entornos de Hw o Sw y se tiene en cuenta desde la fase de diseño.
+	\item Facilidad de Cambios: [3 puntos] El cambio de la configuración se hace interactivamente y tiene efecto inmediato.
 \end{enumerate}
+
+\textbf{Cálculo de los puntos de función ajustados}\\
+\begin{tabular}{| l | l | l |}
+\hline
+\textbf{No.} & \textbf{Factor de Complejidad} & \textbf{Valor}\\
+\hline
+1 &  Comunicación de Datos & 4 \\
+\hline
+2 &  Proceso Distribuído &4  \\
+\hline
+3 & Objetivos de Rendimiento  &4  \\
+\hline
+4 & Configuración Explotación Compartida  & 1 \\
+\hline
+5 & Tasa de Transacciones  & 2 \\
+\hline
+6 &  Entrada de Datos EN-LÍNEA &  5\\
+\hline
+7 & Eficiencia con el Usuario Final  &  3\\
+\hline
+8 & Actualizaciones En-LÍNEA  & 4 \\
+\hline
+9 & Lógica del Proceso Interno Compleja  &  5\\
+\hline
+10 & Reusabilidad del Código  &  5\\
+\hline
+11&  Contempla la Conversión e Instalación &  0\\
+\hline
+12& Facilidad de Operación  &  5\\
+\hline
+13& Instalaciones Múltiples  &  3\\
+\hline
+14& Facilidad de Cambios  & 3 \\
+\hline
+\multicolumn{2}{|c|}{Factor de Complejidad Total (FCT)} & 48\\
+\hline
+\end{tabular}
+\\\\\\
+
+\section{Puntos de función ajustados}
+La siguiente formula describe la cantidad ajustada de puntos de función y estos a su ves son multiplicados por el valor en horas de lo que cuesta en tiempo y dinero, cada uno de los puntos. Obteniendo finalmente el valor ponderado del proyecto en si.
+
+\begin{math}
+PFA=PFSA * ( 0.65 + ( 0.01 * FCT ) = 123 * ( 0.65 + ( 0.01 * 48 ) = 139
+\end{math}
+
+\begin{math}
+139 * (Horas * Valor Hora) = 139 * (4 * 4000) = 2224000
+\end{math}
+
+El proyecto vale un mínimo de 2.224.000 pesos.
 
 \chapter{Corolario}
 
