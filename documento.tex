@@ -925,27 +925,67 @@ Para evaluar los costos monetarios de este proyecto se utilizara el calculo de P
 \section{Conteo de puntos}
 
 \begin{enumerate}
-	\item Ficheros Internos Lógicos (FIL): La información de los datos internos, contenida en bases de datos y ficheros de configuración.
-	\item Ficheros Externos de Interfaz (FEI): El proyecto utiliza datos que son administrados por la aplicación DirDoc.
+	\item Ficheros Internos Lógicos (FIL): La información de los datos internos, contenida en bases de datos y ficheros de configuración. Se tomarán como medida la cantidad de tablas contenidas en el modelo.
+	\item Ficheros Externos de Interfaz (FEI): El proyecto utiliza datos externos que son administrados por la aplicación DirDoc. Por ejemplo hay un aproximado de 32 servicios adjuntos al modelo, contenidos en 11 servicios, mas, un aproximado de 24 sub-tareas externas en el integrador contenidas en 6 tareas grandes.
 	\item Entrada Externa (EE): El sistema consume servicios web provenientes de otros sistemas.
-	\item Salida Externa (SE): El sistema muestra la totalidad de los datos internos en su parte visual.
-	\item Consulta Externa (CE): El sistema tiene mantenedores de todos sus datos, para poder ser modificables por los usuarios.
+	\item Salida Externa (SE): El sistema muestra la totalidad de los datos internos en su parte visual. En este caso particular todas las tablas del modelo tienen un apartado visual en la vista.
+	\item Consulta Externa (CE): El sistema tiene mantenedores de todos sus datos en base de datos, para poder ser modificables por los usuarios.
 \end{enumerate}
 
 \textbf{Tabla de valores ponderados}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
-\textbf{Característica} & \textbf{Ponderación} & \textbf{Valor} & \textbf{Resultado} \\
+\textbf{Característica} & \textbf{Ponderación} & \textbf{Valor} & \textbf{Determinante ponderado} \\
 \hline
-FIL & 25 & medio & 4\\
+FIL & 49 & medio & 8\\
 \hline
-FEI & 25 & medio & 4\\
+FEI & 43 & medio & 3\\
 \hline
-EE & 16  & alto  & 2\\
+EE & 16  & alto  & 6\\
 \hline
-SE & 26  & alto  & 3\\
+SE & 43  & alto  & 8\\
 \hline
-CE & 26  & alto  & 3\\
+CE & 43  & alto  & 8\\
+\hline
+\end{tabular}
+\\\\\\
+Los parámetros anteriores deben ser convertidos en distintas tablas.\\
+\textbf{Complejidad de los Ficheros}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{RET/DET} & \textbf{1-19} & \textbf{20-50} & \textbf{51+} \\
+\hline
+1 & Bajo & Bajo & Medio\\
+\hline
+2-5 & Bajo & Medio & Alto\\
+\hline
+6+ & Medio & Alto & Alto\\
+\hline
+\end{tabular}
+\\\\\\
+\textbf{Complejidad de las Entradas}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{FICH/DET} & \textbf{1-4} & \textbf{5-15} & \textbf{16+} \\
+\hline
+0-1 & Bajo & Bajo & Medio\\
+\hline
+2 & Bajo & Medio & Alto\\
+\hline
+3+ & Medio & Alto & Alto\\
+\hline
+\end{tabular}
+\\\\\\
+\textbf{Complejidad de las Salidas}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{FICH/DET} & \textbf{1-5} & \textbf{6-19} & \textbf{20+} \\
+\hline
+0-1 & Bajo & Bajo & Medio\\
+\hline
+2-3 & Bajo & Medio & Alto\\
+\hline
+4+ & Medio & Alto & Alto\\
 \hline
 \end{tabular}
 \\\\\\
@@ -954,17 +994,17 @@ CE & 26  & alto  & 3\\
 \hline
 \textbf{TIPO} & \textbf{Bajo} & \textbf{Medio} & \textbf{Alto} & \textbf{Total} \\
 \hline
-EE & x3  & 4x4  & x6 & 16\\
+EE & x3  & \textbf{8x4}  & x6 & 32\\
 \hline
-SE & x4  & 4x5  & x7 & 20\\
+SE & x4  & \textbf{3x5}  & x7 & 15\\
 \hline
-CE & x3  & x4  & 2x6 & 12\\
+CE & x3  & x4  & \textbf{6x6} & 36\\
 \hline
-FIL & x7 & x10 & 3x15 & 45\\
+FIL & x7 & x10 & \textbf{8x15} & 120\\
 \hline
-FEI & x5 & x7 & 3x10 & 30\\
+FEI & x5 & x7 & \textbf{8x10} & 80\\
 \hline
-TOTAL &  &  & & 123\\
+TOTAL &  &  & & 283\\
 \hline
 \end{tabular}
 \\\\\\
@@ -1034,14 +1074,14 @@ humana
 La siguiente formula describe la cantidad ajustada de puntos de función y estos a su ves son multiplicados por el valor en horas de lo que cuesta en tiempo y dinero, cada uno de los puntos. Obteniendo finalmente el valor ponderado del proyecto en si.
 
 \begin{math}
-PFA=PFSA * ( 0.65 + ( 0.01 * FCT ) = 123 * ( 0.65 + ( 0.01 * 48 ) = 139
+PFA=PFSA * ( 0.65 + ( 0.01 * FCT ) = 283 * ( 0.65 + ( 0.01 * 48 ) = 319.79
 \end{math}
 
 \begin{math}
-139 * (Horas * Valor Hora) = 139 * (4 * 4000) = 2224000
+319.79 * (Horas * Valor Hora) = 319.79 * (4 * 4000) = 5116640
 \end{math}
 
-El proyecto vale un mínimo de 2.224.000 pesos.
+El proyecto vale un mínimo de 5.116.640 pesos.
 
 \chapter{Corolario}
 
