@@ -65,11 +65,11 @@ Autoridad Responsable
 \end{flushright}
 \chapter*{Resumen}
 \thispagestyle{empty}
-En las organizaciones, para manipular los recursos y la toma de decisiones, es necesario el uso de información procesada, el cual entrega valor agregado.
+En las organizaciones es necesario el uso de información procesada que permita manipular los recursos y tomar decisiones que conducen al valor agregado.
 
-La UTEM dispone del sistema S.E.P.A,. (Sistema Estadístico de Profesores y Alumnos), que consiste en un proyecto Web realizado en PHP que toma datos de alumnos, profesores y encargados provenientes de DirDoc, para posteriormente hacer cálculos predefinidos con el fin de mostrar indicadores que representen la realidad universitaria.
+La UTEM dispone del sistema S.E.P.A.(Sistema Estadístico de Profesores y Alumnos), que consiste en un proyecto Web realizado con la herramienta PHP que toma datos de alumnos, profesores y encargados provenientes de DirDoc, para posteriormente hacer cálculos predefinidos para obtener indicadores que representen la realidad universitaria.
 
-Sin embargo S.E.P.A. presenta insuficiencias: No se disponía de un servicio web (una forma de acceso mas segura y controlada) que se comunique con DirDoc; Hay inconsistencia en los datos.
+Sin embargo S.E.P.A. presenta insuficiencias, por ejemplo: no dispone de un servicio web (una forma de acceso más segura y controlada) que se comunique con DirDoc o carece de formas alternativas de acceso, carece de multiroles y presenta inconsistencia en los datos..
 
 % ejemplos, no tiene servicio web dirdoc, inconsistencia de datos, carece de formas alternativas de accesos, carece multiples roles (más de 2).
 
@@ -87,9 +87,9 @@ El presente trabajo de Título ofrece una mejora al sistema S.E.P.A., con integr
 \thispagestyle{empty}
 La Universidad Tecnológica Metropolitana utiliza para la administración de toda la información referente a estudiantes, profesores y personal de administración un proyecto denominado Sistema Estadístico de Profesores y Alumnos (S.E.P.A.) basado en la tecnológica PHP. Este proyecto constituyó una forma de potenciar las capacidades operativas de la Universidad, generando indicadores de calidad y entregando una ventaja comparativa frente a otras universidades.
 
-La incidencia de este trabajo de título esta en la actualización del proyecto SEPA usando la tecnología Java que utiliza herramientas más estructuradas, extensibles y que tienen como resultado la materialización de sistemas informáticos más fácilmente mantenibles debido al uso de patrones de Diseño (explicados en este informe). Por ejemplo, se utilizará el Modelo Vista Controlador o una Persistencia basada en JPA (adaptador de persistencia en java, para establecer el modelo de base de datos solo con código java), Spring (para facilitar el desarrollo de la lógica del negocio) y PrimeFaces (paquete de desarrollo que se utiliza sobre java para mostrar una visualización cómoda para los usuarios, posee varias herramientas hechas para trabajar en sitios web). 
+El objetivo de este trabajo de título esta en la actualización del proyecto SEPA usando la tecnología Java que utiliza herramientas más estructuradas, extensibles y que tienen como resultado la materialización de sistemas informáticos de más fácil mantención debido al uso de Patrones de Diseño (explicados en este informe). Por ejemplo, se utilizará el Modelo Vista Controlador o una Persistencia basada en JPA (adaptador de persistencia en java, para establecer el modelo de base de datos solo con código java), Spring (para facilitar el desarrollo de la lógica del negocio) y PrimeFaces (paquete de desarrollo que se utiliza sobre java para mostrar una visualización cómoda a los usuarios, posee varias herramientas hechas para trabajar en sitios web). 
 
-Además, el proyecto se hará bajo la metodología PSP (Personal Software Process) que nos proporciona un modelo de trabajo basado en la caracterización de los tiempos y costes del trabajo de un ingeniero informático, adicionando documentación extra (explicada en este informe), correspondiente a eventos que caracterizaron las directrices de cómo se lleva adelante este trabajo, todo lo cual, conduce a una evaluación de la calidad del proyecto como programa.
+Además, el proyecto se hará bajo la metodología PSP (Personal Software Process) que nos proporciona un modelo de trabajo basado en la caracterización de los tiempos y costes de operación de un ingeniero informático, adicionando documentación extra (explicada en este informe), correspondiente a eventos que caracterizaron las directrices de cómo se lleva adelante esta tarea, todo lo cual, conduce a una evaluación de la calidad del proyecto como programa.
 
 Existen 3 tipos de beneficios que la Universidad puede obtener al hacerse con la versión mejorada del sistema SEPA:
 
@@ -97,9 +97,9 @@ Existen 3 tipos de beneficios que la Universidad puede obtener al hacerse con la
 \item La universidad se muestra al mercado como un ente preocupado de medir su calidad con herramientas tecnológicas que justifican un buen desempeño mediante indicadores cuantificables y verificables por 
 organismos reguladores.
 
-\item Beneficio de los usuarios, los cuales se ven favorecidos, ya que tendrán a su disposición una completa herramienta que los apoyará en la elección de su carga academia, gracias a la visualización de su desempeño posterior.
+\item Beneficio de los usuarios que tendrán a su disposición una completa herramienta que los apoyará en la elección de su carga academia, como asimismo la visualización de su desempeño posterior.
 
-\item Beneficio a futuro, dado el alto estándar de las herramientas utilizadas, la integración, en términos de programación, debiese resultar más sencilla, ya que este proyecto esta realizado bajo tecnologías más estandarizadas como lo son los proyectos desarrollados en java, maven, spring.
+\item Beneficio a futuro, dado el alto estándar de las herramientas utilizadas, la integración, en términos de programación, resultará más sencilla, ya que este proyecto está realizado bajo tecnologías más estandarizadas como lo son los proyectos desarrollados en Java, Maven y Spring.
 \end{enumerate}
 
 \chapter{Antecedentes}
@@ -111,13 +111,13 @@ El proyecto SEPA (Sistema Estadístico de Profesores y Alumnos, es el encargado 
 \section{Problema}
 El antiguo S.E.P.A. presenta faltas o insuficiencias, tales como: 
 \begin{itemize}
-	\item No se disponía de un servicio web (una forma de acceso mas segura y controlada) de DirDoc.
+	\item No se disponía de un servicio web (una forma de acceso más segura y controlada) de DirDoc.
 	\item Se detectaba inconsistencia en los datos.
-	\item Carecía de múltiples tipos de usuarios, diferenciando sus actividades.
+	\item Carecía de acceso a múltiples tipos de usuarios, diferenciados por actividad.
 	\item No existía una forma sencilla de modificar y actualizar la información.
 \end{itemize} 
 \section{Motivación}
-Ayudar a mejorar las herramientas de administración de la Universidad y aprender a desarrollar tecnologías que apoyan a instituciones públicas, los cuales, ayudan a la gente.
+Ayudar a mejorar las herramientas de administración de la Universidad y aprender a desarrollar tecnologías que apoyan a las instituciones públicas que finalmente ayudan a la gente.
 Para lograr esto se completarán las siguientes tareas:
 \begin{itemize}
 	\item Acceder a un servicio web para obtener los datos de manera segura.
@@ -137,9 +137,9 @@ El desarrollo del proyecto esta bajo la metodología Personal Sofware Process (P
 \chapter{Problema}
 \thispagestyle{empty}
 \section{Situación Actual}
-La organización dispone del sistema SEPA, el cual tiene una paleta de funcionalidades, que esperan en un futuro poder mejorar. Por ejemplo hoy se pueden generar gráficos y variables estadísticas que muestran información útil a la hora de tomar decisiones. Los profesores o funcionarios pueden entrar a mirar datos y comprobar indicadores. Para estos efectos ya se han pedido mejoras e inclusión de más actores frente a este sistema, mejorando no solo su funcionalidad si no que también agregando características de seguridad y mejora de la calidad de los datos.
+La organización dispone del sistema SEPA, el cual tiene una paleta de funcionalidades, que se espera en un futuro poder mejorar. Por ejemplo hoy se pueden generar gráficos y variables estadísticas que muestran información útil a la hora de tomar decisiones. Los profesores o funcionarios pueden entrar a mirar datos y comprobar indicadores. Para estos efectos ya se han pedido mejoras e inclusión de más actores frente a este sistema, mejorando no solo su funcionalidad si no que también agregando características de seguridad y mejora de la calidad de los datos.
 \section{Situación Propuesta}
-Una serie de módulos de mantenimiento de datos para arreglar los defectos que se presenten en todos los datos (provenientes del DirDoc) que son expuestos en los servicios web. Un sistema automatizado de integración con DirDoc,  para mantener actualizado Sepa, sin la necesidad de procesos manuales y directos en base de datos.
+Una serie de módulos de mantenimiento de datos, provenientes del DirDoc y que son expuestos en los servicios web, para reparar los defectos que se presenten. Un sistema automatizado de integración con DirDoc,  para mantener actualizado Sepa, sin la necesidad de procesos manuales y directos en base de datos.
 \section{Objetivos Generales y Específicos}
 \subsection{Objetivos Generales}
 \textit{Desarrollar un sistema de mantención de información estadística para la Universidad Tecnológica Metropolitana ayudando a sus procesos docentes y productivos, disponiendo de información veraz de la realidad universitaria.}
@@ -169,40 +169,40 @@ Una serie de módulos de mantenimiento de datos para arreglar los defectos que s
 \thispagestyle{empty}
 \section{Base Conceptual}
 \subsection{Establecer el problema}
-En la universidad existe la necesidad de mostrar información relevante para la toma de decisiones, esta información debe ser respaldada por las grandes cantidades de registros que se guardan constantemente en el sistema DirDoc de la universidad. Para este propósito existe el Sistema Estadístico de Profesores y Alumnos (SEPA), el cual otorga indicadores que pueden ser usados para la toma de decisiones. Como la universidad ha crecido, también crece la cantidad de información y la necesidad de actualizar y modificar los datos de manera más rápida y sencilla.
+En la universidad existe la necesidad de mostrar información relevante para la toma de decisiones, esta información debe ser respaldada por enormes volúmenes de registros que se guardan constantemente en el sistema DirDoc de la universidad. Para este propósito existe el Sistema Estadístico de Profesores y Alumnos (SEPA), el cual incluye indicadores que pueden ser usados para la toma de decisiones. Como la universidad ha crecido, también crece la cantidad de información y la necesidad de actualizar y modificar los datos de manera más rápida y sencilla.
 \subsection{Establecer la Solución}
-La solución de este proyecto es la creación de un un módulo que pueda consumir los servicios web que proveen datos que deben ser procesados y persistidos en una base de datos local. Este sistema debe validad la integridad de los datos evitando perdida de registros. Mas adelante se trabaja en un mantenedor para cada uno de estos datos que compone el sistema, en los cuales es posible buscar registros, comprobar que estén correctos, si no lo están, poder modificarlos.
+La solución de este proyecto es la creación de un Módulo que pueda concentrar los servicios web que proveen datos que deben ser procesados y mantenidos en una base de datos local. Este sistema debe validad la integridad de los datos evitando perdida de registros. A continuación se desarrolla un Mantenedor de los datos que componen el sistema, en el cual es posible buscar registros, comprobar que estén correctos, y si no lo están poder modificarlos.
 \subsection{¿Por qué ocupar Java?}
-El proyecto es construido a través del compendio de tecnologías que engloba la convención JEE, ya que de esta manera nos enfocamos en el proceso productivo de una manera bastante estandarizada, gracias a esta forma de trabajo podemos automatizar varios procesos y centrarnos en el proyecto.Eso facilita la construcción del proyecto de manera más flexible y rápida. Todo con el fin de realizar de la mejor manera posible este proyecto que beneficia a la universidad.
+El proyecto es construido a través del compendio de tecnologías que engloba la convención JEE, caracterizada por un enfoque estandarizado en el proceso productivo, lo que permite automatizar varios procesos y centrarnos en el proyecto. Esto permite la construcción del proyecto de manera más flexible y rápida.
 \subsection{¿Por qué no otras tecnologías?}
-Otras tecnologías como PHP nos permite crear la pagina de manera rápida e incorporar un framework de persistencia. Pero son difíciles de escalar y mantener.  Otros frameworks como Ruby on Rails podría llevar a cabo esta tarea de mejor manera. Pero el punto frágil de Ruby es que su curva de aprendizaje es bastante costosa.
+Algunas tecnologías como PHP permiten crear la página de manera rápida e incorporar un framework de persistencia pero son difíciles de escalar y mantener.  Otros frameworks como Ruby on Rails podrían llevar a cabo esta tarea de mejor manera. Pero el punto frágil es su curva de aprendizaje que es bastante costosa.
 
 % enfocar a las cosas que no se pueden haceren otros lenguajes.
 \section{Ciclo de vida del Software}
 \begin{enumerate}
 \item Toma de Requerimientos: Proceso que básicamente comprende 2 actividades, primero la toma de requerimientos en base al sistema SEPA anterior, segundo una serie de entrevistas para captar las historias de usuarios que posteriormente se convierten en requerimientos.
-\item Análisis de Requerimientos: Etapa en donde el profesor encargado discute con el alumno los requerimientos deben realizarse, de acuerdo con las expectativas y las necesidades del equipo de trabajo.
+\item Análisis de Requerimientos: Etapa en donde el profesor encargado discute con el alumno los requerimientos que deben realizarse, de acuerdo con las expectativas y las necesidades del equipo de trabajo.
 \item Diseño de la solución: Proceso en donde se desarrolla el modelo de datos que debe soportar a los requerimientos, y las interfaces asociadas.
-\item Diseño Estructural: En este punto el alumno trabaja desarrollando el proyecto en coordinación con el profesor encargado y este va revisando constantemente el avance, emitiendo preferencias y aclaraciones.
-\item Pruebas: Proceso por el cual el sistema en una fase anterior al termino de proyecto se encuentra en estudio, el profesor encargado verifica la fiabilidad y calidad de los requerimientos ya resueltos.
-\item Instalación: En este punto se produce la incorporación del sistema en su ambiente por defecto, lo que implica un termino del proyecto, solo dentro del marco de trabajo de título para el alumno de este proyecto.
+\item Diseño Estructural: En este punto el alumno trabaja desarrollando el proyecto en coordinación con el profesor encargado y éste va revisando constantemente el avance, emitiendo calificaciones y aclaraciones.
+\item Pruebas: Proceso por el cual el profesor encargado verifica la fiabilidad y calidad de los requerimientos ya resueltos.
+\item Instalación: En este punto se produce la incorporación del sistema en su ambiente por defecto, lo que implica un término del proyecto, solo dentro del marco de Trabajo de Título para el alumno de este proyecto.
 \end{enumerate}
 \section{Historia del Arte}
 La calidad de datos que se obtienen en un establecimiento educacional, es de vital importancia para la planificación y desarrollo de sus actividades, ya que permiten una normal toma de decisiones que afectan el crecimiento de la institución, ya sea de forma docente como administrativa. 
 
-Los estudios estadísticos son importantes por que entregan retroalimentación. Buscando como objetivo llegar más cerca de su visión como organización.
+Los estudios estadísticos son tambien importantes porque entregan retroalimentación y permiten una visión más cerca como organización.
 
-Las instituciones educacionales que producen profesionales deben estar evaluadas por organismos preparados en testificar las características de su desempeño. Para estos efectos, existen organismos estatales que acreditan lo que cada universidad propone, pero en otro lado existen entandares de calidad que son medidos por organismos extranjeros, para dar un sello de calidad, evaluado por datos estadísticos  \cite{data1}.
+Las instituciones educacionales que producen profesionales deben estar evaluadas por organismos preparados en auditar las características de su desempeño. Para estos efectos, existen organismos estatales que acreditan lo que cada universidad propone, pero por otro lado existen entandares de calidad que son medidos por organismos extranjeros, para dar un sello de calidad, evaluando a partir de datos estadísticos  \cite{data1}.
 
-En 2009 se abre el sitio QS Top Universities que hasta el día de hoy es un sitio altamente eficiente en evaluación a trabes de ránkings enfocados a entregar información a gente proveniente de post-grados, MBA, estudios de ingeniería y negocios. Desarrollando estadísticas de alto alcance en sitios web, eventos, guias y programas por Internet y finalmente entregando soluciones técnicas a otros organismos, tales como universidades o empresas privadas, entre otras.
+En 2009 se abre el sitio QS Top Universities que hasta el día de hoy es un sitio altamente eficiente en evaluación a trabes de ránkings enfocados a entregar información a organismos y personas relacionadas con post-grados, MBA, estudios de ingeniería y negocios, desarrollando estadísticas de alto alcance en sitios web, eventos, guías y programas por Internet y finalmente entregando soluciones técnicas a otros organismos, tales como universidades o empresas privadas, entre otras.
 
-Sus datos manejan información de 41 países, entre los que están: Argentina, Ecuador, Japon, Singapur, Australia, Egipto. Su servicio esta libre para todo el publico y permite un tipo de suscripción gratuita para visualizar tablas comparativas de manera bien simple.
+Sus datos manejan información de 41 países, entre los que están: Argentina, Ecuador, Japon, Singapur, Australia, Egipto. Su servicio es sin costo para todo el público y permite un tipo de suscripción gratuita para visualizar tablas comparativas de manera simple.
 
 Permite hacer comparaciones por categorías varias, ya sea país, estado, ciudad y otras características internas de la universidad como ponderaciones o prestaciones de alumnos, tales como cantidad de alumnos o la segregación por sexo o etnia en cada localidad.
 
 Su objetivo es ser el principal sitio de ránkings de educación con visualización con alcances estadísticos y comparativos a quienes estén dentro de su sistema.
 
-Una debilidad de este sistema es que solo hace comparaciones de carácter global y no se involucra en temas más finos sobre cada universidad, solo tiene datos recopilados de otras investigaciones para saldar ese tema.
+Una debilidad de este sistema es que solo hace comparaciones de carácter global y no se involucra en temas más finos sobre cada universidad, solo tiene datos recopilados de otras investigaciones para completar este tema.
 
 Es una empresa de tamaño mediano, con más de 150 empleados en oficinas de todo el mundo. También se realizan Tours en 70 ciudades en 39 países que permiten a más de 50.000 espectadores, los cuales buscan entrar a una universidad  \cite{data2}.
 
@@ -212,18 +212,17 @@ El Ránking de Calidad de las Universidades Chilenas, es un trabajo realizado po
 
 Mucha de esta información estadística es recopilada a traves de encuestas enviadas a distintas universidades y organismos de educación en Chile. De esta manera se puede obtener información importante para ser mostrada al publico que desea tomar una decisión en el mercado.
 
-Este sistema da cuenta de una necesidad por parte de las universidades, de ser más competitiva en el mercado universitario. Aumentando los esfuerzos por adquirir más estudiantes, mostrando mejores profesores, alumnos e investigaciones.
+Este sistema da cuenta de una necesidad por parte de las universidades, de ser más competitiva en el mercado universitario. Aumentando los esfuerzos por recibir más estudiantes, mostrando mejores profesores, alumnos e investigaciones.
 
-La gran debilidad de este sistema es que no se efectúan muchos criterios de comparación y por tanto solo da una arista para presentar la comparación lo que resulta incomodo al no poder ver desde otra perspectiva este sistema.
+La gran debilidad de este sistema es que no se muestran muchos criterios de comparación y tanto solo da una arista para comparar lo que resulta insuficiente para formarse una opinión global del sistema.
 
-Finalmente se nota a las universidades actuales buscando organismos extranjeros capaces de certificar las características de la educación que ofrecen, de esta manera muestran no solo una acreditación por un organismo chileno, si no también una necesidad por competir a nivel internacional \cite{data3}.
+Finalmente se observa a las universidades actuales buscando organismos extranjeros capaces de certificar las características de la educación que ofrecen, de esta manera muestran no solo una acreditación por un organismo chileno, sino también una necesidad de competir a nivel internacional \cite{data3}.
 
 \section{Justificación del Trabajo de Título}
-La universidad necesita un sistema que agregue funcionalidades que son necesarias para el control de sus datos de manera simple y segura. En el anterior SEPA los datos eran extraídos directamente del DirDoc, dando la posibilidad de cometer errores de inserción graves. Con este nuevo sistema, ahora no solo hay una seguridad con los datos que son transferidos desde servicios Web, si no que también implementa un sistema de autenticación, gracias a su sistema de perfiles de usuarios que limita el acceso en el sitio para mas de 2 tipos de usuarios.
+La universidad necesita un sistema informático que agregue funcionalidades que son necesarias para el control de sus datos de manera simple y segura. En el anterior SEPA los datos eran extraídos directamente del DirDoc, dando la posibilidad de cometer errores de inserción graves. Con este nuevo sistema, ahora no solo hay una seguridad con los datos que son transferidos desde servicios Web, sino que también implementa un Sistema de Autenticación, gracias a su sistema de perfiles de usuarios que limita el acceso en el sitio para más de 2 tipos de usuarios.
+Además de la variable costo aparecen otras al momento de la toma de decisión de comprar un sistema externo ya que un sistema de esta envergadura requiere también el consentimiento de varias entidades de poder dentro de la universidad, 
 
-Existe una razón económica, prima por otras ya que un sistema de esta envergadura requiere no solo dinero si no también el consentimiento de varias entidades de poder dentro de la universidad, para realmente tomar la decisión de comprar un sistema externo.
-
-Finalmente el punto negativo de todo esto, es que este trabajo esta acotado dentro de los margenes que debe tener un trabajo de Título, por lo tanto no es posible seguir en el desarrollo a menos que exista una visión de futuro y/o parte del profesor a cargo de este proyecto con el alumno que realiza este trabajo.
+Finalmente el punto de inflexión del proyecto, es que este esfuerzo esta acotado dentro de los márgenes que debe tener un Trabajo de Título, por lo tanto no es posible seguir en el desarrollo a menos que exista una visión de futuro sobre la pertinnencia de su completación por parte de las autoridades universitarias.
 \section{Análisis de las herramientas}
 El desarrollo de las aplicaciones debe ser con un lenguaje que nos permita la correcta ejecución de las tareas de diseño y desarrollo. Por lo cual resulta interesante desarrollar algunos criterios que nos mostrarán las características y la justificación de nuestra elección a la hora de pensar en un lenguaje apropiado para este proyecto.
 
@@ -237,13 +236,13 @@ El desarrollo de las aplicaciones debe ser con un lenguaje que nos permita la co
 
 \item Portabilidad: Capacidad de un lenguaje para correr en múltiples sistemas operativos \cite{data4}.
 
-\item Neutralidad: Independencia de la maquina en donde se ejecuta, haciendo una experiencia lo más similar posible entre distintas máquinas y sistemas operativos \cite{data4}.
+\item Neutralidad: Independencia de la maquina en donde se ejecuta, concibiendo una experiencia lo más similar posible entre distintas máquinas y sistemas operativos \cite{data4}.
 
 \item Interfaz: Capacidad de producir fácilmente interfaces cómodas para el usuario final \cite{data4}.
 
-\item Expresividad: Cantidad de lineas con las que una acción puede ejecutarse dentro del código \cite{data5}.
+\item Expresividad: Capacidad de minimizar el número de líneas con las que una acción puede ejecutarse dentro del código \cite{data5}.
 
-\item Compilación: Se refiere al tiempo que toma poder compilar el código producido.
+\item Compilación: Capacidad de minimizar el tiempo que toma poder compilar el código producido.
 
 \item Aprendizaje: Dificultad para aprender el lenguaje. Basado simplemente en la experiencia propia sobre cada lenguaje.
 
@@ -263,7 +262,7 @@ También es importante tener en cuenta el lenguaje a utilizar en el momento de l
 
 \item Ruby on Rails: Es un entorno de desarrollo web de código abierto que está optimizado para satisfacción de los programadores y de la productividad. Te permite escribir un buen código favoreciendo la convención antes que la configuración \cite{data9}.
 
-\item Java: Es un lenguaje de programación con el que podemos realizar cualquier tipo de programa. En la actualidad es un lenguaje muy extendido y cada vez cobra más importancia tanto en el ámbito de Internet como en la informática en general. Está desarrollado por la compañía Sun Microsystems con gran dedicación y siempre enfocado a cubrir las necesidades tecnológicas más punteras \cite{data10}. 
+\item Java: Es un lenguaje de programación con el que podemos realizar cualquier tipo de programa. En la actualidad es un lenguaje muy extendido y cada vez cobra más importancia tanto en el ámbito de Internet como en la informática en general. Está desarrollado por la compañía Sun Microsystems con gran dedicación y siempre enfocado a cubrir las necesidades tecnológicas de punta. \cite{data10}.
 \end{enumerate}
 
 En la siguiente tabla muestra una comparación de las cuatro tecnologías anteriormente presentadas de forma explicita para comprender nuestra elección. Es claro decir que uno de los aspectos que marca profundamente la elección sobre el lenguaje con que se va a realizar este proyecto, es determinada por los conocimientos que tiene el alumno y las indicaciones del profesor, en pos de realizar lo más rápido posible el trabajo, haciéndolo de forma elegante. 
@@ -306,9 +305,9 @@ Se mostrarán a continuación los criterios de calidad que el proyecto como tal 
 
 \begin{enumerate}
 
-\item Mantenibilidad: Característica que hace que nuestro proyecto sea fácil de corregir en caso de fallos, mas que nada se refiere a si las bases de nuestro proyecto están debidamente revisadas. Basándose en la concepción de que un proyecto que tiene un modelo bien establecido es más fácil de reparar \cite{data11}.
+\item Mantenibilidad: Característica que hace que nuestro proyecto sea fácil de corregir en caso de fallos, más que nada se refiere a si las bases de nuestro proyecto están debidamente revisadas. Basándose en la concepción de que un proyecto que tiene un modelo bien establecido es más fácil de reparar \cite{data11}.
 
-\item Flexibilidad: Característica que permite a nuestro proyecto un fácil modelo de cambios o adiciones de más características, incluyendo también el echo de que como es un sistema echo dentro del contexto de la Universidad esta lo suficientemente enfocado en ella, pero también es posible cambiar algunas cosas en pos de que este sistema funcione también en otras universidades. \cite{data11}.
+\item Flexibilidad: Característica que permite a nuestro proyecto un fácil modelo de cambios o adiciones de más características, incluyendo también el hecho de que como es un sistema hecho dentro del contexto de esta Universidad está lo suficientemente enfocado en ella, pero también es posible cambiar algunas cosas en pos de que este sistema funcione también en otras universidades. \cite{data11}.
 
 \item Testeabilidad: Esto nos muestra que el modelo del sistema ha pasado por un test antes de ser ocupado en el proyecto, de manera tal como es. \cite{data11}.
 
@@ -316,12 +315,12 @@ Se mostrarán a continuación los criterios de calidad que el proyecto como tal 
 
 \item Integridad: Este sistema se caracteriza por su integridad con los datos, lo que nos muestra un dedicado trabajo sobre el tema de la base de datos. \cite{data11}.
 
-\item Rapidez: El sistema esta echo de tal manera que debe funcionar de forma expedita y veloz, sobretodo con la enorme cantidad de datos que se van a manejar. \cite{data11}.
+\item Rapidez: El sistema está hecho de tal manera que debe funcionar de forma expedita y veloz, sobre todo con la enorme cantidad de datos que se van a manejar. \cite{data11}.
 
 \end{enumerate}
 
 \section{Patrones de Diseño}
-Son arquitecturas estandarizadas para del desarrollo de software, permiten a los proyectos ser resueltos con estrategias ya probadas y que funcionan en la mayoría de los casos. Existen muchos patrones distintos, algunos de ellos son:
+Son arquitecturas estandarizadas para el desarrollo de software, permiten a los proyectos ser resueltos con estrategias ya probadas y que funcionan en la mayoría de los casos. Existen muchos patrones distintos, algunos de ellos son:
 
 \begin{enumerate}
 
@@ -334,38 +333,38 @@ Son arquitecturas estandarizadas para del desarrollo de software, permiten a los
 \chapter{Introducción al PSP}
 \thispagestyle{empty}
 \section{Base Teórica}
-PSP (Proceso de Software Personal) es una metodología de desarrollo para proyectos informáticos, que tiene una serie de pasos enfocados en el ordenamiento, cuantificación y la categorización del trabajo y el tiempo. Es usada mundialmente por su fácil aprendizaje y su rápida incorporación. Este modelo de trabajo es solo para proyectos personales, osea en donde el desarrollador toma todo el trabajo por si solo.
+PSP (Proceso de Software Personal) es una metodología de desarrollo para proyectos informáticos, que tiene una serie de pasos enfocados en el ordenamiento, cuantificación y la categorización del trabajo y el tiempo. Es usada mundialmente por su fácil aprendizaje y su rápida incorporación. Este modelo de trabajo es solo para proyectos personales, o sea, en donde el desarrollador toma todo el trabajo por sí solo.
 
-Este tipo de trabajo nos proporciona una serie de tablas que muestran nuestros tiempos de desarrollo y avance del proyecto, básicamente en el PSP nosotros podemos obtener los tiempos de desarrollo y la cantidad de lineas de código para cada actividad o conjunto de actividades. De esta manera uno puede llegar a determinar un factor de calidad dentro de nuestro trabajo dentro de los estándares que uno estime conveniente utilizar.
+Este tipo de trabajo nos proporciona una serie de tablas que muestran nuestros tiempos de desarrollo y avance del proyecto, básicamente en el PSP nosotros podemos obtener los tiempos de desarrollo y la cantidad de líneas de código para cada actividad o conjunto de actividades. De esta manera uno puede llegar a determinar un factor de calidad dentro de nuestro trabajo dentro de los estándares que uno estime conveniente utilizar.
 
 PSP nos obliga a desarrollar una forma de trabajo en la cual un desarrollador programa y anota los tiempos de desarrollo y la cantidad de código que uno ha producido, dentro de distintas tablas hechas para ese propósito.
 
 \section{Criterios para uso de PSP}
-La necesidad de usar PSP fue concebida para generar un proyecto que tuviera un criterio de calidad cuantificable. Ya que nos proporcionaba tablas e indicadores que establecían con el tiempo en minutos, la cantidad de esfuerzo y errores que uno puede cometer en el trascurso del proyecto.
+La necesidad de usar PSP fue concebida para generar un proyecto que tuviera un criterio de calidad cuantificable. Ya que nos proporcionaba tablas e indicadores que establecen con el tiempo en minutos, la cantidad de esfuerzo y errores que uno puede cometer en el trascurso del proyecto.
 
 \section{Estructura del PSP}
 \subsection{El Trabajo del Ingeniero de Sofware}
-En este apartado se requiere desarrollar un lista de actividades que contemplan el desarrollo del proyecto, incluyendo todo lo que pueda servir como avances en el proyecto, ya sea investigar, reunirse con otros o desarrollar.
+En este apartado se requiere desarrollar una lista de actividades que contemplan el desarrollo del proyecto, incluyendo todo lo que pueda servir como avances en el proyecto, ya sea investigar, reunirse con otros o desarrollar.
 \subsection{La Gestión del Tiempo}
-Para este punto solo se necesita la estructuración del tiempo que uno tiene sobre el tiempo que se pretende dar al proyecto. Basándose en la lista de actividades.
+Para este punto solo se necesita la estructuración del tiempo que uno tiene sobre el tiempo que se pretende dar al proyecto, basándose en la lista de actividades.
 \subsection{El Control del Tiempo}
-Para este apartado se desarrolla una tabla que contiene una lista de actividades con los tiempos de inicio y termino de cada una de las cosas que se hacen. También se anotan los tiempos perdidos, el tipo de actividad y si esta completado o no.
+Para este apartado se desarrolla una tabla que contiene una lista de actividades con los tiempos de inicio y término de cada una de las tareas que se hacen. También se anotan los tiempos perdidos, el tipo de actividad y si está completada o no.
 \subsection{Planificación de Períodos y Productos}
-Este apartado se preocupa de la planificación semanal del tiempo, en la parte de desarrollo se tienen 3 tablas que nos permiten llevar los registros totales de tiempo en minutos de las actividades que hago durante la semana. La primera tabla muestra las sumas de los tiempos, la segunda muestra la actividad de las semanas pasadas y la tercera muestra el total de las semanas hasta hoy en día.
+Este apartado se preocupa de la planificación semanal del tiempo, en la parte de desarrollo se tienen 3 tablas que nos permiten llevar los registros totales de tiempo en minutos de las actividades hecha durante la semana. La primera tabla muestra las sumas de los tiempos, la segunda muestra la actividad de las semanas pasadas y la tercera muestra el total de las semanas hasta hoy en día.
 \subsection{La Planificación del Producto}
-El desarrollo del proyecto requiere de un cuaderno que registre la actividad en función de los trabajos que se van realizando, para lo cual se tiene un cuaderno de trabajos que registra las actividades con sus respectivas estimaciones de tiempo, sacadas de datos anteriores. Recordar que en esta tabla se anotan los trabajos que son las actividades diarias, así que se anota uno al día.
+El desarrollo del proyecto requiere de un cuaderno que registre la actividad en función de los trabajos que se van realizando, para lo cual se tiene un cuaderno de trabajos que registra las actividades con sus respectivas estimaciones de tiempo, sacadas de datos anteriores. Recordar que en esta tabla se anotan los trabajos que resumen las actividades diarias, así que se anota uno al día.
 \subsection{El Tamaño del Producto}
-Para estimar los costes de tiempo y valor de cada actividad que representa parte del desarrollo del un producto como tal, es necesario establecer formas de medición para valores que pueden ser cuantificables en unidades de trabajo. Para lo cual en esta actividad de mostrarán Estimaciones de tamaños para las actividades particulares de este proyecto.
+Para estimar los costes de tiempo y valor de cada actividad que representa parte del desarrollo del un producto como tal, es necesario establecer formas de medición para valores que pueden ser cuantificables en unidades de trabajo. Para lo cual en esta actividad se mostrarán Estimaciones de Tamaños para las actividades particulares de este proyecto.
 \subsection{La Gestión del Tiempo}
-Para poder desarrollar las actividades, se necesita tiempo, por lo cual resulta importante el manejarlo apropiadamente, para esto se hace una estimación aproximada del tiempo que consumirá la ejecución de las actividades relacionadas con el desarrollo del trabajo que esta en curso. Se expondrán dos tablas y un marco de referencias para las aproximaciones futuras.
+Para poder desarrollar las actividades, se necesita tiempo, por lo cual resulta importante manejarlo apropiadamente, para esto se hace una estimación aproximada del tiempo que consumirá la ejecución de las actividades relacionadas con el desarrollo del trabajo que está en curso. Se expondrán dos tablas y un marco de referencias para las aproximaciones futuras.
 \subsection{La Gestión de los Compromisos}
 Los compromisos que uno hace con las personas a las cuales espera entregar un proyecto, deben ser documentados, mostrando el tipo de actividad a realizar, el día, los participantes de ese compromiso, la hora en que se realiza, la fecha y finalmente lo que se recibe a cambio de la finalización de estas tareas. Es importante destacar que una correcta forma de manejar los compromisos lleva a un buen plan de trabajo.
 \subsection{La Gestión de las Programaciones}
 En un proyecto siempre es necesario definir las características importantes que comprenden la ejecución de cada una de las actividades que se están desarrollando, por tanto en este proyecto se tiene un registro de los puntos de control, los cuales representan las características importantes que el desarrollo de este trabajo debe comprender.
 \subsection{El Plan del Proyecto}
-Para generar un plan del proyecto se necesita tener un resumen de las características de como se desarrolla el trabajo, para lo cual se expondrá un molde para generar planes de proyectos, los cuales estiman la cantidad de trabajo que uno puede desarrollar de acuerdo a los trabajos anteriores que ha realizado. Finalmente se mostrará un ejemplo de estimación del tamaño del programa.
+Para generar un plan del proyecto se necesita tener un resumen de las características de cómo se desarrolla el trabajo, para lo cual se expondrá un molde para generar planes de proyectos, mediante el cual se estima la cantidad de esfuerzo que uno puede desarrollar de acuerdo a las labores anteriores que ha realizado. Finalmente se mostrará un ejemplo de estimación del tamaño del programa.
 \subsection{Defectos}
-El registro de los defectos es altamente importante, ya que nos permite la correcta verificación de cada incidente ocurrido dentro del proceso de desarrollo del software. El cuaderno de registro de errores se ocupa en el desarrollo de aplicaciones, y nos permite anotar un error cuando ha salido en modo de compilación para lo cual uno registra el tipo de error y el tiempo dedicado a la reparación de este error. El objetivo de esta tabla es impedir la repetición de ciertos errores que pueden ser reparados mediante del aprendizaje.\\
+El registro de los defectos es altamente importante, ya que nos permite la correcta verificación de cada incidente ocurrido dentro del proceso de desarrollo del software. El cuaderno de registro de errores se ocupa en el desarrollo de aplicaciones, y nos permite anotar un error cuando ha salido en modo de compilación para lo cual uno registra el tipo de error y el tiempo dedicado a la reparación de este error. El objetivo de esta tabla es impedir la repetición de ciertos errores que pueden ser reparados mediante el aprendizaje.\\
 \\
 \textbf{Tipos de Defectos}\\
 \begin{tabular}{| l | l | l | l |}
@@ -385,10 +384,10 @@ El registro de los defectos es altamente importante, ya que nos permite la corre
 \chapter{Aplicación del PSP}
 \thispagestyle{empty}
 \section{Explicación}
-Se mostrará la forma de desarrollo de las tablas PSP más importantes en el proyecto. Dando muestra de como es el trabajo del PSP dentro de nuestro proyecto SEPA. Tendremos el desarrollo de las tablas más importantes en el PSP frente a nuestro trabajo. Obtendremos una mirada clara frente a que es el PSP y como este permite complementar calidad en nuestro trabajo.
+Se mostrará la forma de desarrollo de las tablas PSP más importantes en el proyecto dando cuenta de cómo es el desempeño del PSP dentro de nuestro proyecto SEPA. Tendremos el desarrollo de las tablas más importantes en el PSP frente a nuestra operación. Obtendremos una mirada clara frente a que es el PSP y como éste permite complementar calidad en nuestra ocupación.
 \section{Desarrollo del PSP}
 \subsection{El Trabajo del Ingeniero de Sofware}
-En estos efectos se desarrollo la siguiente tabla de actividades, con su frecuencia semanal y sus minutos.
+Para estos efectos se desarrollo la siguiente tabla de actividades, con su frecuencia semanal y sus minutos.
 
 \begin{tabular}{|l | l | l |}
 \hline
@@ -406,7 +405,7 @@ Reparar Documentos & Mi, V & 840/semana\\
 \hline
 \end{tabular}
 \subsection{La Gestión del Tiempo}
-Para este caso en particular uno puede ver que se tienen todos los días de la semana destinados para el propósito de desarrollar el proyecto ya sea en informes o programar. En menos tiempo se reparten las tareas de investigar y reparar cosas.
+En este caso en particular uno puede ver que se tienen todos los días de la semana destinados para el propósito de desarrollar el proyecto ya sea en informes o programar. En menos tiempo se reparten las tareas de investigar y reparar cosas.
 \subsection{El Control del Tiempo}
 Se muestra la siguiente tabla de control de Tiempo, de forma resumida, para un día en especifico.
 
@@ -679,7 +678,7 @@ S  & Escribir   & Profesor & 3 & ... & Título \\
 \hline
 \end{tabular}
 \subsection{La Gestión de las Programaciones}
-A continuación una tabla que muestra un poco de como una persona que utiliza el PSP puede programar su lista de actividades.
+A continuación una tabla que muestra un poco como una persona que utiliza el PSP puede programar su lista de actividades.
 
 \textbf{Estudiante}: Miguel Angel Fuenzaldia Pino     \textbf{Fecha}: 9/10/2012\\\\\
 \begin{tabular}{| l | l |}
@@ -698,7 +697,7 @@ A continuación una tabla que muestra un poco de como una persona que utiliza el
 \hline
 \end{tabular}
 \subsection{El Plan del Proyecto}
-Se tiene un molde de lo que es el plan del proyecto, que es la parte mas fuerte del desarrollo en PSP, ya que nos muestra información acerca de tiempos por lineas de código en un compendio de actividades que puede ser una tarea a realizar semanalmente o en periodos más largos.
+Se tiene un molde de lo que es el plan del proyecto, que es la parte más consistente del desarrollo en PSP, ya que nos muestra información acerca de tiempos por líneas de código en un compendio de actividades que puede ser una tarea a realizar semanalmente o en periodos más largos.
 \\\\
 \textbf{Resumen del plan de Proyecto}\\
 \begin{tabular}{| l | l | l | l |}
@@ -819,19 +818,19 @@ La siguiente tabla es simplemente una muestra de la lista de los defectos y como
 \chapter{Integrador}
 \thispagestyle{empty}
 \section{Poblador}
-SEPA utiliza un módulo que permite la comunicación entre los datos del sistema de notas y estudiantes existente dentro de la universidad (Dir Doc). El fin de esto es preguntar por datos que posteriormente serán insertados en las tablas del sistema nuestro. Para esto se consume a un Web Service que provee una interfaz en donde se obtiene la información, esta posteriormente se normaliza y adecua a nuestro sistema y finalmente se persiste. Existen varios procesos de integraciones, cada uno va dirigido a un objeto que se quiere poblar.
+SEPA utiliza un módulo que permite la comunicación entre los datos del sistema de notas y estudiantes existente dentro de la universidad (Dir Doc). El fin de ésto es preguntar por datos que posteriormente serán insertados en las tablas del sistema nuestro. Para esto se utiliza a un Web Service que provee una interfaz en donde se obtiene la información, ésta posteriormente se normaliza y adecua a nuestro sistema y finalmente se persiste. Existen varios procesos de integraciones, cada uno va dirigido a un objeto que se quiere poblar.
 \section{Web Service}
-Es una tecnología que permite la comunicación entre 2 programas mediante un sistema que expone herramientas para el traspaso de datos, donde el encargado de generar las preguntas debe tener información consistente y poder establecer la conexión. Por otro lado los programas se relacionan gracias a un meta lenguaje basado en XML (de etiquetado) que describe el código que debe implementarse para poder realizar las consultas y retornar objetos con los cuales posteriormente trabaja.
+Es una tecnología que permite la comunicación entre 2 programas mediante un sistema que expone herramientas para el traspaso de datos, donde el encargado de generar las preguntas debe tener información consistente y poder establecer la conexión. Por otro lado los programas se relacionan gracias a un meta lenguaje basado en XML (de etiquetado) que describe el código que debe implementarse para poder realizar las consultas y retornar objetos con los cuales posteriormente opera.
 
-Eso es posible gracias a que se hace uso del framework Apache CXF que nos abstrae de la complejidad de programar un servicio web y nos permite realizar esta tarea de manera fácil. CXF nos pide información relacionada con la dirección del servicio a consumir y el se encarga de traernos las respuestas que necesitemos.
+Eso es posible gracias a que se hace uso del framework Apache CXF que nos abstrae de la complejidad de programar un servicio web y nos permite realizar esta tarea de manera fácil. CXF nos pide información relacionada con la dirección del servicio a consumir y él se encarga de traernos las respuestas que necesitemos.
 \section{Tareas}
 La integración se basa en distintas tareas separadas por el momento y la hora en donde se realizan, todas las tareas tienen el objetivo de poblar los datos propios por lo cual el trabajo de mapeo de datos es siempre distinto para todas las consultas y objetos que se tienen.
 \subsection{Tarea Diaria}
-Tareas que se ejecutan una ves al día, en donde podemos encontrar: Actualizar Cohortes y Actualizar Estudiantes. El proceso obtiene los datos, principalmente, del servicio web llamado servicio carrera.
+Tareas que se ejecutan una vez al día, en donde podemos encontrar: Actualizar Cohortes y Actualizar Estudiantes. El proceso obtiene los datos, principalmente, del servicio web llamado servicio carrera.
 \subsection{Tarea Semanal}
-Tareas que se ejecutan una ves a la semana, en donde podemos encontrar: Actualizar Asignaturas Cursadas. El proceso obtiene los datos, principalmente, del servicio web llamado servicio curso.
+Tareas que se ejecutan una vez a la semana, en donde podemos encontrar: Actualizar Asignaturas Cursadas. El proceso obtiene los datos, principalmente, del servicio web llamado servicio curso.
 \subsection{Tarea Mensual}
-Tareas que se ejecutan una ves al mes, en donde podemos encontrar: Actualizar Asignaturas Mallas, Actualizar Cursos, Actualizar Docentes y Actualizar Cargos. El proceso obtiene los datos, principalmente, del servicio web llamado servicio curso y docente.
+Tareas que se ejecutan una vez al mes, en donde podemos encontrar: Actualizar Asignaturas Mallas, Actualizar Cursos, Actualizar Docentes y Actualizar Cargos. El proceso obtiene los datos, principalmente, del servicio web llamado servicio curso y docente.
 \subsection{Tarea Trimestral}
 Tareas que se ejecutan cada tres meses, en donde podemos encontrar: Actualizar Asignaturas, Actualizar Cupos Carreras, Actualizar Titulados. El proceso obtiene los datos, principalmente, del servicio web llamado servicio utem y curso.
 \subsection{Tarea Semestral}
@@ -846,7 +845,7 @@ El proyecto mantenedor es un sitio web basado en Java Server Faces o (JSF), que 
 \section{Ingreso}
 El ingreso al sitio sitio se hace con usuario y contraseña, cada usuario esta asociado a un perfil que limita el uso en el sitio, la autentificación esta hecha con Spring Security, un framework que permite automatizar el paso de perfiles con sus contraseñas, gestionando la encriptación y la desencriptación, de esta manera se asegura que los ingresos al sitio son seguros.
 
-También el inicio de la pagina cuenta con links de la universidad hacia sitos de interés que están dentro de la Universidad.
+También el inicio de la página cuenta con links de la universidad hacia sitios de interés que están dentro de la Universidad.
 \section{Mantenedores}
 Al ingresar al sitio uno puede ver un menú con los distintos mantenedores, abajo se ve un registro con los ingresos al sitio e información detallada con algún indicador.
 
@@ -867,14 +866,15 @@ Todos estos mantenedores cumplen con las mismas funciones de buscar, borrar, fil
 
 \chapter{Rendimiento}
 \section{Jmeter}
-Es un software que permite la medición de flujos de carga en aplicaciones web, documenta y graba la ejecución de actividades dentro de un sitio con una dirección y un puerto. Una ves grabado el flujo este se puede multiplicar por las cantidades que uno desee, de tal manera que uno simule las peticiones de muchos usuarios concurrentes en la aplicación. La concurrencia es simplemente la cantidad de usuarios dividido por la cantidad de tiempo.
+Es un software que permite la medición de flujos de carga en aplicaciones web, documenta y graba la ejecución de actividades dentro de un sitio con una dirección y un puerto. Una vez grabado el flujo este se puede multiplicar por las cantidades que uno desee, de tal manera que uno simule las peticiones de muchos usuarios concurrentes en la aplicación. La concurrencia es simplemente la cantidad de usuarios dividido por la cantidad de tiempo.
 
 Una de las características de Jmeter es que entrega información de las peticiones y los fallos que puedan ocurrir en  las ejecuciones, por lo tanto si un elemento del flujo falla (ya sea una variable o una imagen que no puede cargarse apropiadamente).
 
-Por lo tanto dentro de este proyecto nosotros haremos pruebas para medir la concurrencia y la cantidad de errores con respecto a 100 o mas usuarios en la aplicación web.
+Por lo tanto dentro de este proyecto nosotros haremos pruebas para medir la concurrencia y la cantidad de errores con respecto a 100 o más usuarios en la aplicación web.
 
 \subsection{Medición de Concurrencia}
-Primero que nada se inicia Jmeter, por ejemplo si es en Linux, es necesario bajar de Internet la version compilada y ejecutar el archivo jmeter.sh. Una ves dentro, iniciamos la prueba.
+
+Primero que nada se inicia Jmeter, por ejemplo si es en Linux, es necesario bajar de Internet la versión compilada y ejecutar el archivo jmeter.sh. Una vez dentro, iniciamos la prueba.
 
 Para realizar esta prueba se inicia un grupo de hilos (dentro de un plan de pruebas), seguidamente dentro del grupo de hilos las siguientes herramientas:
 
@@ -883,11 +883,11 @@ Para realizar esta prueba se inicia un grupo de hilos (dentro de un plan de prue
 	\item Gestor de Cabecera HTTP: Se utiliza para decirle a jmeter que guarde las paginas que se van a visitar concurrentemente.
 	\item Valores por defecto para petición HTTP: Se utiliza para decirle a jmeter que registre valores que se utilizan en la navegación.
 	\item Controlador de Grabación: El grabador de Jmeter, utilizado para registrar la lista de actividades que se hacen dentro de una dirección y un puerto, para después emular este flujo multiplicado por la cantidad de usuarios con que se quiere medir la concurrencia.
-	\item Reporte Resumen: Muestra en tiempo real de la entrada de peticiones y los porcentajes de fallo de cada objeto que los usuarios simulados ejecutan. Cuando el proceso de simulación termina, se pueden ver los valores totales de errores y concurrencia.
+    \item Reporte Resumen: Muestra en tiempo real la entrada de peticiones y los porcentajes de fallo de cada objeto que los usuarios simulados ejecutan. Cuando el proceso de simulación termina, se pueden ver los valores totales de errores y concurrencia.
 	\item Árbol de resultados: Muestra si cada uno de los objetos fue procesado satisfactoriamente o fue procesado con error. De esta manera uno también puede observar el log del error que se produjo u omitir ciertas partes que pueden ser poco interesantes para el estudio.
 \end{enumerate}
 
-El siguiente gráfico muestra la cantidad de errores y la concurrencia simulando de 100 a 1000 usuarios realizando una tarea simple como entrar mirar unos datos y salir. Como se puede observar, hay una tendencia a un error que supera el 20 por ciento en el flujo de acciones. Esto quiere decir que el sistema soporta de una manera estable a lo mas unos 300 usuarios, asegurando que estos usuarios verán la pagina de una manera mas o menos parecida, todo esto sin contar el tiempo de carga que se puede producir por una sobre petición en el sistema.
+El siguiente gráfico muestra la cantidad de errores y la concurrencia simulando de 100 a 1000 usuarios realizando una tarea simple como entrar mirar unos datos y salir. Como se puede observar, hay una tendencia a un error que supera el 20 por ciento en el flujo de acciones. Esto quiere decir que el sistema soporta de una manera estable a lo más unos 300 usuarios, asegurando que estos usuarios verán la página de una manera más o menos parecida, todo esto sin contar el tiempo de carga que se puede producir por una sobre petición en el sistema.
 
 Por otro lado en el tema de la concurrencia se puede inferir que el sistema puede hacer peticiones a una taza de 5 usuarios en un segundo, dando a entender que el sistema puede sufrir un alto retraso con respecto al tiempo si se llegan a sobrepasar los 10 usuarios concurrentes.
 
@@ -901,13 +901,13 @@ Por otro lado en el tema de la concurrencia se puede inferir que el sistema pued
 
 \section{Recomendaciones}
 
-Las 2 recomendaciones principales es que el sistema puede aguantar un poco más de lo que las pruebas de carga y estres puedan decirnos, ya que el ambiente en donde se trabaja tiene ciertas limitantes, por ejemplo el servidor de consulta es uno de prueba en el cual hay una cantidad limite de usuarios.
+Las 2 recomendaciones principales son que el sistema puede aguantar un poco más de lo que las pruebas de carga y estrés puedan decirnos, ya que el ambiente en donde se trabaja tiene ciertas limitantes, por ejemplo el servidor de consulta es uno de prueba en el cual hay una cantidad limitada de usuarios.
 
-Para finalizar es necesario también aclarar que las pruebas contemplan a usuarios que están realizando exactamente la misma acción, lo que hace que el sistema se sobrecargue en ciertos aspectos como consultas a bases de datos de manera repetitiva. Dando a entender que esta no es una situación para nada real y altamente fuerte para el sistema y que en condiciones reales es muy probable que se comporte un poco mejor que lo que pueden decir los resultados.
+Para finalizar es necesario también aclarar que las pruebas contemplan a usuarios que están realizando exactamente la misma acción, lo que hace que el sistema se sobrecargue en ciertos aspectos como consultas a bases de datos de manera repetitiva. Dando a entender que esta no es una situación para nada real y altamente demandante para el sistema y que en condiciones reales es muy probable que se comporte un poco mejor que lo que pueden decir los resultados.
 
 \chapter{Diagrama del Proyecto}
 \section{Información}
-Esto es un servicio que alimenta a sus datos gracias a un servicio web, Usando el framework Apache CXF nos permite gestionar estos datos y nosotros con java y Spring Data somos capaces de entregárselos a nuestra base de datos PostgresSQL. De esta manera nosotros podemos con Spring Security ocupar los Beans de Spring que nos gestionan las paginas del sitio de mantenedores. El sitio por su parte esta echo con JSF para mostrar en pantalla sus datos, por encima tenemos un componente que enriquece las características de JSF llamado Primefaces, el cual nos agrega funcionalidad y características nuevas, como por ejemplo cajas de texto con parámetros que verifican los datos buscando errores en ellos así evitando completamente que el usuario use de mala manera el sitio.
+Esto es un servicio que alimenta a sus datos gracias a un servicio web. Usando el framework Apache CXF nos permite gestionar estos datos y nosotros con Java y Spring Data somos capaces de entregárselos a nuestra base de datos PostgresSQL. De esta manera nosotros podemos con Spring Security ocupar los Beans de Spring que nos gestionan las páginas del sitio de mantenedores. El sitio por su parte está hecho con JSF para mostrar en pantalla sus datos. Por encima tenemos un componente que enriquece las características de JSF llamado Primefaces, el cual nos agrega funcionalidad y características nuevas, como por ejemplo cajas de texto con parámetros que verifican los datos buscando errores en ellos así evitando completamente que el usuario use de mala manera el sitio.
 
 Esto es un servicio que alimenta a sus datos gracias a un servicio web, Apache CXF nos permite gestionar estos datos y nosotros con java y Spring Data somos capaces de entregárselos a nuestra base de datos PostgresSQL. De esta manera nosotros podemos con Spring Security ocupar los Beans de Spring que nos gestionan las paginas del sitio de mantenedores. El sitio por su parte esta echo con JSF para mostrar en pantalla sus datos, por encima tenemos un componente que enriquece las características de JSF llamado Primefaces, el cual nos agrega funcionalidad y características nuevas, como por ejemplo cajas de texto con parámetros que verifican los datos buscando errores en ellos así evitando completamente que el usuario pueda mal usar el sitio.
 
@@ -925,7 +925,7 @@ Para evaluar los costos monetarios de este proyecto se utilizara el calculo de P
 \section{Conteo de puntos}
 
 \begin{enumerate}
-	\item Ficheros Internos Lógicos (FIL): La información de los datos internos, contenida en bases de datos y ficheros de configuración. Se tomarán como medida la cantidad de tablas contenidas en el modelo.
+	\item Ficheros Internos Lógicos (FIL): La información de los datos internos, contenida en bases de datos y ficheros de configuración se tomarán como medida la cantidad de tablas contenidas en el modelo.
 	\item Ficheros Externos de Interfaz (FEI): El proyecto utiliza datos externos que son administrados por la aplicación DirDoc. Por ejemplo hay un aproximado de 32 servicios adjuntos al modelo, contenidos en 11 servicios, mas, un aproximado de 24 sub-tareas externas en el integrador contenidas en 6 tareas grandes.
 	\item Entrada Externa (EE): El sistema consume servicios web provenientes de otros sistemas.
 	\item Salida Externa (SE): El sistema muestra la totalidad de los datos internos en su parte visual. En este caso particular todas las tablas del modelo tienen un apartado visual en la vista.
@@ -1026,8 +1026,7 @@ En esta sección se evalúa con un número de 0 a 5 las distintas característic
 	\item Lógica de Proceso Interno Compleja: [5 puntos] La aplicación llevará incorporados sistemas de seguridad y control.
 	\item Reusabilidad del Código: [5 puntos] La aplicación ha sido específicamente empaquetada y/o documentada para ser fácil de reutilizar.
 	\item Contempla la Conversión y Facilidad de Instalación: [0 puntos] No reemplazamos un sistema existente o no se requiere conversión. Tampoco se enuncia nada sobre la instalación.
-	\item Facilidad de Operación: [5 puntos] Sistema automático sin intervención.
-humana
+	\item Facilidad de Operación: [5 puntos] Sistema automático sin intervención humana.
 	\item Instalaciones Múltiples: [3 puntos] La aplicación correrá en múltiples entornos de Hw o Sw y se tiene en cuenta desde la fase de diseño.
 	\item Facilidad de Cambios: [3 puntos] El cambio de la configuración se hace interactivamente y tiene efecto inmediato.
 \end{enumerate}
@@ -1039,7 +1038,7 @@ humana
 \hline
 1 &  Comunicación de Datos & 4 \\
 \hline
-2 &  Proceso Distribuído &4  \\
+2 &  Proceso Distribuido &4  \\
 \hline
 3 & Objetivos de Rendimiento  &4  \\
 \hline
@@ -1071,7 +1070,7 @@ humana
 \\\\\\
 
 \section{Puntos de función ajustados}
-La siguiente formula describe la cantidad ajustada de puntos de función y estos a su ves son multiplicados por el valor en horas de lo que cuesta en tiempo y dinero, cada uno de los puntos. Obteniendo finalmente el valor ponderado del proyecto en si.
+La siguiente fórmula describe la cantidad ajustada de puntos de función y éstos a su vez son multiplicados por el valor en horas dando lo que cuesta en tiempo y dinero, cada uno de los puntos obteniéndose finalmente el valor ponderado del proyecto en sí.
 
 \begin{math}
 PFA=PFSA * ( 0.65 + ( 0.01 * FCT ) = 283 * ( 0.65 + ( 0.01 * 48 ) = 319.79
@@ -1090,24 +1089,24 @@ El proyecto vale un mínimo de 5.116.640 pesos.
 La calidad de este sistema se ve potenciada por varios aspectos, los cuales se explicaran a continuación:
 
 \begin{enumerate}
-	\item Uso de Metodología de Trabajo: El uso de PSP fortalece el desempeño del proyecto, mostrando los errores que el proceso de desarrollo pueda mostrar, desde esta perspectiva es necesario destacar que cuando se van anotando los errores estos tienden a disminuir con el tiempo por lo que en las etapas finales es muy difícil encontrar errores en el desarrollo.
-	\item Uso de Patrón de diseño: El patrón MVC ha echo de este proyecto un ente robusto y fuerte que puede ser mejorable incluso con poco conocimiento, ya que posee una base solida que sustenta su funcionamiento, por lo cual los cambios que se puedan nesesitar en el futuro harán uso de las herramientas que se fabricaron el desarrollo mismo.
-	\item Uso de Java y Frameworks: Esto nos permite una autonomía en varios aspectos, ya que nosotros como impulsores de proyectos tenemos siempre que velar por que todo el desarrollo sea altamente eficiente, y una manera muy clara de obtener eso es mediante del uso de herramientas que ya han sido muy probadas y se encuentran en uso de muchos otros proyectos. Dado que en otros sistemas esto ha funcionado muy bien es de esperar que en el nuestro también funcione excelente.
-	\item Pruebas de rendimiento: Las pruebas sobrecargan el sistema de tal manera que nosotros podemos decir a ciencia cierta que el software es capaz de resistir lo que los datos nos entregan, y eso nos demuestra que el trabajo realizado cumple con ciertas características que hacen a un proyecto web por lo menos algo que gran valor.
+        \item Uso de Metodología de Trabajo: El uso de PSP fortalece el desempeño del proyecto, mostrando los errores que el proceso de desarrollo pueda presentar, desde esta perspectiva es necesario destacar que cuando se van anotando los errores éstos tienden a disminuir con el tiempo por lo que en las etapas finales es muy difícil encontrar errores en el desarrollo.
+        \item Uso de Patrón de diseño: El patrón MVC ha hecho de este proyecto un ente robusto y consistente que puede ser mejorable incluso con poco conocimiento, ya que posee una base sólida que sustenta su funcionamiento, por lo cual los cambios que se puedan necesitar en el futuro harán uso de las herramientas que se fabricaron el desarrollo mismo.
+        \item Uso de Java y Frameworks: Esto nos permite una autonomía en varios aspectos, ya que nosotros como impulsores de proyectos tenemos siempre que velar por que todo el desarrollo sea altamente eficiente, y una manera muy clara de obtener eso es mediante el uso de herramientas que ya han sido muy probadas y se encuentran en uso de muchos otros proyectos. Dado que en otros sistemas esto ha funcionado muy bien es de esperar que en el nuestro también funcione de igual modo.
+        \item Pruebas de rendimiento: Las pruebas sobrecargan el sistema de tal manera que nos permiten decir a ciencia cierta si el software es capaz de resistir lo que los datos nos entregan, y estas nos demuestran que el trabajo realizado cumple con ciertas características que cumple un proyecto web de gran valor.
 \end{enumerate}
 
-Finalmente con de estos puntos se puede tener una clara idea de la calidad del producto que se entrega y de como este puede ir mejorando todavía, e inclusive puede cambiar y adecuase a otras necesidades.
+Finalmente con de estos puntos se puede tener una clara idea de la calidad del producto que se entrega y de cómo éste puede ir mejorando todavía, e inclusive puede cambiar y adecuase a otras necesidades.
 
 \section{Conclusión}
-El trabajo correspondiente al Sistema Mantenedor e Integrador en SEPA ha mostrado una forma de como recuperar datos que pueden ser difíciles de manejar. Los datos para este trabajo no estaban del todo bien organizados, esto quiere decir que cuando uno observa los datos, es posible encontrar insuficiencias de campos en los objetos mostrados en las tablas de los mantenedores, para lo cual los Mantenedores están preparados para ingresar datos en los sectores que lo requieran.
+El trabajo correspondiente al Sistema Mantenedor e Integrador en SEPA ha mostrado como recuperar datos que pueden ser difíciles de manejar. Los datos para este trabajo no estaban del todo bien organizados, esto quiere decir que cuando uno observa los datos, es posible encontrar insuficiencias de campos en los objetos mostrados en las tablas de los mantenedores, para lo cual los Mantenedores están preparados para ingresar datos en los sectores que lo requieran.
 
-También es posible identificar errores estructurales de información. En el sistema Integrador entraban datos que contenían errores repetidos en todas las filas de ciertas tablas, para lo cual este sistema esta preparado para resistir ese tipo de datos y cargar una data estándar que mas adelante será reparada por el sistema Mantenedor.
+También es posible identificar errores estructurales de información. Por ejemplo, en el sistema Integrador entraban datos que contenían errores repetidos en todas las filas de ciertas tablas. Este sistema está preparado para resistir ese tipo de datos y cargar una data estándar que más adelante será reparada por el sistema Mantenedor.
 
-Finalmente como análisis final se determina que este trabajo es necesario para cada organización educacional chilena, ya que en cada una de ellas existen datos que tienen estructuras antiguas de orden e indexado, lo que hace difícil para sistemas nuevos o venideros generar productos que ayuden en el desempeño de actividades, tales como organización económica de la institución académica, orden y mantenimiento de los sistemas docentes.
+Finalmente como corolario se estima que este proyecto es necesario implementar en cada organización educacional chilena, ya que en cada una de ellas existen datos que tienen estructuras antiguas de orden e indexado, lo que hace difícil para sistemas nuevos o venideros generar productos que apoyen la gestión y el desempeño de actividades, tales como la organización económica de la institución académica, orden y mantenimiento de los sistemas docentes.
 \section{Trabajo Futuro}
-Para ampliar las posibilidades de un trabajo que descansa sobre el valor de potenciar las capacidades administrativas de una institución académica, es necesario hacer estudios que posibiliten un mayor alcance de datos, tal como lo hace sepa, por tal razón es de vital importancia promover nuevas mejoras que hagan de este sistema una herramienta completa en el desarrollo de las capacidades generales de una organización, como lo es la Universidad Tecnológica Metropolitana.
+Para ampliar las posibilidades de un trabajo que descansa sobre el valor de potenciar las capacidades administrativas de una institución académica, es necesario hacer estudios que posibiliten un mayor alcance de datos, tal como lo hace SEPA, por tal razón es de vital importancia promover nuevas mejoras que hagan de este sistema una herramienta completa en el desarrollo de las capacidades generales de una organización, como lo es la Universidad Tecnológica Metropolitana.
 
-Finalizando, se puede pensar que un trabajo como este es perfectamente capaz de entregar datos y argumentos solidos en pos de generar estudios científicos relacionados con indicadores de calidad en educación, puesto que con el sistema SEPA en las condiciones actuales, se tienen todas las herramientas preparadas para tales propósitos. 
+Finalizando, se puede afirmar que un trabajo como éste es perfectamente capaz de entregar datos y argumentos sólidos en pos de generar estudios científicos relacionados con indicadores de calidad en educación, puesto que con el sistema SEPA en las condiciones actuales mejoradas, se tienen todas las herramientas preparadas para tales propósitos. 
 \bibliographystyle{plain}
 \bibliography{bibliografia.bib}
 \end{document}
