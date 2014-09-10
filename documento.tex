@@ -65,11 +65,11 @@ Autoridad Responsable
 \end{flushright}
 \chapter*{Resumen}
 \thispagestyle{empty}
-En las organizaciones es necesario el uso de información procesada que permita manipular los recursos y tomar decisiones que conducen al valor agregado.
+En las organizaciones es necesario el uso de información para tomar decisiones correctas. Tener un buen software, entrega valor agregado al proceso.
 
 La UTEM dispone del sistema S.E.P.A.(Sistema Estadístico de Profesores y Alumnos), que consiste en un proyecto Web realizado con la herramienta PHP que toma datos de alumnos, profesores y encargados provenientes de DirDoc, para posteriormente hacer cálculos predefinidos para obtener indicadores que representen la realidad universitaria.
 
-Sin embargo S.E.P.A. presenta insuficiencias, por ejemplo: no dispone de un servicio web (una forma de acceso más segura y controlada) que se comunique con DirDoc o carece de formas alternativas de acceso, carece de multiroles y presenta inconsistencia en los datos..
+Sin embargo S.E.P.A. presenta insuficiencias, por ejemplo: no dispone de un servicio web (una forma de acceso más segura y controlada) que se comunique con DirDoc o no presenta formas alternativas de acceso, no tiene multiroles y presenta datos incompletos.
 
 % ejemplos, no tiene servicio web dirdoc, inconsistencia de datos, carece de formas alternativas de accesos, carece multiples roles (más de 2).
 
@@ -85,9 +85,9 @@ El presente trabajo de Título ofrece una mejora al sistema S.E.P.A., con integr
 %\listoffigures
 \chapter*{Introducción}
 \thispagestyle{empty}
-La Universidad Tecnológica Metropolitana utiliza para la administración de toda la información referente a estudiantes, profesores y personal de administración un proyecto denominado Sistema Estadístico de Profesores y Alumnos (S.E.P.A.) basado en la tecnológica PHP. Este proyecto constituyó una forma de potenciar las capacidades operativas de la Universidad, generando indicadores de calidad y entregando una ventaja comparativa frente a otras universidades.
+La Universidad Tecnológica Metropolitana utiliza para la administración de toda la información referente a estudiantes, profesores y personal de administración un proyecto denominado DirDoc basado en la tecnológica PHP. S.E.P.A. es un proyecto que constituyó una forma de potenciar las capacidades operativas de la Universidad, generando indicadores de calidad y entregando una ventaja comparativa frente a otras universidades.
 
-El objetivo de este trabajo de título esta en la actualización del proyecto SEPA usando la tecnología Java que utiliza herramientas más estructuradas, extensibles y que tienen como resultado la materialización de sistemas informáticos de más fácil mantención debido al uso de Patrones de Diseño (explicados en este informe). Por ejemplo, se utilizará el Modelo Vista Controlador o una Persistencia basada en JPA (adaptador de persistencia en java, para establecer el modelo de base de datos solo con código java), Spring (para facilitar el desarrollo de la lógica del negocio) y PrimeFaces (paquete de desarrollo que se utiliza sobre java para mostrar una visualización cómoda a los usuarios, posee varias herramientas hechas para trabajar en sitios web). 
+El objetivo de este trabajo de título esta en la actualización del proyecto SEPA usando la tecnología Java que utiliza herramientas más estructuradas, extensibles y que tienen como resultado la materialización de sistemas informáticos de más fácil mantención debido al uso de Patrones de Diseño (explicados en este informe). Por ejemplo, se utilizará el Modelo Vista Controlador, Persistencia basada en JPA (adaptador de persistencia en java, para establecer el modelo de base de datos solo con código java), Spring (para facilitar el desarrollo de la lógica del negocio) y PrimeFaces (paquete de desarrollo que se utiliza sobre java para mostrar una visualización cómoda a los usuarios, posee varios componentes hechos para trabajar en sitios web). 
 
 Además, el proyecto se hará bajo la metodología PSP (Personal Software Process) que nos proporciona un modelo de trabajo basado en la caracterización de los tiempos y costes de operación de un ingeniero informático, adicionando documentación extra (explicada en este informe), correspondiente a eventos que caracterizaron las directrices de cómo se lleva adelante esta tarea, todo lo cual, conduce a una evaluación de la calidad del proyecto como programa.
 
@@ -97,7 +97,7 @@ Existen 3 tipos de beneficios que la Universidad puede obtener al hacerse con la
 \item La universidad se muestra al mercado como un ente preocupado de medir su calidad con herramientas tecnológicas que justifican un buen desempeño mediante indicadores cuantificables y verificables por 
 organismos reguladores.
 
-\item Beneficio de los usuarios que tendrán a su disposición una completa herramienta que los apoyará en la elección de su carga academia, como asimismo la visualización de su desempeño posterior.
+\item Beneficio de los usuarios que tendrán a su disposición una completa herramienta que los apoyará en la elección de su carga academia, como asimismo la visualización de su desempeño.
 
 \item Beneficio a futuro, dado el alto estándar de las herramientas utilizadas, la integración, en términos de programación, resultará más sencilla, ya que este proyecto está realizado bajo tecnologías más estandarizadas como lo son los proyectos desarrollados en Java, Maven y Spring.
 \end{enumerate}
@@ -105,19 +105,19 @@ organismos reguladores.
 \chapter{Antecedentes}
 \thispagestyle{empty}
 \section{Contexto General}
-Lo expuesto en este documento esta inmerso en la Universidad Tecnológica Metropolitana (UTEM), la cual es un organismo de enseñanza superior que se encuentra dentro del Consejo de Rectores de las Universidades Chilenas. Además estamos en el ámbito de la administración de la misma universidad, esto quiere decir que hablaremos sobre los manejos de información que están dentro de sistemas informáticos que posee la universidad como por ejemplo el anterior SEPA y el DirDoc.
+La Universidad Tecnológica Metropolitana (UTEM) es un organismo de enseñanza superior que se encuentra dentro del Consejo de Rectores de las Universidades Chilenas. Dentro de su sistema administrativo de notas se ocupa la herramienta DirDoc, la cual entrega información de notas con respecto a tales ramos y alumnos, es ocupado particularmente por profesores para ingresar notas de los distintos ramos impartidos en la universidad. S.E.P.A. es una herramienta que nacido como un apoyo en el ámbito estadístico, toma los datos que se encuentran en el marco de DirDoc, permite obtener valores ponderados entre otras cosas.
 \section{Contexto Particular}
 El proyecto SEPA (Sistema Estadístico de Profesores y Alumnos, es el encargado de mostrar información que pueda ser cuantificable en pos de tener herramientas de control general y toma de decisiones. Dicha información viene del sistema DirDoc que se utiliza para la mantención de datos académicos en la universidad.
 \section{Problema}
 El antiguo S.E.P.A. presenta faltas o insuficiencias, tales como: 
 \begin{itemize}
-	\item No se disponía de un servicio web (una forma de acceso más segura y controlada) de DirDoc.
-	\item Se detectaba inconsistencia en los datos.
-	\item Carecía de acceso a múltiples tipos de usuarios, diferenciados por actividad.
-	\item No existía una forma sencilla de modificar y actualizar la información.
+	\item No se dispone de un servicio web (una forma de acceso más segura y controlada) de DirDoc.
+	\item Presenta falta de datos.
+	\item No posee acceso de múltiples tipos de usuarios, diferenciados por actividad.
+	\item No existe una forma sencilla de modificar y actualizar la información.
 \end{itemize} 
 \section{Motivación}
-Ayudar a mejorar las herramientas de administración de la Universidad y aprender a desarrollar tecnologías que apoyan a las instituciones públicas que finalmente ayudan a la gente.
+Ayudar a mejorar las herramientas de administración de la Universidad y aprender a desarrollar tecnologías que apoyan a las instituciones de Educación.
 Para lograr esto se completarán las siguientes tareas:
 \begin{itemize}
 	\item Acceder a un servicio web para obtener los datos de manera segura.
@@ -127,17 +127,23 @@ Para lograr esto se completarán las siguientes tareas:
 \chapter{La Organización de la UTEM}
 \thispagestyle{empty}
 \section{Misión}
-La Universidad Tecnológica Metropolitana es una organización estatal enfocada en la generación de profesionales que estén a la altura de los proyectos que se necesitan en pos de mejorar el país de manera sólida, segura y tecnológica. Para este motivo transforma a personas en profesionales con altas capacidades para enfrentar problemas. Estos profesionales se caracterizan por la fuerte convicción de lograr sus objetivos incluso en situaciones difíciles.
+Formar personas con altas capacidades académicas y profesionales, en el ámbito preferentemente tecnológico, apoyada en la generación, transferencia, aplicación y difusión del conocimiento en las áreas del saber que le son propias, para contribuir al desarrollo sustentable del país y de la sociedad de la que forma parte.
 \section{Visión}
-La organización será un ente de enseñanza que contará con una inclusión de profesionales de un alto nivel académico, mejorando así su capacidad de formar a los profesionales del futuro. Tendrá áreas de investigación y creación tecnológica que permitirán la modernización en muchas áreas del conocimiento. La organización se caracterizará por la prescindencia de todo tipo de discriminación de genero, religión y raza.
+La Universidad Tecnológica Metropolitana, será reconocida por la formación de sus egresados, la calidad de su educación continua, por la construcción de capacidades de investigación y creación, innovación y transferencia en algunas áreas del saber, por la equidad social en su acceso, su tolerancia y pluralismo, por su cuerpo académico de excelencia y por una gestión institucional que asegura su sustentabilidad y la práctica de mecanismos de aseguramiento de la calidad en todo su quehacer.
 %\section{Organigrama Empresarial}
 
 \section{Estructura de desarrollo el proyecto}
 El desarrollo del proyecto esta bajo la metodología Personal Sofware Process (PSP), la cual permite medir en forma cuantitativa todas la variables implicadas en el proceso productivo de este proyecto, lo que brindará valiosa información tanto del proyecto como del alumno.
+
+Primero se crean una serie de tablas que registran el tiempo de desarrollo, la cantidad trabajada, y el porcentaje de avance, desde distintos puntos de vista, tales como: el desempeño diario, la cantidad de errores diarios, el avance semanal.
+
+Después Se acomoda el tiempo en distintos indicadores que registran la cantidad de horas dedicadas el trabajo, ya sea en desarrollo como en estudio, sin olvidar el tiempo de descanso que se plantea. Este enfoque permite organizar el tiempo de acuerdo a actividades en función de completar el proyecto y la documentación PSP.
+
+Finalmente se termina el proyecto y se tienen tablas completadas que muestran indicadores porcentuales de desempeño, cada ves mas eficiente y errores, cada ves mas tenues, lo que indica un avance generalizado y paulatino de la calidad en el proceso de desarrollo.
 \chapter{Problema}
 \thispagestyle{empty}
 \section{Situación Actual}
-La organización dispone del sistema SEPA, el cual tiene una paleta de funcionalidades, que se espera en un futuro poder mejorar. Por ejemplo hoy se pueden generar gráficos y variables estadísticas que muestran información útil a la hora de tomar decisiones. Los profesores o funcionarios pueden entrar a mirar datos y comprobar indicadores. Para estos efectos ya se han pedido mejoras e inclusión de más actores frente a este sistema, mejorando no solo su funcionalidad si no que también agregando características de seguridad y mejora de la calidad de los datos.
+La U.T.E.M. dispone del sistema SEPA, el cual tiene una paleta de funcionalidades, que se espera en un futuro poder mejorar. Por ejemplo hoy se pueden generar gráficos y variables estadísticas que muestran información útil a la hora de tomar decisiones. Los profesores o estudiantes pueden entrar a mirar datos y comprobar indicadores. Para estos efectos ya se han pedido mejoras e inclusión de más actores frente a este sistema, mejorando no solo su funcionalidad si no que también agregando características de seguridad y mejora de la calidad de los datos.
 \section{Situación Propuesta}
 Una serie de módulos de mantenimiento de datos, provenientes del DirDoc y que son expuestos en los servicios web, para reparar los defectos que se presenten. Un sistema automatizado de integración con DirDoc,  para mantener actualizado Sepa, sin la necesidad de procesos manuales y directos en base de datos.
 \section{Objetivos Generales y Específicos}
@@ -169,13 +175,13 @@ Una serie de módulos de mantenimiento de datos, provenientes del DirDoc y que s
 \thispagestyle{empty}
 \section{Base Conceptual}
 \subsection{Establecer el problema}
-En la universidad existe la necesidad de mostrar información relevante para la toma de decisiones, esta información debe ser respaldada por enormes volúmenes de registros que se guardan constantemente en el sistema DirDoc de la universidad. Para este propósito existe el Sistema Estadístico de Profesores y Alumnos (SEPA), el cual incluye indicadores que pueden ser usados para la toma de decisiones. Como la universidad ha crecido, también crece la cantidad de información y la necesidad de actualizar y modificar los datos de manera más rápida y sencilla.
+En la universidad existe la necesidad de disponer de información relevante para apoyar la toma de decisiones, esta información debe ser respaldada por enormes volúmenes de registros que se guardan constantemente en el sistema DirDoc de la universidad. Para este propósito existe el Sistema Estadístico de Profesores y Alumnos (SEPA), el cual incluye indicadores que pueden ser usados para el estudio de la institución. Con el tiempo la cantidad de datos va en crecimiento, también crece la cantidad de información y la necesidad de actualizar y modificar las tablas de manera más rápida y sencilla.
 \subsection{Establecer la Solución}
-La solución de este proyecto es la creación de un Módulo que pueda concentrar los servicios web que proveen datos que deben ser procesados y mantenidos en una base de datos local. Este sistema debe validad la integridad de los datos evitando perdida de registros. A continuación se desarrolla un Mantenedor de los datos que componen el sistema, en el cual es posible buscar registros, comprobar que estén correctos, y si no lo están poder modificarlos.
+La solución de este proyecto es la creación de varios servicios web que proveen datos que deben ser procesados y mantenidos en una base de datos local. Este sistema debe validad la integridad de los datos evitando perdida de registros. A continuación se desarrolla un Mantenedor de los datos que componen el sistema, en el cual es posible buscar registros, comprobar que estén correctos, y si no lo están poder modificarlos.
 \subsection{¿Por qué ocupar Java?}
-El proyecto es construido a través del compendio de tecnologías que engloba la convención JEE, caracterizada por un enfoque estandarizado en el proceso productivo, lo que permite automatizar varios procesos y centrarnos en el proyecto. Esto permite la construcción del proyecto de manera más flexible y rápida.
+El proyecto es construido a través del compendio de tecnologías que engloba la convención JEE, caracterizada por un enfoque estandarizado en el proceso productivo, lo que permite automatizar varios procesos y centrarnos en el proyecto. Esto permite la construcción del proyecto de manera más estable y segura.
 \subsection{¿Por qué no otras tecnologías?}
-Algunas tecnologías como PHP permiten crear la página de manera rápida e incorporar un framework de persistencia pero son difíciles de escalar y mantener.  Otros frameworks como Ruby on Rails podrían llevar a cabo esta tarea de mejor manera. Pero el punto frágil es su curva de aprendizaje que es bastante costosa.
+Algunas tecnologías como PHP permiten crear la página de manera rápida e incorporar un framework de persistencia pero son difíciles de escalar y mantener.  Otros frameworks como Ruby on Rails podrían llevar a cabo esta tarea de mejor manera. Pero el punto frágil es su curva de aprendizaje que es bastante alta.
 
 % enfocar a las cosas que no se pueden haceren otros lenguajes.
 \section{Ciclo de vida del Software}
@@ -188,9 +194,9 @@ Algunas tecnologías como PHP permiten crear la página de manera rápida e inco
 \item Instalación: En este punto se produce la incorporación del sistema en su ambiente por defecto, lo que implica un término del proyecto, solo dentro del marco de Trabajo de Título para el alumno de este proyecto.
 \end{enumerate}
 \section{Historia del Arte}
-La calidad de datos que se obtienen en un establecimiento educacional, es de vital importancia para la planificación y desarrollo de sus actividades, ya que permiten una normal toma de decisiones que afectan el crecimiento de la institución, ya sea de forma docente como administrativa. 
+La calidad de datos que se obtienen en un establecimiento educacional, es de vital importancia para la planificación y desarrollo de sus actividades, ya que permiten una normal toma de decisiones que afectan el desarrollo de la institución, ya sea de forma docente como administrativa. 
 
-Los estudios estadísticos son tambien importantes porque entregan retroalimentación y permiten una visión más cerca como organización.
+Los estudios estadísticos son tambien importantes porque entregan retroalimentación y permiten una visión más clara de la realidad operativa.
 
 Las instituciones educacionales que producen profesionales deben estar evaluadas por organismos preparados en auditar las características de su desempeño. Para estos efectos, existen organismos estatales que acreditan lo que cada universidad propone, pero por otro lado existen entandares de calidad que son medidos por organismos extranjeros, para dar un sello de calidad, evaluando a partir de datos estadísticos  \cite{data1}.
 
@@ -210,7 +216,7 @@ El Ránking de Calidad de las Universidades Chilenas, es un trabajo realizado po
 
 %Algunos datos generales que se obtienen, son que la Universidad de Chile y la PUC, tienen diferencias muy pequeñas %en el campo de la investigación, para lo cual se mostró que la Universidad de Chile aporto con 1.329 papers %publicados, en cambio la PUC hizo un aporte total de 1.029 publicaciones.
 
-Mucha de esta información estadística es recopilada a traves de encuestas enviadas a distintas universidades y organismos de educación en Chile. De esta manera se puede obtener información importante para ser mostrada al publico que desea tomar una decisión en el mercado.
+Mucha de esta data estadística es recopilada a traves de encuestas enviadas a distintas universidades y organismos de educación en Chile. Cada institución trabaja con esto, con el fin de captar publico que desea tomar una decisión en el mercado.
 
 Este sistema da cuenta de una necesidad por parte de las universidades, de ser más competitiva en el mercado universitario. Aumentando los esfuerzos por recibir más estudiantes, mostrando mejores profesores, alumnos e investigaciones.
 
@@ -219,10 +225,9 @@ La gran debilidad de este sistema es que no se muestran muchos criterios de comp
 Finalmente se observa a las universidades actuales buscando organismos extranjeros capaces de certificar las características de la educación que ofrecen, de esta manera muestran no solo una acreditación por un organismo chileno, sino también una necesidad de competir a nivel internacional \cite{data3}.
 
 \section{Justificación del Trabajo de Título}
-La universidad necesita un sistema informático que agregue funcionalidades que son necesarias para el control de sus datos de manera simple y segura. En el anterior SEPA los datos eran extraídos directamente del DirDoc, dando la posibilidad de cometer errores de inserción graves. Con este nuevo sistema, ahora no solo hay una seguridad con los datos que son transferidos desde servicios Web, sino que también implementa un Sistema de Autenticación, gracias a su sistema de perfiles de usuarios que limita el acceso en el sitio para más de 2 tipos de usuarios.
-Además de la variable costo aparecen otras al momento de la toma de decisión de comprar un sistema externo ya que un sistema de esta envergadura requiere también el consentimiento de varias entidades de poder dentro de la universidad, 
+La universidad requiere un sistema informático que agregue funcionalidades para el control de sus datos de manera simple y segura. En el anterior SEPA los datos eran extraídos directamente del DirDoc, dando la posibilidad de cometer errores de inserción graves. Con este nuevo sistema, ahora no solo hay una seguridad con los datos que son transferidos desde servicios Web, sino que también implementa un Sistema de Autenticación, gracias a su sistema de perfiles de usuarios que limita el acceso en el sitio para más de 2 tipos de usuarios.
 
-Finalmente el punto de inflexión del proyecto, es que este esfuerzo esta acotado dentro de los márgenes que debe tener un Trabajo de Título, por lo tanto no es posible seguir en el desarrollo a menos que exista una visión de futuro sobre la pertinnencia de su completación por parte de las autoridades universitarias.
+Finalmente el punto de inflexión del proyecto, es que este esfuerzo esta acotado dentro de los márgenes que debe tener un Trabajo de Título, por lo tanto no es posible seguir en el desarrollo a menos que exista una visión de futuro sobre la pertenencia de su completación por parte de las autoridades universitarias.
 \section{Análisis de las herramientas}
 El desarrollo de las aplicaciones debe ser con un lenguaje que nos permita la correcta ejecución de las tareas de diseño y desarrollo. Por lo cual resulta interesante desarrollar algunos criterios que nos mostrarán las características y la justificación de nuestra elección a la hora de pensar en un lenguaje apropiado para este proyecto.
 
@@ -262,7 +267,7 @@ También es importante tener en cuenta el lenguaje a utilizar en el momento de l
 
 \item Ruby on Rails: Es un entorno de desarrollo web de código abierto que está optimizado para satisfacción de los programadores y de la productividad. Te permite escribir un buen código favoreciendo la convención antes que la configuración \cite{data9}.
 
-\item Java: Es un lenguaje de programación con el que podemos realizar cualquier tipo de programa. En la actualidad es un lenguaje muy extendido y cada vez cobra más importancia tanto en el ámbito de Internet como en la informática en general. Está desarrollado por la compañía Sun Microsystems con gran dedicación y siempre enfocado a cubrir las necesidades tecnológicas de punta. \cite{data10}.
+\item Java: Es un lenguaje de programación de propósito general. En la actualidad es un lenguaje muy extendido y cada vez cobra más importancia tanto en el ámbito de Internet como en la informática en general. Está desarrollado por la compañía Oracle con gran dedicación y siempre enfocado a cubrir las necesidades tecnológicas de punta. \cite{data10}.
 \end{enumerate}
 
 En la siguiente tabla muestra una comparación de las cuatro tecnologías anteriormente presentadas de forma explicita para comprender nuestra elección. Es claro decir que uno de los aspectos que marca profundamente la elección sobre el lenguaje con que se va a realizar este proyecto, es determinada por los conocimientos que tiene el alumno y las indicaciones del profesor, en pos de realizar lo más rápido posible el trabajo, haciéndolo de forma elegante. 
@@ -301,15 +306,15 @@ Como lo muestra la tabla anterior, java es el que puede cumplir más criterios, 
 
 \section{Criterios de Calidad}
 
-Se mostrarán a continuación los criterios de calidad que el proyecto como tal va a proporcionar a la universidad. Estos criterios muestran de forma justificada, que la mejor elección es la que nosotros proponemos para la organización, pensando en los costes de tiempo y recursos económicos que un proyecto de esta clase puede significar.
+Se mostrarán a continuación los criterios de calidad del proyecto. Estos criterios muestran de forma justificada, que la mejor elección es la que nosotros proponemos para la organización, pensando en los costes de tiempo y recursos económicos que un proyecto de esta clase puede significar.
 
 \begin{enumerate}
 
-\item Mantenibilidad: Característica que hace que nuestro proyecto sea fácil de corregir en caso de fallos, más que nada se refiere a si las bases de nuestro proyecto están debidamente revisadas. Basándose en la concepción de que un proyecto que tiene un modelo bien establecido es más fácil de reparar \cite{data11}.
+\item Mantenibilidad: Característica que hace que nuestro proyecto sea fácil de corregir en caso de fallos. Basándose en la concepción de que un proyecto que tiene un modelo bien establecido es más fácil de reparar \cite{data11}.
 
-\item Flexibilidad: Característica que permite a nuestro proyecto un fácil modelo de cambios o adiciones de más características, incluyendo también el hecho de que como es un sistema hecho dentro del contexto de esta Universidad está lo suficientemente enfocado en ella, pero también es posible cambiar algunas cosas en pos de que este sistema funcione también en otras universidades. \cite{data11}.
+\item Flexibilidad: Característica que indica la capacidad de agregar cambios, incluyendo también el hecho de que como es un sistema hecho dentro del contexto de esta Universidad está lo suficientemente enfocado en ella, pero también es posible cambiar algunas cosas en pos de que este sistema funcione también en otras universidades. \cite{data11}.
 
-\item Testeabilidad: Esto nos muestra que el modelo del sistema ha pasado por un test antes de ser ocupado en el proyecto, de manera tal como es. \cite{data11}.
+\item Testeabilidad: Esto nos muestra que el modelo del sistema ha pasado por un test antes de ser ocupado en el proyecto. \cite{data11}.
 
 \item Portabilidad: Ya que como se trabaja con Java, el proyecto es básicamente portable a casi cualquier tipo de sistema operativo, lo que lo hace un ente fácil de cambiar en otros entornos de trabajo y es perfectamente acomodable en ese sentido. \cite{data11}.
 
@@ -328,6 +333,10 @@ Son arquitecturas estandarizadas para el desarrollo de software, permiten a los 
 
 \item SOA, Arquitectura orientada a servicios: Establece el software enfocado a los procesos de negocio, teniendo distintas capas de aplicaciones como: Aplicaciones básicas, caracterizadas por ser pequeñas y geográficamente establecidas; Exposición de Funcionalidades, donde rigen servicios; Integración de servicios, para intercambio de datos; Composición de procesos, determina términos de negocio y funcionalidades; Entrega, para usuarios finales.
 
+\item POA, Programación Orientada al Aspecto: Es un paradigma de programación relativamente reciente cuya intención es permitir una adecuada modularización de las aplicaciones y posibilitar una mejor separación de incumbencias. Con esto se pueden encapsular los diferentes conceptos que componen una aplicación en entidades bien definidas, eliminando las dependencias entre cada uno de los módulos. De esta forma se consigue razonar mejor sobre los conceptos, se elimina la dispersión del código y las implementaciones resultan más comprensibles, adaptables y reusables.
+
+\item DAO, Objeto de Acceso a datos: es un componente de software que suministra una interfaz común entre la aplicación y uno o más dispositivos de almacenamiento de datos, tales como una Base de datos o un archivo. El término se aplica frecuentemente al Patrón de diseño Object. Los Objetos de Acceso a Datos son un Patrón de los subordinados de Diseño Core J2EE y considerados una buena práctica. La ventaja de usar objetos de acceso a datos es que cualquier objeto de negocio (aquel que contiene detalles específicos de operación o aplicación) no requiere conocimiento directo del destino final de la información que manipula.
+
 \end{enumerate}
 
 \chapter{Introducción al PSP}
@@ -340,11 +349,11 @@ Este tipo de trabajo nos proporciona una serie de tablas que muestran nuestros t
 PSP nos obliga a desarrollar una forma de trabajo en la cual un desarrollador programa y anota los tiempos de desarrollo y la cantidad de código que uno ha producido, dentro de distintas tablas hechas para ese propósito.
 
 \section{Criterios para uso de PSP}
-La necesidad de usar PSP fue concebida para generar un proyecto que tuviera un criterio de calidad cuantificable. Ya que nos proporcionaba tablas e indicadores que establecen con el tiempo en minutos, la cantidad de esfuerzo y errores que uno puede cometer en el trascurso del proyecto.
+La necesidad de usar PSP fue concebida para generar un proyecto que tuviera un criterio de calidad cuantificable. Ya que nos proporcionaba tablas e indicadores que establecen con el tiempo empleado, la cantidad de esfuerzo y errores que uno puede cometer en el trascurso del proyecto.
 
 \section{Estructura del PSP}
 \subsection{El Trabajo del Ingeniero de Sofware}
-En este apartado se requiere desarrollar una lista de actividades que contemplan el desarrollo del proyecto, incluyendo todo lo que pueda servir como avances en el proyecto, ya sea investigar, reunirse con otros o desarrollar.
+En este apartado se listan las actividades que contemplan el desarrollo del proyecto, incluyendo todo lo que pueda servir como avances en el proyecto, ya sea investigar, reunirse con otros o desarrollar.
 \subsection{La Gestión del Tiempo}
 Para este punto solo se necesita la estructuración del tiempo que uno tiene sobre el tiempo que se pretende dar al proyecto, basándose en la lista de actividades.
 \subsection{El Control del Tiempo}
@@ -820,7 +829,7 @@ La siguiente tabla es simplemente una muestra de la lista de los defectos y como
 \section{Poblador}
 SEPA utiliza un módulo que permite la comunicación entre los datos del sistema de notas y estudiantes existente dentro de la universidad (Dir Doc). El fin de ésto es preguntar por datos que posteriormente serán insertados en las tablas del sistema nuestro. Para esto se utiliza a un Web Service que provee una interfaz en donde se obtiene la información, ésta posteriormente se normaliza y adecua a nuestro sistema y finalmente se persiste. Existen varios procesos de integraciones, cada uno va dirigido a un objeto que se quiere poblar.
 \section{Web Service}
-Es una tecnología que permite la comunicación entre 2 programas mediante un sistema que expone herramientas para el traspaso de datos, donde el encargado de generar las preguntas debe tener información consistente y poder establecer la conexión. Por otro lado los programas se relacionan gracias a un meta lenguaje basado en XML (de etiquetado) que describe el código que debe implementarse para poder realizar las consultas y retornar objetos con los cuales posteriormente opera.
+Es una tecnología que permite la comunicación entre 2 programas mediante un sistema que expone un protocolo para el traspaso de datos, donde el encargado de generar las preguntas debe tener información consistente y poder establecer la conexión. Por otro lado los programas se relacionan gracias a un meta lenguaje basado en XML (de etiquetado) que describe el código que debe implementarse para poder realizar las consultas y retornar objetos con los cuales posteriormente opera.
 
 Eso es posible gracias a que se hace uso del framework Apache CXF que nos abstrae de la complejidad de programar un servicio web y nos permite realizar esta tarea de manera fácil. CXF nos pide información relacionada con la dirección del servicio a consumir y él se encarga de traernos las respuestas que necesitemos.
 \section{Tareas}
@@ -841,9 +850,9 @@ Tareas que se ejecutan una ves al año, en donde podemos encontrar: Actualizar C
 \chapter{Mantenedor}
 \thispagestyle{empty}
 \section{Sitio Web}
-El proyecto mantenedor es un sitio web basado en Java Server Faces o (JSF), que permite la visualización de una estructura de código en formato xml para mostrar sitos web con contenido dinámico en java. Sobre esta tecnología se ocupa Primefaces que enriquece las características de JSF proporcionando herramientas HTML mas complejas (tales como menús despegables o tablas con distintas funcionalidades ya programadas).
+El proyecto mantenedor es un sitio web que utiliza la tecnología Java Server Faces o (JSF), que permite la visualización de una estructura de código en formato xml para mostrar sitos web con contenido dinámico en java. Sobre esta tecnología se ocupa Primefaces que enriquece las características de JSF proporcionando herramientas HTML mas complejas (tales como menús despegables o tablas con distintas funcionalidades ya programadas).
 \section{Ingreso}
-El ingreso al sitio sitio se hace con usuario y contraseña, cada usuario esta asociado a un perfil que limita el uso en el sitio, la autentificación esta hecha con Spring Security, un framework que permite automatizar el paso de perfiles con sus contraseñas, gestionando la encriptación y la desencriptación, de esta manera se asegura que los ingresos al sitio son seguros.
+El ingreso al sitio sitio se hace con usuario y contraseña, cada usuario esta asociado a un perfil que limita el uso en el sitio, la autentificación esta hecha con Spring Security, un framework que permite automatizar el paso de perfiles con sus contraseñas, gestionando la encriptación y la desencriptación, de esta manera se asegura que los ingresos al sitio son seguros, manejando los distintos tipos de seguridad.
 
 También el inicio de la página cuenta con links de la universidad hacia sitios de interés que están dentro de la Universidad.
 \section{Mantenedores}
@@ -852,7 +861,7 @@ Al ingresar al sitio uno puede ver un menú con los distintos mantenedores, abaj
 Volviendo al menú tenemos una serie de opciones estas son:
 
 \begin{itemize}
-	\item Inicio: Que nos devuelve al inicio donde nos encontramos.
+	\item Inicio: Que nos da un mensaje de bienvenida y es un punto de partida.
 	\item Acceso: Contiene los mantenedores de Acceso, Auditoría, Rol y Usuario.
 	\item Geografía: Contiene los mantenedores de País, Región, Provincia y Comuna.
 	\item UTEM: Contiene los mantenedores de Facultad, Departamento, Escuela, Contrato, Docente, Jerarquía, Jornada, Carrera, Asignatura Malla, Cupo Carrera, Malla, Plan de Estudio y Requisito de Asignatura.
@@ -866,7 +875,7 @@ Todos estos mantenedores cumplen con las mismas funciones de buscar, borrar, fil
 
 \chapter{Rendimiento}
 \section{Jmeter}
-Es un software que permite la medición de flujos de carga en aplicaciones web, documenta y graba la ejecución de actividades dentro de un sitio con una dirección y un puerto. Una vez grabado el flujo este se puede multiplicar por las cantidades que uno desee, de tal manera que uno simule las peticiones de muchos usuarios concurrentes en la aplicación. La concurrencia es simplemente la cantidad de usuarios dividido por la cantidad de tiempo.
+Es un software que permite la medición de flujos de carga en aplicaciones web, documenta y graba la ejecución de actividades dentro utilizando un proxy (intermediario en las peticiones de recursos que realiza un cliente a un servidor). Una vez grabado el flujo este se puede multiplicar por las cantidades que uno desee, de tal manera que uno simule las peticiones de muchos usuarios concurrentes en la aplicación. La concurrencia es simplemente la cantidad de usuarios dividido por la cantidad de tiempo.
 
 Una de las características de Jmeter es que entrega información de las peticiones y los fallos que puedan ocurrir en  las ejecuciones, por lo tanto si un elemento del flujo falla (ya sea una variable o una imagen que no puede cargarse apropiadamente).
 
@@ -907,9 +916,7 @@ Para finalizar es necesario también aclarar que las pruebas contemplan a usuari
 
 \chapter{Diagrama del Proyecto}
 \section{Información}
-Esto es un servicio que alimenta a sus datos gracias a un servicio web. Usando el framework Apache CXF nos permite gestionar estos datos y nosotros con Java y Spring Data somos capaces de entregárselos a nuestra base de datos PostgresSQL. De esta manera nosotros podemos con Spring Security ocupar los Beans de Spring que nos gestionan las páginas del sitio de mantenedores. El sitio por su parte está hecho con JSF para mostrar en pantalla sus datos. Por encima tenemos un componente que enriquece las características de JSF llamado Primefaces, el cual nos agrega funcionalidad y características nuevas, como por ejemplo cajas de texto con parámetros que verifican los datos buscando errores en ellos así evitando completamente que el usuario use de mala manera el sitio.
-
-Esto es un servicio que alimenta a sus datos gracias a un servicio web, Apache CXF nos permite gestionar estos datos y nosotros con java y Spring Data somos capaces de entregárselos a nuestra base de datos PostgresSQL. De esta manera nosotros podemos con Spring Security ocupar los Beans de Spring que nos gestionan las paginas del sitio de mantenedores. El sitio por su parte esta echo con JSF para mostrar en pantalla sus datos, por encima tenemos un componente que enriquece las características de JSF llamado Primefaces, el cual nos agrega funcionalidad y características nuevas, como por ejemplo cajas de texto con parámetros que verifican los datos buscando errores en ellos así evitando completamente que el usuario pueda mal usar el sitio.
+Esto es un servicio que alimenta a sus datos gracias a un servicio web. Usando el framework Apache CXF nos permite gestionar estos datos y nosotros con Java y Spring Data somos capaces de administrarlos usando una base de datos PostgresSQL. De esta manera nosotros podemos con Spring Security ocupar los Beans de Spring que nos gestionan las páginas del sitio de mantenedores. El sitio por su parte está hecho con JSF para mostrar en pantalla sus datos. Por encima tenemos un componente que enriquece las características de JSF llamado Primefaces, el cual nos agrega funcionalidad y características nuevas, como por ejemplo cajas de texto con parámetros que verifican los datos buscando errores en ellos así evitando completamente que el usuario use de mala manera el sitio.
 
 \begin{figure}[!hbp]
 \begin{center}
@@ -1080,7 +1087,7 @@ PFA=PFSA * ( 0.65 + ( 0.01 * FCT ) = 283 * ( 0.65 + ( 0.01 * 48 ) = 319.79
 319.79 * (Horas * Valor Hora) = 319.79 * (4 * 4000) = 5116640
 \end{math}
 
-El proyecto vale un mínimo de 5.116.640 pesos.
+El proyecto tiene un costo mínimo de 5.116.640 pesos.
 
 \chapter{Corolario}
 
@@ -1102,7 +1109,7 @@ El trabajo correspondiente al Sistema Mantenedor e Integrador en SEPA ha mostrad
 
 También es posible identificar errores estructurales de información. Por ejemplo, en el sistema Integrador entraban datos que contenían errores repetidos en todas las filas de ciertas tablas. Este sistema está preparado para resistir ese tipo de datos y cargar una data estándar que más adelante será reparada por el sistema Mantenedor.
 
-Finalmente como corolario se estima que este proyecto es necesario implementar en cada organización educacional chilena, ya que en cada una de ellas existen datos que tienen estructuras antiguas de orden e indexado, lo que hace difícil para sistemas nuevos o venideros generar productos que apoyen la gestión y el desempeño de actividades, tales como la organización económica de la institución académica, orden y mantenimiento de los sistemas docentes.
+Finalmente como corolario se estima que un proyecto de estas características es una importante oportunidad de mejora, ya que en cada una de ellas existen datos que tienen estructuras antiguas de orden e indexado, lo que hace difícil para sistemas nuevos o venideros generar productos que apoyen la gestión y el desempeño de actividades, tales como la organización económica de la institución académica, orden y mantenimiento de los sistemas docentes.
 \section{Trabajo Futuro}
 Para ampliar las posibilidades de un trabajo que descansa sobre el valor de potenciar las capacidades administrativas de una institución académica, es necesario hacer estudios que posibiliten un mayor alcance de datos, tal como lo hace SEPA, por tal razón es de vital importancia promover nuevas mejoras que hagan de este sistema una herramienta completa en el desarrollo de las capacidades generales de una organización, como lo es la Universidad Tecnológica Metropolitana.
 
