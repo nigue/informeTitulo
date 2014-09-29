@@ -1005,13 +1005,13 @@ EE & x3  & \textbf{8x4}  & x6 & 32\\
 \hline
 SE & x4  & \textbf{3x5}  & x7 & 15\\
 \hline
-CE & x3  & x4  & \textbf{6x6} & 36\\
+CE & x3  & x4  & \textbf{6x10} & 60\\
 \hline
-FIL & x7 & x10 & \textbf{8x15} & 120\\
+FIL & x7 & x10 & \textbf{8x25} & 200\\
 \hline
-FEI & x5 & x7 & \textbf{8x10} & 80\\
+FEI & x5 & x7 & \textbf{8x15} & 120\\
 \hline
-TOTAL &  &  & & 283\\
+TOTAL &  &  & & 427\\
 \hline
 \end{tabular}
 \\\\\\
@@ -1080,22 +1080,34 @@ En esta sección se evalúa con un número de 0 a 5 las distintas característic
 La siguiente fórmula describe la cantidad ajustada de puntos de función y éstos a su vez son multiplicados por el valor en horas dando lo que cuesta en tiempo y dinero, cada uno de los puntos obteniéndose finalmente el valor ponderado del proyecto en sí.
 
 \begin{math}
-PFA=PFSA * ( 0.65 + ( 0.01 * FCT ) = 283 * ( 0.65 + ( 0.01 * 48 ) = 319.79
+PFA=PFSA * ( 0.65 + ( 0.01 * FCT ) = 427 * ( 0.65 + ( 0.01 * 48 ) = 452.51
 \end{math}
+
+Después se multiplican los Puntos de Función por un factor de 4 horas hombre por cada punto de función.
 
 \begin{math}
-319.79 * (Horas * Valor Hora) = 319.79 * (4 * 4000) = 5116640
+452.51 PF * 4 (HH / PF) = 452.51 * (4) = 1810.04 HH
 \end{math}
 
-El proyecto tiene un costo mínimo de 5.116.640 pesos.
+Finalmente se multiplican las horas hombre por el factor 0.4 UF / HH.
 
-\chapter{Corolario}
+\begin{math}
+1810.04 HH * 0.4(UF / HH) = 724.016 UF = 17.492.226.6 \$
+\end{math}
+
+El proyecto tiene un costo mínimo de 17.500.000 pesos.
+
+\chapter{Conclusiones}
 
 \section{Garantías de calidad}
 
 La calidad de este sistema se ve potenciada por varios aspectos, los cuales se explicaran a continuación:
 
 \begin{enumerate}
+        \item Uso de una base de datos PostgreSQL: Un sistema gestor de bases de datos, de código abierto, echo para ser una potente forma de mantener grandes cantidades de datos. Siendo un proyecto realizado de manera altruista por muchos desarrolladores a nivel mundial, es muy estable, seguro y es el entorno necesario para que el sistema S.E.P.A. trabaje sin necesidad de pensar en licencias u otros tipos de registros de datos. Contiene una infinidad de tipos de datos que fortalece la forma de como uno ingresa parámetros.
+        \item Uso de Mybatis: Herramienta de ayuda para sentencias SQL que permite el uso de cualquier base de datos, con gran escalabilidad y adaptabilidad, permitiendo escribir las consultas que uno desee ejecutar y mapearlas directamente en los objetos que uno desee. Tiene un nivel de complejidad medio, lo que hace que sea un poco difícil aprender, pero una ves se comprende, la incorporación de nuevos elementos de data es ordenada y escalable.
+        \item Uso de WebServices: Una tecnología que utiliza un conjunto de protocolos y estándares que sirven para intercambiar datos entre aplicaciones. Distintas aplicaciones de software desarrolladas en lenguajes de programación diferentes, y ejecutadas sobre cualquier plataforma, pueden utilizar los servicios web para intercambiar datos en redes de ordenadores como Internet.
+        \item Uso de Primefaces: Una librería de componentes para JavaServer Faces (JSF) de código abierto que cuenta con un conjunto de componentes enriquecidos que facilitan la creación de las aplicaciones web. Soporte de ajax con despliegue parcial, lo que permite controlar qué componentes de la página actual se actualizarán y cuáles no.
         \item Uso de Metodología de Trabajo: El uso de PSP fortalece el desempeño del proyecto, mostrando los errores que el proceso de desarrollo pueda presentar, desde esta perspectiva es necesario destacar que cuando se van anotando los errores éstos tienden a disminuir con el tiempo por lo que en las etapas finales es muy difícil encontrar errores en el desarrollo.
         \item Uso de Patrón de diseño: El patrón MVC ha hecho de este proyecto un ente robusto y consistente que puede ser mejorable incluso con poco conocimiento, ya que posee una base sólida que sustenta su funcionamiento, por lo cual los cambios que se puedan necesitar en el futuro harán uso de las herramientas que se fabricaron el desarrollo mismo.
         \item Uso de Java y Frameworks: Esto nos permite una autonomía en varios aspectos, ya que nosotros como impulsores de proyectos tenemos siempre que velar por que todo el desarrollo sea altamente eficiente, y una manera muy clara de obtener eso es mediante el uso de herramientas que ya han sido muy probadas y se encuentran en uso de muchos otros proyectos. Dado que en otros sistemas esto ha funcionado muy bien es de esperar que en el nuestro también funcione de igual modo.
@@ -1109,9 +1121,19 @@ El trabajo correspondiente al Sistema Mantenedor e Integrador en SEPA ha mostrad
 
 También es posible identificar errores estructurales de información. Por ejemplo, en el sistema Integrador entraban datos que contenían errores repetidos en todas las filas de ciertas tablas. Este sistema está preparado para resistir ese tipo de datos y cargar una data estándar que más adelante será reparada por el sistema Mantenedor.
 
-Finalmente como corolario se estima que un proyecto de estas características es una importante oportunidad de mejora, ya que en cada una de ellas existen datos que tienen estructuras antiguas de orden e indexado, lo que hace difícil para sistemas nuevos o venideros generar productos que apoyen la gestión y el desempeño de actividades, tales como la organización económica de la institución académica, orden y mantenimiento de los sistemas docentes.
+Un proyecto de estas características es una importante oportunidad de mejoras, tales como: mantenibilidad de la data, aunque esta contenga errores, ya que es posible editar aspectos mínimos dentro de todas las tablas, conectividad con servicios web, manejado por parámetros SOAP, dejando la complejidad de las comunicaciones a frameworks que se encargan de trabajar con estas interacciones.
+
+Gracias a este trabajo se puede hablar de indicadores estadísticos, los cuales nos proporcionan información que regulan el funcionamiento de cualquier organización. Para este caso en particular, el desarrollo de indicadores, nos permite sostener una organización a nivel de estudiantes, integrando consultas estadísticas a problemas particulares en estudiantes y profesores. Principalmente el objetivo de S.E.P.A. era ser mostrado.
+
+La ventaja de que este sistema se comunique con otros mediante el uso de WebServices es que a lo largo de la vida útil de este proyecto se pueden agregar otros proyectos que pueden nutriste de la información que S.E.P.A. produce, de tal manera hace que cada ves sea mas intenso su uso.
 \section{Trabajo Futuro}
 Para ampliar las posibilidades de un trabajo que descansa sobre el valor de potenciar las capacidades administrativas de una institución académica, es necesario hacer estudios que posibiliten un mayor alcance de datos, tal como lo hace SEPA, por tal razón es de vital importancia promover nuevas mejoras que hagan de este sistema una herramienta completa en el desarrollo de las capacidades generales de una organización, como lo es la Universidad Tecnológica Metropolitana.
+
+Se puede considerar el integrar un motor de minería de datos que revele información que hasta ahora no se ha obtenido dentro de los marcos de este proyecto, por ejemplo, una herramienta que obtenga formulaciones o métodos de aproximación para datos del futuro. Tal cosa produciría un impacto en S.E.P.A. ya que con esta perspectiva se aumentan los beneficios de los indicadores que uno puede obtener, validando estos o creando aproximaciones que ayudan a esclarecer las razones de los valores que actualmente entrega el sistema.
+
+También se piensa en una Inteligencia de Negocio que junto con la idea anterior sea capaz de producir nuevos indicadores enfocados a la mejora o a la conducción, con intervención humana, de los valores generalizados en las tablas que maneja S.E.P.A., en otras palabras, que se sepa información que nos permitiera guiar a la universidad en torno a los objetivos de su Visión, haciendo un impacto en el corto plazo.
+
+Estas dos ideas anteriores convergen finalmente en que el sistema en un futuro podría tener una Inteligencia Artificial que sea manejable por los usuarios de S.E.P.A. permitiendo manejar las respuestas de los usuarios en pos de darle las mejores oportunidades a todos por igual. Mediando en todos los asuntos de manera logia, estadística y totalmente regulada. Podríamos decir que en un futuro, S.E.P.A. seria un sistema automático y autónomo.
 
 Finalizando, se puede afirmar que un trabajo como éste es perfectamente capaz de entregar datos y argumentos sólidos en pos de generar estudios científicos relacionados con indicadores de calidad en educación, puesto que con el sistema SEPA en las condiciones actuales mejoradas, se tienen todas las herramientas preparadas para tales propósitos. 
 \bibliographystyle{plain}
