@@ -82,7 +82,7 @@ El presente trabajo de Título ofrece una mejora al sistema S.E.P.A., con integr
 El resultado final de este proyecto es la obtención por parte de la Universidad un webservice que comunique S.E.P.A. con DirDoc de manera mas expedita y segura, mediante varios tipos de consultas, un módulo de mantenedor que permitirá monitorizar y editar las distintas tablas, con sus registros correspondientes, pensado desde un principio para hacer búsquedas y reparar data que este incompleta.
 
 \tableofcontents
-%\listoffigures
+\listoffigures
 \chapter*{Introducción}
 \thispagestyle{empty}
 La Universidad Tecnológica Metropolitana utiliza para la administración de toda la información referente a estudiantes, profesores y personal de administración un sistema denominado DirDoc basado en la tecnológica PHP. S.E.P.A., software desarrollado por Sebastián Salazar Molina para en ese entonces su trabajo de título, es un proyecto que constituyó una forma de potenciar las capacidades operativas de la Universidad, generando indicadores de calidad y entregando una ventaja comparativa frente a otras Universidades.
@@ -145,16 +145,42 @@ Para lograr esto se completarán las siguientes tareas:
 Formar personas con altas capacidades académicas y profesionales, en el ámbito preferentemente tecnológico, apoyada en la generación, transferencia, aplicación y difusión del conocimiento en las áreas del saber que le son propias, para contribuir al desarrollo sustentable del país y de la sociedad de la que forma parte.
 \section{Visión}
 La Universidad Tecnológica Metropolitana, será reconocida por la formación de sus egresados, la calidad de su educación continua, por la construcción de capacidades de investigación y creación, innovación y transferencia en algunas áreas del saber, por la equidad social en su acceso, su tolerancia y pluralismo, por su cuerpo académico de excelencia y por una gestión institucional que asegura su sustentabilidad y la práctica de mecanismos de aseguramiento de la calidad en todo su quehacer.
-%\section{Organigrama Empresarial}
+\section{Organigrama}
+La organización se compone de distintos marcos de jerarquía, en este caso se mostrarán los que tienen relevancia académica en este trabajo, por su dependencia al posible uso de la herramienta S.E.P.A.:
+\subsection{Rectoría}
+Esta compuesta de un Rector que toma decisiones planteadas desde un consejo superior, gracias al apoyo de un consejo académico. Los cuales gobiernan el desarrollo estratégico, la dirección jurídica y la dirección de relaciones.
+\begin{figure}[!hbp]
+\begin{center}
+\includegraphics[scale=0.6,angle=0]{images/organigrama/1.png}
+\caption{Organigrama de rector\'ia}
+\label{Organigrama de rectoria}
+\end{center}
+\end{figure}
 
-\section{Estructura de desarrollo el proyecto}
-El desarrollo del proyecto esta bajo la metodología Personal Sofware Process (PSP), la cual permite medir en forma cuantitativa todas la variables implicadas en el proceso productivo de este proyecto, lo que brindará valiosa información tanto del proyecto como del alumno.
+Es el segmento con mas poder en la organización universitaria, siendo este el foco central de las decisiones tomadas por los otros organismos. Es importante señalar que muchas de sus políticas provienen en gran medida de las necesidades y aspiraciones de las siguientes estructuras jerárquicas.
 
-Primero se crean una serie de tablas que registran el tiempo de desarrollo, la cantidad trabajada, y el porcentaje de avance, desde distintos puntos de vista, tales como: el desempeño diario, la cantidad de errores diarios, el avance semanal.
+\subsection{Vicerrectoría Academica}
+Es la entidad de que administra de manera local las decisiones de rectoría, hacia distintos polos como: Investigación, Dirección de evaluación, Dirección de docencia, Relaciones estudiantiles, Biblioteca, U.T.E.M. Virtual.
+\begin{figure}[!hbp]
+\begin{center}
+\includegraphics[scale=0.45,angle=0]{images/organigrama/2.png}
+\caption{Organigrama de Vicerrector\'ia Academica}
+\label{Organigrama de vicerrectoria Academica}
+\end{center}
+\end{figure}
 
-Después Se acomoda el tiempo en distintos indicadores que registran la cantidad de horas dedicadas el trabajo, ya sea en desarrollo como en estudio, sin olvidar el tiempo de descanso que se plantea. Este enfoque permite organizar el tiempo de acuerdo a actividades en función de completar el proyecto y la documentación PSP.
+Tiene el rol de velar por la correcta disponibilidad de recursos frente a los organismos de dirección institucional, para lo cual trabaja de manera constante en un perfeccionamiento de su rol como comandante.
 
-Finalmente se termina el proyecto y se tienen tablas completadas que muestran indicadores porcentuales de desempeño, cada ves mas eficiente y errores, cada ves mas tenues, lo que indica un avance generalizado y paulatino de la calidad en el proceso de desarrollo.
+\subsection{Facultad de ingeniería}
+El decano de ingeniería es el principal responsable por las decisiones tomadas en esta estructura, debe liderar a todos los departamentos que le corresponden y cada uno de estos debe trabajar en pos de las directrices del decano de la facultad.
+\begin{figure}[!hbp]
+\begin{center}
+\includegraphics[scale=0.45,angle=0]{images/organigrama/11.png}
+\caption{Organigrama de la facultad de ingen\'ieria}
+\label{Organigrama de la facultad de ingenieria}
+\end{center}
+\end{figure}
+
 \chapter{Problema}
 \thispagestyle{empty}
 \section{Situación Actual}
@@ -186,6 +212,14 @@ Una serie de módulos de mantenimiento de datos, provenientes del DirDoc y que s
 %Los alcances del Trabajo de Título están delimitados por las características que el trabajo de título debe tener, es %decir, que se hace un marco de trabajo, delimitado por el profesor, que comprende los tópicos a trabajar.
 %\section{Limitaciones del Trabajo de Título}
 %El trabajo no comprende áreas que estén fuera de los límites temporales a la toma de requerimientos, por lo cual es %necesario indicar que hay características y funcionalidades que a pesar de ser levantadas puede que no sean parte de %este trabajo de título.
+\section{Estructura de desarrollo el proyecto}
+El desarrollo del proyecto esta bajo la metodología Personal Sofware Process (PSP), la cual permite medir en forma cuantitativa todas la variables implicadas en el proceso productivo de este proyecto, lo que brindará valiosa información tanto del proyecto como del alumno.
+
+Primero se crean una serie de tablas que registran el tiempo de desarrollo, la cantidad trabajada, y el porcentaje de avance, desde distintos puntos de vista, tales como: el desempeño diario, la cantidad de errores diarios, el avance semanal.
+
+Después Se acomoda el tiempo en distintos indicadores que registran la cantidad de horas dedicadas el trabajo, ya sea en desarrollo como en estudio, sin olvidar el tiempo de descanso que se plantea. Este enfoque permite organizar el tiempo de acuerdo a actividades en función de completar el proyecto y la documentación PSP.
+
+Finalmente se termina el proyecto y se tienen tablas completadas que muestran indicadores porcentuales de desempeño, cada ves mas eficiente y errores, cada ves mas tenues, lo que indica un avance generalizado y paulatino de la calidad en el proceso de desarrollo.
 \chapter{Marco Teórico}
 \thispagestyle{empty}
 \section{Base Conceptual}
@@ -896,7 +930,7 @@ Esto es un servicio que alimenta a sus datos gracias a un servicio web. Usando e
 \begin{center}
 \includegraphics[scale=0.6,angle=0]{images/diagrama.jpg}
 \caption{Diagrama general del sistema}
-
+\label{Diagrama general del sistema}
 \end{center}
 \end{figure}
 \chapter{Evaluación de Costos}
