@@ -120,19 +120,19 @@ Finalmente es importante destacar que las transacciones de los servicios web que
 \chapter{Antecedentes}
 \thispagestyle{empty}
 \section{Contexto General}
-La Universidad Tecnológica Metropolitana (UTEM) es un organismo de enseñanza superior que se encuentra dentro del Consejo de Rectores de las Universidades Chilenas. Dentro de su sistema administrativo de notas se ocupa la herramienta DirDoc, la cual entrega información de notas con respecto a tales ramos y alumnos, es ocupado particularmente por profesores para ingresar notas de los distintos ramos impartidos en la Universidad. S.E.P.A. es una herramienta que nacido como un apoyo en el ámbito estadístico, toma los datos que se encuentran en el marco de DirDoc, permite obtener valores ponderados entre otras cosas.
+La Universidad Tecnológica Metropolitana (UTEM) es un organismo de enseñanza superior que se encuentra dentro del Consejo de Rectores de las Universidades Chilenas. Dentro de su sistema administrativo de notas se ocupa el sistema DirDoc, el cual entrega información de notas con respecto a tales ramos y alumnos, es ocupado particularmente por alumnos, profesores y directores de escuela para  mirar e ingresar notas, respectivaemtne, de los distintos ramos impartidos en la Universidad. S.E.P.A. es una herramienta que nacido como un apoyo en el ámbito estadístico, toma los datos que se encuentran en el marco de DirDoc, permite obtener valores ponderados entre otras cosas.
 \section{Contexto Particular}
-El proyecto S.E.P.A. (Sistema Estadístico de Profesores y Alumnos, es el encargado de mostrar información que pueda ser cuantificable en pos de tener herramientas de control general y toma de decisiones. Dicha información viene del sistema DirDoc que se utiliza para la mantención de datos académicos en la Universidad.
+El proyecto S.E.P.A. el Sistema Estadístico de Profesores y Alumnos, es el encargado de mostrar información que pueda ser cuantificable en pos de tener herramientas de control general y toma de decisiones. Dicha información viene del sistema DirDoc que se utiliza para la mantención de datos académicos en la Universidad.
 \section{Problema}
 El antiguo S.E.P.A. presenta faltas o insuficiencias, tales como: 
 \begin{itemize}
-	\item No se dispone de un servicio web (una forma de acceso más segura y controlada) de DirDoc.
-	\item Presenta falta de datos.
-	\item No posee acceso de múltiples tipos de usuarios, diferenciados por actividad.
-	\item No existe una forma sencilla de modificar y actualizar la información.
+	\item No se dispone de un servicio web (una forma de acceso más segura y controlada) de DirDoc. En el actual S.E.P.A. se deben seguir una serie de pasos para ingresar data. Primero se debe seleccionar mediante el DirDoc que data hay que insertar en S.E.P.A. y después se requiere hablar con un encargado de S.E.P.A. para que ejecute una sentencia SQL que ingrese los valores deseados a la base de datos. Lo que conlleva peligro, ya que es muy probable la perdida u omisión de algún valor.
+	\item Presenta falta de datos. Retomando el punto anterior, en el actual S.E.P.A. se da que hay ciertas tablas que no tienen datos y esto es debido a que en su proceso de inserción, estos fueron omitidos o perdidos.
+	\item No posee acceso de múltiples tipos de usuarios, diferenciados por actividad. Lo cual constituye una barrera ya que actualmente no se puede mostrar toda la información para la cual un rol tiene acceso, por ejemplo, un profesor debiera ver su información y la de sus alumnos, pero un jefe de carrera debe ser capaz de ver su información, la de los alumnos y la de los profesores. 
+	\item No existe una forma sencilla de modificar y actualizar la información desde DirDoc hasta S.E.P.A., ya que lo que hoy se esta haciendo es hacer una petición sobre una data en DirDoc y finalmente pedirle a un encargado que ingrese cierta data a la base de datos de S.E.P.A.
 \end{itemize} 
 \section{Motivación}
-Ayudar a mejorar las herramientas de administración de la Universidad y aprender a desarrollar tecnologías que apoyan a las instituciones de Educación.
+Ayudar a mejorar las herramientas de administración de la Universidad y aprender a desarrollar tecnologías que apoyan a las instituciones de educación.
 Para lograr esto se completarán las siguientes tareas:
 \begin{itemize}
 	\item Acceder a un servicio web para obtener los datos de manera segura.
