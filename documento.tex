@@ -188,13 +188,26 @@ El decano de ingeniería es el principal responsable por las decisiones tomadas 
 El Dirdoc es una plataforma online en la que, alumnos, profesores y funcionarios tienen acceso, mediante distintos puntos de acceso, en cada uno de estos se ejecutan ciertas actividades. A continuación se detallan las características de cada uno.
 
 \begin{itemize}
-	\item Alumno: Es un acceso que le permite a un alumno mirar sus notas y sus promedios de todos sus ramos, ademas de la carrera, la maya curricular, entre otros.
-	\item Crear un mantenedor de todos los datos que podamos integrar en el servicio web.
-	\item Automatizar los procesos de acceso y actualización de datos.
+	\item Alumno: Es un acceso que le permite a un alumno mirar sus notas y sus promedios de todos sus ramos, además de la carrera, la maya curricular, entre otros.
+	\item Profesor: Es un acceso en el que se permite la inserción de notas para los alumnos correspondientes, de acuerdo a los ramos que se imparten, entre otras cosas es posible mirar información del profesor, ramos en los que se trabaja y alumnos asociados a las clases.
+	\item Funcionarios, son capaces de mirar información de todos los otros niveles, e incluso tienen facultades para editar información, para lo cual su uso esta centrado en regular el correcto funcionamiento de la herramienta DirDoc y tomar acciones frente a errores que puedan originarse.
 \end{itemize}
 
+\subsection{S.E.P.A.}
+El S.E.P.A. (Sistema Estadístico de Profesores y Alumnos) es una herramienta complementaria en la U.T.E.M. que otorga principalmente indicadores estadísticos, que permiten tomar decisiones que afectan a un segmento importante de la organización. Por ejemplo se tiene el promedio de notas de un curso que imparte un profesor, o también el promedio de notas totales de un alumno. Si bien son importantes estos datos, pero son poco específicos.
+
+Uno de los problemas que se tienen en sepa, es que al no existir un sistema de ingreso de data desde DirDoc, la única forma de ingresar data en sepa es mediante la petición a un funcionario encargado del sistema, lo que supone un riesgo por la perdida de data.
+
 \section{Situación Propuesta}
-Una serie de módulos de mantenimiento de datos, provenientes del DirDoc y que son expuestos en los servicios web, para reparar los defectos que se presenten. Un sistema automatizado de integración con DirDoc,  para mantener actualizado Sepa, sin la necesidad de procesos manuales y directos en base de datos.
+Dentro de los módulos mantenedor e integrador de S.E.P.A. se comprenden las siguientes actividades que no están en la versión anterior:
+
+\begin{itemize}
+	\item Ingreso por perfiles: Gracias a las mejoras que se programan, se agrega el sistema de registro por perfiles, el cual otorga permisos por los distintos tipos de usuarios. Estos tendrán un rango de data que puedan visualizar. 
+	\item Visualización de todas las tablas: En estas mejoras a S.E.P.A. se incorpora la posibilidad de mirar todos los parámetros de las tablas comprendidas en el modelo de base de datos. Esto significa que mediante los perfiles es posible ver la información historia de todas las tablas permitidas.
+	\item Edición de todas las tablas: Como en el punto anterior, no solo es posible mirar, ya que también hay perfiles que pueden editar data de las tablas, pensando en la reparación de esta debido a que puede tener fallos o faltar.
+	\item Integración por web service: El traspaso de data desde DirDoc a S.E.P.A. será mediante un servicio en linea de comunicación entre dos programas (DirDoc y S.E.P.A.), ya que de esta forma uno se asegura que la forma de ingreso de data en S.E.P.A. sea, en la mayor medida, limpia y sin errores. El sistema es capas de soportar la falta de ciertos datos en las tablas, los cuales pueden ser llenados posteriormente por el mantenedor que se incorpora.
+	\item Facilidad de programar indicadores en un futuro: La forma de como esta programado S.E.P.A. supone una mejora, ya que al utilizar una tecnología que de rápido aprendizaje, es fácil encontrar otros desarrolladores que aporten con la programación de distintos indicadores. Ya que solo basta que se tenga gente con conocimientos específicos del entorno del servicio y la vista, sin conocer en detalle el modelo de la aplicación.
+\end{itemize}
 \section{Objetivos Generales y Específicos}
 \subsection{Objetivos Generales}
 \textit{Desarrollar un sistema de mantención de información estadística para la Universidad Tecnológica Metropolitana ayudando a sus procesos docentes y productivos, disponiendo de información veraz de la realidad universitaria.}
