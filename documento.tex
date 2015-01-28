@@ -243,6 +243,16 @@ Primero se crean una serie de tablas que registran el tiempo de desarrollo, la c
 Después Se acomoda el tiempo en distintos indicadores que registran la cantidad de horas dedicadas el trabajo, ya sea en desarrollo como en estudio, sin olvidar el tiempo de descanso que se plantea. Este enfoque permite organizar el tiempo de acuerdo a actividades en función de completar el proyecto y la documentación PSP.
 
 Finalmente se termina el proyecto y se tienen tablas completadas que muestran indicadores porcentuales de desempeño, cada ves mas eficiente y errores, cada ves mas tenues, lo que indica un avance generalizado y paulatino de la calidad en el proceso de desarrollo.
+\section{Diagrama del Proyecto}
+Esto es un servicio que alimenta a sus datos gracias a un servicio web. Usando el framework Apache CXF nos permite gestionar estos datos y nosotros con Java y Spring Data somos capaces de administrarlos usando una base de datos PostgresSQL. De esta manera nosotros podemos con Spring Security ocupar los Beans de Spring que nos gestionan las páginas del sitio de mantenedores. El sitio por su parte está hecho con JSF para mostrar en pantalla sus datos. Por encima tenemos un componente que enriquece las características de JSF llamado Primefaces, el cual nos agrega funcionalidad y características nuevas, como por ejemplo cajas de texto con parámetros que verifican los datos buscando errores en ellos así evitando completamente que el usuario use de mala manera el sitio.
+
+\begin{figure}[!hbp]
+\begin{center}
+\includegraphics[scale=0.6,angle=0]{images/diagrama.jpg}
+\caption{Diagrama general del sistema}
+\label{Diagrama general del sistema}
+\end{center}
+\end{figure}
 \chapter{Marco Teórico}
 \thispagestyle{empty}
 \section{Base Conceptual}
@@ -279,6 +289,13 @@ Esto nos lleva a tomar la decisión de abandonar PHP ya que lo que se busca es, 
 
 Desde esta perspectiva cada componente que se le quiera agregar al proyecto, debe obligatoriamente partir desde el Análisis de requerimientos, pasando por un Diseño de la solución, para después llegar al Diseño estructural y Pruebas, para finalmente Instalar los cambios.
 
+\begin{figure}[!hbp]
+\begin{center}
+\includegraphics[scale=0.6,angle=0]{images/cicloMini.PNG}
+\caption{Ciclo de vida}
+\label{Organigrama de rectoria}
+\end{center}
+\end{figure}
 %imagen de como tiene que ser
 \section{Estado del arte}
 La calidad de datos que se obtienen en un establecimiento educacional, es de vital importancia para la planificación y desarrollo de sus actividades, ya que permiten una normal toma de decisiones que afectan el desarrollo de la institución, ya sea de forma docente como administrativa. 
@@ -445,7 +462,7 @@ Son arquitecturas estandarizadas para el desarrollo de software, permiten a los 
 
 \end{enumerate}
 
-\chapter{Introducción al PSP}
+\chapter{Uso de PSP}
 \thispagestyle{empty}
 \section{Base teórica}
 PSP (Proceso de Software Personal) es una metodología de desarrollo para proyectos informáticos, que tiene una serie de pasos enfocados en el ordenamiento, cuantificación y la categorización del trabajo y el tiempo. Es usada mundialmente por su fácil aprendizaje y su rápida incorporación. Este modelo de trabajo es solo para proyectos personales, o sea, en donde el desarrollador toma todo el trabajo por sí solo.
@@ -457,53 +474,14 @@ PSP nos obliga a desarrollar una forma de trabajo en la cual un desarrollador pr
 \section{Criterios para uso de PSP}
 La necesidad de usar PSP fue concebida para generar un proyecto que tuviera un criterio de calidad cuantificable. Ya que nos proporcionaba tablas e indicadores que establecen con el tiempo empleado, la cantidad de esfuerzo y errores que uno puede cometer en el trascurso del proyecto.
 
-\section{Estructura del PSP}
-\subsection{El trabajo del ingeniero de sofware}
-En este apartado se listan las actividades que contemplan el desarrollo del proyecto, incluyendo todo lo que pueda servir como avances en el proyecto, ya sea investigar, reunirse con otros o desarrollar.
-\subsection{La gestión del tiempo}
-Para este punto solo se necesita la estructuración del tiempo que uno tiene sobre el tiempo que se pretende dar al proyecto, basándose en la lista de actividades.
-\subsection{El control del tiempo}
-Para este apartado se desarrolla una tabla que contiene una lista de actividades con los tiempos de inicio y término de cada una de las tareas que se hacen. También se anotan los tiempos perdidos, el tipo de actividad y si está completada o no.
-\subsection{Planificación de períodos y productos}
-Este apartado se preocupa de la planificación semanal del tiempo, en la parte de desarrollo se tienen 3 tablas que nos permiten llevar los registros totales de tiempo en minutos de las actividades hecha durante la semana. La primera tabla muestra las sumas de los tiempos, la segunda muestra la actividad de las semanas pasadas y la tercera muestra el total de las semanas hasta hoy en día.
-\subsection{La planificación del producto}
-El desarrollo del proyecto requiere de un cuaderno que registre la actividad en función de los trabajos que se van realizando, para lo cual se tiene un cuaderno de trabajos que registra las actividades con sus respectivas estimaciones de tiempo, sacadas de datos anteriores. Recordar que en esta tabla se anotan los trabajos que resumen las actividades diarias, así que se anota uno al día.
-\subsection{El tamaño del producto}
-Para estimar los costes de tiempo y valor de cada actividad que representa parte del desarrollo del un producto como tal, es necesario establecer formas de medición para valores que pueden ser cuantificables en unidades de trabajo. Para lo cual en esta actividad se mostrarán Estimaciones de Tamaños para las actividades particulares de este proyecto.
-\subsection{La gestión del tiempo}
-Para poder desarrollar las actividades, se necesita tiempo, por lo cual resulta importante manejarlo apropiadamente, para esto se hace una estimación aproximada del tiempo que consumirá la ejecución de las actividades relacionadas con el desarrollo del trabajo que está en curso. Se expondrán dos tablas y un marco de referencias para las aproximaciones futuras.
-\subsection{La gestión de los compromisos}
-Los compromisos que uno hace con las personas a las cuales espera entregar un proyecto, deben ser documentados, mostrando el tipo de actividad a realizar, el día, los participantes de ese compromiso, la hora en que se realiza, la fecha y finalmente lo que se recibe a cambio de la finalización de estas tareas. Es importante destacar que una correcta forma de manejar los compromisos lleva a un buen plan de trabajo.
-\subsection{La gestión de las programaciones}
-En un proyecto siempre es necesario definir las características importantes que comprenden la ejecución de cada una de las actividades que se están desarrollando, por tanto en este proyecto se tiene un registro de los puntos de control, los cuales representan las características importantes que el desarrollo de este trabajo debe comprender.
-\subsection{El plan del proyecto}
-Para generar un plan del proyecto se necesita tener un resumen de las características de cómo se desarrolla el trabajo, para lo cual se expondrá un molde para generar planes de proyectos, mediante el cual se estima la cantidad de esfuerzo que uno puede desarrollar de acuerdo a las labores anteriores que ha realizado. Finalmente se mostrará un ejemplo de estimación del tamaño del programa.
-\subsection{Defectos}
-El registro de los defectos es altamente importante, ya que nos permite la correcta verificación de cada incidente ocurrido dentro del proceso de desarrollo del software. El cuaderno de registro de errores se ocupa en el desarrollo de aplicaciones, y nos permite anotar un error cuando ha salido en modo de compilación para lo cual uno registra el tipo de error y el tiempo dedicado a la reparación de este error. El objetivo de esta tabla es impedir la repetición de ciertos errores que pueden ser reparados mediante el aprendizaje.\\
-\\
-\textbf{Tipos de Defectos}\\
-\begin{tabular}{| l | l | l | l |}
-\hline
-10 & Documentación         & 60 & Comprobación\\
-\hline
-20 & Sintaxis              & 70 & Datos\\
-\hline
-30 & Construcción Paquetes & 80 & Función\\
-\hline
-40 & Asignación            & 90 & Sistema\\
-\hline
-50 & Interfaz              & 100 & Entorno\\
-\hline
-\end{tabular}
-
-\chapter{Aplicación del PSP}
-\thispagestyle{empty}
-\section{Explicación}
 Se mostrará la forma de desarrollo de las tablas PSP más importantes en el proyecto dando cuenta de cómo es el desempeño del PSP dentro de nuestro proyecto S.E.P.A.. Tendremos el desarrollo de las tablas más importantes en el PSP frente a nuestra operación. Obtendremos una mirada clara frente a que es el PSP y como éste permite complementar calidad en nuestra ocupación.
-\section{Desarrollo del PSP}
-\subsection{El Trabajo del Ingeniero de Sofware}
-Para estos efectos se desarrollo la siguiente tabla de actividades, con su frecuencia semanal y sus minutos.
 
+\section{Desarrollo del PSP}
+\subsection{El trabajo del ingeniero de sofware}
+En este apartado se listan las actividades que contemplan el desarrollo del proyecto, incluyendo todo lo que pueda servir como avances en el proyecto, ya sea investigar, reunirse con otros o desarrollar. Para estos efectos se desarrollo la siguiente tabla de actividades, con su frecuencia semanal y sus minutos.
+
+\newpage
+\begin{table}
 \begin{tabular}{|l | l | l |}
 \hline
 \textbf{Tarea} & \textbf{Frecuencia (semanal)} & \textbf{Tiempo (minutos)} \\
@@ -519,11 +497,14 @@ Reuniones & L, M, J & 420/semana\\
 Reparar Documentos & Mi, V & 840/semana\\
 \hline
 \end{tabular}
-\subsection{La Gestión del Tiempo}
-En este caso en particular uno puede ver que se tienen todos los días de la semana destinados para el propósito de desarrollar el proyecto ya sea en informes o programar. En menos tiempo se reparten las tareas de investigar y reparar cosas.
-\subsection{El Control del Tiempo}
-Se muestra la siguiente tabla de control de Tiempo, de forma resumida, para un día en especifico.
-
+\caption{Tabla de actividades}
+\end{table}
+\subsection{La gestión del tiempo}
+Para este punto solo se necesita la estructuración del tiempo que uno tiene sobre el tiempo que se pretende dar al proyecto, basándose en la lista de actividades. Se tienen todos los días de la semana destinados para el propósito de desarrollar el proyecto ya sea en informes o programar. En menos tiempo se reparten las tareas de investigar y reparar cosas.
+\subsection{El control del tiempo}
+Para este apartado se desarrolla una tabla que contiene una lista de actividades con los tiempos de inicio y término de cada una de las tareas que se hacen. También se anotan los tiempos perdidos, el tipo de actividad y si está completada o no. Se muestra la siguiente tabla de control de Tiempo, de forma resumida, para un día en especifico.
+\newpage
+\begin{table}
 \begin{tabbing}
 Estudiante: \= Miguel Angel Fuenzaldia Pino \= Fecha: \= 9/10/2012\\
 Profesor: \> Sebastián Salazar Molina \>   \>  \\
@@ -563,9 +544,12 @@ Profesor: \> Sebastián Salazar Molina \>   \>  \\
 26/11 & 15:00 & ... & ... & Desarrollo & notebook\\
 \hline
 \end{tabular}
-\subsection{Planificación de Períodos y Productos}
-Se muestran las siguientes tablas de planificación, de forma resumida, para comprender como se utilizan.
+\caption{Tabla de control de tiempo}
+\end{table}
+\subsection{Planificación de períodos y productos}
+Este apartado se preocupa de la planificación semanal del tiempo, en la parte de desarrollo se tienen 3 tablas que nos permiten llevar los registros totales de tiempo en minutos de las actividades hecha durante la semana. La primera tabla muestra las sumas de los tiempos, la segunda muestra la actividad de las semanas pasadas y la tercera muestra el total de las semanas hasta hoy en día. Se muestran las siguientes tablas de planificación, de forma resumida, para comprender como se utilizan.
 
+\begin{table}
 \textbf{Estudiante}: Miguel Angel Fuenzaldia Pino     \textbf{Fecha}: 9/10/2012\\
 \begin{tabular}{| l | l | l | l | l | l |}
 \hline
@@ -590,9 +574,12 @@ S & & & & & \\
 \textbf{Totales} & 120 & 540 & 180 & 180 & 1170\\
 \hline
 \end{tabular}
-\\
+\caption{Primera tabla de planificación de periodos y productos}
+\end{table}
+
 Tiempos y Medias del Período, Número de Semanas (número anterior +1): 1\\
-Resumen de las semanas anteriores:\\
+Resumen de las semanas anteriores:
+\begin{table}
 \begin{tabular}{| l | l | l | l | l | l |}
 \hline
 \textbf{Total} & 1170 & 1290 & 1170 & 1150 & 1170 \\
@@ -604,8 +591,11 @@ Resumen de las semanas anteriores:\\
 \textbf{Mín} & 900 & 800 & 400 & 900 & 800 \\
 \hline
 \end{tabular}
-\\
-Resumen de las semanas totales (anteriores mas última)\\
+\caption{Segunda tabla de planificación de periodos y productos}
+\end{table}
+
+Resumen de las semanas totales (anteriores mas última)
+\begin{table}
 \begin{tabular}{| l | l | l | l | l | l |}
 \hline
 \textbf{Total} & 1170 & 2460 & 3630 & 4780 & 5950 \\
@@ -617,9 +607,12 @@ Resumen de las semanas totales (anteriores mas última)\\
 \textbf{Mín} & 900 & 1700 & 2100 & 3000 & 3800 \\
 \hline
 \end{tabular}
-\subsection{La Planificación del Producto}
-La siguiente tabla muestra una forma de planificación.
-
+\caption{Tercera tabla de planificación de periodos y productos}
+\end{table}
+\subsection{La planificación del producto}
+El desarrollo del proyecto requiere de un cuaderno que registre la actividad en función de los trabajos que se van realizando, para lo cual se tiene un cuaderno de trabajos que registra las actividades con sus respectivas estimaciones de tiempo, sacadas de datos anteriores. Recordar que en esta tabla se anotan los trabajos que resumen las actividades diarias, así que se anota uno al día. La siguiente tabla muestra una forma de planificación.
+\newpage
+\begin{table}
 \textbf{Estudiante}: Miguel Angel Fuenzaldia Pino     \textbf{Fecha}: 9/10/2012\\
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
@@ -637,9 +630,12 @@ La siguiente tabla muestra una forma de planificación.
 \cline{2-13} & \multicolumn{12}{|l|}{\textbf{Descripción:}}\\
 \hline
 \end{tabular}
-\subsection{El Tamaño del Producto}
-Se tiene una muestra de tablas por actividad para determinar la cantidad total de trabajo que se realiza con respecto a lo que se tiene que tener al final.
-
+\caption{Tabla de la planificación de producto}
+\end{table}
+\subsection{El tamaño del producto}
+Para estimar los costes de tiempo y valor de cada actividad que representa parte del desarrollo del un producto como tal, es necesario establecer formas de medición para valores que pueden ser cuantificables en unidades de trabajo. Para lo cual en esta actividad se mostrarán Estimaciones de Tamaños para las actividades particulares de este proyecto. Se tiene una muestra de tablas por actividad para determinar la cantidad total de trabajo que se realiza con respecto a lo que se tiene que tener al final.
+\newpage
+\begin{table}
 \begin{tabbing}
 \textbf{Estudiante:} \= Miguel Angel Fuenzaldia Pino \= \textbf{Fecha:} \= 19/11/2012\\
 \textbf{Profesor:} \> Sebastián Salazar Molina \> \textbf{Tiempos de Actividad} \>  \\
@@ -656,7 +652,9 @@ Sebastián Salazar & 60 & 4 & 15\\
 \textbf{Medias} & 60 & 4 & 15 \\
 \hline
 \end{tabular}
-\\\\
+\caption{Tabla del tamaño del producto}
+\end{table}
+\begin{table}
 \textbf{Lectura}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
@@ -675,7 +673,9 @@ Sebastián Salazar & 60 & 4 & 15\\
 \textbf{Medias} & 180 & 50 & 3,6 \\
 \hline
 \end{tabular}
-\\\\
+\caption{Tabla asociada a la lectura}
+\end{table}
+\begin{table}
 \textbf{Escribir}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
@@ -692,7 +692,9 @@ Título & & & \\
 \textbf{Medias} & 185 & 15,5 & 15 \\
 \hline
 \end{tabular}
-\\\\
+\caption{Tabla asociada a escribir}
+\end{table}
+\begin{table}
 \textbf{Programar}\\
 \begin{tabular}{| l | l | l | l | l | l | l |}
 \hline
@@ -709,9 +711,12 @@ Vista &  			400  & 350 & 175 & 175 & 350 & 400\\
 \textbf{Medias} & 	500	 & 400 & 100 & 100 & 400 & 500\\
 \hline
 \end{tabular}
-\subsection{La Gestión del Tiempo}
-Se muestran las tablas de gestión del tiempo por actividades.
+\caption{Tabla asociada a programar}
+\end{table}
 
+\subsection{La gestión del tiempo}
+Para poder desarrollar las actividades, se necesita tiempo, por lo cual resulta importante manejarlo apropiadamente, para esto se hace una estimación aproximada del tiempo que consumirá la ejecución de las actividades relacionadas con el desarrollo del trabajo que está en curso. Se expondrán dos tablas y un marco de referencias para las aproximaciones futuras. Se muestran las tablas de gestión del tiempo por actividades.
+\begin{table}
 \begin{tabbing}
 \textbf{Estudiante:} \= Miguel Angel Fuenzaldia Pino \= \textbf{Fecha:} \= 19/11/2012\\
 \textbf{Profesor:} \> Sebastián Salazar Molina \> \textbf{Tiempos de Actividad} \>  \\
@@ -740,7 +745,9 @@ S  &    & & 180 & 180 & 360 \\
 \textbf{Totales} & 180 & & 1260 & 1260 & 1440 \\
 \hline
 \end{tabular}
-\\\\
+\caption{Primera tabla de la gestión del tiempo}
+\end{table}
+\begin{table}
 \textbf{Etapa de desarrollo de Proyecto e Informe}\\
 \begin{tabular}{| l | l | l | l | l | l |}
 \hline
@@ -765,9 +772,11 @@ S  &    & 180 & 180 &  & 360 \\
 \textbf{Totales} & 180 & 1260 & 1260 &  & 2700 \\
 \hline
 \end{tabular}
-\subsection{La Gestión de los Compromisos}
-La siguiente tabla muestra un ejemplo de los compromisos y la información de acuerdo a cada tarea que uno pretende realizar.
-
+\caption{Segunda tabla de la gestión del tiempo}
+\end{table}
+\subsection{La gestión de los compromisos}
+Los compromisos que uno hace con las personas a las cuales espera entregar un proyecto, deben ser documentados, mostrando el tipo de actividad a realizar, el día, los participantes de ese compromiso, la hora en que se realiza, la fecha y finalmente lo que se recibe a cambio de la finalización de estas tareas. Es importante destacar que una correcta forma de manejar los compromisos lleva a un buen plan de trabajo. La siguiente tabla muestra un ejemplo de los compromisos y la información de acuerdo a cada tarea que uno pretende realizar.
+\begin{table}
 \begin{tabbing}
 \textbf{Estudiante:} \= Miguel Angel Fuenzaldia Pino \= \textbf{Fecha:} \= 19/11/2012\\
 \textbf{Profesor:} \> Sebastián Salazar Molina \> \textbf{Tiempos de Actividad} \>  \\
@@ -792,9 +801,11 @@ V  & Desarrollo & Cliente  & 3 & ... & título \\
 S  & Escribir   & Profesor & 3 & ... & título \\
 \hline
 \end{tabular}
-\subsection{La Gestión de las Programaciones}
-A continuación una tabla que muestra un poco como una persona que utiliza el PSP puede programar su lista de actividades.
-
+\caption{Tabla de la gestión de los compromisos}
+\end{table}
+\subsection{La gestión de las programaciones}
+En un proyecto siempre es necesario definir las características importantes que comprenden la ejecución de cada una de las actividades que se están desarrollando, por tanto en este proyecto se tiene un registro de los puntos de control, los cuales representan las características importantes que el desarrollo de este trabajo debe comprender. A continuación una tabla que muestra un poco como una persona que utiliza el PSP puede programar su lista de actividades.
+\begin{table}
 \textbf{Estudiante}: Miguel Angel Fuenzaldia Pino     \textbf{Fecha}: 9/10/2012\\\\\
 \begin{tabular}{| l | l |}
 \hline
@@ -811,9 +822,11 @@ A continuación una tabla que muestra un poco como una persona que utiliza el PS
 4 & Escribir un informe de título en coordinación con lo requerido\\
 \hline
 \end{tabular}
-\subsection{El Plan del Proyecto}
-Se tiene un molde de lo que es el plan del proyecto, que es la parte más consistente del desarrollo en PSP, ya que nos muestra información acerca de tiempos por líneas de código en un compendio de actividades que puede ser una tarea a realizar semanalmente o en periodos más largos.
-\\\\
+\caption{Tabla de la gestión de las programaciones}
+\end{table}
+\subsection{El plan del proyecto}
+Para generar un plan del proyecto se necesita tener un resumen de las características de cómo se desarrolla el trabajo, para lo cual se expondrá un molde para generar planes de proyectos, mediante el cual se estima la cantidad de esfuerzo que uno puede desarrollar de acuerdo a las labores anteriores que ha realizado. Finalmente se mostrará un ejemplo de estimación del tamaño del programa. Se tiene un molde de lo que es el plan del proyecto, que es la parte más consistente del desarrollo en PSP, ya que nos muestra información acerca de tiempos por líneas de código en un compendio de actividades que puede ser una tarea a realizar semanalmente o en periodos más largos.
+\begin{table}
 \textbf{Resumen del plan de Proyecto}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
@@ -824,7 +837,9 @@ Se tiene un molde de lo que es el plan del proyecto, que es la parte más consis
 \textbf{Profesor:} & Sebastián Salazar Molina & \textbf{Lenguaje} & Java  \\
 \hline
 \end{tabular}
-\\\\\\
+\caption{Primera tabla del plan de proyecto}
+\end{table}
+\begin{table}
 \begin{tabular}{| l | l | l | l | l | l |}
 \hline
 \textbf{Resumen} & \textbf{Plan} & \multicolumn{2}{|c|}{\textbf{Real}} & \multicolumn{2}{|c|}{\textbf{Hasta la Fecha}} \\
@@ -870,7 +885,10 @@ Se tiene un molde de lo que es el plan del proyecto, que es la parte más consis
 \textit{Mín} & 			200 & \multicolumn{4}{|c|}{\textbf{}}\\
 \hline
 \end{tabular}
+\caption{Segunda tabla del plan de proyecto}
+\end{table}
 \newpage
+\begin{table}
 \begin{tabular}{| l | l | l | l | l | l |}
 \hline
 \textbf{D. Introducidos} & \textbf{Plan} & \textbf{Real} & \textbf{Hasta la Fecha} & \textbf{Porcentaje} & \textbf{Def./Hora} \\
@@ -906,9 +924,30 @@ Se tiene un molde de lo que es el plan del proyecto, que es la parte más consis
 \textit{Total} &         36 & 74 & 360& 1 & 11 \\
 \hline
 \end{tabular}
+\caption{Tercera tabla del plan de proyecto}
+\end{table}
 \subsection{Defectos}
-La siguiente tabla es simplemente una muestra de la lista de los defectos y como se van anotando.
+El registro de los defectos es altamente importante, ya que nos permite la correcta verificación de cada incidente ocurrido dentro del proceso de desarrollo del software. El cuaderno de registro de errores se ocupa en el desarrollo de aplicaciones, y nos permite anotar un error cuando ha salido en modo de compilación para lo cual uno registra el tipo de error y el tiempo dedicado a la reparación de este error. El objetivo de esta tabla es impedir la repetición de ciertos errores que pueden ser reparados mediante el aprendizaje.\\
+\begin{table}
+\textbf{Tipos de Defectos}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+10 & Documentación         & 60 & Comprobación\\
+\hline
+20 & Sintaxis              & 70 & Datos\\
+\hline
+30 & Construcción Paquetes & 80 & Función\\
+\hline
+40 & Asignación            & 90 & Sistema\\
+\hline
+50 & Interfaz              & 100 & Entorno\\
+\hline
+\end{tabular}
+\caption{Primera tabla defectos}
+\end{table}
 
+La siguiente tabla es simplemente una muestra de la lista de los defectos y como se van anotando.
+\begin{table}
 \textbf{Resumen del plan de Proyecto al cual se le encuentran Defectos}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
@@ -919,7 +958,9 @@ La siguiente tabla es simplemente una muestra de la lista de los defectos y como
 \textbf{Profesor:} & Sebastián Salazar Molina & \textbf{Lenguaje} & Java  \\
 \hline
 \end{tabular}
-\\\\\\
+\caption{Segunda tabla defectos}
+\end{table}
+\begin{table}
 \begin{tabular}{| l | l | l | l | l | l | l |}
 \hline
 \textbf{Fecha} & \textbf{Número} & \textbf{Tipo} & \textbf{Introducido} & \textbf{Eliminado} & \textbf{Correc.} & \textbf{Correg.}\\
@@ -929,11 +970,16 @@ La siguiente tabla es simplemente una muestra de la lista de los defectos y como
 \textbf{Descripción} & \multicolumn{6}{|c|}{Mal despliegue de textos, en mantenedores} \\
 \hline
 \end{tabular}
-
+\caption{Tercera tabla defectos}
+\end{table}
 \chapter{Integrador}
 \thispagestyle{empty}
+\section{Introducción}
+
+El modulo de integración que se le agrega a S.E.P.A. es una herramienta de poca complejidad, en donde es posible hacer cargas de datos, que serán explicadas posteriormente. Además de esto existen herramientas que hacen posible las peticiones de información desde el módulo integrador hacia DirDoc, esta funcionalidad se carga por tareas determinadas en ciclos de tiempo predefinidos, que son explicados a continuación.
+
 \section{Poblador}
-S.E.P.A. utiliza un módulo que permite la comunicación entre los datos del sistema de notas y estudiantes existente dentro de la Universidad (Dir Doc). El fin de ésto es preguntar por datos que posteriormente serán insertados en las tablas del sistema nuestro. Para esto se utiliza a un Web Service que provee una interfaz en donde se obtiene la información, ésta posteriormente se normaliza y adecua a nuestro sistema y finalmente se persiste. Existen varios procesos de integraciones, cada uno va dirigido a un objeto que se quiere poblar.
+Al proceso S.E.P.A. se le agrega un módulo integrador que permite la comunicación entre los datos del sistema de notas y estudiantes existente dentro de la Universidad (Dir Doc). El fin de ésto es preguntar por datos que posteriormente serán insertados en las tablas del sistema nuestro. Para esto se utiliza a un Web Service que provee una interfaz en donde se obtiene la información, ésta posteriormente se normaliza y adecua a nuestro sistema y finalmente se persiste. Existen varios procesos de integraciones, cada uno va dirigido a un objeto que se quiere poblar.
 \section{Web Service}
 Es una tecnología que permite la comunicación entre 2 programas mediante un sistema que expone un protocolo para el traspaso de datos, donde el encargado de generar las preguntas debe tener información consistente y poder establecer la conexión. Por otro lado los programas se relacionan gracias a un meta lenguaje basado en XML (de etiquetado) que describe el código que debe implementarse para poder realizar las consultas y retornar objetos con los cuales posteriormente opera.
 
@@ -955,6 +1001,10 @@ Tareas que se ejecutan una ves al año, en donde podemos encontrar: Actualizar C
 
 \chapter{Mantenedor}
 \thispagestyle{empty}
+\section{Introducción}
+
+El mantenedor es la interfaz nueva que tiene S.E.P.A. después de estas mejoras, es la parte que el usuario final sentirá de manera distinta, ya que ahora se tienen perfiles, visualización e incluso modificación de data. De manera lógica y simple, manteniendo siempre la facilidad del desarrollo para futuros componentes.
+
 \section{Sitio Web}
 El proyecto mantenedor es un sitio web que utiliza la tecnología Java Server Faces o (JSF), que permite la visualización de una estructura de código en formato xml para mostrar sitos web con contenido dinámico en java. Sobre esta tecnología se ocupa Primefaces que enriquece las características de JSF proporcionando herramientas HTML mas complejas (tales como menús despegables o tablas con distintas funcionalidades ya programadas).
 \section{Ingreso}
@@ -978,21 +1028,9 @@ Volviendo al menú tenemos una serie de opciones estas son:
 \end{itemize}
 
 Todos estos mantenedores cumplen con las mismas funciones de buscar, borrar, filtrar, agregar y modificar los registros en cada una de las tablas que uno elija.
-
-\chapter{Diagrama del Proyecto}
-\section{Información}
-Esto es un servicio que alimenta a sus datos gracias a un servicio web. Usando el framework Apache CXF nos permite gestionar estos datos y nosotros con Java y Spring Data somos capaces de administrarlos usando una base de datos PostgresSQL. De esta manera nosotros podemos con Spring Security ocupar los Beans de Spring que nos gestionan las páginas del sitio de mantenedores. El sitio por su parte está hecho con JSF para mostrar en pantalla sus datos. Por encima tenemos un componente que enriquece las características de JSF llamado Primefaces, el cual nos agrega funcionalidad y características nuevas, como por ejemplo cajas de texto con parámetros que verifican los datos buscando errores en ellos así evitando completamente que el usuario use de mala manera el sitio.
-
-\begin{figure}[!hbp]
-\begin{center}
-\includegraphics[scale=0.6,angle=0]{images/diagrama.jpg}
-\caption{Diagrama general del sistema}
-\label{Diagrama general del sistema}
-\end{center}
-\end{figure}
 \chapter{Evaluación de Costos}
 \section{Puntos de Función}
-Para evaluar los costos monetarios de este proyecto se utilizara el calculo de Puntos de Función para llegar a un valor justificado. Mediante una función matemática que utiliza varios parámetros, divididos en 2 ramas.
+Para evaluar los costos monetarios de este proyecto se utilizara el cálculo de Puntos de Función para llegar a un valor justificado. Mediante una función matemática que utiliza varios parámetros, divididos en 2 ramas.
 
 \section{Conteo de puntos}
 
@@ -1004,6 +1042,7 @@ Para evaluar los costos monetarios de este proyecto se utilizara el calculo de P
 	\item Consulta Externa (CE): El sistema tiene mantenedores de todos sus datos en base de datos, para poder ser modificables por los usuarios.
 \end{enumerate}
 
+\begin{table}
 \textbf{Tabla de valores ponderados}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
@@ -1020,9 +1059,11 @@ SE & 43  & alto  & 8\\
 CE & 43  & alto  & 8\\
 \hline
 \end{tabular}
-\\\\\\
-Los parámetros anteriores deben ser convertidos en distintas tablas.\\
-\textbf{Complejidad de los Ficheros}\\
+\caption{Tabla de valores ponderados}
+\end{table}
+Los parámetros anteriores deben ser convertidos en distintas tablas.
+\begin{table}
+\textbf{Complejidad de los ficheros}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
 \textbf{RET/DET} & \textbf{1-19} & \textbf{20-50} & \textbf{51+} \\
@@ -1034,8 +1075,10 @@ Los parámetros anteriores deben ser convertidos en distintas tablas.\\
 6+ & Medio & Alto & Alto\\
 \hline
 \end{tabular}
-\\\\\\
-\textbf{Complejidad de las Entradas}\\
+\caption{Complejidad de los ficheros}
+\end{table}
+\begin{table}
+\textbf{Complejidad de las entradas}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
 \textbf{FICH/DET} & \textbf{1-4} & \textbf{5-15} & \textbf{16+} \\
@@ -1047,7 +1090,9 @@ Los parámetros anteriores deben ser convertidos en distintas tablas.\\
 3+ & Medio & Alto & Alto\\
 \hline
 \end{tabular}
-\\\\\\
+\caption{Complejidad de las entradas}
+\end{table}
+\begin{table}
 \textbf{Complejidad de las Salidas}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
@@ -1060,7 +1105,9 @@ Los parámetros anteriores deben ser convertidos en distintas tablas.\\
 4+ & Medio & Alto & Alto\\
 \hline
 \end{tabular}
-\\\\\\
+\caption{Complejidad de las salidas}
+\end{table}
+\begin{table}
 \textbf{Tabla de valores calculados}\\
 \begin{tabular}{| l | l | l | l | l |}
 \hline
@@ -1079,8 +1126,8 @@ FEI & x5 & x7 & \textbf{8x15} & 120\\
 TOTAL &  &  & & 427\\
 \hline
 \end{tabular}
-\\\\\\
-El total obtenido debe ser reparado con una serie de factores que se incluyen a continuación.
+\caption{Tabla de valores calculados}
+\end{table}
 
 \section{Características generales del sistema}
 
@@ -1102,7 +1149,7 @@ En esta sección se evalúa con un número de 0 a 5 las distintas característic
 	\item Instalaciones Múltiples: [3 puntos] La aplicación correrá en múltiples entornos de Hw o Sw y se tiene en cuenta desde la fase de diseño.
 	\item Facilidad de Cambios: [3 puntos] El cambio de la configuración se hace interactivamente y tiene efecto inmediato.
 \end{enumerate}
-
+\begin{table}
 \textbf{Cálculo de los puntos de función ajustados}\\
 \begin{tabular}{| l | l | l |}
 \hline
@@ -1139,7 +1186,8 @@ En esta sección se evalúa con un número de 0 a 5 las distintas característic
 \multicolumn{2}{|c|}{Factor de Complejidad Total (FCT)} & 48\\
 \hline
 \end{tabular}
-\\\\\\
+\caption{Cálculo de los puntos de función ajustados}
+\end{table}
 
 \section{Puntos de función ajustados}
 La siguiente fórmula describe la cantidad ajustada de puntos de función y éstos a su vez son multiplicados por el valor en horas dando lo que cuesta en tiempo y dinero, cada uno de los puntos obteniéndose finalmente el valor ponderado del proyecto en sí.
@@ -1148,7 +1196,7 @@ La siguiente fórmula describe la cantidad ajustada de puntos de función y ést
 PFA=PFSA * ( 0.65 + ( 0.01 * FCT ) = 427 * ( 0.65 + ( 0.01 * 48 ) = 452.51
 \end{math}
 
-Después se multiplican los Puntos de Función por un factor de 4 horas hombre por cada punto de función.
+Donde se obtuvo un total de 452 puntos de función ajustados, los que vienen a ser puntos de cambios en el proceso de desarrollo, los cuales por lo menos requieren un proceso de medición para posteriormente pasar a la programación. Después se multiplican los Puntos de Función por un factor de 4 horas hombre, aproximadamente, por cada punto de función.
 
 \begin{math}
 452.51 PF * 4 (HH / PF) = 452.51 * (4) = 1810.04 HH
