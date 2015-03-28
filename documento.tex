@@ -37,7 +37,7 @@
 FACULTAD DE INGENIERÍA\\
 ESCUELA DE INFORMÁTICA}\\
 \vspace{3cm}
-MÓDULOS INTEGRADOR Y MANTENEDOR DE DATOS EN SISTEMA S.E.P.A.
+MÓDULOS INTEGRADOR Y MANTENEDOR DE DATOS EN SISTEMA SEPA
 \end{center}
 \begin{flushright}
 TRABAJO DE TÍTULO PARA OPTAR AL TÍTULO DE\\
@@ -63,32 +63,27 @@ Autoridad Responsable
 \end{flushright}
 \chapter*{Resumen}
 \thispagestyle{empty}
-En las organizaciones es necesario el uso de información para tomar decisiones correctas. Tener un buen software, entrega valor agregado a la dirección de actividades en todo tipo de estructuras con jerarquía.
+En las organizaciones es necesario el uso de información para tomar decisiones correctas.
+% Tener un buen software, entrega valor agregado a la dirección de actividades en todo tipo de estructuras con jerarquía.
 
-La UTEM dispone del sistema S.E.P.A. (Sistema Estadístico de Profesores y Alumnos), que consiste en un proyecto Web realizado con la herramienta PHP que toma datos de alumnos, profesores y encargados provenientes de DirDoc, para posteriormente hacer cálculos predefinidos para obtener indicadores que representen la realidad universitaria.
+La UTEM dispone del sistema SEPA (Sistema Estadístico de Profesores y Alumnos), que consiste en un proyecto Web realizado con anterioridad, que toma datos de alumnos, profesores y encargados provenientes de DirDoc, para posteriormente obtener indicadores que representen la realidad universitaria.
 
-Sin embargo S.E.P.A. presenta insuficiencias, por ejemplo: no dispone de un servicio web (una forma de acceso más segura y controlada) que se comunique con DirDoc o no presenta formas alternativas de acceso, no tiene multiroles y presenta datos incompletos.
+Sin embargo SEPA presenta insuficiencias, por ejemplo: no dispone de un mecanismo que se comunique con DirDoc de manera segura y controlada, tampoco presenta formas alternativas de acceso, no posee varios tipos de roles y tiene datos incompletos.
 
 % ejemplos, no tiene servicio web dirdoc, inconsistencia de datos, carece de formas alternativas de accesos, carece multiples roles (más de 2).
 
-El presente trabajo de Título ofrece una mejora al sistema S.E.P.A., con integración de herramientas que permiten mejoras por la Universidad (serán explicadas a fondo en este documento). Las herramientas usadas en este proyecto son: 
+El presente trabajo de Título ofrece una mejora al sistema SEPA, con integración de herramientas que permiten mejoras por la Universidad, explicadas a fondo en este informe.
 
-\begin{itemize}
-	\item El sistema gestor de bases de datos PostgresSQL.
-	\item Herramienta de construcción de proyectos MAVEN para el lenguaje de programación Java.
-	\item Uso de servicios web con CXF.
-\end{itemize}
-
-El resultado final de este proyecto es la obtención por parte de la Universidad un webservice que comunique S.E.P.A. con DirDoc de manera mas expedita y segura, mediante varios tipos de consultas, un módulo de mantenedor que permitirá monitorizar y editar las distintas tablas, con sus registros correspondientes, pensado desde un principio para hacer búsquedas y reparar data que este incompleta.
+El resultado final de este proyecto es la obtención por parte de la Universidad un servicio que comunique SEPA con DirDoc de manera mas expedita y segura, mediante varios tipos de consultas, un módulo de mantenedor que permitirá monitorizar y editar las distintas tablas, con sus registros correspondientes, pensado desde un principio para hacer búsquedas y reparar data que este incompleta.
 
 \tableofcontents
 \listoffigures
 \listoftables
 \chapter*{Introducción}
 \thispagestyle{empty}
-La Universidad Tecnológica Metropolitana utiliza para la administración de toda la información referente a estudiantes, profesores y personal de administración un sistema denominado DirDoc basado en la tecnológica PHP. S.E.P.A., software desarrollado por Sebastián Salazar Molina para en ese entonces su trabajo de título, es un proyecto que constituyó una forma de potenciar las capacidades operativas de la Universidad, generando indicadores de calidad y entregando una ventaja comparativa frente a otras Universidades.
+La Universidad Tecnológica Metropolitana utiliza para la administración de toda la información referente a estudiantes, profesores y personal de administración un sistema denominado DirDoc basado en la tecnológica PHP (ver anexo). SEPA, software desarrollado por Sebastián Salazar Molina para en ese entonces su trabajo de título, es un proyecto que constituyó una forma de potenciar las capacidades operativas de la Universidad, generando indicadores de calidad y entregando una ventaja comparativa frente a otras Universidades.
 
-El objetivo de este trabajo de título esta en la actualización del proyecto S.E.P.A. mediante el lenguaje Java que utiliza herramientas estructuradas, extensibles y que tienen como resultado la materialización de sistemas informáticos de más fácil mantención debido al uso de Patrones de Diseño (explicados en este informe):
+El objetivo de este trabajo de título esta en la mejora del proyecto SEPA mediante el lenguaje de programación Java que utiliza herramientas estructuradas, extensibles y que tienen como resultado la materialización de sistemas informáticos de más fácil mantención debido al uso de Patrones de Diseño (explicados en este informe):
 
 \begin{itemize}
 	\item Modelo Vista Controlador: Es un modelo de desarrollo informático que permite separar el modelo de datos, el negocio y sus flujos, de la vista para el usuario final \cite{data12}.
@@ -101,7 +96,7 @@ El objetivo de este trabajo de título esta en la actualización del proyecto S.
 
 Además, el proyecto se hará bajo la metodología PSP (Personal Software Process) que nos proporciona un modelo de trabajo basado en la caracterización de los tiempos y costes de operación de un ingeniero informático, adicionando documentación extra (explicada en este informe), correspondiente a eventos que caracterizaron las directrices de cómo se lleva adelante esta tarea, todo lo cual, conduce a una evaluación de la calidad del proyecto como programa.
 
-Existen 3 tipos de beneficios que la Universidad puede obtener al hacerse con la versión mejorada del sistema S.E.P.A.:
+Existen 3 tipos de beneficios que la Universidad puede obtener al hacerse con la versión mejorada del sistema SEPA:
 
 \begin{enumerate}
 \item Mediante la entrega al mercado laborar, de un perfil de profesional característico de la U.T.E.M., visualizado en la competencia y desempeño de sus profesionales, la Universidad se muestra al mercado como un ente preocupado de medir su calidad con herramientas tecnológicas que justifican un buen desempeño mediante indicadores cuantificables y verificables por 
@@ -112,25 +107,25 @@ organismos reguladores.
 \item Beneficio a futuro, dado el alto estándar de las herramientas utilizadas, la integración, en términos de programación, resultará más sencilla, ya que este proyecto está realizado bajo tecnologías más estandarizadas como lo son los proyectos desarrollados en Java, Maven y Spring.
 \end{enumerate}
 
-La justificación principal de por que en S.E.P.A. se realizarán estas mejoras, radica en la necesidad de contar con indicadores claros y precisos, que son los que hacen que las decisiones sean justificadas, Por ejemplo, una vez implementadas las mejoras, en S.E.P.A. se prodrá fácilmente programar contadores de la totalidad de las tablas, incluidas conexiones entre tablas, mientras que la version actual de S.E.P.A. tiene contadores simples y poco específicos, tales como el promedio de notas por ramo y por alumnos programados de manera tal que no se pueden hacer búsquedas especificas sobre todos los parámetros de una tabla en especifico.
+La justificación principal de por que en SEPA se realizarán estas mejoras, radica en la necesidad de contar con indicadores claros y precisos, que son los que hacen que las decisiones sean justificadas, Por ejemplo, una vez implementadas las mejoras, en SEPA se prodrá fácilmente programar contadores de la totalidad de las tablas, incluidas conexiones entre tablas, mientras que la version actual de SEPA tiene contadores simples y poco específicos, tales como el promedio de notas por ramo y por alumnos programados de manera tal que no se pueden hacer búsquedas especificas sobre todos los parámetros de una tabla en especifico.
 
-Otra justificación de estos cambios, es la capacidad de reparar data que este mal escrita o que simplemente no exista, permitiendo que los datos puedan ser mejorados constantemente y de manera expedita. Característica que S.E.P.A. actual no posee, ya que para solicitar un cambio se necesita básicamente pedir la data desde la propia fuente de datos, proceso que es manual y toma días y muchas personas.
+Otra justificación de estos cambios, es la capacidad de reparar data que este mal escrita o que simplemente no exista, permitiendo que los datos puedan ser mejorados constantemente y de manera expedita. Característica que SEPA actual no posee, ya que para solicitar un cambio se necesita básicamente pedir la data desde la propia fuente de datos, proceso que es manual y toma días y muchas personas.
 
 Finalmente es importante destacar que las transacciones de los servicios web que se agregaran como parte de este proyecto constituyen otra mejora, haciendo el sistema mas seguro y rápido.
 
 \chapter{Antecedentes}
 \thispagestyle{empty}
 \section{Contexto General}
-La Universidad Tecnológica Metropolitana (UTEM) es un organismo de enseñanza superior que se encuentra dentro del Consejo de Rectores de las Universidades Chilenas. Dentro de su sistema administrativo de notas se ocupa el sistema DirDoc, el cual entrega información de notas con respecto a tales ramos y alumnos, es ocupado particularmente por alumnos, profesores y directores de escuela para  mirar e ingresar notas, respectivaemtne, de los distintos ramos impartidos en la Universidad. S.E.P.A. es una herramienta que nacido como un apoyo en el ámbito estadístico, toma los datos que se encuentran en el marco de DirDoc, permite obtener valores ponderados entre otras cosas.
+La Universidad Tecnológica Metropolitana (UTEM) es un organismo de enseñanza superior que se encuentra dentro del Consejo de Rectores de las Universidades Chilenas. Dentro de su sistema administrativo de notas se ocupa el sistema DirDoc, el cual entrega información de notas con respecto a tales ramos y alumnos, es ocupado particularmente por alumnos, profesores y directores de escuela para  mirar e ingresar notas, respectivaemtne, de los distintos ramos impartidos en la Universidad. SEPA es una herramienta que nacido como un apoyo en el ámbito estadístico, toma los datos que se encuentran en el marco de DirDoc, permite obtener valores ponderados entre otras cosas.
 \section{Contexto Particular}
-El proyecto S.E.P.A. el Sistema Estadístico de Profesores y Alumnos, es el encargado de mostrar información que pueda ser cuantificable en pos de tener herramientas de control general y toma de decisiones. Dicha información viene del sistema DirDoc que se utiliza para la mantención de datos académicos en la Universidad.
+El proyecto SEPA el Sistema Estadístico de Profesores y Alumnos, es el encargado de mostrar información que pueda ser cuantificable en pos de tener herramientas de control general y toma de decisiones. Dicha información viene del sistema DirDoc que se utiliza para la mantención de datos académicos en la Universidad.
 \section{Problema}
-El antiguo S.E.P.A. presenta faltas o insuficiencias, tales como: 
+El antiguo SEPA presenta faltas o insuficiencias, tales como: 
 \begin{itemize}
-	\item No se dispone de un servicio web (una forma de acceso más segura y controlada) de DirDoc. En el actual S.E.P.A. se deben seguir una serie de pasos para ingresar data. Primero se debe seleccionar mediante el DirDoc que data hay que insertar en S.E.P.A. y después se requiere hablar con un encargado de S.E.P.A. para que ejecute una sentencia SQL que ingrese los valores deseados a la base de datos. Lo que conlleva peligro, ya que es muy probable la perdida u omisión de algún valor.
-	\item Presenta falta de datos. Retomando el punto anterior, en el actual S.E.P.A. se da que hay ciertas tablas que no tienen datos y esto es debido a que en su proceso de inserción, estos fueron omitidos o perdidos.
+	\item No se dispone de un servicio web (una forma de acceso más segura y controlada) de DirDoc. En el actual SEPA se deben seguir una serie de pasos para ingresar data. Primero se debe seleccionar mediante el DirDoc que data hay que insertar en SEPA y después se requiere hablar con un encargado de SEPA para que ejecute una sentencia SQL que ingrese los valores deseados a la base de datos. Lo que conlleva peligro, ya que es muy probable la perdida u omisión de algún valor.
+	\item Presenta falta de datos. Retomando el punto anterior, en el actual SEPA se da que hay ciertas tablas que no tienen datos y esto es debido a que en su proceso de inserción, estos fueron omitidos o perdidos.
 	\item No posee acceso de múltiples tipos de usuarios, diferenciados por actividad. Lo cual constituye una barrera ya que actualmente no se puede mostrar toda la información para la cual un rol tiene acceso, por ejemplo, un profesor debiera ver su información y la de sus alumnos, pero un jefe de carrera debe ser capaz de ver su información, la de los alumnos y la de los profesores. 
-	\item No existe una forma sencilla de modificar y actualizar la información desde DirDoc hasta S.E.P.A., ya que lo que hoy se esta haciendo es hacer una petición sobre una data en DirDoc y finalmente pedirle a un encargado que ingrese cierta data a la base de datos de S.E.P.A.
+	\item No existe una forma sencilla de modificar y actualizar la información desde DirDoc hasta SEPA, ya que lo que hoy se esta haciendo es hacer una petición sobre una data en DirDoc y finalmente pedirle a un encargado que ingrese cierta data a la base de datos de SEPA
 \end{itemize} 
 \section{Motivación}
 Ayudar a mejorar las herramientas de administración de la Universidad y aprender a desarrollar tecnologías que apoyan a las instituciones de educación.
@@ -147,7 +142,7 @@ Formar personas con altas capacidades académicas y profesionales, en el ámbito
 \section{Visión}
 La Universidad Tecnológica Metropolitana, será reconocida por la formación de sus egresados, la calidad de su educación continua, por la construcción de capacidades de investigación y creación, innovación y transferencia en algunas áreas del saber, por la equidad social en su acceso, su tolerancia y pluralismo, por su cuerpo académico de excelencia y por una gestión institucional que asegura su sustentabilidad y la práctica de mecanismos de aseguramiento de la calidad en todo su quehacer.
 \section{Organigrama}
-La organización se compone de distintos marcos de jerarquía, en este caso se mostrarán los que tienen relevancia académica en este trabajo, por su dependencia al posible uso de la herramienta S.E.P.A.:
+La organización se compone de distintos marcos de jerarquía, en este caso se mostrarán los que tienen relevancia académica en este trabajo, por su dependencia al posible uso de la herramienta SEPA:
 \subsection{Rectoría}
 Esta compuesta de un Rector que toma decisiones planteadas desde un consejo superior, gracias al apoyo de un consejo académico. Los cuales gobiernan el desarrollo estratégico, la dirección jurídica y la dirección de relaciones.
 \begin{figure}[!hbp]
@@ -194,33 +189,33 @@ El Dirdoc es una plataforma online en la que, alumnos, profesores y funcionarios
 	\item Funcionarios, son capaces de mirar información de todos los otros niveles, e incluso tienen facultades para editar información, para lo cual su uso esta centrado en regular el correcto funcionamiento de la herramienta DirDoc y tomar acciones frente a errores que puedan originarse.
 \end{itemize}
 
-\subsection{S.E.P.A.}
-El S.E.P.A. (Sistema Estadístico de Profesores y Alumnos) es una herramienta complementaria en la U.T.E.M. que otorga principalmente indicadores estadísticos, que permiten tomar decisiones que afectan a un segmento importante de la organización. Por ejemplo se tiene el promedio de notas de un curso que imparte un profesor, o también el promedio de notas totales de un alumno. Si bien son importantes estos datos, pero son poco específicos.
+\subsection{SEPA}
+El SEPA (Sistema Estadístico de Profesores y Alumnos) es una herramienta complementaria en la U.T.E.M. que otorga principalmente indicadores estadísticos, que permiten tomar decisiones que afectan a un segmento importante de la organización. Por ejemplo se tiene el promedio de notas de un curso que imparte un profesor, o también el promedio de notas totales de un alumno. Si bien son importantes estos datos, pero son poco específicos.
 
 Uno de los problemas que se tienen en sepa, es que al no existir un sistema de ingreso de data desde DirDoc, la única forma de ingresar data en sepa es mediante la petición a un funcionario encargado del sistema, lo que supone un riesgo por la perdida de data.
 
 \section{Situación Propuesta}
-Dentro de los módulos mantenedor e integrador de S.E.P.A. se comprenden las siguientes actividades que no están en la versión anterior:
+Dentro de los módulos mantenedor e integrador de SEPA se comprenden las siguientes actividades que no están en la versión anterior:
 
 \begin{itemize}
 	\item Ingreso por perfiles: Gracias a las mejoras que se programan, se agrega el sistema de registro por perfiles, el cual otorga permisos por los distintos tipos de usuarios. Estos tendrán un rango de data que puedan visualizar. 
-	\item Visualización de todas las tablas: En estas mejoras a S.E.P.A. se incorpora la posibilidad de mirar todos los parámetros de las tablas comprendidas en el modelo de base de datos. Esto significa que mediante los perfiles es posible ver la información historia de todas las tablas permitidas.
+	\item Visualización de todas las tablas: En estas mejoras a SEPA se incorpora la posibilidad de mirar todos los parámetros de las tablas comprendidas en el modelo de base de datos. Esto significa que mediante los perfiles es posible ver la información historia de todas las tablas permitidas.
 	\item Edición de todas las tablas: Como en el punto anterior, no solo es posible mirar, ya que también hay perfiles que pueden editar data de las tablas, pensando en la reparación de esta debido a que puede tener fallos o faltar.
-	\item Integración por web service: El traspaso de data desde DirDoc a S.E.P.A. será mediante un servicio en linea de comunicación entre dos programas (DirDoc y S.E.P.A.), ya que de esta forma uno se asegura que la forma de ingreso de data en S.E.P.A. sea, en la mayor medida, limpia y sin errores. El sistema es capas de soportar la falta de ciertos datos en las tablas, los cuales pueden ser llenados posteriormente por el mantenedor que se incorpora.
-	\item Facilidad de programar indicadores en un futuro: La forma de como esta programado S.E.P.A. supone una mejora, ya que al utilizar una tecnología que de rápido aprendizaje, es fácil encontrar otros desarrolladores que aporten con la programación de distintos indicadores. Ya que solo basta que se tenga gente con conocimientos específicos del entorno del servicio y la vista, sin conocer en detalle el modelo de la aplicación.
+	\item Integración por web service: El traspaso de data desde DirDoc a SEPA será mediante un servicio en linea de comunicación entre dos programas (DirDoc y SEPA), ya que de esta forma uno se asegura que la forma de ingreso de data en SEPA sea, en la mayor medida, limpia y sin errores. El sistema es capas de soportar la falta de ciertos datos en las tablas, los cuales pueden ser llenados posteriormente por el mantenedor que se incorpora.
+	\item Facilidad de programar indicadores en un futuro: La forma de como esta programado SEPA supone una mejora, ya que al utilizar una tecnología que de rápido aprendizaje, es fácil encontrar otros desarrolladores que aporten con la programación de distintos indicadores. Ya que solo basta que se tenga gente con conocimientos específicos del entorno del servicio y la vista, sin conocer en detalle el modelo de la aplicación.
 \end{itemize}
 \section{Objetivos Generales y Específicos}
 \subsection{Objetivos Generales}
-\textit{Mejorar S.E.P.A. convirtiéndolo en un sistema de mantención de información estadística para la Universidad Tecnológica Metropolitana ayudando a sus procesos docentes y productivos, disponiendo de información veraz de la realidad universitaria.}
+\textit{Mejorar SEPA convirtiéndolo en un sistema de mantención de información estadística para la Universidad Tecnológica Metropolitana ayudando a sus procesos docentes y productivos, disponiendo de información veraz de la realidad universitaria.}
 
-A partir de la versión actual de S.E.P.A., crear un sistema web basado en el patrón Modelo Vista Controlador, asegurando un producto que sea eficiente en el cumplimiento de sus objetivos. Las características principales serán que este sistema estará hecho en Java lo que nos permite una fácil implementación de las mejores prácticas de programación. Potenciando su valor en el tiempo, convirtiéndose en una herramienta cada ves mas útil y necesaria para el desarrollo de la organización.
+A partir de la versión actual de SEPA, crear un sistema web basado en el patrón Modelo Vista Controlador, asegurando un producto que sea eficiente en el cumplimiento de sus objetivos. Las características principales serán que este sistema estará hecho en Java lo que nos permite una fácil implementación de las mejores prácticas de programación. Potenciando su valor en el tiempo, convirtiéndose en una herramienta cada ves mas útil y necesaria para el desarrollo de la organización.
 
 \subsection{Objetivos Específicos}
 \begin{enumerate}
 	\item Generar un sistema que sea fácilmente mejorable, usando tecnologías estandarizadas y óptimas. Mediante JavaEE (Java Enterprise Edition), lo cual permite la integración de herramientas robustas dentro del software, tales como un sistema de mapeo de bases de datos a objetos simples de ocupar, un servicio web de comunicación entre dos sistemas, una vista con elementos de fácil interacción con el usuario final, entre otros.
 	\item Entregar un producto de calidad, escalable y fiable para la comunidad universitaria. El cual sea un aporte para la toma de decisiones y también un soporte en la búsqueda de patrones o mejoras administrativas.
 	\item Otro objetivo es la utilización de una metodología de desarrollo, en este caso PSP (Personal Software Process), la cual nos permite llevar un seguimiento y retroalimentación de las actividades que se deben realizar, de manera lógica y ordenada, para este propósito la metodología propone la utilización de valores contables en el tiempo, estos valores establecen las características y condiciones del trabajo del ingeniero. Lo cual entrega valor agregado al producto, mostrando data numérica y estadística del tiempo invertido en el trabajo y como este se va completando con eficiencia.
-	\item Hacer una mejora sustancial en S.E.P.A. de manera que todo su conjunto sea útil para todos los usuarios a los que se enfoca, haciendo especial énfasis en que los perfiles a los que esta dirigido este trabajo puedan certificar mejoras en la calidad de la data, la rapidez del servicio, la seguridad que tiene, entre otras mejoras.  
+	\item Hacer una mejora sustancial en SEPA de manera que todo su conjunto sea útil para todos los usuarios a los que se enfoca, haciendo especial énfasis en que los perfiles a los que esta dirigido este trabajo puedan certificar mejoras en la calidad de la data, la rapidez del servicio, la seguridad que tiene, entre otras mejoras.  
 	\item Producir una herramienta lo mas puramente moderna, que cumpla con calidad el objetivo propuesto, siendo un desafío para el desarrollador, incorporando herramientas simples que hacen el producto robusto y confiable, sin comprometer la facilidad de desarrollo futuro.
 \end{enumerate}
 %\chapter{Alcances y Limitaciones}
@@ -257,14 +252,14 @@ Esto es un servicio que alimenta a sus datos gracias a un servicio web. Usando e
 \thispagestyle{empty}
 \section{Base Conceptual}
 \subsection{Establecer el problema}
-En la Universidad existe la necesidad de disponer de información relevante para apoyar la toma de decisiones, esta información debe ser respaldada por enormes volúmenes de registros que se guardan constantemente en el sistema DirDoc de la Universidad. Para este propósito existe el Sistema Estadístico de Profesores y Alumnos (S.E.P.A.), el cual incluye indicadores que pueden ser usados para el estudio de la institución. Con el tiempo la cantidad de datos va en crecimiento, también crece la cantidad de información y la necesidad de actualizar y modificar las tablas de manera más rápida y sencilla.
+En la Universidad existe la necesidad de disponer de información relevante para apoyar la toma de decisiones, esta información debe ser respaldada por enormes volúmenes de registros que se guardan constantemente en el sistema DirDoc de la Universidad. Para este propósito existe el Sistema Estadístico de Profesores y Alumnos (SEPA), el cual incluye indicadores que pueden ser usados para el estudio de la institución. Con el tiempo la cantidad de datos va en crecimiento, también crece la cantidad de información y la necesidad de actualizar y modificar las tablas de manera más rápida y sencilla.
 
-A raíz de esto se generaron ciertos problemas que comprometen la integridad de la data y por tanto entorpecen el objetivo inicial de S.E.P.A., estos son:
+A raíz de esto se generaron ciertos problemas que comprometen la integridad de la data y por tanto entorpecen el objetivo inicial de SEPA, estos son:
 
 \begin{enumerate}
-	\item Inserción de data en S.E.P.A., mediante la planificación con funcionarios de la universidad, se solicita la inserción de data desde DirDoc hacia S.E.P.A., lo que origina muchos problemas, como el tiempo que se ocupa en este proceso, la fácil probabilidad de falla debido a un error humano en varios puntos del proceso.
-	\item Consultas que pueden ser lentas: Debido a que el sistema anterior S.E.P.A. estaba construido con PHP, el cual es una herramienta flexible pero de compleja mantención. Se hace poco eficiente su uso a medida que la cantidad de data va creciendo.
-	\item No existe un modulo de actualización de data: Lo que hace a S.E.P.A. una herramienta con algunas cosas que no se pudieron programar en su momento.
+	\item Inserción de data en SEPA, mediante la planificación con funcionarios de la universidad, se solicita la inserción de data desde DirDoc hacia SEPA, lo que origina muchos problemas, como el tiempo que se ocupa en este proceso, la fácil probabilidad de falla debido a un error humano en varios puntos del proceso.
+	\item Consultas que pueden ser lentas: Debido a que el sistema anterior SEPA estaba construido con PHP, el cual es una herramienta flexible pero de compleja mantención. Se hace poco eficiente su uso a medida que la cantidad de data va creciendo.
+	\item No existe un modulo de actualización de data: Lo que hace a SEPA una herramienta con algunas cosas que no se pudieron programar en su momento.
 	\item No existe un mecanismo de diferenciación de usuarios. Haciendo este sistema un tanto inseguro, ya que no debiera existir la posibilidad de mirar toda la data, si no solo una parte, en relación a un perfil.
 	\item Data corrupta o inexistente: Dado que en el paso del tiempo la data esta corrupta, poco actualizada o simplemente no existe. Y la necesidad de esto se hace urgente.
 \end{enumerate}
@@ -279,7 +274,7 @@ Esto nos lleva a tomar la decisión de abandonar PHP ya que lo que se busca es, 
 % enfocar a las cosas que no se pueden haceren otros lenguajes.
 \section{Ciclo de vida del Software}
 \begin{enumerate}
-\item Toma de requerimientos: Proceso que básicamente comprende 2 actividades, primero la toma de requerimientos en base al sistema S.E.P.A. anterior, segundo una serie de entrevistas para captar las historias de usuarios que posteriormente se convierten en requerimientos.
+\item Toma de requerimientos: Proceso que básicamente comprende 2 actividades, primero la toma de requerimientos en base al sistema SEPA anterior, segundo una serie de entrevistas para captar las historias de usuarios que posteriormente se convierten en requerimientos.
 \item Análisis de requerimientos: Etapa en donde el profesor encargado discute con el alumno los requerimientos que deben realizarse, de acuerdo con las expectativas y las necesidades del equipo de trabajo.
 \item Diseño de la solución: Proceso en donde se desarrolla el modelo de datos que debe soportar a los requerimientos, y las interfaces asociadas.
 \item Diseño estructural: En este punto el alumno trabaja desarrollando el proyecto en coordinación con el profesor encargado y éste va revisando constantemente el avance, emitiendo calificaciones y aclaraciones.
@@ -329,12 +324,12 @@ La gran debilidad de este sistema es que no se muestran muchos criterios de comp
 Finalmente se observa a las Universidades actuales buscando organismos extranjeros capaces de certificar las características de la educación que ofrecen, de esta manera muestran no solo una acreditación por un organismo chileno, sino también una necesidad de competir a nivel internacional \cite{data3}.
 
 \section{Justificación del Trabajo de Título}
-La U.T.E.M. requiere un sistema informático que agregue funcionalidades para el control de sus datos de manera simple y segura. En el anterior S.E.P.A. los datos eran extraídos directamente del DirDoc, dando la posibilidad de cometer errores de inserción graves. Con este nuevo sistema, ahora no solo hay una seguridad con los datos que son transferidos desde servicios web, sino que también implementa un Sistema de Autenticación, gracias a su sistema de perfiles de usuarios que limita el acceso en el sitio para más de 2 tipos de usuarios.
+La U.T.E.M. requiere un sistema informático que agregue funcionalidades para el control de sus datos de manera simple y segura. En el anterior SEPA los datos eran extraídos directamente del DirDoc, dando la posibilidad de cometer errores de inserción graves. Con este nuevo sistema, ahora no solo hay una seguridad con los datos que son transferidos desde servicios web, sino que también implementa un Sistema de Autenticación, gracias a su sistema de perfiles de usuarios que limita el acceso en el sitio para más de 2 tipos de usuarios.
 
 El avance gracias al servicio web es justificado con las siguientes mejoras que se tienen que hacer para que esta modificación se pueda realizar:
 
 \begin{itemize}
-	\item Sistema de comunicación desde DirDoc hacia S.E.P.A.: Programar distintas interfaces que entregan información a S.E.P.A., pasando por todos los requerimientos que se puedan originar, y dejando paso a futuras peticiones por parte de este sistema a DirDoc.
+	\item Sistema de comunicación desde DirDoc hacia SEPA: Programar distintas interfaces que entregan información a SEPA, pasando por todos los requerimientos que se puedan originar, y dejando paso a futuras peticiones por parte de este sistema a DirDoc.
 	\item Sistema de rastreo de data y corrección: Programar un mecanismo que detecte cuando se presenten problemas con la data, ya sea que venga corrupta o mal formada, convirtiéndola en data en blanco, para posteriormente poder ser reparada.
 	\item Sistema de inserción de data a un modelo estructurado para funcionar con JPA: Generar un modelo de datos que permita la interacción frente al patrón Modelo, Vista, Controlador, en donde el modelo es la estructura simple de la data, pero permite tomar todos los conjuntos de data de manera fácil, rápida y óptima.
 	\item Sistema cronométrico de petición de data a DirDoc: Programar un sistema que haga las distintas consultas a DirDoc de manera cronometrada, ocupando distintos horarios para hacer las ejecuciones. Por ejemplo haciendo que las ejecuciones sean en un horario en que poca gente hace uso de los servicios. Minimizando los recursos.
@@ -345,7 +340,7 @@ Por otro lado la creación del sistema mantenedor comprende las siguientes mejor
 \begin{itemize}
 	\item Inserción de perfiles de usuario: Programar por medio de herramientas dentro de JavaEE, distintos perfiles que serán capaces de mirar en ciertas medidas la data que ofrece el sistema.
 	\item Mejora de la interfaz de usuario: Programar componentes que el usuario pueda aprender a usar de forma rápida y eficiente.
-	\item Uso completo de las tablas de S.E.P.A.: Mediante los distintos perfiles es posible llegar a todas las tablas, lo que supone el mantenimiento de todas estas.
+	\item Uso completo de las tablas de SEPA: Mediante los distintos perfiles es posible llegar a todas las tablas, lo que supone el mantenimiento de todas estas.
 	\item Visualización y mantenimiento de las tablas: Programar sistema de mantenimiento para todas las tablas que un usuario pueda visualizar
 \end{itemize}
 
@@ -474,7 +469,7 @@ PSP nos obliga a desarrollar una forma de trabajo en la cual un desarrollador pr
 \section{Criterios para uso de PSP}
 La necesidad de usar PSP fue concebida para generar un proyecto que tuviera un criterio de calidad cuantificable. Ya que nos proporcionaba tablas e indicadores que establecen con el tiempo empleado, la cantidad de esfuerzo y errores que uno puede cometer en el trascurso del proyecto.
 
-Se mostrará la forma de desarrollo de las tablas PSP más importantes en el proyecto dando cuenta de cómo es el desempeño del PSP dentro de nuestro proyecto S.E.P.A.. Tendremos el desarrollo de las tablas más importantes en el PSP frente a nuestra operación. Obtendremos una mirada clara frente a que es el PSP y como éste permite complementar calidad en nuestra ocupación.
+Se mostrará la forma de desarrollo de las tablas PSP más importantes en el proyecto dando cuenta de cómo es el desempeño del PSP dentro de nuestro proyecto SEPA. Tendremos el desarrollo de las tablas más importantes en el PSP frente a nuestra operación. Obtendremos una mirada clara frente a que es el PSP y como éste permite complementar calidad en nuestra ocupación.
 
 \section{Desarrollo del PSP}
 \subsection{El trabajo del ingeniero de sofware}
@@ -976,10 +971,10 @@ La siguiente tabla es simplemente una muestra de la lista de los defectos y como
 \thispagestyle{empty}
 \section{Introducción}
 
-El modulo de integración que se le agrega a S.E.P.A. es una herramienta de poca complejidad, en donde es posible hacer cargas de datos, que serán explicadas posteriormente. Además de esto existen herramientas que hacen posible las peticiones de información desde el módulo integrador hacia DirDoc, esta funcionalidad se carga por tareas determinadas en ciclos de tiempo predefinidos, que son explicados a continuación.
+El modulo de integración que se le agrega a SEPA es una herramienta de poca complejidad, en donde es posible hacer cargas de datos, que serán explicadas posteriormente. Además de esto existen herramientas que hacen posible las peticiones de información desde el módulo integrador hacia DirDoc, esta funcionalidad se carga por tareas determinadas en ciclos de tiempo predefinidos, que son explicados a continuación.
 
 \section{Poblador}
-Al proceso S.E.P.A. se le agrega un módulo integrador que permite la comunicación entre los datos del sistema de notas y estudiantes existente dentro de la Universidad (Dir Doc). El fin de ésto es preguntar por datos que posteriormente serán insertados en las tablas del sistema nuestro. Para esto se utiliza a un Web Service que provee una interfaz en donde se obtiene la información, ésta posteriormente se normaliza y adecua a nuestro sistema y finalmente se persiste. Existen varios procesos de integraciones, cada uno va dirigido a un objeto que se quiere poblar.
+Al proceso SEPA se le agrega un módulo integrador que permite la comunicación entre los datos del sistema de notas y estudiantes existente dentro de la Universidad (Dir Doc). El fin de ésto es preguntar por datos que posteriormente serán insertados en las tablas del sistema nuestro. Para esto se utiliza a un Web Service que provee una interfaz en donde se obtiene la información, ésta posteriormente se normaliza y adecua a nuestro sistema y finalmente se persiste. Existen varios procesos de integraciones, cada uno va dirigido a un objeto que se quiere poblar.
 \section{Web Service}
 Es una tecnología que permite la comunicación entre 2 programas mediante un sistema que expone un protocolo para el traspaso de datos, donde el encargado de generar las preguntas debe tener información consistente y poder establecer la conexión. Por otro lado los programas se relacionan gracias a un meta lenguaje basado en XML (de etiquetado) que describe el código que debe implementarse para poder realizar las consultas y retornar objetos con los cuales posteriormente opera.
 
@@ -1003,7 +998,7 @@ Tareas que se ejecutan una ves al año, en donde podemos encontrar: Actualizar C
 \thispagestyle{empty}
 \section{Introducción}
 
-El mantenedor es la interfaz nueva que tiene S.E.P.A. después de estas mejoras, es la parte que el usuario final sentirá de manera distinta, ya que ahora se tienen perfiles, visualización e incluso modificación de data. De manera lógica y simple, manteniendo siempre la facilidad del desarrollo para futuros componentes.
+El mantenedor es la interfaz nueva que tiene SEPA después de estas mejoras, es la parte que el usuario final sentirá de manera distinta, ya que ahora se tienen perfiles, visualización e incluso modificación de data. De manera lógica y simple, manteniendo siempre la facilidad del desarrollo para futuros componentes.
 
 \section{Sitio Web}
 El proyecto mantenedor es un sitio web que utiliza la tecnología Java Server Faces o (JSF), que permite la visualización de una estructura de código en formato xml para mostrar sitos web con contenido dinámico en java. Sobre esta tecnología se ocupa Primefaces que enriquece las características de JSF proporcionando herramientas HTML mas complejas (tales como menús despegables o tablas con distintas funcionalidades ya programadas).
@@ -1217,7 +1212,7 @@ El proyecto tiene un costo mínimo de 17.500.000 pesos.
 La calidad de este sistema se ve potenciada por varios aspectos, los cuales se explicaran a continuación:
 
 \begin{enumerate}
-        \item Uso de una base de datos PostgreSQL: Un sistema gestor de bases de datos, de código abierto, echo para ser una potente forma de mantener grandes cantidades de datos. Siendo un proyecto realizado de manera altruista por muchos desarrolladores a nivel mundial, es muy estable, seguro y es el entorno necesario para que el sistema S.E.P.A. trabaje sin necesidad de pensar en licencias u otros tipos de registros de datos. Contiene una infinidad de tipos de datos que fortalece la forma de como uno ingresa parámetros \cite{data18}.
+        \item Uso de una base de datos PostgreSQL: Un sistema gestor de bases de datos, de código abierto, echo para ser una potente forma de mantener grandes cantidades de datos. Siendo un proyecto realizado de manera altruista por muchos desarrolladores a nivel mundial, es muy estable, seguro y es el entorno necesario para que el sistema SEPA trabaje sin necesidad de pensar en licencias u otros tipos de registros de datos. Contiene una infinidad de tipos de datos que fortalece la forma de como uno ingresa parámetros \cite{data18}.
         \item Uso de Mybatis: Herramienta de ayuda para sentencias SQL que permite el uso de cualquier base de datos, con gran escalabilidad y adaptabilidad, permitiendo escribir las consultas que uno desee ejecutar y mapearlas directamente en los objetos que uno desee. Tiene un nivel de complejidad medio, lo que hace que sea un poco difícil aprender, pero una ves se comprende, la incorporación de nuevos elementos de data es ordenada y escalable  \cite{data19}.
         \item Uso de WebServices: Una tecnología que utiliza un conjunto de protocolos y estándares que sirven para intercambiar datos entre aplicaciones. Distintas aplicaciones de software desarrolladas en lenguajes de programación diferentes, y ejecutadas sobre cualquier plataforma, pueden utilizar los servicios web para intercambiar datos en redes de ordenadores como Internet \cite{data20}.
         \item Uso de Primefaces: Una librería de componentes para JavaServer Faces (JSF) de código abierto que cuenta con un conjunto de componentes enriquecidos que facilitan la creación de las aplicaciones web. Soporte de ajax con despliegue parcial, lo que permite controlar qué componentes de la página actual se actualizarán y cuáles no \cite{data21}.
@@ -1230,25 +1225,32 @@ La calidad de este sistema se ve potenciada por varios aspectos, los cuales se e
 Finalmente con de estos puntos se puede tener una clara idea de la calidad del producto que se entrega y de cómo éste puede ir mejorando todavía, e inclusive puede cambiar y adecuase a otras necesidades.
 
 \section{Conclusión}
-El trabajo correspondiente al Sistema Mantenedor e Integrador en S.E.P.A. ha mostrado como recuperar datos que pueden ser difíciles de manejar. Los datos para este trabajo no estaban del todo bien organizados, esto quiere decir que cuando uno observa los datos, es posible encontrar insuficiencias de campos en los objetos mostrados en las tablas de los mantenedores, para lo cual los Mantenedores están preparados para ingresar datos en los sectores que lo requieran.
+El trabajo correspondiente al Sistema Mantenedor e Integrador en SEPA ha mostrado como recuperar datos que pueden ser difíciles de manejar. Los datos para este trabajo no estaban del todo bien organizados, esto quiere decir que cuando uno observa los datos, es posible encontrar insuficiencias de campos en los objetos mostrados en las tablas de los mantenedores, para lo cual los Mantenedores están preparados para ingresar datos en los sectores que lo requieran.
 
 También es posible identificar errores estructurales de información. Por ejemplo, en el sistema Integrador entraban datos que contenían errores repetidos en todas las filas de ciertas tablas. Este sistema está preparado para resistir ese tipo de datos y cargar una data estándar que más adelante será reparada por el sistema Mantenedor.
 
 Un proyecto de estas características es una importante oportunidad de mejoras, tales como: mantenibilidad de la data, aunque esta contenga errores, ya que es posible editar aspectos mínimos dentro de todas las tablas, conectividad con servicios web, manejado por parámetros SOAP, dejando la complejidad de las comunicaciones a frameworks que se encargan de trabajar con estas interacciones.
 
-Gracias a este trabajo se puede hablar de indicadores estadísticos, los cuales nos proporcionan información que regulan el funcionamiento de cualquier organización. Para este caso en particular, el desarrollo de indicadores, nos permite sostener una organización a nivel de estudiantes, integrando consultas estadísticas a problemas particulares en estudiantes y profesores. Principalmente el objetivo de S.E.P.A. era ser mostrado.
+Gracias a este trabajo se puede hablar de indicadores estadísticos, los cuales nos proporcionan información que regulan el funcionamiento de cualquier organización. Para este caso en particular, el desarrollo de indicadores, nos permite sostener una organización a nivel de estudiantes, integrando consultas estadísticas a problemas particulares en estudiantes y profesores. Principalmente el objetivo de SEPA era ser mostrado.
 
-La ventaja de que este sistema se comunique con otros mediante el uso de WebServices es que a lo largo de la vida útil de este proyecto se pueden agregar otros proyectos que pueden nutriste de la información que S.E.P.A. produce, de tal manera hace que cada ves sea mas intenso su uso.
+La ventaja de que este sistema se comunique con otros mediante el uso de WebServices es que a lo largo de la vida útil de este proyecto se pueden agregar otros proyectos que pueden nutriste de la información que SEPA produce, de tal manera hace que cada ves sea mas intenso su uso.
 \section{Trabajo Futuro}
-Para ampliar las posibilidades de un trabajo que descansa sobre el valor de potenciar las capacidades administrativas de una institución académica, es necesario hacer estudios que posibiliten un mayor alcance de datos, tal como lo hace S.E.P.A., por tal razón es de vital importancia promover nuevas mejoras que hagan de este sistema una herramienta completa en el desarrollo de las capacidades generales de una organización, como lo es la Universidad Tecnológica Metropolitana.
+Para ampliar las posibilidades de un trabajo que descansa sobre el valor de potenciar las capacidades administrativas de una institución académica, es necesario hacer estudios que posibiliten un mayor alcance de datos, tal como lo hace SEPA, por tal razón es de vital importancia promover nuevas mejoras que hagan de este sistema una herramienta completa en el desarrollo de las capacidades generales de una organización, como lo es la Universidad Tecnológica Metropolitana.
 
-Se puede considerar el integrar un motor de minería de datos que revele información que hasta ahora no se ha obtenido dentro de los marcos de este proyecto, por ejemplo, una herramienta que obtenga formulaciones o métodos de aproximación para datos del futuro. Tal cosa produciría un impacto en S.E.P.A. ya que con esta perspectiva se aumentan los beneficios de los indicadores que uno puede obtener, validando estos o creando aproximaciones que ayudan a esclarecer las razones de los valores que actualmente entrega el sistema.
+Se puede considerar el integrar un motor de minería de datos que revele información que hasta ahora no se ha obtenido dentro de los marcos de este proyecto, por ejemplo, una herramienta que obtenga formulaciones o métodos de aproximación para datos del futuro. Tal cosa produciría un impacto en SEPA ya que con esta perspectiva se aumentan los beneficios de los indicadores que uno puede obtener, validando estos o creando aproximaciones que ayudan a esclarecer las razones de los valores que actualmente entrega el sistema.
 
-También se piensa en una Inteligencia de Negocio que junto con la idea anterior sea capaz de producir nuevos indicadores enfocados a la mejora o a la conducción, con intervención humana, de los valores generalizados en las tablas que maneja S.E.P.A., en otras palabras, que se sepa información que nos permitiera guiar a la Universidad en torno a los objetivos de su Visión, haciendo un impacto en el corto plazo.
+También se piensa en una Inteligencia de Negocio que junto con la idea anterior sea capaz de producir nuevos indicadores enfocados a la mejora o a la conducción, con intervención humana, de los valores generalizados en las tablas que maneja SEPA, en otras palabras, que se sepa información que nos permitiera guiar a la Universidad en torno a los objetivos de su Visión, haciendo un impacto en el corto plazo.
 
-Estas dos ideas anteriores convergen finalmente en que el sistema en un futuro podría tener una Inteligencia Artificial que sea manejable por los usuarios de S.E.P.A. permitiendo manejar las respuestas de los usuarios en pos de darle las mejores oportunidades a todos por igual. Mediando en todos los asuntos de manera logia, estadística y totalmente regulada. Podríamos decir que en un futuro, S.E.P.A. seria un sistema automático y autónomo.
+Estas dos ideas anteriores convergen finalmente en que el sistema en un futuro podría tener una Inteligencia Artificial que sea manejable por los usuarios de SEPA permitiendo manejar las respuestas de los usuarios en pos de darle las mejores oportunidades a todos por igual. Mediando en todos los asuntos de manera logia, estadística y totalmente regulada. Podríamos decir que en un futuro, SEPA seria un sistema automático y autónomo.
 
-Finalizando, se puede afirmar que un trabajo como éste es perfectamente capaz de entregar datos y argumentos sólidos en pos de generar estudios científicos relacionados con indicadores de calidad en educación, puesto que con el sistema S.E.P.A. en las condiciones actuales mejoradas, se tienen todas las herramientas preparadas para tales propósitos. 
+Finalizando, se puede afirmar que un trabajo como éste es perfectamente capaz de entregar datos y argumentos sólidos en pos de generar estudios científicos relacionados con indicadores de calidad en educación, puesto que con el sistema SEPA en las condiciones actuales mejoradas, se tienen todas las herramientas preparadas para tales propósitos. 
+\chapter{Anexo}
+\begin{enumerate}
+        \item PostgresSQL: Un sistema gestor de bases de datos, de código abierto, echo para ser una potente forma de mantener grandes cantidades de datos. Siendo un proyecto realizado de manera altruista por muchos desarrolladores a nivel mundial, es muy estable, seguro y es el entorno necesario para que el sistema SEPA trabaje sin necesidad de pensar en licencias u otros tipos de registros de datos. Contiene una infinidad de tipos de datos que fortalece la forma de como uno ingresa parámetros \cite{data18}.
+        \item Maven:
+        \item CXF: 
+        \item PHP: Es el lenguaje de lado servidor más extendido en la web. Surgido en 1994, se trata de un lenguaje de creación relativamente reciente, aunque con la rapidez con la que evoluciona Internet parezca que ha existido toda la vida. Es un lenguaje que ha tenido una gran aceptación en la comunidad de desarrolladores, debido a la potencia y simplicidad que lo caracterizan, así como al soporte generalizado en la mayoría de los servidores \cite{data7}.
+\end{enumerate}
 \bibliographystyle{plain}
 \bibliography{bibliografia.bib}
 \end{document}
