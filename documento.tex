@@ -83,33 +83,24 @@ El resultado final de este proyecto es la obtención por parte de la Universidad
 \thispagestyle{empty}
 La Universidad Tecnológica Metropolitana utiliza para la administración de toda la información referente a estudiantes, profesores y personal de administración un sistema denominado DirDoc basado en la tecnológica PHP (ver anexo). SEPA, software desarrollado por Sebastián Salazar Molina para en ese entonces su trabajo de título, es un proyecto que constituyó una forma de potenciar las capacidades operativas de la Universidad, generando indicadores de calidad y entregando una ventaja comparativa frente a otras Universidades.
 
-El objetivo de este trabajo de título esta en la mejora del proyecto SEPA mediante el lenguaje de programación Java que utiliza herramientas estructuradas, extensibles y que tienen como resultado la materialización de sistemas informáticos de más fácil mantención debido al uso de Patrones de Diseño (explicados en este informe):
-
-\begin{itemize}
-	\item Modelo Vista Controlador: Es un modelo de desarrollo informático que permite separar el modelo de datos, el negocio y sus flujos, de la vista para el usuario final \cite{data12}.
-	\item Java EE: Java enterprise edition, es una plataforma para programadores en Java que contiene herramientas enfocadas en el desarrollo de aplicaciones para empresas \cite{data14}.
-	\item JPA: Java Persistente API, una herarmienta que permite la homologacion de la base de datos que un sistema trabaje, frente a un modelo de objetos simple creado en lenguaje Java \cite{data13}.
-	\item Spring: Herramienta que permite la integración de distintos modulos en aplicaciones Java EE, entre otras utilidades, permite la separación de los componentes de desarrollo bajo el esquema MVC  \cite{data15}.
-	\item JSF: Herramienta que permite desarrollar interfaces con una potente comunicación con aplicaciones Java EE bajo el modelo MVC \cite{data16}.
-	\item PrimeFaces: Kit de desarrollo para aplicaciones en JSF que permite usar componentes mas avanzados y específicos que JSF \cite{data17}.
-\end{itemize}
+El objetivo de este trabajo de título esta en la mejora del proyecto SEPA mediante el lenguaje de programación Java que utiliza herramientas estructuradas, extensibles y que tienen como resultado la materialización de sistemas informáticos de más fácil mantención debido al uso de Patrones de Diseño como Modelo Vista Controlador sobre tecnologías como Java EE, JPA, Spring, JSF, PrimeFaces, ver anexo.
 
 Además, el proyecto se hará bajo la metodología PSP (Personal Software Process) que nos proporciona un modelo de trabajo basado en la caracterización de los tiempos y costes de operación de un ingeniero informático, adicionando documentación extra (explicada en este informe), correspondiente a eventos que caracterizaron las directrices de cómo se lleva adelante esta tarea, todo lo cual, conduce a una evaluación de la calidad del proyecto como programa.
 
 Existen 3 tipos de beneficios que la Universidad puede obtener al hacerse con la versión mejorada del sistema SEPA:
 
 \begin{enumerate}
-\item Mediante la entrega al mercado laborar, de un perfil de profesional característico de la U.T.E.M., visualizado en la competencia y desempeño de sus profesionales, la Universidad se muestra al mercado como un ente preocupado de medir su calidad con herramientas tecnológicas que justifican un buen desempeño mediante indicadores cuantificables y verificables por 
+\item Mediante la entrega al mercado laborar, de un perfil de profesional característico de la UTEM, visualizado en la competencia y desempeño de sus profesionales, la Universidad se muestra al mercado como un ente preocupado de medir su calidad con herramientas tecnológicas que justifican un buen desempeño mediante indicadores cuantificables y verificables por 
 organismos reguladores.
 
 \item Beneficio de los usuarios que tendrán a su disposición una completa herramienta que los apoyará en la elección de su carga académica, como asimismo la visualización de su desempeño.
 
-\item Beneficio a futuro, dado el alto estándar de las herramientas utilizadas, la integración, en términos de programación, resultará más sencilla, ya que este proyecto está realizado bajo tecnologías más estandarizadas como lo son los proyectos desarrollados en Java, Maven y Spring.
+\item Beneficio a futuro, dado gran tiempo de utilidad de las herramientas utilizadas, la integración, en términos de programación, resultará más sencilla, ya que este proyecto está realizado bajo tecnologías más estandarizadas como lo son los proyectos desarrollados en Java, Maven y Spring.
 \end{enumerate}
 
 La justificación principal de por que en SEPA se realizarán estas mejoras, radica en la necesidad de contar con indicadores claros y precisos, que son los que hacen que las decisiones sean justificadas, Por ejemplo, una vez implementadas las mejoras, en SEPA se prodrá fácilmente programar contadores de la totalidad de las tablas, incluidas conexiones entre tablas, mientras que la version actual de SEPA tiene contadores simples y poco específicos, tales como el promedio de notas por ramo y por alumnos programados de manera tal que no se pueden hacer búsquedas especificas sobre todos los parámetros de una tabla en especifico.
 
-Otra justificación de estos cambios, es la capacidad de reparar data que este mal escrita o que simplemente no exista, permitiendo que los datos puedan ser mejorados constantemente y de manera expedita. Característica que SEPA actual no posee, ya que para solicitar un cambio se necesita básicamente pedir la data desde la propia fuente de datos, proceso que es manual y toma días y muchas personas.
+Otra justificación de estos cambios, es la capacidad de reparar data que este mal escrita o que simplemente no exista, permitiendo que los datos puedan ser mejorados constantemente y de manera automática. Característica que SEPA actual no posee, ya que para solicitar un cambio se necesita básicamente pedir la data desde la propia fuente de datos, proceso que es manual y toma días y muchas personas. 
 
 Finalmente es importante destacar que las transacciones de los servicios web que se agregaran como parte de este proyecto constituyen otra mejora, haciendo el sistema mas seguro y rápido.
 
@@ -119,63 +110,15 @@ Finalmente es importante destacar que las transacciones de los servicios web que
 La Universidad Tecnológica Metropolitana (UTEM) es un organismo de enseñanza superior que se encuentra dentro del Consejo de Rectores de las Universidades Chilenas. Dentro de su sistema administrativo de notas se ocupa el sistema DirDoc, el cual entrega información de notas con respecto a tales ramos y alumnos, es ocupado particularmente por alumnos, profesores y directores de escuela para  mirar e ingresar notas, respectivaemtne, de los distintos ramos impartidos en la Universidad. SEPA es una herramienta que nacido como un apoyo en el ámbito estadístico, toma los datos que se encuentran en el marco de DirDoc, permite obtener valores ponderados entre otras cosas.
 \section{Contexto Particular}
 El proyecto SEPA el Sistema Estadístico de Profesores y Alumnos, es el encargado de mostrar información que pueda ser cuantificable en pos de tener herramientas de control general y toma de decisiones. Dicha información viene del sistema DirDoc que se utiliza para la mantención de datos académicos en la Universidad.
-\section{Problema}
-El antiguo SEPA presenta faltas o insuficiencias, tales como: 
-\begin{itemize}
-	\item No se dispone de un servicio web (una forma de acceso más segura y controlada) de DirDoc. En el actual SEPA se deben seguir una serie de pasos para ingresar data. Primero se debe seleccionar mediante el DirDoc que data hay que insertar en SEPA y después se requiere hablar con un encargado de SEPA para que ejecute una sentencia SQL que ingrese los valores deseados a la base de datos. Lo que conlleva peligro, ya que es muy probable la perdida u omisión de algún valor.
-	\item Presenta falta de datos. Retomando el punto anterior, en el actual SEPA se da que hay ciertas tablas que no tienen datos y esto es debido a que en su proceso de inserción, estos fueron omitidos o perdidos.
-	\item No posee acceso de múltiples tipos de usuarios, diferenciados por actividad. Lo cual constituye una barrera ya que actualmente no se puede mostrar toda la información para la cual un rol tiene acceso, por ejemplo, un profesor debiera ver su información y la de sus alumnos, pero un jefe de carrera debe ser capaz de ver su información, la de los alumnos y la de los profesores. 
-	\item No existe una forma sencilla de modificar y actualizar la información desde DirDoc hasta SEPA, ya que lo que hoy se esta haciendo es hacer una petición sobre una data en DirDoc y finalmente pedirle a un encargado que ingrese cierta data a la base de datos de SEPA
-\end{itemize} 
+
 \section{Motivación}
 Ayudar a mejorar las herramientas de administración de la Universidad y aprender a desarrollar tecnologías que apoyan a las instituciones de educación.
 Para lograr esto se completarán las siguientes tareas:
 \begin{itemize}
-	\item Acceder a un servicio web para obtener los datos de manera segura.
-	\item Crear un mantenedor de todos los datos que podamos integrar en el servicio web.
-	\item Automatizar los procesos de acceso y actualización de datos.
+	\item Acceder a un servicio web para obtener los datos de manera segura. Esto implica la creación de componentes que consuman los servicios del Dirdoc. Estos a su ven son un conjunto de procesos que cargan información en una base de datos. Teniendo especial cuidado en datos que estén corruptos o con falta de información. Intentando guardar en la manera de lo posible, toda la información necesaria.
+	\item Crear un mantenedor de todos los datos que podamos integrar en el servicio web. Este mantenedor tiene como objetivo ser una herramienta de muchos propósitos, tales como visualizar o reparar data. Tener permisos que restringan el acceso a los usuarios del sistema.
+	\item Automatizar los procesos de acceso y actualización de datos. Mediante ejecuciones que se efectúen de manera automática. Estos procesos deben hacer uso de los servicios web en horarios específicos, destinados a ocupar el procesamiento del servidor en horas en que no hay mucho flujo de data.
 \end{itemize}
-\chapter{La Organización de la UTEM}
-\thispagestyle{empty}
-\section{Misión}
-Formar personas con altas capacidades académicas y profesionales, en el ámbito preferentemente tecnológico, apoyada en la generación, transferencia, aplicación y difusión del conocimiento en las áreas del saber que le son propias, para contribuir al desarrollo sustentable del país y de la sociedad de la que forma parte.
-\section{Visión}
-La Universidad Tecnológica Metropolitana, será reconocida por la formación de sus egresados, la calidad de su educación continua, por la construcción de capacidades de investigación y creación, innovación y transferencia en algunas áreas del saber, por la equidad social en su acceso, su tolerancia y pluralismo, por su cuerpo académico de excelencia y por una gestión institucional que asegura su sustentabilidad y la práctica de mecanismos de aseguramiento de la calidad en todo su quehacer.
-\section{Organigrama}
-La organización se compone de distintos marcos de jerarquía, en este caso se mostrarán los que tienen relevancia académica en este trabajo, por su dependencia al posible uso de la herramienta SEPA:
-\subsection{Rectoría}
-Esta compuesta de un Rector que toma decisiones planteadas desde un consejo superior, gracias al apoyo de un consejo académico. Los cuales gobiernan el desarrollo estratégico, la dirección jurídica y la dirección de relaciones.
-\begin{figure}[!hbp]
-\begin{center}
-\includegraphics[scale=0.6,angle=0]{images/organigrama/1.png}
-\caption{Organigrama de rector\'ia}
-\label{Organigrama de rectoria}
-\end{center}
-\end{figure}
-
-Es el segmento con mas poder en la organización universitaria, siendo este el foco central de las decisiones tomadas por los otros organismos. Es importante señalar que muchas de sus políticas provienen en gran medida de las necesidades y aspiraciones de las siguientes estructuras jerárquicas.
-
-\subsection{Vicerrectoría Academica}
-Es la entidad de que administra de manera local las decisiones de rectoría, hacia distintos polos como: Investigación, Dirección de evaluación, Dirección de docencia, Relaciones estudiantiles, Biblioteca, U.T.E.M. Virtual.
-\begin{figure}[!hbp]
-\begin{center}
-\includegraphics[scale=0.45,angle=0]{images/organigrama/2.png}
-\caption{Organigrama de Vicerrector\'ia Academica}
-\label{Organigrama de vicerrectoria Academica}
-\end{center}
-\end{figure}
-
-Tiene el rol de velar por la correcta disponibilidad de recursos frente a los organismos de dirección institucional, para lo cual trabaja de manera constante en un perfeccionamiento de su rol como comandante.
-
-\subsection{Facultad de ingeniería}
-El decano de ingeniería es el principal responsable por las decisiones tomadas en esta estructura, debe liderar a todos los departamentos que le corresponden y cada uno de estos debe trabajar en pos de las directrices del decano de la facultad.
-\begin{figure}[!hbp]
-\begin{center}
-\includegraphics[scale=0.45,angle=0]{images/organigrama/11.png}
-\caption{Organigrama de la facultad de ingen\'ieria}
-\label{Organigrama de la facultad de ingenieria}
-\end{center}
-\end{figure}
 
 \chapter{Problema}
 \thispagestyle{empty}
@@ -184,15 +127,23 @@ El decano de ingeniería es el principal responsable por las decisiones tomadas 
 El Dirdoc es una plataforma online en la que, alumnos, profesores y funcionarios tienen acceso, mediante distintos puntos de acceso, en cada uno de estos se ejecutan ciertas actividades. A continuación se detallan las características de cada uno.
 
 \begin{itemize}
-	\item Alumno: Es un acceso que le permite a un alumno mirar sus notas y sus promedios de todos sus ramos, además de la carrera, la maya curricular, entre otros.
+	\item Estudiante: Es un acceso que le permite a un alumno mirar sus notas y sus promedios de todos sus ramos, además de la carrera, la maya curricular, entre otros.
 	\item Profesor: Es un acceso en el que se permite la inserción de notas para los alumnos correspondientes, de acuerdo a los ramos que se imparten, entre otras cosas es posible mirar información del profesor, ramos en los que se trabaja y alumnos asociados a las clases.
-	\item Funcionarios, son capaces de mirar información de todos los otros niveles, e incluso tienen facultades para editar información, para lo cual su uso esta centrado en regular el correcto funcionamiento de la herramienta DirDoc y tomar acciones frente a errores que puedan originarse.
+	\item Gestor: Son capaces de mirar información de todos los otros niveles, e incluso tienen facultades para editar información, para lo cual su uso esta centrado en regular el correcto funcionamiento de la herramienta DirDoc y tomar acciones frente a errores que puedan originarse.
 \end{itemize}
 
 \subsection{SEPA}
-El SEPA (Sistema Estadístico de Profesores y Alumnos) es una herramienta complementaria en la U.T.E.M. que otorga principalmente indicadores estadísticos, que permiten tomar decisiones que afectan a un segmento importante de la organización. Por ejemplo se tiene el promedio de notas de un curso que imparte un profesor, o también el promedio de notas totales de un alumno. Si bien son importantes estos datos, pero son poco específicos.
+El SEPA (Sistema Estadístico de Profesores y Alumnos) es una herramienta complementaria en la UTEM que otorga principalmente indicadores estadísticos, que permiten tomar decisiones que afectan a un segmento importante de la organización. Por ejemplo se tiene el promedio de notas de un curso que imparte un profesor, o también el promedio de notas totales de un alumno. Si bien son importantes estos datos, pero son poco específicos.
 
-Uno de los problemas que se tienen en sepa, es que al no existir un sistema de ingreso de data desde DirDoc, la única forma de ingresar data en sepa es mediante la petición a un funcionario encargado del sistema, lo que supone un riesgo por la perdida de data.
+Uno de los problemas que se tienen en sepa, es que al no existir un sistema de ingreso de data desde DirDoc, la única forma de ingresar data en sepa es mediante la petición a un funcionario encargado del sistema, lo que supone un riesgo por la perdida de data. Las principales insuficiencias en SEPA son:
+
+\begin{itemize}
+	\item No se dispone de un servicio web (una forma de acceso más segura y controlada) de DirDoc. En el actual SEPA se deben seguir una serie de pasos para ingresar data. Primero se debe seleccionar mediante el DirDoc que data hay que insertar en SEPA y después se requiere hablar con un encargado de SEPA para que ejecute una sentencia SQL que ingrese los valores deseados a la base de datos. Lo que conlleva peligro, ya que es muy probable la perdida u omisión de algún valor.
+	\item Presenta falta de datos. Retomando el punto anterior, en el actual SEPA se da que hay ciertas tablas que no tienen datos y esto es debido a que en su proceso de inserción, estos fueron omitidos o perdidos.
+	\item No posee acceso de múltiples tipos de usuarios, diferenciados por actividad. Lo cual constituye una barrera ya que actualmente no se puede mostrar toda la información para la cual un rol tiene acceso, por ejemplo, un profesor debiera ver su información y la de sus alumnos, pero un jefe de carrera debe ser capaz de ver su información, la de los alumnos y la de los profesores. 
+	\item No existe una forma sencilla de modificar y actualizar la información desde DirDoc hasta SEPA, ya que lo que hoy se esta haciendo es hacer una petición sobre una data en DirDoc y finalmente pedirle a un encargado que ingrese cierta data a la base de datos de SEPA
+\end{itemize} 
+
 
 \section{Situación Propuesta}
 Dentro de los módulos mantenedor e integrador de SEPA se comprenden las siguientes actividades que no están en la versión anterior:
@@ -267,8 +218,8 @@ A raíz de esto se generaron ciertos problemas que comprometen la integridad de 
 La solución de este proyecto es la creación de varios servicios web que proveen datos que deben ser procesados y mantenidos en una base de datos local. Este sistema debe validad la integridad de los datos evitando perdida de registros. A continuación se desarrolla un Mantenedor de los datos que componen el sistema, en el cual es posible buscar registros, comprobar que estén correctos, y si no lo están poder modificarlos.
 \subsection{Uso de Java}
 Esta actualización es construida a través del compendio de tecnologías que engloba la convención JavaEE (Java Enterprise Edition), caracterizada por un enfoque estandarizado en el proceso productivo, lo que permite automatizar varios procesos y centrarnos en el proyecto. Esto facilita la construcción del proyecto de manera más estable y segura. Agregando valor al proyecto mediante la incorporación de distintas herramientas, explicadas en este documento, que posibilitan un desarrollo de calidad y mejorable en el futuro.
-\subsection{Desuso de PHP}
-Algunas tecnologías como PHP permiten crear la página de manera rápida e incorporar un framework de persistencia pero son difíciles de escalar y mantener.  Otros frameworks como Ruby on Rails podrían llevar a cabo esta tarea de mejor manera. Pero el punto frágil es su curva de aprendizaje que es bastante alta.
+\subsection{Desventaja de PHP}
+Algunas tecnologías como PHP permiten crear la página de manera rápida e incorporar un framework de persistencia pero son difíciles de escalar y mantener. Otros frameworks como Ruby on Rails podrían llevar a cabo esta tarea de mejor manera. Pero el punto frágil es su curva de aprendizaje que es bastante alta.
 
 Esto nos lleva a tomar la decisión de abandonar PHP ya que lo que se busca es, una herramienta que tenga reusabilidad en la organización y capacidad de mejora, manteniendo la robustez y la simpleza.
 % enfocar a las cosas que no se pueden haceren otros lenguajes.
@@ -323,26 +274,26 @@ La gran debilidad de este sistema es que no se muestran muchos criterios de comp
 
 Finalmente se observa a las Universidades actuales buscando organismos extranjeros capaces de certificar las características de la educación que ofrecen, de esta manera muestran no solo una acreditación por un organismo chileno, sino también una necesidad de competir a nivel internacional \cite{data3}.
 
-\section{Justificación del Trabajo de Título}
-La U.T.E.M. requiere un sistema informático que agregue funcionalidades para el control de sus datos de manera simple y segura. En el anterior SEPA los datos eran extraídos directamente del DirDoc, dando la posibilidad de cometer errores de inserción graves. Con este nuevo sistema, ahora no solo hay una seguridad con los datos que son transferidos desde servicios web, sino que también implementa un Sistema de Autenticación, gracias a su sistema de perfiles de usuarios que limita el acceso en el sitio para más de 2 tipos de usuarios.
+%\section{Justificación del Trabajo de Título}
+%La UTEM requiere un sistema informático que agregue funcionalidades para el control de sus datos de manera simple y segura. En el anterior SEPA los datos eran extraídos directamente del DirDoc, dando la posibilidad de cometer errores de inserción graves. Con este nuevo sistema, ahora no solo hay una seguridad con los datos que son transferidos desde servicios web, sino que también implementa un Sistema de Autenticación, gracias a su sistema de perfiles de usuarios que limita el acceso en el sitio para más de 2 tipos de usuarios.
 
-El avance gracias al servicio web es justificado con las siguientes mejoras que se tienen que hacer para que esta modificación se pueda realizar:
+%El avance gracias al servicio web es justificado con las siguientes mejoras que se tienen que hacer para que esta modificación se pueda realizar:
 
-\begin{itemize}
-	\item Sistema de comunicación desde DirDoc hacia SEPA: Programar distintas interfaces que entregan información a SEPA, pasando por todos los requerimientos que se puedan originar, y dejando paso a futuras peticiones por parte de este sistema a DirDoc.
-	\item Sistema de rastreo de data y corrección: Programar un mecanismo que detecte cuando se presenten problemas con la data, ya sea que venga corrupta o mal formada, convirtiéndola en data en blanco, para posteriormente poder ser reparada.
-	\item Sistema de inserción de data a un modelo estructurado para funcionar con JPA: Generar un modelo de datos que permita la interacción frente al patrón Modelo, Vista, Controlador, en donde el modelo es la estructura simple de la data, pero permite tomar todos los conjuntos de data de manera fácil, rápida y óptima.
-	\item Sistema cronométrico de petición de data a DirDoc: Programar un sistema que haga las distintas consultas a DirDoc de manera cronometrada, ocupando distintos horarios para hacer las ejecuciones. Por ejemplo haciendo que las ejecuciones sean en un horario en que poca gente hace uso de los servicios. Minimizando los recursos.
-\end{itemize}
+%\begin{itemize}
+%	\item Sistema de comunicación desde DirDoc hacia SEPA: Programar distintas interfaces que entregan información a SEPA, pasando por todos los requerimientos que se puedan originar, y dejando paso a futuras peticiones por parte de este sistema a DirDoc.
+%	\item Sistema de rastreo de data y corrección: Programar un mecanismo que detecte cuando se presenten problemas con la data, ya sea que venga corrupta o mal formada, convirtiéndola en data en blanco, para posteriormente poder ser reparada.
+%	\item Sistema de inserción de data a un modelo estructurado para funcionar con JPA: Generar un modelo de datos que permita la interacción frente al patrón Modelo, Vista, Controlador, en donde el modelo es la estructura simple de la data, pero permite tomar todos los conjuntos de data de manera fácil, rápida y óptima.
+%	\item Sistema cronométrico de petición de data a DirDoc: Programar un sistema que haga las distintas consultas a DirDoc de manera cronometrada, ocupando distintos horarios para hacer las ejecuciones. Por ejemplo haciendo que las ejecuciones sean en un horario en que poca gente hace uso de los servicios. Minimizando los recursos.
+%\end{itemize}
 
-Por otro lado la creación del sistema mantenedor comprende las siguientes mejoras:
+%Por otro lado la creación del sistema mantenedor comprende las siguientes mejoras:
 
-\begin{itemize}
-	\item Inserción de perfiles de usuario: Programar por medio de herramientas dentro de JavaEE, distintos perfiles que serán capaces de mirar en ciertas medidas la data que ofrece el sistema.
-	\item Mejora de la interfaz de usuario: Programar componentes que el usuario pueda aprender a usar de forma rápida y eficiente.
-	\item Uso completo de las tablas de SEPA: Mediante los distintos perfiles es posible llegar a todas las tablas, lo que supone el mantenimiento de todas estas.
-	\item Visualización y mantenimiento de las tablas: Programar sistema de mantenimiento para todas las tablas que un usuario pueda visualizar
-\end{itemize}
+%\begin{itemize}
+%	\item Inserción de perfiles de usuario: Programar por medio de herramientas dentro de JavaEE, distintos perfiles que serán capaces de mirar en ciertas medidas la data que ofrece el sistema.
+%	\item Mejora de la interfaz de usuario: Programar componentes que el usuario pueda aprender a usar de forma rápida y eficiente.
+%	\item Uso completo de las tablas de SEPA: Mediante los distintos perfiles es posible llegar a todas las tablas, lo que supone el mantenimiento de todas estas.
+%	\item Visualización y mantenimiento de las tablas: Programar sistema de mantenimiento para todas las tablas que un usuario pueda visualizar
+%\end{itemize}
 
 \section{Análisis de las herramientas}
 El desarrollo de las aplicaciones debe ser con un lenguaje que nos permita la correcta ejecución de las tareas de diseño y desarrollo. Por lo cual resulta interesante desarrollar algunos criterios que nos mostrarán las características y la justificación de nuestra elección a la hora de pensar en un lenguaje apropiado para este proyecto.
@@ -373,18 +324,7 @@ El desarrollo de las aplicaciones debe ser con un lenguaje que nos permita la co
 
 \end{enumerate}
 
-También es importante tener en cuenta el lenguaje a utilizar en el momento de la creación del proyecto, de esta manera se pondrán los lenguajes candidatos para conocerlos en mayor detalle.
-
-\begin{enumerate}
-
-\item PHP: Es el lenguaje de lado servidor más extendido en la web. Surgido en 1994, se trata de un lenguaje de creación relativamente reciente, aunque con la rapidez con la que evoluciona Internet parezca que ha existido toda la vida. Es un lenguaje que ha tenido una gran aceptación en la comunidad de desarrolladores, debido a la potencia y simplicidad que lo caracterizan, así como al soporte generalizado en la mayoría de los servidores \cite{data7}.
-
-\item .NET: Es un framework de Microsoft que hace un énfasis en la transparencia de redes, con independencia de plataforma de hardware y que permita un rápido desarrollo de aplicaciones. Basado en ella, la empresa intenta desarrollar una estrategia horizontal que integre todos sus productos, desde el sistema operativo hasta las herramientas de mercado \cite{data8}.
-
-\item Ruby on Rails: Es un entorno de desarrollo web de código abierto que está optimizado para satisfacción de los programadores y de la productividad. Te permite escribir un buen código favoreciendo la convención antes que la configuración \cite{data9}.
-
-\item Java: Es un lenguaje de programación de propósito general. En la actualidad es un lenguaje muy extendido y cada vez cobra más importancia tanto en el ámbito de Internet como en la informática en general. Está desarrollado por la compañía Oracle con gran dedicación y siempre enfocado a cubrir las necesidades tecnológicas de punta. \cite{data10}.
-\end{enumerate}
+También es importante tener en cuenta el lenguaje a utilizar en el momento de la creación del proyecto, de esta manera se pondrán los lenguajes candidatos: PHP, .NET, Ruby on Rails y Java. Ver anexo.
 
 En la siguiente tabla muestra una comparación de las cuatro tecnologías anteriormente presentadas de forma explicita para comprender nuestra elección. Es claro decir que uno de los aspectos que marca profundamente la elección sobre el lenguaje con que se va a realizar este proyecto, es determinada por los conocimientos que tiene el alumno y las indicaciones del profesor, en pos de realizar lo más rápido posible el trabajo, haciéndolo de forma elegante. 
 
@@ -457,7 +397,342 @@ Son arquitecturas estandarizadas para el desarrollo de software, permiten a los 
 
 \end{enumerate}
 
-\chapter{Uso de PSP}
+\chapter{Integrador}
+\thispagestyle{empty}
+\section{Funcionalidad}
+
+El modulo de integración que se le agrega a SEPA es una herramienta de poca complejidad, en donde es posible hacer cargas de datos, que serán explicadas posteriormente. Además de esto existen herramientas que hacen posible las peticiones de información desde el módulo integrador hacia DirDoc, esta funcionalidad se carga por tareas determinadas en ciclos de tiempo predefinidos, que son explicados a continuación.
+
+\section{Poblador}
+Al proceso SEPA se le agrega un módulo integrador que permite la comunicación entre los datos del sistema de notas y estudiantes existente dentro de la Universidad (Dir Doc). El fin de ésto es preguntar por datos que posteriormente serán insertados en las tablas del sistema nuestro. Para esto se utiliza a un Web Service que provee una interfaz en donde se obtiene la información, ésta posteriormente se normaliza y adecua a nuestro sistema y finalmente se persiste. Existen varios procesos de integraciones, cada uno va dirigido a un objeto que se quiere poblar.
+\section{Web Service}
+Es una tecnología que permite la comunicación entre 2 programas mediante un sistema que expone un protocolo para el traspaso de datos, donde el encargado de generar las preguntas debe tener información consistente y poder establecer la conexión. Por otro lado los programas se relacionan gracias a un meta lenguaje basado en XML (de etiquetado) que describe el código que debe implementarse para poder realizar las consultas y retornar objetos con los cuales posteriormente opera.
+
+Eso es posible gracias a que se hace uso del framework Apache CXF que nos abstrae de la complejidad de programar un servicio web y nos permite realizar esta tarea de manera fácil. CXF nos pide información relacionada con la dirección del servicio a consumir y él se encarga de traernos las respuestas que necesitemos.
+\section{Operaciones}
+La integración se basa en distintas operaciones separadas por el momento y la hora en donde se realizan, todas las tareas tienen el objetivo de poblar los datos propios por lo cual el trabajo de mapeo de datos es siempre distinto para todas las consultas y objetos que se tienen.
+\subsection{Tarea diaria}
+Tareas que se ejecutan una vez al día, en donde podemos encontrar: Actualizar Cohortes y Actualizar Estudiantes. El proceso obtiene los datos, principalmente, del servicio web llamado servicio carrera.
+\subsection{Tarea semanal}
+Tareas que se ejecutan una vez a la semana, en donde podemos encontrar: Actualizar Asignaturas Cursadas. El proceso obtiene los datos, principalmente, del servicio web llamado servicio curso.
+\subsection{Tarea mensual}
+Tareas que se ejecutan una vez al mes, en donde podemos encontrar: Actualizar Asignaturas Mallas, Actualizar Cursos, Actualizar Docentes y Actualizar Cargos. El proceso obtiene los datos, principalmente, del servicio web llamado servicio curso y docente.
+\subsection{Tarea trimestral}
+Tareas que se ejecutan cada tres meses, en donde podemos encontrar: Actualizar Asignaturas, Actualizar Cupos Carreras, Actualizar Titulados. El proceso obtiene los datos, principalmente, del servicio web llamado servicio utem y curso.
+\subsection{Tarea semestral}
+Tareas que se ejecutan cada semestre, en donde podemos encontrar: Actualizar Establecimientos y Actualizar Mallas. El proceso obtiene los datos, principalmente, del servicio web llamado servicio curso y estudiante.
+\subsection{Tarea anual}
+Tareas que se ejecutan una ves al año, en donde podemos encontrar: Actualizar Carreras, Actualizar Planes de Estudio y Actualizar Quintalización. El proceso obtiene los datos, principalmente, del servicio web llamado servicio curso, docente, utem y carrera.
+
+\chapter{Mantenedor}
+\thispagestyle{empty}
+\section{Introducción}
+
+El mantenedor es la interfaz nueva que tiene SEPA después de estas mejoras, es la parte que el usuario final sentirá de manera distinta, ya que ahora se tienen perfiles, visualización e incluso modificación de data. De manera lógica y simple, manteniendo siempre la facilidad del desarrollo para futuros componentes.
+
+\section{Sitio Web}
+El proyecto mantenedor es un sitio web que utiliza la tecnología Java Server Faces o (JSF), que permite la visualización de una estructura de código en formato xml para mostrar sitos web con contenido dinámico en java. Sobre esta tecnología se ocupa Primefaces que enriquece las características de JSF proporcionando herramientas HTML mas complejas (tales como menús despegables o tablas con distintas funcionalidades ya programadas).
+\section{Ingreso}
+El ingreso al sitio sitio se hace con usuario y contraseña, cada usuario esta asociado a un perfil que limita el uso en el sitio, la autentificación esta hecha con Spring Security, un framework que permite automatizar el paso de perfiles con sus contraseñas, gestionando la encriptación y la desencriptación, de esta manera se asegura que los ingresos al sitio son seguros, manejando los distintos tipos de seguridad.
+
+También el inicio de la página cuenta con links de la Universidad hacia sitios de interés que están dentro de la Universidad.
+\section{Mantenedores}
+Al ingresar al sitio uno puede ver un menú con los distintos mantenedores, abajo se ve un registro con los ingresos al sitio e información detallada con algún indicador.
+
+Volviendo al menú tenemos una serie de opciones estas son:
+
+\begin{itemize}
+	\item Inicio: Que nos da un mensaje de bienvenida y es un punto de partida.
+	\item Acceso: Contiene los mantenedores de Acceso, Auditoría, Rol y Usuario.
+	\item Geografía: Contiene los mantenedores de País, Región, Provincia y Comuna.
+	\item UTEM: Contiene los mantenedores de Facultad, Departamento, Escuela, Contrato, Docente, Jerarquía, Jornada, Carrera, Asignatura Malla, Cupo Carrera, Malla, Plan de Estudio y Requisito de Asignatura.
+	\item Curso: Contiene los mantenedores de Asignatura, Asignatura Cursada, Curso, Estado de Asignatura y Régimen.
+	\item Estudiante: Contiene los mantenedores de Establecimiento, Grupo Dependencia, Rama, Régimen Educacional, Tipo Establecimiento, Cohorte, Egresado, Estado Alumno, Estudiante, Histórico Alumno, Tipo de Ingreso y Titulado.
+	\item Contacto: Contiene los mantenedores de Contacto y Preguntas Frecuentes.
+	\item Sesión: Que tiene el Logout para poder salir del sistema cerrando sesión.
+\end{itemize}
+
+Todos estos mantenedores cumplen con las mismas funciones de buscar, borrar, filtrar, agregar y modificar los registros en cada una de las tablas que uno elija.
+\chapter{Evaluación de Costos}
+\section{Puntos de Función}
+Para evaluar los costos monetarios de este proyecto se utilizara el cálculo de Puntos de Función para llegar a un valor justificado. Mediante una función matemática que utiliza varios parámetros, divididos en 2 ramas.
+
+\section{Conteo de puntos}
+
+\begin{enumerate}
+	\item Ficheros Internos Lógicos (FIL): La información de los datos internos, contenida en bases de datos y ficheros de configuración se tomarán como medida la cantidad de tablas contenidas en el modelo.
+	\item Ficheros Externos de Interfaz (FEI): El proyecto utiliza datos externos que son administrados por la aplicación DirDoc. Por ejemplo hay un aproximado de 32 servicios adjuntos al modelo, contenidos en 11 servicios, mas, un aproximado de 24 sub-tareas externas en el integrador contenidas en 6 tareas grandes.
+	\item Entrada Externa (EE): El sistema consume servicios web provenientes de otros sistemas.
+	\item Salida Externa (SE): El sistema muestra la totalidad de los datos internos en su parte visual. En este caso particular todas las tablas del modelo tienen un apartado visual en la vista.
+	\item Consulta Externa (CE): El sistema tiene mantenedores de todos sus datos en base de datos, para poder ser modificables por los usuarios.
+\end{enumerate}
+
+\begin{table}
+\textbf{Tabla de valores ponderados}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Característica} & \textbf{Ponderación} & \textbf{Valor} & \textbf{Determinante ponderado} \\
+\hline
+FIL & 49 & medio & 8\\
+\hline
+FEI & 43 & medio & 3\\
+\hline
+EE & 16  & alto  & 6\\
+\hline
+SE & 43  & alto  & 8\\
+\hline
+CE & 43  & alto  & 8\\
+\hline
+\end{tabular}
+\caption{Tabla de valores ponderados}
+\end{table}
+Los parámetros anteriores deben ser convertidos en distintas tablas.
+\begin{table}
+\textbf{Complejidad de los ficheros}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{RET/DET} & \textbf{1-19} & \textbf{20-50} & \textbf{51+} \\
+\hline
+1 & Bajo & Bajo & Medio\\
+\hline
+2-5 & Bajo & Medio & Alto\\
+\hline
+6+ & Medio & Alto & Alto\\
+\hline
+\end{tabular}
+\caption{Complejidad de los ficheros}
+\end{table}
+\begin{table}
+\textbf{Complejidad de las entradas}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{FICH/DET} & \textbf{1-4} & \textbf{5-15} & \textbf{16+} \\
+\hline
+0-1 & Bajo & Bajo & Medio\\
+\hline
+2 & Bajo & Medio & Alto\\
+\hline
+3+ & Medio & Alto & Alto\\
+\hline
+\end{tabular}
+\caption{Complejidad de las entradas}
+\end{table}
+\begin{table}
+\textbf{Complejidad de las Salidas}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{FICH/DET} & \textbf{1-5} & \textbf{6-19} & \textbf{20+} \\
+\hline
+0-1 & Bajo & Bajo & Medio\\
+\hline
+2-3 & Bajo & Medio & Alto\\
+\hline
+4+ & Medio & Alto & Alto\\
+\hline
+\end{tabular}
+\caption{Complejidad de las salidas}
+\end{table}
+\begin{table}
+\textbf{Tabla de valores calculados}\\
+\begin{tabular}{| l | l | l | l | l |}
+\hline
+\textbf{TIPO} & \textbf{Bajo} & \textbf{Medio} & \textbf{Alto} & \textbf{Total} \\
+\hline
+EE & x3  & \textbf{8x4}  & x6 & 32\\
+\hline
+SE & x4  & \textbf{3x5}  & x7 & 15\\
+\hline
+CE & x3  & x4  & \textbf{6x10} & 60\\
+\hline
+FIL & x7 & x10 & \textbf{8x25} & 200\\
+\hline
+FEI & x5 & x7 & \textbf{8x15} & 120\\
+\hline
+TOTAL &  &  & & 427\\
+\hline
+\end{tabular}
+\caption{Tabla de valores calculados}
+\end{table}
+
+\section{Características generales del sistema}
+
+En esta sección se evalúa con un número de 0 a 5 las distintas características que este sistema puede o no tener, y finalmente se ponderan para generar un valor que nos permite hacer el ajuste para el conteo de puntos anterior.
+
+\begin{enumerate}
+	\item Comunicación de Datos: [4 puntos] Varios teleprocesos pero con el mismo protocolo de comunicaciones.
+	\item Proceso Distribuido: [4 puntos] Proceso de datos distribuidos y transferencia de datos en línea en ambas direcciones. Por ejemplo una red de cajeros automáticos en donde estos procesan parte de la transacción.
+	\item Objetivos de Rendimiento: [4 puntos] Se utilizan herramientas de análisis de rendimiento durante el diseño, desarrollo e instalación, con el objetivo de alcanzar el rendimiento demandado por el usuario.
+	\item Configuración de Explotación Usada intensamente por Otros Sistemas: [1 punto] Existen restricciones, pero son las usuales de cualquier equipo departamental. No es necesario hacer consideraciones especiales.
+	\item Tasa de Transacciones: [2 puntos] Se prevén peaks de operaciones semanales.
+	\item Entrada de datos EN-LÍNEA: [5 puntos] La entrada de datos interactivas superan el 30 por ciento de las transacciones.
+	\item Eficiencia con el Usuario Final: [3 puntos] Seis o más factores, pero sin especiales requerimientos de eficiencia.
+	\item Actualizaciones EN-LÍNEA: [4 puntos] Protección ante pérdidas y el sistema se ha de diseñar e implementar con estas consideraciones.
+	\item Lógica de Proceso Interno Compleja: [5 puntos] La aplicación llevará incorporados sistemas de seguridad y control.
+	\item Reusabilidad del Código: [5 puntos] La aplicación ha sido específicamente empaquetada y/o documentada para ser fácil de reutilizar.
+	\item Contempla la Conversión y Facilidad de Instalación: [0 puntos] No reemplazamos un sistema existente o no se requiere conversión. Tampoco se enuncia nada sobre la instalación.
+	\item Facilidad de Operación: [5 puntos] Sistema automático sin intervención humana.
+	\item Instalaciones Múltiples: [3 puntos] La aplicación correrá en múltiples entornos de Hw o Sw y se tiene en cuenta desde la fase de diseño.
+	\item Facilidad de Cambios: [3 puntos] El cambio de la configuración se hace interactivamente y tiene efecto inmediato.
+\end{enumerate}
+\begin{table}
+\textbf{Cálculo de los puntos de función ajustados}\\
+\begin{tabular}{| l | l | l |}
+\hline
+\textbf{No.} & \textbf{Factor de Complejidad} & \textbf{Valor}\\
+\hline
+1 &  Comunicación de Datos & 4 \\
+\hline
+2 &  Proceso Distribuido &4  \\
+\hline
+3 & Objetivos de Rendimiento  &4  \\
+\hline
+4 & Configuración Explotación Compartida  & 1 \\
+\hline
+5 & Tasa de Transacciones  & 2 \\
+\hline
+6 &  Entrada de Datos EN-LÍNEA &  5\\
+\hline
+7 & Eficiencia con el Usuario Final  &  3\\
+\hline
+8 & Actualizaciones En-LÍNEA  & 4 \\
+\hline
+9 & Lógica del Proceso Interno Compleja  &  5\\
+\hline
+10 & Reusabilidad del Código  &  5\\
+\hline
+11&  Contempla la Conversión e Instalación &  0\\
+\hline
+12& Facilidad de Operación  &  5\\
+\hline
+13& Instalaciones Múltiples  &  3\\
+\hline
+14& Facilidad de Cambios  & 3 \\
+\hline
+\multicolumn{2}{|c|}{Factor de Complejidad Total (FCT)} & 48\\
+\hline
+\end{tabular}
+\caption{Cálculo de los puntos de función ajustados}
+\end{table}
+
+\section{Puntos de función ajustados}
+La siguiente fórmula describe la cantidad ajustada de puntos de función y éstos a su vez son multiplicados por el valor en horas dando lo que cuesta en tiempo y dinero, cada uno de los puntos obteniéndose finalmente el valor ponderado del proyecto en sí.
+
+\begin{math}
+PFA=PFSA * ( 0.65 + ( 0.01 * FCT ) = 427 * ( 0.65 + ( 0.01 * 48 ) = 452.51
+\end{math}
+
+Donde se obtuvo un total de 452 puntos de función ajustados, los que vienen a ser puntos de cambios en el proceso de desarrollo, los cuales por lo menos requieren un proceso de medición para posteriormente pasar a la programación. Después se multiplican los Puntos de Función por un factor de 4 horas hombre, aproximadamente, por cada punto de función.
+
+\begin{math}
+452.51 PF * 4 (HH / PF) = 452.51 * (4) = 1810.04 HH
+\end{math}
+
+Finalmente se multiplican las horas hombre por el factor 0.4 UF / HH.
+
+\begin{math}
+1810.04 HH * 0.4(UF / HH) = 724.016 UF = 17.492.226.6 \$
+\end{math}
+
+El proyecto tiene un costo mínimo de 17.500.000 pesos.
+
+\chapter{Conclusiones}
+
+\section{Garantías de calidad}
+
+La calidad de este sistema se ve potenciada por varios aspectos, los cuales se explicaran a continuación:
+
+\begin{enumerate}
+        \item Uso de una base de datos PostgreSQL: Un sistema gestor de bases de datos, de código abierto, echo para ser una potente forma de mantener grandes cantidades de datos. Siendo un proyecto realizado de manera altruista por muchos desarrolladores a nivel mundial, es muy estable, seguro y es el entorno necesario para que el sistema SEPA trabaje sin necesidad de pensar en licencias u otros tipos de registros de datos. Contiene una infinidad de tipos de datos que fortalece la forma de como uno ingresa parámetros \cite{data18}.
+        \item Uso de Mybatis: Herramienta de ayuda para sentencias SQL que permite el uso de cualquier base de datos, con gran escalabilidad y adaptabilidad, permitiendo escribir las consultas que uno desee ejecutar y mapearlas directamente en los objetos que uno desee. Tiene un nivel de complejidad medio, lo que hace que sea un poco difícil aprender, pero una ves se comprende, la incorporación de nuevos elementos de data es ordenada y escalable  \cite{data19}.
+        \item Uso de WebServices: Una tecnología que utiliza un conjunto de protocolos y estándares que sirven para intercambiar datos entre aplicaciones. Distintas aplicaciones de software desarrolladas en lenguajes de programación diferentes, y ejecutadas sobre cualquier plataforma, pueden utilizar los servicios web para intercambiar datos en redes de ordenadores como Internet \cite{data20}.
+        \item Uso de Primefaces: Una librería de componentes para JavaServer Faces (JSF) de código abierto que cuenta con un conjunto de componentes enriquecidos que facilitan la creación de las aplicaciones web. Soporte de ajax con despliegue parcial, lo que permite controlar qué componentes de la página actual se actualizarán y cuáles no \cite{data21}.
+        \item Uso de Metodología de Trabajo: El uso de PSP fortalece el desempeño del proyecto, mostrando los errores que el proceso de desarrollo pueda presentar, desde esta perspectiva es necesario destacar que cuando se van anotando los errores éstos tienden a disminuir con el tiempo por lo que en las etapas finales es muy difícil encontrar errores en el desarrollo.
+        \item Uso de Patrón de diseño: El patrón MVC ha hecho de este proyecto un ente robusto y consistente que puede ser mejorable incluso con poco conocimiento, ya que posee una base sólida que sustenta su funcionamiento, por lo cual los cambios que se puedan necesitar en el futuro harán uso de las herramientas que se fabricaron el desarrollo mismo.
+        \item Uso de Java y Frameworks: Esto nos permite una autonomía en varios aspectos, ya que nosotros como impulsores de proyectos tenemos siempre que velar por que todo el desarrollo sea altamente eficiente, y una manera muy clara de obtener eso es mediante el uso de herramientas que ya han sido muy probadas y se encuentran en uso de muchos otros proyectos. Dado que en otros sistemas esto ha funcionado muy bien es de esperar que en el nuestro también funcione de igual modo.
+        \item Pruebas de rendimiento: Las pruebas sobrecargan el sistema de tal manera que nos permiten decir a ciencia cierta si el software es capaz de resistir lo que los datos nos entregan, y estas nos demuestran que el trabajo realizado cumple con ciertas características que cumple un proyecto web de gran valor.
+\end{enumerate}
+
+Finalmente con de estos puntos se puede tener una clara idea de la calidad del producto que se entrega y de cómo éste puede ir mejorando todavía, e inclusive puede cambiar y adecuase a otras necesidades.
+
+\section{Conclusión}
+El trabajo correspondiente al Sistema Mantenedor e Integrador en SEPA ha mostrado como recuperar datos que pueden ser difíciles de manejar. Los datos para este trabajo no estaban del todo bien organizados, esto quiere decir que cuando uno observa los datos, es posible encontrar insuficiencias de campos en los objetos mostrados en las tablas de los mantenedores, para lo cual los Mantenedores están preparados para ingresar datos en los sectores que lo requieran.
+
+También es posible identificar errores estructurales de información. Por ejemplo, en el sistema Integrador entraban datos que contenían errores repetidos en todas las filas de ciertas tablas. Este sistema está preparado para resistir ese tipo de datos y cargar una data estándar que más adelante será reparada por el sistema Mantenedor.
+
+Un proyecto de estas características es una importante oportunidad de mejoras, tales como: mantenibilidad de la data, aunque esta contenga errores, ya que es posible editar aspectos mínimos dentro de todas las tablas, conectividad con servicios web, manejado por parámetros SOAP, dejando la complejidad de las comunicaciones a frameworks que se encargan de trabajar con estas interacciones.
+
+Gracias a este trabajo se puede hablar de indicadores estadísticos, los cuales nos proporcionan información que regulan el funcionamiento de cualquier organización. Para este caso en particular, el desarrollo de indicadores, nos permite sostener una organización a nivel de estudiantes, integrando consultas estadísticas a problemas particulares en estudiantes y profesores. Principalmente el objetivo de SEPA era ser mostrado.
+
+La ventaja de que este sistema se comunique con otros mediante el uso de WebServices es que a lo largo de la vida útil de este proyecto se pueden agregar otros proyectos que pueden nutriste de la información que SEPA produce, de tal manera hace que cada ves sea mas intenso su uso.
+\section{Trabajo Futuro}
+Para ampliar las posibilidades de un trabajo que descansa sobre el valor de potenciar las capacidades administrativas de una institución académica, es necesario hacer estudios que posibiliten un mayor alcance de datos, tal como lo hace SEPA, por tal razón es de vital importancia promover nuevas mejoras que hagan de este sistema una herramienta completa en el desarrollo de las capacidades generales de una organización, como lo es la Universidad Tecnológica Metropolitana.
+
+Se puede considerar el integrar un motor de minería de datos que revele información que hasta ahora no se ha obtenido dentro de los marcos de este proyecto, por ejemplo, una herramienta que obtenga formulaciones o métodos de aproximación para datos del futuro. Tal cosa produciría un impacto en SEPA ya que con esta perspectiva se aumentan los beneficios de los indicadores que uno puede obtener, validando estos o creando aproximaciones que ayudan a esclarecer las razones de los valores que actualmente entrega el sistema.
+
+También se piensa en una Inteligencia de Negocio que junto con la idea anterior sea capaz de producir nuevos indicadores enfocados a la mejora o a la conducción, con intervención humana, de los valores generalizados en las tablas que maneja SEPA, en otras palabras, que se sepa información que nos permitiera guiar a la Universidad en torno a los objetivos de su Visión, haciendo un impacto en el corto plazo.
+
+Estas dos ideas anteriores convergen finalmente en que el sistema en un futuro podría tener una Inteligencia Artificial que sea manejable por los usuarios de SEPA permitiendo manejar las respuestas de los usuarios en pos de darle las mejores oportunidades a todos por igual. Mediando en todos los asuntos de manera logia, estadística y totalmente regulada. Podríamos decir que en un futuro, SEPA seria un sistema automático y autónomo.
+
+Finalizando, se puede afirmar que un trabajo como éste es perfectamente capaz de entregar datos y argumentos sólidos en pos de generar estudios científicos relacionados con indicadores de calidad en educación, puesto que con el sistema SEPA en las condiciones actuales mejoradas, se tienen todas las herramientas preparadas para tales propósitos. 
+\chapter{Anexo 1}
+\begin{enumerate}
+        \item PostgresSQL: Un sistema gestor de bases de datos, de código abierto, echo para ser una potente forma de mantener grandes cantidades de datos. Siendo un proyecto realizado de manera altruista por muchos desarrolladores a nivel mundial, es muy estable, seguro y es el entorno necesario para que el sistema SEPA trabaje sin necesidad de pensar en licencias u otros tipos de registros de datos. Contiene una infinidad de tipos de datos que fortalece la forma de como uno ingresa parámetros \cite{data18}.
+        \item Maven: asdf.
+        \item CXF: asdf.
+        \item PHP: Es el lenguaje de lado servidor más extendido en la web. Surgido en 1994, se trata de un lenguaje de creación relativamente reciente, aunque con la rapidez con la que evoluciona Internet parezca que ha existido toda la vida. Es un lenguaje que ha tenido una gran aceptación en la comunidad de desarrolladores, debido a la potencia y simplicidad que lo caracterizan, así como al soporte generalizado en la mayoría de los servidores \cite{data7}.
+        \item Patrones de Diseño: Son arquitecturas estandarizadas para el desarrollo de software, permiten a los proyectos ser resueltos con estrategias ya probadas y que funcionan en la mayoría de los casos. Existen muchos patrones distintos, cada uno tiene sus ventajas y desventajas.
+	    \item Modelo Vista Controlador: Es un patrón de diseño, sirviendo como modelo de desarrollo informático que permite separar el modelo de datos, el negocio con sus flujos y la vista del usuario final. En este esquema de trabajo se puede apreciar que el modelo solo es comunicado con el negocio, y este a su ves es solo comunicado con la vista. de manera que cada parte realice sus tareas y entreguen paquetes de información mas claros y fáciles de manejar a lo largo de la vida útil de un software \cite{data12}.
+	\item Java EE: Java enterprise edition, es una plataforma para programadores en Java que contiene herramientas enfocadas en el desarrollo de aplicaciones para empresas. Es administrada por grandes compañas de la computación que promueven el uso de ciertos marcos de trabajo que estandarizan el desarrollo en el lenguaje Java. \cite{data14}.
+	\item JPA: Java Persistente API, una herramienta que permite la homologación de la base de datos desde objetos programados en un sistema, creado en lenguaje Java. Permitiendo usar la programación relacionada a objetos para realizar consultas a la base de datos, desligándose del uso del lenguaje especifico de la base de datos para la consulta e inserción de la data \cite{data13}.
+	\item JSF: Herramienta que permite desarrollar interfaces visuales con una potente comunicación con aplicaciones Java EE bajo el modelo MVC. Permite a los programadores crear interfaces cómodas e inteligentes, sobre los patrones web actuales. Es una tecnología pensada para un ágil desarrollo informático que integre otras tecnologías como puede ser JPA o Spring. \cite{data16}.
+	\item Spring: Herramienta que permite la integración de distintos módulos en aplicaciones Java EE, entre otras utilidades, permite la separación de los componentes de desarrollo bajo el esquema MVC. Tambien funciona como una conexión entre distintos flujos del sistema, por ejemplo al trabajar en el marco MVC se puede llamar a clases desde las paginas que componen el sistema\cite{data15}.
+	\item PrimeFaces: Kit de desarrollo para aplicaciones en JSF que permite usar componentes mas avanzados y específicos que JSF. Tiene una interacción que trabaja bien con spring y permite el uso de todos los componentes aceptados por JSF. \cite{data17}.
+	\item .NET: Es un framework de Microsoft que hace un énfasis en la transparencia de redes, con independencia de plataforma de hardware y que permita un rápido desarrollo de aplicaciones. Basado en ella, la empresa intenta desarrollar una estrategia horizontal que integre todos sus productos, desde el sistema operativo hasta las herramientas de mercado \cite{data8}.
+	\item Ruby on Rails: Es un entorno de desarrollo web de código abierto que está optimizado para satisfacción de los programadores y de la productividad. Te permite escribir un buen código favoreciendo la convención antes que la configuración \cite{data9}.
+	\item Java: Es un lenguaje de programación de propósito general. En la actualidad es un lenguaje muy extendido y cada vez cobra más importancia tanto en el ámbito de Internet como en la informática en general. Está desarrollado por la compañía Oracle con gran dedicación y siempre enfocado a cubrir las necesidades tecnológicas de punta. \cite{data10}.
+\end{enumerate}
+\chapter{Anexo 2 - La Organización de la UTEM}
+\thispagestyle{empty}
+\section{Misión}
+Formar personas con altas capacidades académicas y profesionales, en el ámbito preferentemente tecnológico, apoyada en la generación, transferencia, aplicación y difusión del conocimiento en las áreas del saber que le son propias, para contribuir al desarrollo sustentable del país y de la sociedad de la que forma parte.
+\section{Visión}
+La Universidad Tecnológica Metropolitana, será reconocida por la formación de sus egresados, la calidad de su educación continua, por la construcción de capacidades de investigación y creación, innovación y transferencia en algunas áreas del saber, por la equidad social en su acceso, su tolerancia y pluralismo, por su cuerpo académico de excelencia y por una gestión institucional que asegura su sustentabilidad y la práctica de mecanismos de aseguramiento de la calidad en todo su quehacer.
+\section{Organigrama}
+La organización se compone de distintos marcos de jerarquía, en este caso se mostrarán los que tienen relevancia académica en este trabajo, por su dependencia al posible uso de la herramienta SEPA:
+\subsection{Rectoría}
+Esta compuesta de un Rector que toma decisiones planteadas desde un consejo superior, gracias al apoyo de un consejo académico. Los cuales gobiernan el desarrollo estratégico, la dirección jurídica y la dirección de relaciones.
+\begin{figure}[!hbp]
+\begin{center}
+\includegraphics[scale=0.6,angle=0]{images/organigrama/1.png}
+\caption{Organigrama de rector\'ia}
+\label{Organigrama de rectoria}
+\end{center}
+\end{figure}
+
+Es el segmento con mas poder en la organización universitaria, siendo este el foco central de las decisiones tomadas por los otros organismos. Es importante señalar que muchas de sus políticas provienen en gran medida de las necesidades y aspiraciones de las siguientes estructuras jerárquicas.
+
+\subsection{Vicerrectoría Academica}
+Es la entidad de que administra de manera local las decisiones de rectoría, hacia distintos polos como: Investigación, Dirección de evaluación, Dirección de docencia, Relaciones estudiantiles, Biblioteca, UTEM Virtual.
+\begin{figure}[!hbp]
+\begin{center}
+\includegraphics[scale=0.45,angle=0]{images/organigrama/2.png}
+\caption{Organigrama de Vicerrector\'ia Academica}
+\label{Organigrama de vicerrectoria Academica}
+\end{center}
+\end{figure}
+
+Tiene el rol de velar por la correcta disponibilidad de recursos frente a los organismos de dirección institucional, para lo cual trabaja de manera constante en un perfeccionamiento de su rol como comandante.
+
+\subsection{Facultad de ingeniería}
+El decano de ingeniería es el principal responsable por las decisiones tomadas en esta estructura, debe liderar a todos los departamentos que le corresponden y cada uno de estos debe trabajar en pos de las directrices del decano de la facultad.
+\begin{figure}[!hbp]
+\begin{center}
+\includegraphics[scale=0.45,angle=0]{images/organigrama/11.png}
+\caption{Organigrama de la facultad de ingen\'ieria}
+\label{Organigrama de la facultad de ingenieria}
+\end{center}
+\end{figure}
+\chapter{Anexo 3 - PSP}
 \thispagestyle{empty}
 \section{Base teórica}
 PSP (Proceso de Software Personal) es una metodología de desarrollo para proyectos informáticos, que tiene una serie de pasos enfocados en el ordenamiento, cuantificación y la categorización del trabajo y el tiempo. Es usada mundialmente por su fácil aprendizaje y su rápida incorporación. Este modelo de trabajo es solo para proyectos personales, o sea, en donde el desarrollador toma todo el trabajo por sí solo.
@@ -465,6 +740,9 @@ PSP (Proceso de Software Personal) es una metodología de desarrollo para proyec
 Este tipo de trabajo nos proporciona una serie de tablas que muestran nuestros tiempos de desarrollo y avance del proyecto, básicamente en el PSP nosotros podemos obtener los tiempos de desarrollo y la cantidad de líneas de código para cada actividad o conjunto de actividades. De esta manera uno puede llegar a determinar un factor de calidad dentro de nuestro trabajo dentro de los estándares que uno estime conveniente utilizar.
 
 PSP nos obliga a desarrollar una forma de trabajo en la cual un desarrollador programa y anota los tiempos de desarrollo y la cantidad de código que uno ha producido, dentro de distintas tablas hechas para ese propósito.
+
+\section{Ventajas y Desventajas}
+Las ventajas del uso de PSP, básicamente están en el orden que genera, desarrollar una aplicación grande siempre es un desafío, pero cuando se trabaja de manera ordenada, se encapsula de mejor manera los errores que se producen en el desarrollo. Mientras que la principal desventaja es el tiempo que lleva, el aprender la estructura de trabajo, el incorporarla al trabajo cotidiano y finalmente el resumen de los resultados. Esto produce que se gaste tiempo en actividades de calculo, en ves de estar en el desarrollo.
 
 \section{Criterios para uso de PSP}
 La necesidad de usar PSP fue concebida para generar un proyecto que tuviera un criterio de calidad cuantificable. Ya que nos proporcionaba tablas e indicadores que establecen con el tiempo empleado, la cantidad de esfuerzo y errores que uno puede cometer en el trascurso del proyecto.
@@ -967,290 +1245,7 @@ La siguiente tabla es simplemente una muestra de la lista de los defectos y como
 \end{tabular}
 \caption{Tercera tabla defectos}
 \end{table}
-\chapter{Integrador}
-\thispagestyle{empty}
-\section{Introducción}
 
-El modulo de integración que se le agrega a SEPA es una herramienta de poca complejidad, en donde es posible hacer cargas de datos, que serán explicadas posteriormente. Además de esto existen herramientas que hacen posible las peticiones de información desde el módulo integrador hacia DirDoc, esta funcionalidad se carga por tareas determinadas en ciclos de tiempo predefinidos, que son explicados a continuación.
-
-\section{Poblador}
-Al proceso SEPA se le agrega un módulo integrador que permite la comunicación entre los datos del sistema de notas y estudiantes existente dentro de la Universidad (Dir Doc). El fin de ésto es preguntar por datos que posteriormente serán insertados en las tablas del sistema nuestro. Para esto se utiliza a un Web Service que provee una interfaz en donde se obtiene la información, ésta posteriormente se normaliza y adecua a nuestro sistema y finalmente se persiste. Existen varios procesos de integraciones, cada uno va dirigido a un objeto que se quiere poblar.
-\section{Web Service}
-Es una tecnología que permite la comunicación entre 2 programas mediante un sistema que expone un protocolo para el traspaso de datos, donde el encargado de generar las preguntas debe tener información consistente y poder establecer la conexión. Por otro lado los programas se relacionan gracias a un meta lenguaje basado en XML (de etiquetado) que describe el código que debe implementarse para poder realizar las consultas y retornar objetos con los cuales posteriormente opera.
-
-Eso es posible gracias a que se hace uso del framework Apache CXF que nos abstrae de la complejidad de programar un servicio web y nos permite realizar esta tarea de manera fácil. CXF nos pide información relacionada con la dirección del servicio a consumir y él se encarga de traernos las respuestas que necesitemos.
-\section{Tareas}
-La integración se basa en distintas tareas separadas por el momento y la hora en donde se realizan, todas las tareas tienen el objetivo de poblar los datos propios por lo cual el trabajo de mapeo de datos es siempre distinto para todas las consultas y objetos que se tienen.
-\subsection{Tarea diaria}
-Tareas que se ejecutan una vez al día, en donde podemos encontrar: Actualizar Cohortes y Actualizar Estudiantes. El proceso obtiene los datos, principalmente, del servicio web llamado servicio carrera.
-\subsection{Tarea semanal}
-Tareas que se ejecutan una vez a la semana, en donde podemos encontrar: Actualizar Asignaturas Cursadas. El proceso obtiene los datos, principalmente, del servicio web llamado servicio curso.
-\subsection{Tarea mensual}
-Tareas que se ejecutan una vez al mes, en donde podemos encontrar: Actualizar Asignaturas Mallas, Actualizar Cursos, Actualizar Docentes y Actualizar Cargos. El proceso obtiene los datos, principalmente, del servicio web llamado servicio curso y docente.
-\subsection{Tarea trimestral}
-Tareas que se ejecutan cada tres meses, en donde podemos encontrar: Actualizar Asignaturas, Actualizar Cupos Carreras, Actualizar Titulados. El proceso obtiene los datos, principalmente, del servicio web llamado servicio utem y curso.
-\subsection{Tarea semestral}
-Tareas que se ejecutan cada semestre, en donde podemos encontrar: Actualizar Establecimientos y Actualizar Mallas. El proceso obtiene los datos, principalmente, del servicio web llamado servicio curso y estudiante.
-\subsection{Tarea anual}
-Tareas que se ejecutan una ves al año, en donde podemos encontrar: Actualizar Carreras, Actualizar Planes de Estudio y Actualizar Quintalización. El proceso obtiene los datos, principalmente, del servicio web llamado servicio curso, docente, utem y carrera.
-
-\chapter{Mantenedor}
-\thispagestyle{empty}
-\section{Introducción}
-
-El mantenedor es la interfaz nueva que tiene SEPA después de estas mejoras, es la parte que el usuario final sentirá de manera distinta, ya que ahora se tienen perfiles, visualización e incluso modificación de data. De manera lógica y simple, manteniendo siempre la facilidad del desarrollo para futuros componentes.
-
-\section{Sitio Web}
-El proyecto mantenedor es un sitio web que utiliza la tecnología Java Server Faces o (JSF), que permite la visualización de una estructura de código en formato xml para mostrar sitos web con contenido dinámico en java. Sobre esta tecnología se ocupa Primefaces que enriquece las características de JSF proporcionando herramientas HTML mas complejas (tales como menús despegables o tablas con distintas funcionalidades ya programadas).
-\section{Ingreso}
-El ingreso al sitio sitio se hace con usuario y contraseña, cada usuario esta asociado a un perfil que limita el uso en el sitio, la autentificación esta hecha con Spring Security, un framework que permite automatizar el paso de perfiles con sus contraseñas, gestionando la encriptación y la desencriptación, de esta manera se asegura que los ingresos al sitio son seguros, manejando los distintos tipos de seguridad.
-
-También el inicio de la página cuenta con links de la Universidad hacia sitios de interés que están dentro de la Universidad.
-\section{Mantenedores}
-Al ingresar al sitio uno puede ver un menú con los distintos mantenedores, abajo se ve un registro con los ingresos al sitio e información detallada con algún indicador.
-
-Volviendo al menú tenemos una serie de opciones estas son:
-
-\begin{itemize}
-	\item Inicio: Que nos da un mensaje de bienvenida y es un punto de partida.
-	\item Acceso: Contiene los mantenedores de Acceso, Auditoría, Rol y Usuario.
-	\item Geografía: Contiene los mantenedores de País, Región, Provincia y Comuna.
-	\item UTEM: Contiene los mantenedores de Facultad, Departamento, Escuela, Contrato, Docente, Jerarquía, Jornada, Carrera, Asignatura Malla, Cupo Carrera, Malla, Plan de Estudio y Requisito de Asignatura.
-	\item Curso: Contiene los mantenedores de Asignatura, Asignatura Cursada, Curso, Estado de Asignatura y Régimen.
-	\item Estudiante: Contiene los mantenedores de Establecimiento, Grupo Dependencia, Rama, Régimen Educacional, Tipo Establecimiento, Cohorte, Egresado, Estado Alumno, Estudiante, Histórico Alumno, Tipo de Ingreso y Titulado.
-	\item Contacto: Contiene los mantenedores de Contacto y Preguntas Frecuentes.
-	\item Sesión: Que tiene el Logout para poder salir del sistema cerrando sesión.
-\end{itemize}
-
-Todos estos mantenedores cumplen con las mismas funciones de buscar, borrar, filtrar, agregar y modificar los registros en cada una de las tablas que uno elija.
-\chapter{Evaluación de Costos}
-\section{Puntos de Función}
-Para evaluar los costos monetarios de este proyecto se utilizara el cálculo de Puntos de Función para llegar a un valor justificado. Mediante una función matemática que utiliza varios parámetros, divididos en 2 ramas.
-
-\section{Conteo de puntos}
-
-\begin{enumerate}
-	\item Ficheros Internos Lógicos (FIL): La información de los datos internos, contenida en bases de datos y ficheros de configuración se tomarán como medida la cantidad de tablas contenidas en el modelo.
-	\item Ficheros Externos de Interfaz (FEI): El proyecto utiliza datos externos que son administrados por la aplicación DirDoc. Por ejemplo hay un aproximado de 32 servicios adjuntos al modelo, contenidos en 11 servicios, mas, un aproximado de 24 sub-tareas externas en el integrador contenidas en 6 tareas grandes.
-	\item Entrada Externa (EE): El sistema consume servicios web provenientes de otros sistemas.
-	\item Salida Externa (SE): El sistema muestra la totalidad de los datos internos en su parte visual. En este caso particular todas las tablas del modelo tienen un apartado visual en la vista.
-	\item Consulta Externa (CE): El sistema tiene mantenedores de todos sus datos en base de datos, para poder ser modificables por los usuarios.
-\end{enumerate}
-
-\begin{table}
-\textbf{Tabla de valores ponderados}\\
-\begin{tabular}{| l | l | l | l |}
-\hline
-\textbf{Característica} & \textbf{Ponderación} & \textbf{Valor} & \textbf{Determinante ponderado} \\
-\hline
-FIL & 49 & medio & 8\\
-\hline
-FEI & 43 & medio & 3\\
-\hline
-EE & 16  & alto  & 6\\
-\hline
-SE & 43  & alto  & 8\\
-\hline
-CE & 43  & alto  & 8\\
-\hline
-\end{tabular}
-\caption{Tabla de valores ponderados}
-\end{table}
-Los parámetros anteriores deben ser convertidos en distintas tablas.
-\begin{table}
-\textbf{Complejidad de los ficheros}\\
-\begin{tabular}{| l | l | l | l |}
-\hline
-\textbf{RET/DET} & \textbf{1-19} & \textbf{20-50} & \textbf{51+} \\
-\hline
-1 & Bajo & Bajo & Medio\\
-\hline
-2-5 & Bajo & Medio & Alto\\
-\hline
-6+ & Medio & Alto & Alto\\
-\hline
-\end{tabular}
-\caption{Complejidad de los ficheros}
-\end{table}
-\begin{table}
-\textbf{Complejidad de las entradas}\\
-\begin{tabular}{| l | l | l | l |}
-\hline
-\textbf{FICH/DET} & \textbf{1-4} & \textbf{5-15} & \textbf{16+} \\
-\hline
-0-1 & Bajo & Bajo & Medio\\
-\hline
-2 & Bajo & Medio & Alto\\
-\hline
-3+ & Medio & Alto & Alto\\
-\hline
-\end{tabular}
-\caption{Complejidad de las entradas}
-\end{table}
-\begin{table}
-\textbf{Complejidad de las Salidas}\\
-\begin{tabular}{| l | l | l | l |}
-\hline
-\textbf{FICH/DET} & \textbf{1-5} & \textbf{6-19} & \textbf{20+} \\
-\hline
-0-1 & Bajo & Bajo & Medio\\
-\hline
-2-3 & Bajo & Medio & Alto\\
-\hline
-4+ & Medio & Alto & Alto\\
-\hline
-\end{tabular}
-\caption{Complejidad de las salidas}
-\end{table}
-\begin{table}
-\textbf{Tabla de valores calculados}\\
-\begin{tabular}{| l | l | l | l | l |}
-\hline
-\textbf{TIPO} & \textbf{Bajo} & \textbf{Medio} & \textbf{Alto} & \textbf{Total} \\
-\hline
-EE & x3  & \textbf{8x4}  & x6 & 32\\
-\hline
-SE & x4  & \textbf{3x5}  & x7 & 15\\
-\hline
-CE & x3  & x4  & \textbf{6x10} & 60\\
-\hline
-FIL & x7 & x10 & \textbf{8x25} & 200\\
-\hline
-FEI & x5 & x7 & \textbf{8x15} & 120\\
-\hline
-TOTAL &  &  & & 427\\
-\hline
-\end{tabular}
-\caption{Tabla de valores calculados}
-\end{table}
-
-\section{Características generales del sistema}
-
-En esta sección se evalúa con un número de 0 a 5 las distintas características que este sistema puede o no tener, y finalmente se ponderan para generar un valor que nos permite hacer el ajuste para el conteo de puntos anterior.
-
-\begin{enumerate}
-	\item Comunicación de Datos: [4 puntos] Varios teleprocesos pero con el mismo protocolo de comunicaciones.
-	\item Proceso Distribuido: [4 puntos] Proceso de datos distribuidos y transferencia de datos en línea en ambas direcciones. Por ejemplo una red de cajeros automáticos en donde estos procesan parte de la transacción.
-	\item Objetivos de Rendimiento: [4 puntos] Se utilizan herramientas de análisis de rendimiento durante el diseño, desarrollo e instalación, con el objetivo de alcanzar el rendimiento demandado por el usuario.
-	\item Configuración de Explotación Usada intensamente por Otros Sistemas: [1 punto] Existen restricciones, pero son las usuales de cualquier equipo departamental. No es necesario hacer consideraciones especiales.
-	\item Tasa de Transacciones: [2 puntos] Se prevén peaks de operaciones semanales.
-	\item Entrada de datos EN-LÍNEA: [5 puntos] La entrada de datos interactivas superan el 30 por ciento de las transacciones.
-	\item Eficiencia con el Usuario Final: [3 puntos] Seis o más factores, pero sin especiales requerimientos de eficiencia.
-	\item Actualizaciones EN-LÍNEA: [4 puntos] Protección ante pérdidas y el sistema se ha de diseñar e implementar con estas consideraciones.
-	\item Lógica de Proceso Interno Compleja: [5 puntos] La aplicación llevará incorporados sistemas de seguridad y control.
-	\item Reusabilidad del Código: [5 puntos] La aplicación ha sido específicamente empaquetada y/o documentada para ser fácil de reutilizar.
-	\item Contempla la Conversión y Facilidad de Instalación: [0 puntos] No reemplazamos un sistema existente o no se requiere conversión. Tampoco se enuncia nada sobre la instalación.
-	\item Facilidad de Operación: [5 puntos] Sistema automático sin intervención humana.
-	\item Instalaciones Múltiples: [3 puntos] La aplicación correrá en múltiples entornos de Hw o Sw y se tiene en cuenta desde la fase de diseño.
-	\item Facilidad de Cambios: [3 puntos] El cambio de la configuración se hace interactivamente y tiene efecto inmediato.
-\end{enumerate}
-\begin{table}
-\textbf{Cálculo de los puntos de función ajustados}\\
-\begin{tabular}{| l | l | l |}
-\hline
-\textbf{No.} & \textbf{Factor de Complejidad} & \textbf{Valor}\\
-\hline
-1 &  Comunicación de Datos & 4 \\
-\hline
-2 &  Proceso Distribuido &4  \\
-\hline
-3 & Objetivos de Rendimiento  &4  \\
-\hline
-4 & Configuración Explotación Compartida  & 1 \\
-\hline
-5 & Tasa de Transacciones  & 2 \\
-\hline
-6 &  Entrada de Datos EN-LÍNEA &  5\\
-\hline
-7 & Eficiencia con el Usuario Final  &  3\\
-\hline
-8 & Actualizaciones En-LÍNEA  & 4 \\
-\hline
-9 & Lógica del Proceso Interno Compleja  &  5\\
-\hline
-10 & Reusabilidad del Código  &  5\\
-\hline
-11&  Contempla la Conversión e Instalación &  0\\
-\hline
-12& Facilidad de Operación  &  5\\
-\hline
-13& Instalaciones Múltiples  &  3\\
-\hline
-14& Facilidad de Cambios  & 3 \\
-\hline
-\multicolumn{2}{|c|}{Factor de Complejidad Total (FCT)} & 48\\
-\hline
-\end{tabular}
-\caption{Cálculo de los puntos de función ajustados}
-\end{table}
-
-\section{Puntos de función ajustados}
-La siguiente fórmula describe la cantidad ajustada de puntos de función y éstos a su vez son multiplicados por el valor en horas dando lo que cuesta en tiempo y dinero, cada uno de los puntos obteniéndose finalmente el valor ponderado del proyecto en sí.
-
-\begin{math}
-PFA=PFSA * ( 0.65 + ( 0.01 * FCT ) = 427 * ( 0.65 + ( 0.01 * 48 ) = 452.51
-\end{math}
-
-Donde se obtuvo un total de 452 puntos de función ajustados, los que vienen a ser puntos de cambios en el proceso de desarrollo, los cuales por lo menos requieren un proceso de medición para posteriormente pasar a la programación. Después se multiplican los Puntos de Función por un factor de 4 horas hombre, aproximadamente, por cada punto de función.
-
-\begin{math}
-452.51 PF * 4 (HH / PF) = 452.51 * (4) = 1810.04 HH
-\end{math}
-
-Finalmente se multiplican las horas hombre por el factor 0.4 UF / HH.
-
-\begin{math}
-1810.04 HH * 0.4(UF / HH) = 724.016 UF = 17.492.226.6 \$
-\end{math}
-
-El proyecto tiene un costo mínimo de 17.500.000 pesos.
-
-\chapter{Conclusiones}
-
-\section{Garantías de calidad}
-
-La calidad de este sistema se ve potenciada por varios aspectos, los cuales se explicaran a continuación:
-
-\begin{enumerate}
-        \item Uso de una base de datos PostgreSQL: Un sistema gestor de bases de datos, de código abierto, echo para ser una potente forma de mantener grandes cantidades de datos. Siendo un proyecto realizado de manera altruista por muchos desarrolladores a nivel mundial, es muy estable, seguro y es el entorno necesario para que el sistema SEPA trabaje sin necesidad de pensar en licencias u otros tipos de registros de datos. Contiene una infinidad de tipos de datos que fortalece la forma de como uno ingresa parámetros \cite{data18}.
-        \item Uso de Mybatis: Herramienta de ayuda para sentencias SQL que permite el uso de cualquier base de datos, con gran escalabilidad y adaptabilidad, permitiendo escribir las consultas que uno desee ejecutar y mapearlas directamente en los objetos que uno desee. Tiene un nivel de complejidad medio, lo que hace que sea un poco difícil aprender, pero una ves se comprende, la incorporación de nuevos elementos de data es ordenada y escalable  \cite{data19}.
-        \item Uso de WebServices: Una tecnología que utiliza un conjunto de protocolos y estándares que sirven para intercambiar datos entre aplicaciones. Distintas aplicaciones de software desarrolladas en lenguajes de programación diferentes, y ejecutadas sobre cualquier plataforma, pueden utilizar los servicios web para intercambiar datos en redes de ordenadores como Internet \cite{data20}.
-        \item Uso de Primefaces: Una librería de componentes para JavaServer Faces (JSF) de código abierto que cuenta con un conjunto de componentes enriquecidos que facilitan la creación de las aplicaciones web. Soporte de ajax con despliegue parcial, lo que permite controlar qué componentes de la página actual se actualizarán y cuáles no \cite{data21}.
-        \item Uso de Metodología de Trabajo: El uso de PSP fortalece el desempeño del proyecto, mostrando los errores que el proceso de desarrollo pueda presentar, desde esta perspectiva es necesario destacar que cuando se van anotando los errores éstos tienden a disminuir con el tiempo por lo que en las etapas finales es muy difícil encontrar errores en el desarrollo.
-        \item Uso de Patrón de diseño: El patrón MVC ha hecho de este proyecto un ente robusto y consistente que puede ser mejorable incluso con poco conocimiento, ya que posee una base sólida que sustenta su funcionamiento, por lo cual los cambios que se puedan necesitar en el futuro harán uso de las herramientas que se fabricaron el desarrollo mismo.
-        \item Uso de Java y Frameworks: Esto nos permite una autonomía en varios aspectos, ya que nosotros como impulsores de proyectos tenemos siempre que velar por que todo el desarrollo sea altamente eficiente, y una manera muy clara de obtener eso es mediante el uso de herramientas que ya han sido muy probadas y se encuentran en uso de muchos otros proyectos. Dado que en otros sistemas esto ha funcionado muy bien es de esperar que en el nuestro también funcione de igual modo.
-        \item Pruebas de rendimiento: Las pruebas sobrecargan el sistema de tal manera que nos permiten decir a ciencia cierta si el software es capaz de resistir lo que los datos nos entregan, y estas nos demuestran que el trabajo realizado cumple con ciertas características que cumple un proyecto web de gran valor.
-\end{enumerate}
-
-Finalmente con de estos puntos se puede tener una clara idea de la calidad del producto que se entrega y de cómo éste puede ir mejorando todavía, e inclusive puede cambiar y adecuase a otras necesidades.
-
-\section{Conclusión}
-El trabajo correspondiente al Sistema Mantenedor e Integrador en SEPA ha mostrado como recuperar datos que pueden ser difíciles de manejar. Los datos para este trabajo no estaban del todo bien organizados, esto quiere decir que cuando uno observa los datos, es posible encontrar insuficiencias de campos en los objetos mostrados en las tablas de los mantenedores, para lo cual los Mantenedores están preparados para ingresar datos en los sectores que lo requieran.
-
-También es posible identificar errores estructurales de información. Por ejemplo, en el sistema Integrador entraban datos que contenían errores repetidos en todas las filas de ciertas tablas. Este sistema está preparado para resistir ese tipo de datos y cargar una data estándar que más adelante será reparada por el sistema Mantenedor.
-
-Un proyecto de estas características es una importante oportunidad de mejoras, tales como: mantenibilidad de la data, aunque esta contenga errores, ya que es posible editar aspectos mínimos dentro de todas las tablas, conectividad con servicios web, manejado por parámetros SOAP, dejando la complejidad de las comunicaciones a frameworks que se encargan de trabajar con estas interacciones.
-
-Gracias a este trabajo se puede hablar de indicadores estadísticos, los cuales nos proporcionan información que regulan el funcionamiento de cualquier organización. Para este caso en particular, el desarrollo de indicadores, nos permite sostener una organización a nivel de estudiantes, integrando consultas estadísticas a problemas particulares en estudiantes y profesores. Principalmente el objetivo de SEPA era ser mostrado.
-
-La ventaja de que este sistema se comunique con otros mediante el uso de WebServices es que a lo largo de la vida útil de este proyecto se pueden agregar otros proyectos que pueden nutriste de la información que SEPA produce, de tal manera hace que cada ves sea mas intenso su uso.
-\section{Trabajo Futuro}
-Para ampliar las posibilidades de un trabajo que descansa sobre el valor de potenciar las capacidades administrativas de una institución académica, es necesario hacer estudios que posibiliten un mayor alcance de datos, tal como lo hace SEPA, por tal razón es de vital importancia promover nuevas mejoras que hagan de este sistema una herramienta completa en el desarrollo de las capacidades generales de una organización, como lo es la Universidad Tecnológica Metropolitana.
-
-Se puede considerar el integrar un motor de minería de datos que revele información que hasta ahora no se ha obtenido dentro de los marcos de este proyecto, por ejemplo, una herramienta que obtenga formulaciones o métodos de aproximación para datos del futuro. Tal cosa produciría un impacto en SEPA ya que con esta perspectiva se aumentan los beneficios de los indicadores que uno puede obtener, validando estos o creando aproximaciones que ayudan a esclarecer las razones de los valores que actualmente entrega el sistema.
-
-También se piensa en una Inteligencia de Negocio que junto con la idea anterior sea capaz de producir nuevos indicadores enfocados a la mejora o a la conducción, con intervención humana, de los valores generalizados en las tablas que maneja SEPA, en otras palabras, que se sepa información que nos permitiera guiar a la Universidad en torno a los objetivos de su Visión, haciendo un impacto en el corto plazo.
-
-Estas dos ideas anteriores convergen finalmente en que el sistema en un futuro podría tener una Inteligencia Artificial que sea manejable por los usuarios de SEPA permitiendo manejar las respuestas de los usuarios en pos de darle las mejores oportunidades a todos por igual. Mediando en todos los asuntos de manera logia, estadística y totalmente regulada. Podríamos decir que en un futuro, SEPA seria un sistema automático y autónomo.
-
-Finalizando, se puede afirmar que un trabajo como éste es perfectamente capaz de entregar datos y argumentos sólidos en pos de generar estudios científicos relacionados con indicadores de calidad en educación, puesto que con el sistema SEPA en las condiciones actuales mejoradas, se tienen todas las herramientas preparadas para tales propósitos. 
-\chapter{Anexo}
-\begin{enumerate}
-        \item PostgresSQL: Un sistema gestor de bases de datos, de código abierto, echo para ser una potente forma de mantener grandes cantidades de datos. Siendo un proyecto realizado de manera altruista por muchos desarrolladores a nivel mundial, es muy estable, seguro y es el entorno necesario para que el sistema SEPA trabaje sin necesidad de pensar en licencias u otros tipos de registros de datos. Contiene una infinidad de tipos de datos que fortalece la forma de como uno ingresa parámetros \cite{data18}.
-        \item Maven:
-        \item CXF: 
-        \item PHP: Es el lenguaje de lado servidor más extendido en la web. Surgido en 1994, se trata de un lenguaje de creación relativamente reciente, aunque con la rapidez con la que evoluciona Internet parezca que ha existido toda la vida. Es un lenguaje que ha tenido una gran aceptación en la comunidad de desarrolladores, debido a la potencia y simplicidad que lo caracterizan, así como al soporte generalizado en la mayoría de los servidores \cite{data7}.
-\end{enumerate}
 \bibliographystyle{plain}
 \bibliography{bibliografia.bib}
 \end{document}
