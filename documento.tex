@@ -63,7 +63,7 @@ Autoridad Responsable
 \end{flushright}
 \chapter*{Resumen}
 \thispagestyle{empty}
-En las organizaciones es necesario el uso de información para tomar decisiones correctas.
+% En las organizaciones es necesario el uso de información para tomar decisiones correctas.
 % Tener un buen software, entrega valor agregado a la dirección de actividades en todo tipo de estructuras con jerarquía.
 
 La UTEM dispone del sistema SEPA (Sistema Estadístico de Profesores y Alumnos), que consiste en un proyecto Web realizado con anterioridad, que toma datos de alumnos, profesores y encargados provenientes de DirDoc, para posteriormente obtener indicadores que representen la realidad universitaria.
@@ -83,22 +83,21 @@ El resultado final de este proyecto es la obtención por parte de la Universidad
 \thispagestyle{empty}
 La Universidad Tecnológica Metropolitana utiliza para la administración de toda la información referente a estudiantes, profesores y personal de administración un sistema denominado DirDoc basado en la tecnológica PHP (ver anexo). SEPA, software desarrollado por Sebastián Salazar Molina como trabajo de título, es un proyecto que constituyó una forma de potenciar las capacidades operativas de la Universidad, generando indicadores de calidad y entregando una ventaja comparativa frente a otras Universidades.
 
-El objetivo de este trabajo de título consiste en mejorar el proyecto SEPA mediante el lenguaje de programación Java que utiliza herramientas estructuradas, extensibles y que tienen como resultado la materialización de sistemas informáticos de más fácil mantención debido al uso de Patrones de Diseño como Modelo Vista Controlador sobre tecnologías como Java EE, JPA, Spring, JSF, PrimeFaces, ver anexo.
+El objetivo de este trabajo de título consiste en mejorar el proyecto SEPA mediante la programación en Java que utiliza herramientas estructuradas, extensibles y que tienen como resultado la materialización de sistemas informáticos de más fácil mantención debido al uso de Patrones de Diseño como Modelo Vista Controlador sobre tecnologías como Java EE, JPA, Spring, JSF, PrimeFaces, ver anexo.
 
-Además, el proyecto se hará bajo la metodología PSP (Personal Software Process) que nos proporciona un modelo de trabajo basado en la caracterización de los tiempos y costes de operación de un ingeniero informático, adicionando documentación extra (explicada en este informe), correspondiente a eventos que muestran cómo se lleva adelante esta tarea, todo lo cual, conduce a una evaluación de la calidad del proyecto como programa.
+Además, el proyecto se planificará mediante el uso de la metodología PSP (Personal Software Process) que nos proporciona un modelo de trabajo basado en la caracterización de los tiempos y costes de operación de un ingeniero informático, adicionando documentación extra (explicada en este informe), correspondiente a eventos que muestran cómo se lleva adelante esta tarea, todo lo cual, conduce a una evaluación de la calidad del proyecto como programa.
 
 Existen 3 tipos de beneficios que la Universidad puede obtener al utilizar con la versión mejorada del sistema SEPA:
 
 \begin{enumerate}
-\item Mediante la entrega al mercado laboral, de un perfil de profesional característico de la UTEM, visualizado en la competencia y desempeño de sus profesionales, la Universidad se muestra al mercado como un ente preocupado de medir su calidad con herramientas tecnológicas que justifican un buen desempeño mediante indicadores cuantificables y verificables por 
-organismos reguladores.
+\item Una panorámica de la realidad universitaria, para tener una visión general de la realidad universitaria, sin olvidar la perspectiva particular de cada fortaleza y debilidad. Permitiendo una rápida detección de los problemas que puedan surgir. Generando una posibilidad de mejoras en los funcionamientos internos y externos de la organización.
 
 \item Beneficio de los usuarios que tendrán a su disposición una completa herramienta que los apoyará en la elección de su carga académica, como asimismo la visualización de su desempeño.
 
-\item Beneficio a futuro, dado el gran tiempo de utilidad de las herramientas que permiten la integración en términos de programación resultando más sencilla.
+\item Beneficio a futuro, dado el gran tiempo de utilidad de las herramientas que permiten automatizar la integración de la data resultando más sencilla.
 \end{enumerate}
 
-La justificación principal de por que en SEPA se realizarán estas mejoras, radica en la necesidad de contar con indicadores claros y precisos, que son los que hacen que las decisiones sean justificadas. Por ejemplo, una vez implementadas las mejoras, en SEPA se prodrá fácilmente programar contadores de la totalidad de las tablas, incluidas conexiones entre tablas, mientras que la version actual de SEPA tiene contadores simples y poco específicos, tales como el promedio de notas por ramo y por alumnos programados, de manera tal que no se pueden hacer búsquedas especificas sobre todos los parámetros de una tabla.
+La justificación principal de por que en SEPA se realizarán estas mejoras, radica en la necesidad de contar con indicadores actualizados y precisos, que son los que hacen que las decisiones sean justificadas. Por ejemplo, una vez implementadas las mejoras, en SEPA se prodrá fácilmente programar contadores de la totalidad de las tablas, incluidas conexiones entre tablas, mientras que la version actual de SEPA tiene contadores simples y poco específicos, tales como el promedio de notas por ramo y por alumnos programados, de manera tal que no se pueden hacer búsquedas especificas sobre todos los parámetros de una tabla.
 
 Otra justificación de estos cambios, es la capacidad de reparar data que este mal escrita o que simplemente no exista, permitiendo que los datos puedan ser mejorados constantemente y de manera automática. Característica que SEPA actual no posee, ya que para solicitar un cambio se necesita básicamente pedir la data desde la propia fuente de datos, proceso que es manual, toma días y requiere de muchas personas. 
 
@@ -138,7 +137,7 @@ El SEPA (Sistema Estadístico de Profesores y Alumnos) es una herramienta comple
 Uno de los problemas que se tienen en sepa, es que al no existir un sistema de ingreso de data desde DirDoc, la única forma de ingresar data en sepa es mediante la petición a un funcionario encargado del sistema, lo que supone un riesgo por la perdida de data. Las principales insuficiencias en SEPA son:
 
 \begin{itemize}
-	\item No se dispone de un servicio web (una forma de acceso más segura y controlada) de DirDoc. En el actual SEPA se deben seguir una serie de pasos para ingresar data. Primero se debe seleccionar mediante el DirDoc que data hay que insertar en SEPA y después se requiere hablar con un encargado de SEPA para que ejecute una sentencia SQL que ingrese los valores deseados a la base de datos. Lo que conlleva peligro, ya que es muy probable la perdida u omisión de algún valor.
+	\item No se dispone de un mecanismo para actualizar datos (una forma de acceso más segura y controlada) de DirDoc. En el actual SEPA se deben seguir una serie de pasos para ingresar data. Primero se debe seleccionar mediante el DirDoc que data hay que insertar en SEPA y después se requiere hablar con un encargado de SEPA para que ejecute una sentencia SQL que ingrese los valores deseados a la base de datos. Lo que conlleva peligro, ya que es muy probable la perdida u omisión de algún valor.
 	\item Falta de datos. Retomando el punto anterior, en el actual SEPA presenta tablas que no tienen datos y esto es debido a que en su proceso de inserción, estos fueron omitidos o perdidos.
 	\item No posee acceso de múltiples tipos de usuarios, diferenciados por actividad. Lo que constituye una barrera ya que actualmente no se puede mostrar toda la información para la cual un rol tiene acceso, por ejemplo, un profesor debiera ver su información y la de sus alumnos, pero un jefe de carrera debe ser capaz de ver su información, la de los alumnos y la de los profesores. 
 	\item No existe una forma sencilla de modificar y actualizar la información desde DirDoc hasta SEPA, ya que lo que hoy se esta haciendo es hacer una petición sobre una data en DirDoc y finalmente pedirle a un encargado que ingrese cierta data a la base de datos de SEPA
@@ -153,11 +152,11 @@ Dentro de los módulos mantenedor e integrador de SEPA se comprenden las siguien
 	\item Visualización de todas las tablas: En estas mejoras a SEPA se incorpora la posibilidad de mirar todos los parámetros de las tablas comprendidas en el modelo de base de datos. Esto significa que mediante los perfiles es posible ver la información historia de todas las tablas permitidas.
 	\item Edición de todas las tablas: Como en el punto anterior, no solo es posible mirar, ya que también hay perfiles que pueden editar data de las tablas, pensando en la reparación de esta debido a que puede tener fallos o faltar.
 	\item Integración por web service: El traspaso de data desde DirDoc a SEPA será mediante un servicio en linea de comunicación entre dos programas (DirDoc y SEPA), ya que de esta forma uno se asegura que la forma de ingreso de data en SEPA sea, en la mayor medida, limpia y sin errores. El sistema es capas de soportar la falta de ciertos datos en las tablas, los cuales pueden ser llenados posteriormente por el mantenedor que se incorpora.
-	\item Facilidad de programar indicadores en un futuro: La forma de como esta programado SEPA supone una mejora, ya que al utilizar una tecnología que de rápido aprendizaje, es fácil encontrar otros desarrolladores que aporten con la programación de distintos indicadores. Ya que solo basta que se tenga gente con conocimientos específicos del entorno del servicio y la vista, sin conocer en detalle el modelo de la aplicación.
+	\item Facilidad de programar indicadores en un futuro: La forma de como esta programado SEPA supone una mejora, ya que al utilizar una tecnología que al ser de un código maduro, posee una fácil mantención, es simple encontrar otros desarrolladores que aporten con la programación de distintos indicadores. Ya que solo basta que se tenga gente con conocimientos específicos del entorno del servicio y la vista, sin conocer en detalle el modelo de la aplicación.
 \end{itemize}
 \section{Objetivos Generales y Específicos}
 \subsection{Objetivos Generales}
-\textit{Mejorar SEPA convirtiéndolo en un sistema de mantención de información estadística para la Universidad Tecnológica Metropolitana ayudando a sus procesos docentes y productivos, disponiendo de información veraz de la realidad universitaria.}
+\textit{Mejorar SEPA convirtiéndolo en un sistema actualizado e independiente de información estadística para la Universidad Tecnológica Metropolitana ayudando a sus procesos docentes y productivos, disponiendo de información veraz de la realidad universitaria.}
 
 A partir de la versión actual de SEPA, crear un sistema web basado en el patrón Modelo Vista Controlador, asegurando un producto que sea eficiente en el cumplimiento de sus objetivos. Las características principales serán que este sistema estará hecho en Java lo que nos permite una fácil implementación de las mejores prácticas de programación. Potenciando su valor en el tiempo, convirtiéndose en una herramienta cada vez mas útil y necesaria para el desarrollo de la organización.
 
@@ -214,7 +213,7 @@ A raíz de esto se generaron ciertos problemas que comprometen la integridad de 
 	\item No existe un mecanismo de diferenciación de usuarios. Haciendo este sistema un tanto inseguro, ya que no debiera existir la posibilidad de mirar toda la data, si no solo una parte, en relación a un perfil.
 	\item Data corrupta o inexistente: Con el paso del tiempo la data se torna corrupta, poco actualizada o simplemente no existe.
 \end{enumerate}
-\subsection{Establecer la solución}
+\subsection{Oportunidad de mejora}
 La solución que otorga este proyecto es la creación de varios servicios web que proveen datos que deben ser procesados y mantenidos en una base de datos local. Este sistema debe validar la integridad de los datos evitando perdida de registros. A continuación se desarrolla un Mantenedor de los datos que componen el sistema, en el cual es posible buscar registros, comprobar que estén correctos y si no lo están, poder modificarlos.
 \subsection{Uso de Java}
 Esta actualización es construida a través del compendio de tecnologías que engloba la convención JavaEE (Java Enterprise Edition), caracterizada por un enfoque estandarizado en el proceso productivo, lo que permite automatizar varios procesos y centrarnos en el proyecto. Esto facilita la construcción del mismo de manera más estable y segura. Agregando valor mediante la incorporación de distintas herramientas, explicadas en este documento, que posibilitan un desarrollo de calidad y mejorable en el futuro.
@@ -387,7 +386,7 @@ Son arquitecturas estandarizadas para el desarrollo de software, permiten a los 
 
 \begin{enumerate}
 
-\item MVC, Modelo Vista Controlador: Establece que el software tiene por lo menos 3 capas de desarrollo las cuales son; modelo, donde se encuentran el acceso a datos como de una base de datos, ficheros o servicio web; vista, la parte del programa que interactúa con el usuario final; controlador, el código en donde esta el negocio que procesa los datos del modelo para posteriormente mostrarlos en la vista \cite{data22}.
+\item MVC, Modelo Vista Controlador: Establece que el software tiene por lo menos 3 capas de desarrollo las cuales son; modelo, donde se encuentran el acceso a datos como de una base de datos, ficheros o servicio web; vista, la parte del programa que interactúa con el usuario final; controlador, el código en donde esta el negocio que procesa los datos del modelo para posteriormente mostrarlos en la vista \cite{data22}. En sepa se utiliza JSF, que es una tecnología que permite generar vistas para el usuario de forma ágil para los desarrolladores, permitiendo la separación de los objetos encargados de interpretar el patrón MVC.
 
 \item SOA, Arquitectura orientada a servicios: Establece el software enfocado a los procesos de negocio, teniendo distintas capas de aplicaciones como: Aplicaciones básicas, caracterizadas por ser pequeñas y geográficamente establecidas; Exposición de Funcionalidades, donde rigen servicios; Integración de servicios, para intercambio de datos; Composición de procesos, determina términos de negocio y funcionalidades; Entrega, para usuarios finales \cite{data23}.
 
