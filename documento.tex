@@ -386,13 +386,13 @@ Son arquitecturas estandarizadas para el desarrollo de software, permiten a los 
 
 \begin{enumerate}
 
-\item MVC, Modelo Vista Controlador: Establece que el software tiene por lo menos 3 capas de desarrollo las cuales son; modelo, donde se encuentran el acceso a datos como de una base de datos, ficheros o servicio web; vista, la parte del programa que interactúa con el usuario final; controlador, el código en donde esta el negocio que procesa los datos del modelo para posteriormente mostrarlos en la vista \cite{data22}. En sepa se utiliza JSF, que es una tecnología que permite generar vistas para el usuario de forma ágil para los desarrolladores, permitiendo la separación de los objetos encargados de interpretar el patrón MVC.
+\item MVC, Modelo Vista Controlador: Establece que el software tiene por lo menos 3 capas de desarrollo las cuales son; modelo, donde se encuentran el acceso a datos como de una base de datos, ficheros o servicio web; vista, la parte del programa que interactúa con el usuario final; controlador, el código en donde esta el negocio que procesa los datos del modelo para posteriormente mostrarlos en la vista \cite{data22}. En SEPA se utiliza JSF, que es una tecnología que permite generar vistas para el usuario de forma ágil para los desarrolladores, permitiendo la separación de los objetos encargados de interpretar el patrón MVC.
 
-\item SOA, Arquitectura orientada a servicios: Establece el software enfocado a los procesos de negocio, teniendo distintas capas de aplicaciones como: Aplicaciones básicas, caracterizadas por ser pequeñas y geográficamente establecidas; Exposición de Funcionalidades, donde rigen servicios; Integración de servicios, para intercambio de datos; Composición de procesos, determina términos de negocio y funcionalidades; Entrega, para usuarios finales \cite{data23}.
+\item SOA, Arquitectura orientada a servicios: Establece el software enfocado a los procesos de negocio, teniendo distintas capas de aplicaciones como: Aplicaciones básicas, caracterizadas por ser pequeñas y geográficamente establecidas; Exposición de Funcionalidades, donde rigen servicios; Integración de servicios, para intercambio de datos; Composición de procesos, determina términos de negocio y funcionalidades; Entrega, para usuarios finales \cite{data23}. Este proyecto hace uso de CXF que permite la integración de servicios entre procesos distintos. Mediante el uso de servicios web, conocidos por ser mecanismos de comunicación mediante un protocolo establecido, generando una arquitectura de servicios.
 
-\item POA, Programación Orientada al Aspecto: Es un paradigma de programación relativamente reciente cuya intención es permitir una adecuada modularización de las aplicaciones y posibilitar una mejor separación de incumbencias. Con esto se pueden encapsular los diferentes conceptos que componen una aplicación en entidades bien definidas, eliminando las dependencias entre cada uno de los módulos. De esta forma se consigue razonar mejor sobre los conceptos, se elimina la dispersión del código y las implementaciones resultan más comprensibles, adaptables y reusables \cite{data24}.
+\item POA, Programación Orientada al Aspecto: Es un paradigma de programación relativamente reciente cuya intención es permitir una adecuada modularización de las aplicaciones y posibilitar una mejor separación de incumbencias. Con esto se pueden encapsular los diferentes conceptos que componen una aplicación en entidades bien definidas, eliminando las dependencias entre cada uno de los módulos. De esta forma se consigue razonar mejor sobre los conceptos, se elimina la dispersión del código y las implementaciones resultan más comprensibles, adaptables y reusables \cite{data24}. Para utilizar los servicios automáticos se hace uso de Spring, una tecnología que ocupa el criterio de aspecto para configurar funciones u operaciones, disminuyendo la cantidad de código que se usa para similares tareas.
 
-\item DAO, Objeto de Acceso a datos: es un componente de software que suministra una interfaz común entre la aplicación y uno o más dispositivos de almacenamiento de datos, tales como una Base de datos o un archivo. El término se aplica frecuentemente al Patrón de diseño Object. Los Objetos de Acceso a Datos son un Patrón de los subordinados de Diseño Core J2EE y considerados una buena práctica. La ventaja de usar objetos de acceso a datos es que cualquier objeto de negocio (aquel que contiene detalles específicos de operación o aplicación) no requiere conocimiento directo del destino final de la información que manipula \cite{data25}.
+\item DAO, Objeto de Acceso a datos: es un componente de software que suministra una interfaz común entre la aplicación y uno o más dispositivos de almacenamiento de datos, tales como una Base de datos o un archivo. El término se aplica frecuentemente al Patrón de diseño Object. Los Objetos de Acceso a Datos son un Patrón de los subordinados de Diseño Core J2EE y considerados una buena práctica. La ventaja de usar objetos de acceso a datos es que cualquier objeto de negocio (aquel que contiene detalles específicos de operación o aplicación) no requiere conocimiento directo del destino final de la información que manipula \cite{data25}. El modelo de datos de SEPA es consultado con JPA, que permite el acceso a los datos, de una forma genérica y lógica, facilitando el desarrollo, integrándose con Spring y JSF.
 
 \end{enumerate}
 
@@ -408,6 +408,10 @@ Al proceso SEPA se le agrega un módulo integrador que permite la comunicación 
 Es una tecnología que permite la comunicación entre 2 programas mediante un sistema que expone un protocolo para el traspaso de datos, donde el encargado de generar las preguntas debe tener información consistente y poder establecer la conexión. Por otro lado los programas se relacionan gracias a un meta lenguaje basado en XML (de etiquetado) que describe el código que debe implementarse para poder realizar las consultas y retornar objetos con los cuales posteriormente opera.
 
 Eso es posible gracias a que se hace uso del framework Apache CXF que nos abstrae de la complejidad de programar un servicio web y nos permite realizar esta tarea de manera fácil. CXF nos pide información relacionada con la dirección del servicio a consumir y él se encarga de traernos las respuestas que necesitemos.
+
+\section{Periodicidad}
+Los procesos integradores de SEPA, funcionan bajo el esquema de periodicidad, siendo ejecutados en lapsos de tiempo y en un orden concreto. Esto quiere decir que ciertas tareas son ejecutadas una ves en el día, mientras que otras son ejecutadas una ves a la semana o al mes. También es posible configurar los horarios de ejecución, para poder ejecutarlos en momentos de poco flujo de datos.
+
 \section{Operaciones}
 La integración se basa en distintas operaciones separadas por el momento y la hora en donde se realizan, todas las tareas tienen el objetivo de poblar los datos propios por lo cual el trabajo de mapeo de datos es siempre distinto para todas las consultas y objetos que se tienen.
 \subsection{Tarea diaria}
@@ -430,7 +434,7 @@ Tareas que se ejecutan una vez al año, en donde podemos encontrar: Actualizar C
 El mantenedor es la interfaz nueva que tiene SEPA después de estas mejoras, es la parte que el usuario final apreciará de manera distinta, ya que ahora se tienen perfiles, visualización e incluso modificación de data. De manera lógica y simple, manteniendo siempre la facilidad del desarrollo para futuros componentes.
 
 \section{Sitio Web}
-El proyecto mantenedor es un sitio web que utiliza la tecnología Java Server Faces o (JSF), que permite la visualización de una estructura de código en formato xml para mostrar sitos web con contenido dinámico en java. Sobre esta tecnología se ocupa Primefaces que enriquece las características de JSF proporcionando herramientas HTML mas complejas (tales como menús despegables o tablas con distintas funcionalidades ya programadas).
+El proyecto mantenedor es un sitio web que utiliza la tecnología Java Server Faces o (JSF), que permite la visualización de una estructura de código en formato xml para mostrar sitos web con contenido dinámico en java. Sobre esta tecnología se ocupa Primefaces enriqueciendo las características de JSF proporcionando componentes HTML complejos (tales como menús despegables o tablas con distintas funcionalidades ya programadas).
 \section{Ingreso}
 El ingreso al sitio se hace con usuario y contraseña, cada usuario esta asociado a un perfil que limita el uso en el sitio, la autentificación esta hecha con Spring Security, un framework que permite automatizar el paso de perfiles con sus contraseñas, gestionando la encriptación y la desencriptación, de esta manera los ingresos al sitio son seguros, manejando los distintos tipos de roles.
 
@@ -459,16 +463,16 @@ del proyecto, pero no su funcionalidad.
 
 Finalmente se elije el sistema de Puntos de Función, el cual es un proceso que toma fuerza en el impacto de cada componente realizada, donde cada pieza de desarrollo es un punto a sumar en el calculo final. Esta enfocado a los distintos tipos de desarrollo que uno debe hacer en un proyecto, utilizando una categorización de tal manera que se tiene en cuenta el impacto en conjunto de todas estas piezas. Al igual que COCOMO utiliza una función matemática para despejar el valor monetario final, pero su calculo es menos estimado y esta sujeto a una regla mas firme.
 \section{Puntos de Función}
-Para evaluar los costos monetarios de este proyecto se utilizara el cálculo de Puntos de Función para llegar a un valor justificado. Mediante una función matemática que utiliza varios parámetros, divididos en 2 ramas.
+Para evaluar los costos monetarios de este proyecto se utilizara el cálculo de Puntos de Función para llegar a un valor justificado. Mediante una función matemática que utiliza varios parámetros, divididos en 2 ramas. Este método de medición del software es un extracto de las practicas establecidas por la IFPUG (Grupo de usuarios internacional función Point), que se encarga de definir los costos de proyectos que son ocupados a nivel mundial.
 
 \section{Conteo de puntos}
 
 \begin{enumerate}
-	\item Ficheros Internos Lógicos (FIL): Este valor representa la cantidad de información de los datos internos, contenida en bases de datos y ficheros de configuración, por lo tanto se tomará como valor final la cantidad de tablas contenidas en el modelo.
-	\item Ficheros Externos de Interfaz (FEI): El proyecto utiliza datos externos que son administrados por la aplicación DirDoc. Por ejemplo hay un aproximado de 32 servicios adjuntos al modelo, contenidos en 11 servicios, mas, un aproximado de 24 sub-tareas externas en el integrador contenidas en 6 tareas grandes.
-	\item Entrada Externa (EE): El sistema consume servicios web provenientes de otros sistemas.
-	\item Salida Externa (SE): El sistema muestra la totalidad de los datos internos en su parte visual. En este caso particular todas las tablas del modelo tienen un apartado visual en la vista.
-	\item Consulta Externa (CE): El sistema tiene mantenedores de todos sus datos en base de datos, para poder ser modificables por los usuarios.
+	\item Ficheros Internos Lógicos (FIL): Este valor representa la cantidad de información de los datos internos, contenida en bases de datos y ficheros de configuración, por lo tanto se tomará como valor final la cantidad de tablas contenidas en el modelo. Su valor de complejidad es 8, ya que es una tarea que puede ser difícil en un comienzo, pero luego es repetitiva.
+	\item Ficheros Externos de Interfaz (FEI): El proyecto utiliza datos externos que son administrados por la aplicación DirDoc. Por ejemplo hay un aproximado de 32 servicios adjuntos al modelo, contenidos en 11 servicios, mas, un aproximado de 24 sub-tareas externas en el integrador contenidas en 6 tareas grandes. Es una tarea simple, al cual se le asigna el valor 3.
+	\item Entrada Externa (EE): El sistema consume servicios web provenientes de otros sistemas. Su valor es 6, ya que es difícil en un comienzo.
+	\item Salida Externa (SE): El sistema muestra la totalidad de los datos internos en su parte visual. En este caso particular todas las tablas del modelo tienen un apartado visual en la vista. Su valor es 8 ya que es una tarea compleja en un comienzo.
+	\item Consulta Externa (CE): El sistema tiene mantenedores de todos sus datos en base de datos, para poder ser modificables por los usuarios. Su valor es 8 debido a que son alrededor de 30 mantenedores y es una tarea delicada.
 \end{enumerate}
 
 \begin{table}
@@ -563,20 +567,20 @@ TOTAL &  &  & & 427\\
 En esta sección se evalúa con un número de 0 a 5 las distintas características que este sistema puede o no tener, y finalmente se ponderan para generar un valor que nos permite hacer el ajuste para el conteo de puntos anterior.
 
 \begin{enumerate}
-	\item Comunicación de Datos: [4 puntos] Varios teleprocesos pero con el mismo protocolo de comunicaciones.
-	\item Proceso Distribuido: [4 puntos] Proceso de datos distribuidos y transferencia de datos en línea en ambas direcciones. Por ejemplo una red de cajeros automáticos en donde estos procesan parte de la transacción.
-	\item Objetivos de Rendimiento: [4 puntos] Se utilizan herramientas de análisis de rendimiento durante el diseño, desarrollo e instalación, con el objetivo de alcanzar el rendimiento demandado por el usuario.
-	\item Configuración de Explotación Usada intensamente por Otros Sistemas: [1 punto] Existen restricciones, pero son las usuales de cualquier equipo departamental. No es necesario hacer consideraciones especiales.
-	\item Tasa de Transacciones: [2 puntos] Se prevén peaks de operaciones semanales.
-	\item Entrada de datos EN-LÍNEA: [5 puntos] La entrada de datos interactivas superan el 30 por ciento de las transacciones.
-	\item Eficiencia con el Usuario Final: [3 puntos] Seis o más factores, pero sin especiales requerimientos de eficiencia.
-	\item Actualizaciones EN-LÍNEA: [4 puntos] Protección ante pérdidas y el sistema se ha de diseñar e implementar con estas consideraciones.
-	\item Lógica de Proceso Interno Compleja: [5 puntos] La aplicación llevará incorporados sistemas de seguridad y control.
-	\item Reusabilidad del Código: [5 puntos] La aplicación ha sido específicamente empaquetada y/o documentada para ser fácil de reutilizar.
+	\item Comunicación de Datos: [4 puntos] Varios teleprocesos pero con el mismo protocolo de comunicaciones. Tiene una dificultad de programación media, por que es un proceso repetitivo.
+	\item Proceso Distribuido: [4 puntos] Proceso de datos distribuidos y transferencia de datos en línea en ambas direcciones. Por ejemplo una red de cajeros automáticos en donde estos procesan parte de la transacción. Tiene una dificultad de programación media por que es solo un proceso complejo.
+	\item Objetivos de Rendimiento: [4 puntos] Se utilizan herramientas de análisis de rendimiento durante el diseño, desarrollo e instalación, con el objetivo de alcanzar el rendimiento demandado por el usuario. Tiene una dificultad de programación media, debido a se ocupan componentes que facilitan el desarrollo.
+	\item Configuración de Explotación Usada intensamente por Otros Sistemas: [1 punto] Existen restricciones, pero son las usuales de cualquier equipo departamental. No es necesario hacer consideraciones especiales. Tiene una dificultad de programación baja. 
+	\item Tasa de Transacciones: [2 puntos] Se prevén peaks de operaciones semanales. Tiene una dificultad de programación baja.
+	\item Entrada de datos EN-LÍNEA: [5 puntos] La entrada de datos interactivas superan el 30 por ciento de las transacciones. Tiene una dificultad de programación alta, ya que problemas en el código pueden generar tiempos de respuesta altos.
+	\item Eficiencia con el Usuario Final: [3 puntos] Seis o más factores, pero sin especiales requerimientos de eficiencia. Tiene una dificultad de programación media.
+	\item Actualizaciones EN-LÍNEA: [4 puntos] Protección ante pérdidas y el sistema se ha de diseñar e implementar con estas consideraciones. Tiene una dificultad de programación media.
+	\item Lógica de Proceso Interno Compleja: [5 puntos] La aplicación llevará incorporados sistemas de seguridad y control. Tiene una dificultad de programación alta, ya que es un proceso que requiere un tipo de seguridad.
+	\item Reusabilidad del Código: [5 puntos] La aplicación ha sido específicamente empaquetada y/o documentada para ser fácil de reutilizar. Tiene una dificultad de programación alta, debido a que se debe programar de manera elegante y permitiendo implementaciones futuras.
 	\item Contempla la Conversión y Facilidad de Instalación: [0 puntos] No reemplazamos un sistema existente o no se requiere conversión. Tampoco se enuncia nada sobre la instalación.
-	\item Facilidad de Operación: [5 puntos] Sistema automático sin intervención humana.
-	\item Instalaciones Múltiples: [3 puntos] La aplicación correrá en múltiples entornos de Hw o Sw y se tiene en cuenta desde la fase de diseño.
-	\item Facilidad de Cambios: [3 puntos] El cambio de la configuración se hace interactivamente y tiene efecto inmediato.
+	\item Facilidad de Operación: [5 puntos] Sistema automático sin intervención humana. Tiene una dificultad de programación alta, ya que es nesesario programar muchos componentes para que el sistema sea automático.
+	\item Instalaciones Múltiples: [3 puntos] La aplicación correrá en múltiples entornos de Hw o Sw y se tiene en cuenta desde la fase de diseño. Tiene una dificultad de programación media, debido a que es un proceso un poco largo el ajustarlo a múltiples ambientes.
+	\item Facilidad de Cambios: [3 puntos] El cambio de la configuración se hace interactivamente y tiene efecto inmediato. Tiene una dificultad de programación media, por que la gestión de los cambios es proporcionada por el servidor.
 \end{enumerate}
 \begin{table}
 \textbf{Cálculo de los puntos de función ajustados}\\
@@ -631,13 +635,13 @@ Donde se obtuvo un total de 452 puntos de función ajustados, los que vienen a s
 452.51 PF * 4 (HH / PF) = 452.51 * (4) = 1810.04 HH
 \end{math}
 
-Finalmente se multiplican las horas hombre por el factor 0.4 UF / HH.
+Finalmente se multiplican las horas hombre por el factor 1.2 UF / HH.
 
 \begin{math}
-1810.04 HH * 0.4(UF / HH) = 724.016 UF = 17.492.226.6 \$
+1810.04 HH * 1.2(UF / HH) = 2172.048 UF = 54.213.601 \$
 \end{math}
 
-El proyecto tiene un costo mínimo de 17.500.000 pesos.
+El proyecto tiene un costo mínimo de 50.000.000 pesos.
 
 \chapter{Conclusiones}
 
@@ -680,24 +684,28 @@ También se piensa en una Inteligencia de Negocio que junto con la idea anterior
 Estas dos ideas anteriores convergen finalmente en que el sistema en un futuro podría tener una Inteligencia Artificial que sea manejable por los usuarios de SEPA permitiendo manejar las respuestas de los usuarios en pos de entregar mejores oportunidades a todos por igual. Mediando en todos los asuntos de manera lógica, estadística y totalmente regulada. Podríamos decir que en un futuro, SEPA seria un sistema automático y autónomo.
 
 Finalizando, se puede afirmar que un trabajo como éste es perfectamente capaz de entregar datos y argumentos sólidos para generar estudios científicos relacionados con indicadores de calidad en educación, ya que con el sistema SEPA en las condiciones actuales mejoradas, se tienen todas las herramientas preparadas para tales propósitos. 
-\chapter{Anexo 1}
+
+\bibliographystyle{plain}
+\bibliography{bibliografia.bib}
+
+\chapter{Glosario}
 \begin{enumerate}
-        \item PostgresSQL: Un sistema gestor de bases de datos, de código abierto, echo para ser una potente forma de mantener grandes cantidades de datos. Siendo un proyecto realizado de manera altruista por muchos desarrolladores a nivel mundial, es muy estable, seguro y es el entorno necesario para que el sistema SEPA trabaje sin necesidad de comprar licencias u otros tipos de registros de datos. Contiene una infinidad de tipos de datos que fortalece la forma de ingresar parámetros \cite{data18}.
-        \item Maven: Herramienta para la gestión de proyectos java, enfocada principalmente en el mantenimiento del código fuente, su principal característica es que encapsula todo el trabajo de compilación, gestión de dependencias y generación de plugins en un solo archivo. Su uso esta totalmente extendido y esto provoca que se creen nuevas funcionalidades que permiten integrar un proyecto echo con java a una enorme cantidad de recursos \cite{data26}.
-        \item CXF: Recursos para la gestión de servicios web, ya sea desde el lado del consumo o de la generación de uno, contiene muchas herramientas, dentro de las mas destacadas, es que permite a un programa que se esta construyendo, poder bajar las herramientas necesarias para la ejecución de un servicio web \cite{data27}.
-        \item PHP: Es el lenguaje de lado servidor más extendido en la web. Surgido en 1994, se trata de un lenguaje de creación relativamente reciente, aunque con la rapidez con la que evoluciona Internet parezca que ha existido toda la vida. Es un lenguaje que ha tenido una gran aceptación en la comunidad de desarrolladores, debido a la potencia y simplicidad que lo caracterizan, así como al soporte generalizado en la mayoría de los servidores \cite{data7}.
-        \item Patrones de Diseño: Son arquitecturas estandarizadas para el desarrollo de software, permiten a los proyectos ser resueltos con estrategias ya probadas y que funcionan en la mayoría de los casos. Existen muchos patrones distintos, cada uno tiene sus ventajas y desventajas.
-	    \item Modelo Vista Controlador: Es un patrón de diseño, sirviendo como modelo de desarrollo informático que permite separar el modelo de datos, el negocio con sus flujos y la vista del usuario final. En este esquema de trabajo se puede apreciar que el modelo solo es comunicado con el negocio y este a su vez es solo comunicado con la vista, de manera que cada parte realice sus tareas y entregue paquetes de información mas claros y fáciles de manejar a lo largo de la vida útil de un software \cite{data12}.
-	\item Java EE: Java enterprise edition, es una plataforma para programadores en Java que contiene herramientas enfocadas en el desarrollo de aplicaciones para empresas. Es administrada por grandes compañas de la computación que promueven el uso de ciertos marcos de trabajo que estandarizan el desarrollo en el lenguaje Java. \cite{data14}.
-	\item JPA: Java Persistente API, una herramienta que permite la homologación de la base de datos desde objetos programados en un sistema, creado en lenguaje Java. Permitiendo usar la programación relacionada a objetos para realizar consultas a la base de datos, desligándose del uso del lenguaje específico de la base de datos para la consulta e inserción de la data \cite{data13}.
-	\item JSF: Herramienta que permite desarrollar interfaces visuales con una potente comunicación con aplicaciones Java EE bajo el modelo MVC. Permite a los programadores crear interfaces cómodas e inteligentes, sobre los patrones web actuales. Es una tecnología pensada para un ágil desarrollo informático que integre otras tecnologías como puede ser JPA o Spring. \cite{data16}.
-	\item Spring: Herramienta que permite la integración de distintos módulos en aplicaciones Java EE, entre otras utilidades, permite la separación de los componentes de desarrollo bajo el esquema MVC. Tambien funciona como una conexión entre distintos flujos del sistema, por ejemplo al trabajar en el marco MVC se puede llamar a clases desde las paginas que componen el sistema\cite{data15}.
-	\item PrimeFaces: Kit de desarrollo para aplicaciones en JSF que permite usar componentes mas avanzados y específicos que JSF. Tiene una interacción que trabaja bien con spring y permite el uso de todos los componentes aceptados por JSF. \cite{data17}.
-	\item .NET: Es un framework de Microsoft que hace un énfasis en la transparencia de redes, con independencia de plataforma de hardware y que permita un rápido desarrollo de aplicaciones. Basado en ella, la empresa intenta desarrollar una estrategia horizontal que integre todos sus productos, desde el sistema operativo hasta las herramientas de mercado \cite{data8}.
-	\item Ruby on Rails: Es un entorno de desarrollo web de código abierto que está optimizado para satisfacción de los programadores y de la productividad. Te permite escribir un buen código favoreciendo la convención antes que la configuración \cite{data9}.
-	\item Java: Es un lenguaje de programación de propósito general. En la actualidad es un lenguaje muy extendido y cada vez cobra más importancia tanto en el ámbito de Internet como en la informática en general. Está desarrollado por la compañía Oracle con gran dedicación y siempre enfocado a cubrir las necesidades tecnológicas de punta. \cite{data10}.
+        \item \textbf{\underline{PostgresSQL}}: Un sistema gestor de bases de datos, de código abierto, echo para ser una potente forma de mantener grandes cantidades de datos. Siendo un proyecto realizado de manera altruista por muchos desarrolladores a nivel mundial, es muy estable, seguro y es el entorno necesario para que el sistema SEPA trabaje sin necesidad de comprar licencias u otros tipos de registros de datos. Contiene una infinidad de tipos de datos que fortalece la forma de ingresar parámetros \cite{data18}.
+        \item \textbf{\underline{Maven}}: Herramienta para la gestión de proyectos java, enfocada principalmente en el mantenimiento del código fuente, su principal característica es que encapsula todo el trabajo de compilación, gestión de dependencias y generación de plugins en un solo archivo. Su uso esta totalmente extendido y esto provoca que se creen nuevas funcionalidades que permiten integrar un proyecto echo con java a una enorme cantidad de recursos \cite{data26}.
+        \item \textbf{\underline{CXF}}: Recursos para la gestión de servicios web, ya sea desde el lado del consumo o de la generación de uno, contiene muchas herramientas, dentro de las mas destacadas, es que permite a un programa que se esta construyendo, poder bajar las herramientas necesarias para la ejecución de un servicio web \cite{data27}.
+        \item \textbf{\underline{PHP}}: Es el lenguaje de lado servidor más extendido en la web. Surgido en 1994, se trata de un lenguaje de creación relativamente reciente, aunque con la rapidez con la que evoluciona Internet parezca que ha existido toda la vida. Es un lenguaje que ha tenido una gran aceptación en la comunidad de desarrolladores, debido a la potencia y simplicidad que lo caracterizan, así como al soporte generalizado en la mayoría de los servidores \cite{data7}.
+        \item \textbf{\underline{Patrones de Diseño}}: Son arquitecturas estandarizadas para el desarrollo de software, permiten a los proyectos ser resueltos con estrategias ya probadas y que funcionan en la mayoría de los casos. Existen muchos patrones distintos, cada uno tiene sus ventajas y desventajas.
+	    \item \textbf{\underline{Modelo Vista Controlador}}: Es un patrón de diseño, sirviendo como modelo de desarrollo informático que permite separar el modelo de datos, el negocio con sus flujos y la vista del usuario final. En este esquema de trabajo se puede apreciar que el modelo solo es comunicado con el negocio y este a su vez es solo comunicado con la vista, de manera que cada parte realice sus tareas y entregue paquetes de información mas claros y fáciles de manejar a lo largo de la vida útil de un software \cite{data12}.
+	\item \textbf{\underline{Java EE: Java enterprise edition}}, es una plataforma para programadores en Java que contiene herramientas enfocadas en el desarrollo de aplicaciones para empresas. Es administrada por grandes compañas de la computación que promueven el uso de ciertos marcos de trabajo que estandarizan el desarrollo en el lenguaje Java. \cite{data14}.
+	\item \textbf{\underline{JPA}}: Java Persistente API, una herramienta que permite la homologación de la base de datos desde objetos programados en un sistema, creado en lenguaje Java. Permitiendo usar la programación relacionada a objetos para realizar consultas a la base de datos, desligándose del uso del lenguaje específico de la base de datos para la consulta e inserción de la data \cite{data13}.
+	\item \textbf{\underline{JSF}}: Herramienta que permite desarrollar interfaces visuales con una potente comunicación con aplicaciones Java EE bajo el modelo MVC. Permite a los programadores crear interfaces cómodas e inteligentes, sobre los patrones web actuales. Es una tecnología pensada para un ágil desarrollo informático que integre otras tecnologías como puede ser JPA o Spring. \cite{data16}.
+	\item \textbf{\underline{Spring}}: Herramienta que permite la integración de distintos módulos en aplicaciones Java EE, entre otras utilidades, permite la separación de los componentes de desarrollo bajo el esquema MVC. Tambien funciona como una conexión entre distintos flujos del sistema, por ejemplo al trabajar en el marco MVC se puede llamar a clases desde las paginas que componen el sistema\cite{data15}.
+	\item \textbf{\underline{PrimeFaces}}: Kit de desarrollo para aplicaciones en JSF que permite usar componentes mas avanzados y específicos que JSF. Tiene una interacción que trabaja bien con spring y permite el uso de todos los componentes aceptados por JSF. \cite{data17}.
+	\item \textbf{\underline{.NET}}: Es un framework de Microsoft que hace un énfasis en la transparencia de redes, con independencia de plataforma de hardware y que permita un rápido desarrollo de aplicaciones. Basado en ella, la empresa intenta desarrollar una estrategia horizontal que integre todos sus productos, desde el sistema operativo hasta las herramientas de mercado \cite{data8}.
+	\item \textbf{\underline{Ruby on Rails}}: Es un entorno de desarrollo web de código abierto que está optimizado para satisfacción de los programadores y de la productividad. Te permite escribir un buen código favoreciendo la convención antes que la configuración \cite{data9}.
+	\item \textbf{\underline{Java}}: Es un lenguaje de programación de propósito general. En la actualidad es un lenguaje muy extendido y cada vez cobra más importancia tanto en el ámbito de Internet como en la informática en general. Está desarrollado por la compañía Oracle con gran dedicación y siempre enfocado a cubrir las necesidades tecnológicas de punta. \cite{data10}.
 \end{enumerate}
-\chapter{Anexo 2 - La Organización de la UTEM}
+\chapter{UTEM}
 \thispagestyle{empty}
 \section{Misión}
 Formar personas con altas capacidades académicas y profesionales, en el ámbito preferentemente tecnológico, apoyada en la generación, transferencia, aplicación y difusión del conocimiento en las áreas del saber que le son propias, para contribuir al desarrollo sustentable del país y de la sociedad de la que forma parte.
@@ -738,7 +746,7 @@ El decano de ingeniería es el principal responsable por las decisiones tomadas 
 \label{Organigrama de la facultad de ingenieria}
 \end{center}
 \end{figure}
-\chapter{Anexo 3 - PSP}
+\chapter{Anexo - PSP}
 \thispagestyle{empty}
 \section{Base teórica}
 PSP (Proceso de Software Personal) es una metodología de desarrollo para proyectos informáticos, que tiene una serie de pasos enfocados en el ordenamiento, cuantificación y la categorización del trabajo y el tiempo. Es usada mundialmente por su fácil aprendizaje y su rápida incorporación. Este modelo de trabajo es solo para proyectos personales, o sea, en donde el desarrollador toma todo el trabajo por sí solo.
@@ -1252,6 +1260,5 @@ La siguiente tabla es simplemente una muestra de la lista de los defectos y como
 \caption{Tercera tabla defectos}
 \end{table}
 
-\bibliographystyle{plain}
-\bibliography{bibliografia.bib}
+
 \end{document}
