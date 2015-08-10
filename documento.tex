@@ -33,23 +33,25 @@
 %\thispagestyle{empty}
 
 \begin{center}
+
+\pagenumbering{gobble}
 \textbf{UNIVERSIDAD TECNOLÓGICA METROPOLITANA\\
 FACULTAD DE INGENIERÍA\\
 ESCUELA DE INFORMÁTICA}\\
 \vspace{3cm}
-MÓDULOS INTEGRADOR Y MANTENEDOR DE DATOS EN SISTEMA SEPA
+\textbf{MÓDULOS INTEGRADOR Y MANTENEDOR DE DATOS EN SISTEMA SEPA}
 \end{center}
 \begin{flushright}
-TRABAJO DE TÍTULO PARA OPTAR AL TÍTULO DE\\
-INGENIERO CIVIL EN COMPUTACIÓN MENCIÓN INFORMÁTICA\\
+\textbf{TRABAJO DE TÍTULO PARA OPTAR AL TÍTULO DE\\
+INGENIERO CIVIL EN COMPUTACIÓN MENCIÓN INFORMÁTICA\\}
 \vspace{3cm}
-PROFESOR: Sebastián Salazar Molina\\
+\textbf{PROFESOR: Sebastián Salazar Molina\\}
 \vspace{1.5cm}
-ALUMNO: Miguel Ángel Aníbal Davor Fuenzalida Pino
+\textbf{ALUMNO: Miguel Ángel Aníbal Davor Fuenzalida Pino}
 \end{flushright}
 \vspace{4cm}
 \begin{center}
-SANTIAGO - 2015
+\textbf{SANTIAGO - 2015}
 \end{center}
 \newpage
 \thispagestyle{empty}
@@ -72,16 +74,27 @@ Sin embargo SEPA presenta insuficiencias, por ejemplo: no dispone de un mecanism
 
 % ejemplos, no tiene servicio web dirdoc, inconsistencia de datos, carece de formas alternativas de accesos, carece multiples roles (más de 2).
 
-El presente trabajo de Título ofrece una actualización al sistema SEPA, con integración de herramientas que permiten mejoras por la Universidad, explicadas a fondo en este informe.
+El presente trabajo de título ofrece una actualización al sistema SEPA, con integración de herramientas que permiten mejoras por la Universidad, explicadas a fondo en este informe.
 
-El resultado final de este proyecto es la obtención por parte de la Universidad de un servicio que comunique SEPA con DirDoc de manera mas expedita y segura, mediante varios tipos de consultas con un módulo de mantenedor que permitirá monitorizar y editar las distintas tablas mediante sus registros correspondientes, pensado desde un principio para hacer búsquedas y reparar data que este incompleta.
+El resultado final de este proyecto es la obtención por parte de la Universidad de un servicio que comunique SEPA con DirDoc de manera más expedita y segura, mediante varios tipos de consultas con un módulo de mantenedor que permitirá monitorizar y editar las distintas tablas mediante sus registros correspondientes, pensado desde un principio para hacer búsquedas y reparar data que este incompleta.
+
+\chapter*{Summary}
+\thispagestyle{empty}
+
+The UTEM has the SEPA system (Statistical System of Professors and Students), which consists of a Web project done before, which takes data from students, teachers and managers from DirDoc, later to obtain indicators that represent the university reality.
+
+However SEPA has shortcomings, for example, it doesn't have a mechanism to contact DirDoc safe and controlled way, nor has alternative access ways, it doesn't have many types of roles and it has incomplete data.
+
+This work provides an update to the SEPA system, with integrated tools that allow improvements by the University, explained in depth in this report.
+
+The final result of this project is to obtain by the University to provide a service that connect DirDoc with SEPA more expeditiously and safely, using various types of consultations with maintainer module allowing you to monitor and to edit the different tables using corresponding records, designed from the start to search and repair data that is incomplete.
 
 \tableofcontents
 \listoffigures
 \listoftables
-\chapter*{Introducción}
 \thispagestyle{empty}
-La Universidad Tecnológica Metropolitana utiliza para la administración de toda la información referente a estudiantes, profesores y personal de administración un sistema denominado DirDoc basado en la tecnológica PHP (ver anexo). SEPA, software desarrollado por Sebastián Salazar Molina como trabajo de título, es un proyecto que constituyó una forma de potenciar las capacidades operativas de la Universidad, generando indicadores de calidad y entregando una ventaja comparativa frente a otras Universidades.
+\chapter*{Introducción}
+La Universidad Tecnológica Metropolitana (UTEM) utiliza para la administración de toda la información referente a estudiantes, profesores y personal de administración un sistema denominado DirDoc (ver anexo), basado en la tecnológica PHP (ver anexo). SEPA, software desarrollado por Sebastián Salazar Molina, mediante el lenguaje de programación PHP, como trabajo de título, siendo proyecto que constituyó una forma de potenciar las capacidades operativas de la Universidad, generando indicadores de calidad y entregando una ventaja comparativa frente a otras Universidades.
 
 El objetivo de este trabajo de título consiste en mejorar el proyecto SEPA mediante la programación en Java que utiliza herramientas estructuradas, extensibles y que tienen como resultado la materialización de sistemas informáticos de más fácil mantención debido al uso de Patrones de Diseño como Modelo Vista Controlador sobre tecnologías como Java EE, JPA, Spring, JSF, PrimeFaces, ver anexo.
 
@@ -97,13 +110,14 @@ Existen 3 tipos de beneficios que la Universidad puede obtener al utilizar con l
 \item Beneficio a futuro, dado el gran tiempo de utilidad de las herramientas que permiten automatizar la integración de la data resultando más sencilla.
 \end{enumerate}
 
-La justificación principal de por que en SEPA se realizarán estas mejoras, radica en la necesidad de contar con indicadores actualizados y precisos, que son los que hacen que las decisiones sean justificadas. Por ejemplo, una vez implementadas las mejoras, en SEPA se prodrá fácilmente programar contadores de la totalidad de las tablas, incluidas conexiones entre tablas, mientras que la version actual de SEPA tiene contadores simples y poco específicos, tales como el promedio de notas por ramo y por alumnos programados, de manera tal que no se pueden hacer búsquedas especificas sobre todos los parámetros de una tabla.
+La justificación principal de por que en SEPA se realizarán estas mejoras, radica en la necesidad de contar con indicadores actualizados y precisos, que son los que hacen que las decisiones sean justificadas. Por ejemplo, una vez implementadas las mejoras, en SEPA se prodrá fácilmente programar contadores de la totalidad de las tablas, incluidas conexiones entre tablas, mientras que la version actual de SEPA tiene contadores simples y poco específicos, tales como el promedio de notas por ramo y por alumnos programados, de manera tal que no se pueden hacer búsquedas específicas sobre todos los parámetros de una tabla.
 
-Otra justificación de estos cambios, es la capacidad de reparar data que este mal escrita o que simplemente no exista, permitiendo que los datos puedan ser mejorados constantemente y de manera automática. Característica que SEPA actual no posee, ya que para solicitar un cambio se necesita básicamente pedir la data desde la propia fuente de datos, proceso que es manual, toma días y requiere de muchas personas. 
+Otra justificación de estos cambios, es la capacidad de reparar datos que esté mal escrita o que simplemente no exista, permitiendo que los datos puedan ser mejorados constantemente y de manera automática. Característica que SEPA actual no posee, ya que para solicitar un cambio se necesita básicamente pedir los datos desde la propia fuente, proceso que es manual, toma días y requiere de muchas personas. 
 
-Finalmente es importante destacar que las transacciones de los servicios web que se agregaran como parte de este proyecto constituyen otra mejora, haciendo el sistema mas seguro y rápido.
+Finalmente es importante destacar que las transacciones de los servicios web que se agregaran como parte de este proyecto constituyen otra mejora, haciendo el sistema más seguro y rápido.
 
 \chapter{Antecedentes}
+\pagenumbering{arabic}
 \thispagestyle{empty}
 \section{Contexto General}
 La Universidad Tecnológica Metropolitana (UTEM) es un organismo de enseñanza superior que se encuentra dentro del Consejo de Rectores de las Universidades Chilenas. Dentro de su sistema administrativo de notas se ocupa el sistema DirDoc, el cual entrega información de notas con respecto alumnos y asignaturas y es ocupado particularmente por alumnos, profesores y directores de escuela para  mirar e ingresar notas, de los distintos ramos impartidos en la Universidad. SEPA es una herramienta que nació como un apoyo en el ámbito estadístico para tomar los datos que se encuentran en el marco de DirDoc, permitiendo obtener valores ponderados entre otras cosas.
@@ -171,14 +185,14 @@ A partir de la versión actual de SEPA, crear un sistema web basado en el patró
 %\chapter{Alcances y Limitaciones}
 %\thispagestyle{empty}
 %\section{Alcances del Proyecto}
-%La coparticipación de indicadores UTIGRA (Unidad de Títulos y Grados) para trabajar con información pertinente a %gente que ha terminado sus procesos estudiantiles en la UTEM.
+%La coparticipación de indicadores UTIGRA (Unidad de títulos y Grados) para trabajar con información pertinente a %gente que ha terminado sus procesos estudiantiles en la UTEM.
 
 %Se crearan una serie de nuevos perfiles, y cada uno de estos tendrán su nivel de alcance en el sistema.
 %\section{Limitaciones del Proyecto}
-%El proyecto no contendrá requerimientos que se hagan fuera de lo requerido por el profesor como actividades de %Trabajo de Título.
-%\section{Alcances del Trabajo de Título}
-%Los alcances del Trabajo de Título están delimitados por las características que el trabajo de título debe tener, es %decir, que se hace un marco de trabajo, delimitado por el profesor, que comprende los tópicos a trabajar.
-%\section{Limitaciones del Trabajo de Título}
+%El proyecto no contendrá requerimientos que se hagan fuera de lo requerido por el profesor como actividades de %Trabajo de título.
+%\section{Alcances del Trabajo de título}
+%Los alcances del Trabajo de título están delimitados por las características que el trabajo de título debe tener, es %decir, que se hace un marco de trabajo, delimitado por el profesor, que comprende los tópicos a trabajar.
+%\section{Limitaciones del Trabajo de título}
 %El trabajo no comprende áreas que estén fuera de los límites temporales a la toma de requerimientos, por lo cual es %necesario indicar que hay características y funcionalidades que a pesar de ser levantadas puede que no sean parte de %este trabajo de título.
 \section{Estructura de desarrollo el proyecto}
 El desarrollo del proyecto se realiza bajo la metodología Personal Sofware Process (PSP), la cual permite medir en forma cuantitativa todas la variables implicadas en el proceso productivo de este proyecto, brindando una valiosa información tanto del proyecto como del alumno.
@@ -229,7 +243,7 @@ Esto nos lleva a tomar la decisión de abandonar PHP ya que lo que se busca es, 
 \item Diseño de la solución: Proceso en donde se desarrolla el modelo de datos que debe soportar a los requerimientos, y las interfaces asociadas.
 \item Diseño estructural: En este punto el alumno trabaja desarrollando el proyecto en coordinación con el profesor encargado y éste va revisando constantemente el avance, emitiendo calificaciones y aclaraciones.
 \item Pruebas: Proceso por el cual el profesor encargado verifica la fiabilidad y calidad de los requerimientos ya resueltos.
-\item Instalación: En este punto se produce la incorporación del sistema en su ambiente por defecto, lo que implica un término del proyecto, solo dentro del marco de Trabajo de Título para el alumno.
+\item Instalación: En este punto se produce la incorporación del sistema en su ambiente por defecto, lo que implica un término del proyecto, solo dentro del marco de Trabajo de título para el alumno.
 \end{enumerate}
 
 Desde esta perspectiva cada componente que se quiera agregar al proyecto, debe obligatoriamente partir desde el Análisis de requerimientos, pasando por un Diseño de la solución, para después llegar al Diseño estructural y Pruebas, para finalmente Instalar los cambios.
@@ -273,7 +287,7 @@ La gran debilidad de este sistema es que no se muestran muchos criterios de comp
 
 Finalmente se observa a las Universidades actuales buscando organismos extranjeros capaces de certificar las características de la educación que ofrecen, de esta manera muestran no solo una acreditación por un organismo chileno, sino también una necesidad de competir a nivel internacional \cite{data3}.
 
-%\section{Justificación del Trabajo de Título}
+%\section{Justificación del Trabajo de título}
 %La UTEM requiere un sistema informático que agregue funcionalidades para el control de sus datos de manera simple y segura. En el anterior SEPA los datos eran extraídos directamente del DirDoc, dando la posibilidad de cometer errores de inserción graves. Con este nuevo sistema, ahora no solo hay una seguridad con los datos que son transferidos desde servicios web, sino que también implementa un Sistema de Autenticación, gracias a su sistema de perfiles de usuarios que limita el acceso en el sitio para más de 2 tipos de usuarios.
 
 %El avance gracias al servicio web es justificado con las siguientes mejoras que se tienen que hacer para que esta modificación se pueda realizar:
@@ -398,12 +412,16 @@ Son arquitecturas estandarizadas para el desarrollo de software, permiten a los 
 
 \chapter{Integrador}
 \thispagestyle{empty}
+
+\section{Preámbulo}
+A continuación se presenta el módulo de integración. Se explica el funcionamiento general de este. Cada uno de sus servicios son expuestos de manera ordenada y funcional.
+
 \section{Funcionalidad}
 
 El modulo de integración que se le agrega a SEPA es una herramienta de poca complejidad, en donde es posible hacer cargas de datos, que serán explicadas posteriormente. Además de esto existen herramientas que hacen posible las peticiones de información desde el módulo integrador hacia DirDoc, esta funcionalidad se carga por tareas determinadas en ciclos de tiempo predefinidos, que son explicados a continuación.
 
 \section{Poblador}
-Al proceso SEPA se le agrega un módulo integrador que permite la comunicación entre los datos del sistema de notas y estudiantes existente dentro de la Universidad (Dir Doc). El fin de ésto es preguntar por datos que posteriormente serán insertados en las tablas del sistema nuestro. Para esto se utiliza a un Web Service que provee una interfaz en donde se obtiene la información, ésta posteriormente se normaliza y adecua a nuestro sistema y finalmente se persiste. Existen varios procesos de integraciones, cada uno va dirigido a un objeto que se quiere poblar.
+Al proceso SEPA se le agrega un módulo integrador que permite la comunicación entre los datos del sistema de notas y estudiantes existente dentro de la Universidad (DirDoc). El fin de ésto es preguntar por datos que posteriormente serán insertados en las tablas del sistema nuestro. Para esto se utiliza a un Web Service que provee una interfaz en donde se obtiene la información, ésta posteriormente se normaliza y adecua a nuestro sistema y finalmente se persiste. Existen varios procesos de integraciones, cada uno va dirigido a un objeto que se quiere poblar.
 \section{Web Service}
 Es una tecnología que permite la comunicación entre 2 programas mediante un sistema que expone un protocolo para el traspaso de datos, donde el encargado de generar las preguntas debe tener información consistente y poder establecer la conexión. Por otro lado los programas se relacionan gracias a un meta lenguaje basado en XML (de etiquetado) que describe el código que debe implementarse para poder realizar las consultas y retornar objetos con los cuales posteriormente opera.
 
@@ -429,6 +447,8 @@ Tareas que se ejecutan una vez al año, en donde podemos encontrar: Actualizar C
 
 \chapter{Mantenedor}
 \thispagestyle{empty}
+\section{Preámbulo}
+A continuación se presenta el módulo de mantenedor. Se explica el funcionamiento general de este. Cada uno de sus componentes son explicados, validando su facilidad y simpleza.
 \section{Introducción}
 
 El mantenedor es la interfaz nueva que tiene SEPA después de estas mejoras, es la parte que el usuario final apreciará de manera distinta, ya que ahora se tienen perfiles, visualización e incluso modificación de data. De manera lógica y simple, manteniendo siempre la facilidad del desarrollo para futuros componentes.
@@ -704,6 +724,7 @@ Finalizando, se puede afirmar que un trabajo como éste es perfectamente capaz d
 	\item \textbf{\underline{.NET}}: Es un framework de Microsoft que hace un énfasis en la transparencia de redes, con independencia de plataforma de hardware y que permita un rápido desarrollo de aplicaciones. Basado en ella, la empresa intenta desarrollar una estrategia horizontal que integre todos sus productos, desde el sistema operativo hasta las herramientas de mercado \cite{data8}.
 	\item \textbf{\underline{Ruby on Rails}}: Es un entorno de desarrollo web de código abierto que está optimizado para satisfacción de los programadores y de la productividad. Te permite escribir un buen código favoreciendo la convención antes que la configuración \cite{data9}.
 	\item \textbf{\underline{Java}}: Es un lenguaje de programación de propósito general. En la actualidad es un lenguaje muy extendido y cada vez cobra más importancia tanto en el ámbito de Internet como en la informática en general. Está desarrollado por la compañía Oracle con gran dedicación y siempre enfocado a cubrir las necesidades tecnológicas de punta. \cite{data10}.
+	\item \textbf{\underline{DirDoc}}: Es un sistema de gestión de notas dependiente de la dirección de docencia de la UTEM (hasta la fecha actual el sistema se encuentra en http://postulacion.utem.cl/).
 \end{enumerate}
 \chapter{UTEM}
 \thispagestyle{empty}
@@ -972,7 +993,7 @@ PSP & 360 & 30 & 20 \\
 \hline
 Bitácora & 10 & 1 & 10 \\
 \hline
-Título & & & \\
+título & & & \\
 \hline
 \textbf{Totales} & 370 & 31 & 30 \\
 \hline
@@ -1075,11 +1096,11 @@ Los compromisos que uno hace con las personas a las cuales espera entregar un pr
 \hline
 D  & Leer       & Propio   & 3 & Dom & Conocimiento \\
 \hline
-L  & Desarrollo & Cliente  & 3 & ... & Título \\
+L  & Desarrollo & Cliente  & 3 & ... & título \\
 \hline
-M  & Escribir   & Profesor & 3 & ... & Título \\
+M  & Escribir   & Profesor & 3 & ... & título \\
 \hline
-Mi & Desarrollo & Cliente  & 3 & ... & Título \\
+Mi & Desarrollo & Cliente  & 3 & ... & título \\
 \hline
 J  & Reunión    & Profesor & 1 & ... & Información \\
 \hline
