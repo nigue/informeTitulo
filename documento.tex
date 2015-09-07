@@ -6,7 +6,7 @@
 %codificación del documento
 \usepackage[utf8]{inputenc}
 %espaciado
-\linespread{1.5}
+\linespread{1.2}
 %identación de párrafo
 \setlength{\parindent}{20pt}
 %espaciado de párrafo
@@ -27,9 +27,10 @@
 \floatstyle{boxed}
 \newfloat{codigo}{thp}{lop}
 \floatname{codigo}{Caja de Código}
-
+\usepackage[table]{xcolor}
 %comienzo del documento
 \begin{document}
+\rowcolors{2}{gray!25}{white}
 %\thispagestyle{empty}
 
 \begin{center}
@@ -39,7 +40,7 @@
 FACULTAD DE INGENIERÍA\\
 ESCUELA DE INFORMÁTICA}\\
 \vspace{3cm}
-\textbf{MÓDULOS INTEGRADOR Y MANTENEDOR DE DATOS EN SISTEMA SEPA}
+\textbf{MÓDULOS INTEGRADOR Y MANTENEDOR DE DATOS EN SISTEMA SEPA VERSION 2.0}
 \end{center}
 \begin{flushright}
 \textbf{TRABAJO DE TÍTULO PARA OPTAR AL TÍTULO DE\\
@@ -68,13 +69,14 @@ Autoridad Responsable
 % En las organizaciones es necesario el uso de información para tomar decisiones correctas.
 % Tener un buen software, entrega valor agregado a la dirección de actividades en todo tipo de estructuras con jerarquía.
 
-La UTEM dispone del sistema SEPA (Sistema Estadístico de Profesores y Alumnos), que consiste en un proyecto Web realizado con anterioridad, que toma datos de alumnos, profesores y encargados provenientes de DirDoc, para posteriormente obtener indicadores que representen la realidad universitaria.
+La UTEM dispone del sistema SEPA (Sistema Estadístico de Profesores y Alumnos), que consiste en un sistema online realizado con anterioridad, que toma datos de alumnos, profesores y encargados provenientes de DirDoc, para posteriormente obtener indicadores que representen la realidad universitaria.
+
 
 Sin embargo SEPA presenta insuficiencias, por ejemplo: no dispone de un mecanismo que se comunique con DirDoc de manera segura y controlada, tampoco presenta formas alternativas de acceso, no posee varios tipos de roles y tiene datos incompletos.
 
 % ejemplos, no tiene servicio web dirdoc, inconsistencia de datos, carece de formas alternativas de accesos, carece multiples roles (más de 2).
 
-El presente trabajo de título ofrece una actualización al sistema SEPA, con integración de herramientas que permiten mejoras por la Universidad, explicadas a fondo en este informe.
+El presente trabajo de título ofrece una actualización al sistema SEPA, con integración de herramientas que permiten mejoras por la Universidad, explicadas a fondo en este informe. Todos estos cambios han generado un nuevo sistema llamado SEPA version 2.0
 
 El resultado final de este proyecto es la obtención por parte de la Universidad de un servicio que comunique SEPA con DirDoc de manera más expedita y segura, mediante varios tipos de consultas con un módulo de mantenedor que permitirá monitorizar y editar las distintas tablas mediante sus registros correspondientes, pensado desde un principio para hacer búsquedas y reparar data que este incompleta.
 
@@ -94,7 +96,7 @@ The final result of this project is to obtain by the University to provide a ser
 \listoftables
 \thispagestyle{empty}
 \chapter*{Introducción}
-La Universidad Tecnológica Metropolitana (UTEM) utiliza para la administración de toda la información referente a estudiantes, profesores y personal de administración un sistema denominado DirDoc (ver anexo), basado en la tecnológica PHP (ver anexo). SEPA, software desarrollado por Sebastián Salazar Molina, mediante el lenguaje de programación PHP, como trabajo de título, siendo proyecto que constituyó una forma de potenciar las capacidades operativas de la Universidad, generando indicadores de calidad y entregando una ventaja comparativa frente a otras Universidades.
+La Universidad Tecnológica Metropolitana (UTEM) utiliza para la administración de toda la información referente a estudiantes, profesores y personal de administración el sistema de dirección de docencia llamado DirDoc (ver anexo), basado en la tecnológica PHP (ver anexo). SEPA, software desarrollado por Sebastián Salazar Molina, mediante el lenguaje de programación PHP, como trabajo de título, siendo proyecto que constituyó una forma de potenciar las capacidades operativas de la Universidad, generando indicadores de calidad y entregando una ventaja comparativa frente a otras Universidades.
 
 El objetivo de este trabajo de título consiste en mejorar el proyecto SEPA mediante la programación en Java que utiliza herramientas estructuradas, extensibles y que tienen como resultado la materialización de sistemas informáticos de más fácil mantención debido al uso de Patrones de Diseño como Modelo Vista Controlador sobre tecnologías como Java EE, JPA, Spring, JSF, PrimeFaces, ver anexo.
 
@@ -112,7 +114,7 @@ Existen 3 tipos de beneficios que la Universidad puede obtener al utilizar con l
 
 La justificación principal de por que en SEPA se realizarán estas mejoras, radica en la necesidad de contar con indicadores actualizados y precisos, que son los que hacen que las decisiones sean justificadas. Por ejemplo, una vez implementadas las mejoras, en SEPA se prodrá fácilmente programar contadores de la totalidad de las tablas, incluidas conexiones entre tablas, mientras que la version actual de SEPA tiene contadores simples y poco específicos, tales como el promedio de notas por ramo y por alumnos programados, de manera tal que no se pueden hacer búsquedas específicas sobre todos los parámetros de una tabla.
 
-Otra justificación de estos cambios, es la capacidad de reparar datos que esté mal escrita o que simplemente no exista, permitiendo que los datos puedan ser mejorados constantemente y de manera automática. Característica que SEPA actual no posee, ya que para solicitar un cambio se necesita básicamente pedir los datos desde la propia fuente, proceso que es manual, toma días y requiere de muchas personas. 
+Otra justificación de estos cambios, es la capacidad de reparar datos que estén mal escritos o que simplemente no existan, permitiendo que la información puedan ser mejorada constantemente y de manera automática. Característica que SEPA actual no posee, ya que para solicitar un cambio se necesita básicamente pedir los datos desde la propia fuente, proceso que es manual, toma días y requiere de muchas personas. 
 
 Finalmente es importante destacar que las transacciones de los servicios web que se agregaran como parte de este proyecto constituyen otra mejora, haciendo el sistema más seguro y rápido.
 
@@ -170,7 +172,7 @@ Dentro de los módulos mantenedor e integrador de SEPA se comprenden las siguien
 \end{itemize}
 \section{Objetivos Generales y Específicos}
 \subsection{Objetivos Generales}
-\textit{Mejorar SEPA convirtiéndolo en un sistema actualizado e independiente de información estadística para la Universidad Tecnológica Metropolitana ayudando a sus procesos docentes y productivos, disponiendo de información veraz de la realidad universitaria.}
+\textit{Actualizar SEPA a una versión 2.0, creando un sistema actualizado e independiente de información estadística para la Universidad Tecnológica Metropolitana ayudando a sus procesos docentes y productivos, disponiendo de información veraz de la realidad universitaria.}
 
 A partir de la versión actual de SEPA, crear un sistema web basado en el patrón Modelo Vista Controlador, asegurando un producto que sea eficiente en el cumplimiento de sus objetivos. Las características principales serán que este sistema estará hecho en Java lo que nos permite una fácil implementación de las mejores prácticas de programación. Potenciando su valor en el tiempo, convirtiéndose en una herramienta cada vez mas útil y necesaria para el desarrollo de la organización.
 
@@ -203,11 +205,10 @@ Después Se acomoda el tiempo en distintos indicadores que registran la cantidad
 
 Finalmente se termina el proyecto y se obtienen tablas completas que muestran indicadores porcentuales de desempeño, cada vez mas eficiente y errores, cada vez mas tenues, lo que indicará un avance generalizado y paulatino de la calidad en el proceso de desarrollo.
 \section{Diagrama del Proyecto}
-Este es un servicio que alimenta sus datos gracias a un servicio web. Usando el framework Apache CXF nos permite gestionar estos datos y nosotros con Java y Spring Data somos capaces de administrarlos usando una base de datos PostgresSQL. De esta manera nosotros podemos con Spring Security ocupar los Beans de Spring que nos gestionan las páginas del sitio de mantenedores. El sitio por su parte, está hecho con JSF (ver anexo) para mostrar en pantalla sus datos. Sobre este se agrega un componente que enriquece las características de JSF llamado Primefaces, el cual nos agrega funcionalidad y características nuevas, como por ejemplo cajas de texto con parámetros que verifican los datos buscando errores en ellos así evitando completamente que el usuario use de mala manera el sitio.
-
+Este es un servicio que alimenta sus datos gracias a un servicio web. Usando el framework Apache CXF nos permite gestionar estos datos y nosotros con Java y Spring Data somos capaces de administrarlos usando una base de datos PostgresSQL. De esta manera nosotros podemos con Spring Security ocupar los Beans de Spring que nos gestionan las páginas del sitio de mantenedores. El sitio por su parte, está hecho con JSF (ver anexo) para mostrar en pantalla sus datos. Sobre este se agrega un componente que enriquece las características de JSF llamado Primefaces, el cual nos agrega funcionalidad y características nuevas, como por ejemplo cajas de texto con parámetros que verifican los datos buscando errores en ellos así evitando completamente que el usuario use de mala manera el sitio. Como se puede apreciar en la imagen (Diagrama General del Sistema, Figura 2.1), lo explicado anteriormente queda visualizado de la siguiente manera:
 \begin{figure}[!hbp]
 \begin{center}
-\includegraphics[scale=0.6,angle=0]{images/diagrama.jpg}
+\includegraphics[scale=0.6,angle=0]{images/diagrama2.jpg}
 \caption{Diagrama general del sistema}
 \label{Diagrama general del sistema}
 \end{center}
@@ -237,6 +238,17 @@ Algunas tecnologías como PHP permiten crear la página de manera rápida e inco
 Esto nos lleva a tomar la decisión de abandonar PHP ya que lo que se busca es, una herramienta que tenga reusabilidad en la organización y capacidad de mejora, manteniendo la robustez y la simpleza.
 % enfocar a las cosas que no se pueden haceren otros lenguajes.
 \section{Ciclo de vida del Software}
+
+Cada componente que se quiera agregar al proyecto, debe obligatoriamente partir desde el Análisis de requerimientos, pasando por un Diseño de la solución, para después llegar al Diseño estructural y Pruebas, para finalmente Instalar los cambios. La siguiente imagen, Figura 3.1, muestra detalladamente lo explicado anteriormente:
+
+\begin{figure}[!hbp]
+\begin{center}
+\includegraphics[scale=0.6,angle=0]{images/cicloMini.PNG}
+\caption{Ciclo de vida}
+\label{Organigrama de rectoria}
+\end{center}
+\end{figure}
+
 \begin{enumerate}
 \item Toma de requerimientos: Proceso que básicamente comprende 2 actividades, primero, la toma de requerimientos en base al sistema SEPA anterior, segundo, una serie de entrevistas para captar las historias de usuarios que posteriormente se convierten en requerimientos.
 \item Análisis de requerimientos: Etapa en donde el profesor encargado discute con el alumno los requerimientos que deben realizarse, de acuerdo con las expectativas y las necesidades del equipo de trabajo.
@@ -246,15 +258,6 @@ Esto nos lleva a tomar la decisión de abandonar PHP ya que lo que se busca es, 
 \item Instalación: En este punto se produce la incorporación del sistema en su ambiente por defecto, lo que implica un término del proyecto, solo dentro del marco de Trabajo de título para el alumno.
 \end{enumerate}
 
-Desde esta perspectiva cada componente que se quiera agregar al proyecto, debe obligatoriamente partir desde el Análisis de requerimientos, pasando por un Diseño de la solución, para después llegar al Diseño estructural y Pruebas, para finalmente Instalar los cambios.
-
-\begin{figure}[!hbp]
-\begin{center}
-\includegraphics[scale=0.6,angle=0]{images/cicloMini.PNG}
-\caption{Ciclo de vida}
-\label{Organigrama de rectoria}
-\end{center}
-\end{figure}
 %imagen de como tiene que ser
 \section{Estado del arte}
 La calidad de datos que se obtienen en un establecimiento educacional, es de vital importancia para la planificación y desarrollo de sus actividades, ya que permiten una adecuada toma de decisiones que afectan el desarrollo de la institución, ya sea de forma docente como administrativa. 
@@ -311,39 +314,13 @@ Finalmente se observa a las Universidades actuales buscando organismos extranjer
 \section{Análisis de las herramientas}
 El desarrollo de las aplicaciones debe ser con un lenguaje que nos permita la correcta ejecución de las tareas de diseño y desarrollo. Por lo cual resulta interesante desarrollar algunos criterios que nos mostrarán las características y la justificación de nuestra elección a la hora de pensar en un lenguaje apropiado para este proyecto.
 
-\begin{enumerate}
+En la siguiente tabla se muestra una comparación de las cuatro tecnologías anteriormente presentadas de forma explicita para comprender nuestra elección. Es importante señalar que uno de los aspectos que marca profundamente la elección sobre el lenguaje con que se va a realizar este proyecto, es determinada por los conocimientos que tiene el alumno y las indicaciones del profesor, en pos de realizar lo más rápido posible el trabajo, Cuadro 3.1. 
 
-\item Sencillez: Característica del lenguaje que hace que sea fácil el crear o entender el código, al momento de programarlo o leerlo \cite{data4}.
-
-\item Robustez: Capacidad interna del lenguaje de proporcionar herramientas que permiten minimizar los errores producidos por el programador \cite{data4}.
-
-\item Seguridad: Característica que hace que un lenguaje no permita tocar accesos a donde la aplicación no debiese ir (en la mayoría de los casos), ejemplos, restringir accesos, ejecución de pruebas o derechos de accesos \cite{data4}.
-
-\item Portabilidad: Capacidad de un lenguaje para correr en múltiples sistemas operativos \cite{data4}.
-
-\item Neutralidad: Independencia de la maquina en donde se ejecuta, concibiendo una experiencia lo más similar posible entre distintas máquinas y sistemas operativos \cite{data4}.
-
-\item Interfaz: Capacidad de producir fácilmente interfaces cómodas para el usuario final \cite{data4}.
-
-\item Expresividad: Capacidad de minimizar el número de líneas con las que una acción puede ejecutarse dentro del código \cite{data5}.
-
-\item Compilación: Capacidad de minimizar el tiempo que toma poder compilar el código producido.
-
-\item Aprendizaje: Dificultad para aprender el lenguaje. Basado simplemente en la experiencia propia sobre cada lenguaje.
-
-\item Estructuras de control: Un lenguaje debe proveer estructuras simples de control, pero tampoco llenarse de estructuras que nunca se van a utilizar \cite{data6}.
-
-\item Abstracción: Capacidad de convertir cosas difíciles en algo simple con la estructura del lenguaje \cite{data6}.
-
-\end{enumerate}
-
-También es importante tener en cuenta el lenguaje a utilizar en el momento de la creación del proyecto, de esta manera se pondrán los lenguajes candidatos: PHP, .NET, Ruby on Rails y Java. Ver anexo.
-
-En la siguiente tabla se muestra una comparación de las cuatro tecnologías anteriormente presentadas de forma explicita para comprender nuestra elección. Es importante señalar que uno de los aspectos que marca profundamente la elección sobre el lenguaje con que se va a realizar este proyecto, es determinada por los conocimientos que tiene el alumno y las indicaciones del profesor, en pos de realizar lo más rápido posible el trabajo, haciéndolo de forma elegante. 
-
-\begin{table}
+\begin{table}[!ht]
+\centering
 \begin{tabular}{| l | l | l | l | l |}
 \hline
+\rowcolor{green!50}
  & \includegraphics[scale=0.08]{images/icons/php.png} & \includegraphics[scale=0.08]{images/icons/net.png} & \includegraphics[scale=0.51]{images/icons/ruby-on-rails.png} & \includegraphics[scale=0.1]{images/icons/java.png}\\
 \hline
 \textit{Sencillez} & \textcolor{green}{\CheckmarkBold} &  \textcolor{red}{\XSolidBold} &  \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold}\\
@@ -374,6 +351,36 @@ En la siguiente tabla se muestra una comparación de las cuatro tecnologías ant
 \caption{Información obtenida desde el trabajo con distintas herramientas}
 \end{table}
 Como lo muestra la tabla anterior, java cumple más criterios, en el sentido de la observación y el criterio subjetivo del alumno que realiza el trabajo.
+
+\begin{enumerate}
+
+\item Sencillez: Característica del lenguaje que hace que sea fácil el crear o entender el código, al momento de programarlo o leerlo \cite{data4}.
+
+\item Robustez: Capacidad interna del lenguaje de proporcionar herramientas que permiten minimizar los errores producidos por el programador \cite{data4}.
+
+\item Seguridad: Característica que hace que un lenguaje no permita tocar accesos a donde la aplicación no debiese ir (en la mayoría de los casos), ejemplos, restringir accesos, ejecución de pruebas o derechos de accesos \cite{data4}.
+
+\item Portabilidad: Capacidad de un lenguaje para correr en múltiples sistemas operativos \cite{data4}.
+
+\item Neutralidad: Independencia de la maquina en donde se ejecuta, concibiendo una experiencia lo más similar posible entre distintas máquinas y sistemas operativos \cite{data4}.
+
+\item Interfaz: Capacidad de producir fácilmente interfaces cómodas para el usuario final \cite{data4}.
+
+\item Expresividad: Capacidad de minimizar el número de líneas con las que una acción puede ejecutarse dentro del código \cite{data5}.
+
+\item Compilación: Capacidad de minimizar el tiempo que toma poder compilar el código producido.
+
+\item Aprendizaje: Dificultad para aprender el lenguaje. Basado simplemente en la experiencia propia sobre cada lenguaje.
+
+\item Estructuras de control: Un lenguaje debe proveer estructuras simples de control, pero tampoco llenarse de estructuras que nunca se van a utilizar \cite{data6}.
+
+\item Abstracción: Capacidad de convertir cosas difíciles en algo simple con la estructura del lenguaje \cite{data6}.
+
+\end{enumerate}
+
+También es importante tener en cuenta el lenguaje a utilizar en el momento de la creación del proyecto, de esta manera se pondrán los lenguajes candidatos: PHP, .NET, Ruby on Rails y Java. Ver anexo.
+
+
 
 \section{Criterios de Calidad}
 
@@ -445,6 +452,40 @@ Tareas que se ejecutan cada semestre, en donde podemos encontrar: Actualizar Est
 \subsection{Tarea anual}
 Tareas que se ejecutan una vez al año, en donde podemos encontrar: Actualizar Carreras, Actualizar Planes de Estudio y Actualizar Quintalización. El proceso obtiene los datos, principalmente, del servicio web llamado servicio curso, docente, utem y carrera.
 
+\subsection{Comparación}
+La siguiente tabla muestra una comparación desde el punto de vista del módulo de integración frente a la versión de SEPA anterior, ver Cuadro 4.1:
+
+\begin{table}[!ht]
+\centering
+\begin{tabular}{| l | l | l |}
+\hline
+\rowcolor{green!50}
+ & \textit{SEPA} & \textit{SEPA 2.0 (Integrador)} \\
+\hline
+\textit{Instalación} & \textcolor{green}{\CheckmarkBold} &  \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textit{Uso} & \textcolor{green}{\CheckmarkBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textit{Monitoreo} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textit{Portabilidad} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\textit{Estabilidad} & \textcolor{red}{\XSolidBold} & \textcolor{green}{\CheckmarkBold}\\
+\hline
+\end{tabular}
+\caption{Comparación de características de SEPA vs SEPA 2.0 módulo de Integrador}
+\end{table}
+
+\begin{enumerate}
+
+\item Instalación: Se ocupa un servidor de aplicaciones preparado para java.
+\item Uso: Su uso es automático.
+\item Monitoreo: Genera archivos asociados a errores.
+\item Portabilidad: Se puede reinstalar en distintos servidores.
+\item Estabilidad: Presenta pocos o nulos fallos.
+
+\end{enumerate}
+
 \chapter{Mantenedor}
 \thispagestyle{empty}
 \section{Preámbulo}
@@ -495,10 +536,15 @@ Para evaluar los costos monetarios de este proyecto se utilizara el cálculo de 
 	\item Consulta Externa (CE): El sistema tiene mantenedores de todos sus datos en base de datos, para poder ser modificables por los usuarios. Su valor es 8 debido a que son alrededor de 30 mantenedores y es una tarea delicada.
 \end{enumerate}
 
-\begin{table}
+Finalmente estos puntos anteriores se visualizan en la siguiente tabla de valores ponderados, cabe señalar que la estrategia de implementación de esta tabla es un aspecto subjetivo de los participantes del proceso de calculo de costes:
+
+\begin{table}[!ht]
+\centering
 \textbf{Tabla de valores ponderados}\\
-\begin{tabular}{| l | l | l | l |}
+\begin{tabular}{| l | c | l | c |}
 \hline
+
+    \rowcolor{green!50}
 \textbf{Característica} & \textbf{Ponderación} & \textbf{Valor} & \textbf{Determinante ponderado} \\
 \hline
 FIL & 49 & medio & 8\\
@@ -514,11 +560,16 @@ CE & 43  & alto  & 8\\
 \end{tabular}
 \caption{Tabla de valores ponderados}
 \end{table}
+
 Los parámetros anteriores deben ser convertidos en distintas tablas.
-\begin{table}
+
+\begin{table}[!ht]
+\centering
 \textbf{Complejidad de los ficheros}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
+
+    \rowcolor{green!50}
 \textbf{RET/DET} & \textbf{1-19} & \textbf{20-50} & \textbf{51+} \\
 \hline
 1 & Bajo & Bajo & Medio\\
@@ -530,10 +581,13 @@ Los parámetros anteriores deben ser convertidos en distintas tablas.
 \end{tabular}
 \caption{Complejidad de los ficheros}
 \end{table}
-\begin{table}
+
+\begin{table}[!ht]
+\centering
 \textbf{Complejidad de las entradas}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
+\rowcolor{green!50}
 \textbf{FICH/DET} & \textbf{1-4} & \textbf{5-15} & \textbf{16+} \\
 \hline
 0-1 & Bajo & Bajo & Medio\\
@@ -545,10 +599,13 @@ Los parámetros anteriores deben ser convertidos en distintas tablas.
 \end{tabular}
 \caption{Complejidad de las entradas}
 \end{table}
-\begin{table}
+
+\begin{table}[!ht]
+\centering
 \textbf{Complejidad de las Salidas}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
+\rowcolor{green!50}
 \textbf{FICH/DET} & \textbf{1-5} & \textbf{6-19} & \textbf{20+} \\
 \hline
 0-1 & Bajo & Bajo & Medio\\
@@ -560,10 +617,13 @@ Los parámetros anteriores deben ser convertidos en distintas tablas.
 \end{tabular}
 \caption{Complejidad de las salidas}
 \end{table}
-\begin{table}
+
+\begin{table}[!ht]
+\centering
 \textbf{Tabla de valores calculados}\\
 \begin{tabular}{| l | l | l | l | l |}
 \hline
+\rowcolor{green!50}
 \textbf{TIPO} & \textbf{Bajo} & \textbf{Medio} & \textbf{Alto} & \textbf{Total} \\
 \hline
 EE & x3  & \textbf{8x4}  & x6 & 32\\
@@ -602,10 +662,15 @@ En esta sección se evalúa con un número de 0 a 5 las distintas característic
 	\item Instalaciones Múltiples: [3 puntos] La aplicación correrá en múltiples entornos de Hw o Sw y se tiene en cuenta desde la fase de diseño. Tiene una dificultad de programación media, debido a que es un proceso un poco largo el ajustarlo a múltiples ambientes.
 	\item Facilidad de Cambios: [3 puntos] El cambio de la configuración se hace interactivamente y tiene efecto inmediato. Tiene una dificultad de programación media, por que la gestión de los cambios es proporcionada por el servidor.
 \end{enumerate}
-\begin{table}
+
+Las características antes mencionadas, son detalladas en la siguiente tabla que muestra los valores obtenidos para cada punto de función ajustado:
+
+\begin{table}[!ht]
+\centering
 \textbf{Cálculo de los puntos de función ajustados}\\
-\begin{tabular}{| l | l | l |}
+\begin{tabular}{| l | l | c |}
 \hline
+    \rowcolor{green!50}
 \textbf{No.} & \textbf{Factor de Complejidad} & \textbf{Valor}\\
 \hline
 1 &  Comunicación de Datos & 4 \\
@@ -655,13 +720,13 @@ Donde se obtuvo un total de 452 puntos de función ajustados, los que vienen a s
 452.51 PF * 4 (HH / PF) = 452.51 * (4) = 1810.04 HH
 \end{math}
 
-Finalmente se multiplican las horas hombre por el factor 1.2 UF / HH.
+Finalmente se multiplican las horas hombre por el factor 0.9 UF / HH.
 
 \begin{math}
-1810.04 HH * 1.2(UF / HH) = 2172.048 UF = 54.213.601 \$
+1810.04 HH * 0.9(UF / HH) = 1629 UF = 40.931.435 \$
 \end{math}
 
-El proyecto tiene un costo mínimo de 50.000.000 pesos.
+El proyecto tiene un costo mínimo de 40.000.000 pesos.
 
 \chapter{Conclusiones}
 
@@ -789,7 +854,7 @@ Se mostrará la forma de desarrollo de las tablas PSP más importantes en el pro
 En este apartado se listan las actividades que contempla el desarrollo del proyecto, incluyendo todo lo que pueda servir como avances. Para estos efectos se desarrollo la siguiente tabla de actividades, con su frecuencia horaria.
 
 \newpage
-\begin{table}
+\begin{table}[!ht]
 \begin{tabular}{|l | l | l |}
 \hline
 \textbf{Tarea} & \textbf{Frecuencia (semanal)} & \textbf{Tiempo (minutos)} \\
@@ -812,7 +877,7 @@ Para este punto solo se necesita la estructuración del tiempo que uno tiene sob
 \subsection{El control del tiempo}
 Para este apartado se desarrolla una tabla que contiene una lista de actividades con los tiempos de inicio y término de cada una de las tareas que se hacen. También se anotan los tiempos perdidos, el tipo de actividad y si está completada o no. Se muestra la siguiente tabla de control de Tiempo, de forma resumida, para un día en especifico.
 \newpage
-\begin{table}
+\begin{table}[!ht]
 \begin{tabbing}
 Estudiante: \= Miguel Angel Fuenzaldia Pino \= Fecha: \= 9/10/2012\\
 Profesor: \> Sebastián Salazar Molina \>   \>  \\
@@ -857,7 +922,7 @@ Profesor: \> Sebastián Salazar Molina \>   \>  \\
 \subsection{Planificación de períodos y productos}
 Este apartado se preocupa de la planificación semanal del tiempo, en la parte de desarrollo se tienen 3 tablas que nos permiten llevar los registros totales de tiempo en minutos de las actividades hecha durante la semana. La primera tabla muestra las sumas de los tiempos, la segunda muestra la actividad de las semanas pasadas y la tercera muestra el total de las semanas hasta hoy en día. Se muestran las siguientes tablas de planificación, de forma resumida, para comprender como se utilizan.
 
-\begin{table}
+\begin{table}[!ht]
 \textbf{Estudiante}: Miguel Angel Fuenzaldia Pino     \textbf{Fecha}: 9/10/2012\\
 \begin{tabular}{| l | l | l | l | l | l |}
 \hline
@@ -887,7 +952,7 @@ S & & & & & \\
 
 Tiempos y Medias del Período, Número de Semanas (número anterior +1): 1\\
 Resumen de las semanas anteriores:
-\begin{table}
+\begin{table}[!ht]
 \begin{tabular}{| l | l | l | l | l | l |}
 \hline
 \textbf{Total} & 1170 & 1290 & 1170 & 1150 & 1170 \\
@@ -903,7 +968,7 @@ Resumen de las semanas anteriores:
 \end{table}
 
 Resumen de las semanas totales (anteriores mas última)
-\begin{table}
+\begin{table}[!ht]
 \begin{tabular}{| l | l | l | l | l | l |}
 \hline
 \textbf{Total} & 1170 & 2460 & 3630 & 4780 & 5950 \\
@@ -920,7 +985,7 @@ Resumen de las semanas totales (anteriores mas última)
 \subsection{La planificación del producto}
 El desarrollo del proyecto requiere de un cuaderno que registre la actividad en función de los trabajos que se van realizando, para lo cual se tiene un cuaderno de trabajos que registra las actividades con sus respectivas estimaciones de tiempo, sacadas de datos anteriores. Recordar que en esta tabla se anotan los trabajos que resumen las actividades diarias, así que se anota uno al día. La siguiente tabla muestra una forma de planificación.
 \newpage
-\begin{table}
+\begin{table}[!ht]
 \textbf{Estudiante}: Miguel Angel Fuenzaldia Pino     \textbf{Fecha}: 9/10/2012\\
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
@@ -943,7 +1008,7 @@ El desarrollo del proyecto requiere de un cuaderno que registre la actividad en 
 \subsection{El tamaño del producto}
 Para estimar los costes de tiempo y valor de cada actividad que representa parte del desarrollo del un producto como tal, es necesario establecer formas de medición para valores que pueden ser cuantificables en unidades de trabajo. Para lo cual se mostrarán Estimaciones de Tamaños para las actividades particulares de este proyecto. Se tiene una muestra de tablas para determinar la cantidad total de trabajo que se realiza..
 \newpage
-\begin{table}
+\begin{table}[!ht]
 \begin{tabbing}
 \textbf{Estudiante:} \= Miguel Angel Fuenzaldia Pino \= \textbf{Fecha:} \= 19/11/2012\\
 \textbf{Profesor:} \> Sebastián Salazar Molina \> \textbf{Tiempos de Actividad} \>  \\
@@ -962,7 +1027,7 @@ Sebastián Salazar & 60 & 4 & 15\\
 \end{tabular}
 \caption{Tabla del tamaño del producto}
 \end{table}
-\begin{table}
+\begin{table}[!ht]
 \textbf{Lectura}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
@@ -983,7 +1048,7 @@ Sebastián Salazar & 60 & 4 & 15\\
 \end{tabular}
 \caption{Tabla asociada a la lectura}
 \end{table}
-\begin{table}
+\begin{table}[!ht]
 \textbf{Escribir}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
@@ -1002,7 +1067,7 @@ título & & & \\
 \end{tabular}
 \caption{Tabla asociada a escribir}
 \end{table}
-\begin{table}
+\begin{table}[!ht]
 \textbf{Programar}\\
 \begin{tabular}{| l | l | l | l | l | l | l |}
 \hline
@@ -1024,7 +1089,7 @@ Vista &  			400  & 350 & 175 & 175 & 350 & 400\\
 
 \subsection{La gestión del tiempo}
 Para poder desarrollar las actividades, se necesita tiempo, por lo cual resulta importante manejarlo apropiadamente, para esto se hace una estimación aproximada del tiempo que consumirá la ejecución de las actividades relacionadas con el desarrollo del trabajo que está en curso. Se expondrán dos tablas y un marco de referencias para las aproximaciones futuras. Se muestran las tablas de gestión del tiempo por actividades.
-\begin{table}
+\begin{table}[!ht]
 \begin{tabbing}
 \textbf{Estudiante:} \= Miguel Angel Fuenzaldia Pino \= \textbf{Fecha:} \= 19/11/2012\\
 \textbf{Profesor:} \> Sebastián Salazar Molina \> \textbf{Tiempos de Actividad} \>  \\
@@ -1055,7 +1120,7 @@ S  &    & & 180 & 180 & 360 \\
 \end{tabular}
 \caption{Primera tabla de la gestión del tiempo}
 \end{table}
-\begin{table}
+\begin{table}[!ht]
 \textbf{Etapa de desarrollo de Proyecto e Informe}\\
 \begin{tabular}{| l | l | l | l | l | l |}
 \hline
@@ -1084,7 +1149,7 @@ S  &    & 180 & 180 &  & 360 \\
 \end{table}
 \subsection{La gestión de los compromisos}
 Los compromisos que uno hace con las personas a las cuales espera entregar un proyecto, deben ser documentados, mostrando el tipo de actividad a realizar, el día, los participantes de ese compromiso, la hora en que se realiza, la fecha y finalmente lo que se recibe a cambio de la finalización de estas tareas. Es importante destacar que una correcta forma de manejar los compromisos lleva a un buen plan de trabajo. La siguiente tabla muestra un ejemplo de los compromisos y la información de acuerdo a cada tarea que uno pretende realizar.
-\begin{table}
+\begin{table}[!ht]
 \begin{tabbing}
 \textbf{Estudiante:} \= Miguel Angel Fuenzaldia Pino \= \textbf{Fecha:} \= 19/11/2012\\
 \textbf{Profesor:} \> Sebastián Salazar Molina \> \textbf{Tiempos de Actividad} \>  \\
@@ -1113,7 +1178,7 @@ S  & Escribir   & Profesor & 3 & ... & título \\
 \end{table}
 \subsection{La gestión de las programaciones}
 En un proyecto siempre es necesario definir las características importantes que comprenden la ejecución de cada una de las actividades que se están desarrollando, por tanto en este proyecto se tiene un registro de los puntos de control, los cuales representan las características importantes que el desarrollo de este trabajo debe comprender. A continuación una tabla que muestra un poco como una persona que utiliza el PSP puede programar su lista de actividades.
-\begin{table}
+\begin{table}[!ht]
 \textbf{Estudiante}: Miguel Angel Fuenzaldia Pino     \textbf{Fecha}: 9/10/2012\\\\\
 \begin{tabular}{| l | l |}
 \hline
@@ -1134,7 +1199,7 @@ En un proyecto siempre es necesario definir las características importantes que
 \end{table}
 \subsection{El plan del proyecto}
 Para generar un plan del proyecto se necesita tener un resumen de las características de cómo se desarrolla el trabajo, para lo cual se expondrá un molde para generar planes de proyectos, mediante el cual se estima la cantidad de esfuerzo que uno puede desarrollar de acuerdo a las labores anteriores que ha realizado. Finalmente se mostrará un ejemplo de estimación del tamaño del programa. Se tiene un molde de lo que es el plan del proyecto, que es la parte más consistente del desarrollo en PSP, ya que nos muestra información acerca de tiempos por líneas de código en un compendio de actividades que puede ser una tarea a realizar semanalmente o en periodos más largos.
-\begin{table}
+\begin{table}[!ht]
 \textbf{Resumen del plan de Proyecto}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
@@ -1147,7 +1212,7 @@ Para generar un plan del proyecto se necesita tener un resumen de las caracterí
 \end{tabular}
 \caption{Primera tabla del plan de proyecto}
 \end{table}
-\begin{table}
+\begin{table}[!ht]
 \begin{tabular}{| l | l | l | l | l | l |}
 \hline
 \textbf{Resumen} & \textbf{Plan} & \multicolumn{2}{|c|}{\textbf{Real}} & \multicolumn{2}{|c|}{\textbf{Hasta la Fecha}} \\
@@ -1196,7 +1261,7 @@ Para generar un plan del proyecto se necesita tener un resumen de las caracterí
 \caption{Segunda tabla del plan de proyecto}
 \end{table}
 \newpage
-\begin{table}
+\begin{table}[!ht]
 \begin{tabular}{| l | l | l | l | l | l |}
 \hline
 \textbf{D. Introducidos} & \textbf{Plan} & \textbf{Real} & \textbf{Hasta la Fecha} & \textbf{Porcentaje} & \textbf{Def./Hora} \\
@@ -1236,7 +1301,7 @@ Para generar un plan del proyecto se necesita tener un resumen de las caracterí
 \end{table}
 \subsection{Defectos}
 El registro de los defectos es altamente importante, ya que nos permite la correcta verificación de cada incidente ocurrido dentro del proceso de desarrollo del software. El cuaderno de registro de errores se ocupa en el proceso de desarrollo de aplicaciones, y nos permite anotar un error cuando ha salido en modo de compilación para lo cual uno registra el tipo de error y el tiempo dedicado a la reparación de este error. El objetivo de esta tabla es impedir la repetición de ciertos errores que pueden ser reparados mediante el aprendizaje.\\
-\begin{table}
+\begin{table}[!ht]
 \textbf{Tipos de Defectos}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
@@ -1255,7 +1320,7 @@ El registro de los defectos es altamente importante, ya que nos permite la corre
 \end{table}
 
 La siguiente tabla es simplemente una muestra de la lista de los defectos y como se van anotando.
-\begin{table}
+\begin{table}[!ht]
 \textbf{Resumen del plan de Proyecto al cual se le encuentran Defectos}\\
 \begin{tabular}{| l | l | l | l |}
 \hline
@@ -1268,7 +1333,7 @@ La siguiente tabla es simplemente una muestra de la lista de los defectos y como
 \end{tabular}
 \caption{Segunda tabla defectos}
 \end{table}
-\begin{table}
+\begin{table}[!ht]
 \begin{tabular}{| l | l | l | l | l | l | l |}
 \hline
 \textbf{Fecha} & \textbf{Número} & \textbf{Tipo} & \textbf{Introducido} & \textbf{Eliminado} & \textbf{Correc.} & \textbf{Correg.}\\
